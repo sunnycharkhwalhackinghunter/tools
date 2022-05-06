@@ -1,0 +1,46 @@
+@use "./Submenus/Icons";
+@import "../../../scss/--var.scss";
+@import "../../../scss/--mixing.scss";
+.container {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-sm);
+  position: sticky;
+  top: 0;
+  background: $c2;
+  z-index: 10;
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+.burger_container {
+  display: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: white;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+  }
+
+  svg {
+    font-size: 1.8rem;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+  @media screen and (max-width: 360px) {
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .actions {
+    width: 100%;
+  }
+}

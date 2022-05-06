@@ -1,0 +1,33 @@
+@import "--var.scss";
+@import "--mixing.scss";
+@media (max-width: 576px) {
+}
+@media (min-width: 768px) {
+  .top_nav_iner_div_input {
+    margin: 0 2rem;
+  }
+  .menu_container {
+    height: 35rem;
+  }
+}
+@media (min-width: 1024px) {
+  .top_nav_iner_div_input {
+    margin: 0 3rem;
+  }
+  .menu_container {
+    height: 40rem;
+  }
+}
+@media (min-width: 1440px) {
+  .top_nav_iner_div_input {
+    margin: 0 8rem;
+  }
+}
+@media (min-width: 1700px) {
+  .top_nav_iner_div_input {
+    margin: 0 8rem;
+    span {
+      left: 1rem;
+    }
+  }
+}
