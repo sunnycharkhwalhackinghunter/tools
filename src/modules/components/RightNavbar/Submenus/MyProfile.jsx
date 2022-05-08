@@ -7,8 +7,6 @@ import { useState } from "react";
 
 //ICONS , PICS , STYLES
 import styles from "./MyProfile.module.scss";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { ReactComponent as Avatar } from "../../../../pics/avatar.svg";
 
 const MyProfile = () => {
   const [isProfileOpen, setisProfileOpen] = useState(false);
@@ -24,15 +22,7 @@ const MyProfile = () => {
       }}
     >
       {/* AVATAR ICON */}
-      <div className={styles.icon_avatar_container}>
-        <Avatar />
-      </div>
-
-      {/* NAME */}
-      <div className={styles.name}>
-        <span>WebDesign</span>
-        <MdKeyboardArrowDown />
-      </div>
+      <div>df</div>
 
       {/* AVATAR/SETTINGS SUBMENU */}
       <div

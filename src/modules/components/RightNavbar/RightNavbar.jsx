@@ -9,7 +9,6 @@ import NavContext from "../../Context/NavContext";
 
 //ICONS , IMAGES
 import { MdOutlineMenu } from "react-icons/md";
-
 //Components
 import MyProfile from "./Submenus/MyProfile";
 import Notifications from "./Submenus/Notifications";

@@ -9,13 +9,15 @@ import NavContext from "../../Context/NavContext";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../pics/Logo.png";
 //ICONS
-import { MdOutlineLogout, MdPayments } from "react-icons/md";
+import { MdPayments } from "react-icons/md";
+
 import { ImBullhorn } from "react-icons/im";
+import { AiOutlineSearch } from "react-icons/ai";
 import { RiTableAltFill, RiBankFill } from "react-icons/ri";
 import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
 import { BsCalendarX, BsCalendar2CheckFill } from "react-icons/bs";
-// import { IoMdSpeedometer } from "react-icons/io";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Input from "../input/Input";
 import {
   faGaugeHigh,
   faPersonChalkboard,
@@ -56,6 +58,20 @@ const Navbar = () => {
 
         {/* MENU */}
         <ul className={styles.menu_container}>
+          <div className=" d-block d-xxl-none d-xl-none d-md-none">
+            <div className="nav_mobile_search_main_div">
+              <div className="nav_mobile_search_iner_div">
+                <span>
+                  <AiOutlineSearch />
+                </span>
+                <Input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search..."
+                />
+              </div>
+            </div>
+          </div>
           <NavUrl url="/" icon={<RiTableAltFill />} description="Dashboard" />
           <NavUrl
             url="announcement"
@@ -108,14 +124,14 @@ const Navbar = () => {
         </ul>
 
         {/* LOGOUT BUTTON */}
-        <div
+        {/* <div
           className={`${styles.btn_logout}`}
           onClick={() => {
             setNav(!nav);
           }}
         >
           <MdOutlineLogout />
-        </div>
+        </div> */}
       </nav>
 
       <div

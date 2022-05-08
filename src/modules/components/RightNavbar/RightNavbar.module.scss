@@ -10,12 +10,13 @@
   background: $c2;
   z-index: 10;
   svg {
-    font-size: 1.2rem;
+    font-size: 25px;
+    color: white;
   }
 }
 
 .burger_container {
-  display: none;
+  // display: none;
   cursor: pointer;
   padding: 0.2rem;
   color: white;
@@ -33,10 +34,11 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
+  align-items: center;
 
   @media screen and (max-width: 360px) {
     justify-content: flex-start;
-    margin-left: 1rem;
+    margin-left: 3rem;
   }
 }
 @media (max-width: 576px) {
