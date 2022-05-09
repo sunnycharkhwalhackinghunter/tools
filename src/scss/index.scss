@@ -89,4 +89,52 @@ ul {
   padding: 0 40px;
   cursor: pointer;
 }
+.badge_top {
+  font-size: 10px !important;
+  padding: 5px !important;
+}
+.notification_img_div {
+  border: 1.5px solid $cor;
+  padding: 4px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.notification_img {
+  @include bg_img;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+}
+.notification_img_col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notification_text {
+  color: black;
+  text-transform: capitalize;
+  p {
+    margin-bottom: 0;
+  }
+}
+.notification_name {
+  font-size: 15px;
+  font-weight: 550;
+}
+.notification_mess {
+  font-size: 16px;
+}
+.notification_time_div {
+  p {
+    color: $cgr;
+    font-size: 15px;
+    font-weight: 550;
+  }
+}
+.notification_top_div {
+  background-color: #dde2ff;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 // top nav end

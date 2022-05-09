@@ -16,7 +16,7 @@
     pointer-events: none;
     opacity: 0;
     transition: all ease-in-out 300ms;
-
+    width: 37rem;
     @media screen and (max-width: 600px) {
       right: 60%;
       transform: translateY(95%) translateX(60%);
@@ -32,6 +32,8 @@
       font-weight: 450;
       margin: var(--margin-xxs) 0;
       padding-left: 0.8rem;
+      border-bottom: 1px solid rgb(184, 184, 184);
+      padding-bottom: 10px;
     }
 
     .notifications {
@@ -81,10 +83,13 @@
     opacity: 1;
     pointer-events: initial;
     transform: translateY(100%);
+    padding: 1rem;
+    width: 37rem;
 
-    @media screen and (max-width: 600px) {
-      right: 60%;
-      transform: translateY(100%) translateX(60%);
+    @media screen and (max-width: 576px) {
+      width: 18rem;
+      right: 50%;
+      transform: translateY(100%) translateX(33%);
     }
 
     @media screen and (max-width: 420px) {

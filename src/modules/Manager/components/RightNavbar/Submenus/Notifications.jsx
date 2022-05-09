@@ -15,7 +15,13 @@ const Notifications = () => {
   return (
     <>
       <div>
-        <NavLink className="messages_icon_top_nav" to="messages">
+        <NavLink
+          className="messages_icon_top_nav"
+          to="messages"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Messages"
+        >
           <BsFillChatLeftFill />
         </NavLink>
       </div>
@@ -28,7 +34,18 @@ const Notifications = () => {
           setisNotificationsOpen(!isNotificationsOpen);
         }}
       >
-        <MdNotifications />
+        <div
+          className=" position-relative"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Notification"
+        >
+          <span className="position-absolute top-0 start-100 translate-middle badge badge_top rounded-circle bg-danger">
+            99+
+            <span className="visually-hidden">unread messages</span>
+          </span>
+          <MdNotifications />
+        </div>
 
         {/* INBOX SUBMENU */}
         <div

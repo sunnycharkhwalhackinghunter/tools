@@ -7,7 +7,7 @@ import { useState } from "react";
 
 //ICONS , PICS , STYLES
 import styles from "./MyProfile.module.scss";
-
+import NavProfile from "../../../../common/components/NavProfile/NavProfile";
 const MyProfile = () => {
   const [isProfileOpen, setisProfileOpen] = useState(false);
   let domNode = useClickOutside(() => {
@@ -22,7 +22,7 @@ const MyProfile = () => {
       }}
     >
       {/* AVATAR ICON */}
-      <div>df</div>
+      <NavProfile />
 
       {/* AVATAR/SETTINGS SUBMENU */}
       <div

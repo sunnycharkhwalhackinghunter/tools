@@ -1,7 +1,6 @@
 //REACT ROUTER
 import { Link } from "react-router-dom";
-import ProfileImg from "../../../../common/components/img/Img";
-import Profile from "../../../../../pics/profile.jpeg";
+import NavProfile from "../../../../common/components/NavProfile/NavProfile";
 //HOOKS
 import useClickOutside from "../../../CustomHooks/ClickOutside";
 import { useState } from "react";
@@ -23,11 +22,7 @@ const MyProfile = () => {
       }}
     >
       {/* AVATAR ICON */}
-      <div className="profile_img_top_div">
-        <div className="profile_img_div">
-          <ProfileImg className="profile_img" backgroundImage={Profile} />
-        </div>
-      </div>
+      <NavProfile />
 
       {/* AVATAR/SETTINGS SUBMENU */}
       <div
