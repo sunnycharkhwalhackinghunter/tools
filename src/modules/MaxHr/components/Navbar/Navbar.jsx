@@ -7,7 +7,8 @@ import NavContext from "../../Context/NavContext";
 
 //REACT ROUTER
 import { NavLink } from "react-router-dom";
-import Logo from "../../../pics/Logo.png";
+import Logo from "../../../../pics/Logo.png";
+import LogoImg from "../../../common/components/NavLogo/Logo";
 //ICONS
 import { MdPayments } from "react-icons/md";
 
@@ -52,9 +53,7 @@ const Navbar = () => {
     >
       <nav className={nav ? undefined : styles.nav_small}>
         {/* LOGO */}
-        <div className="logo_div">
-          <img src={Logo} alt="logo" />
-        </div>
+        <LogoImg className="logo_div" img={Logo} alt="logo" />
 
         {/* MENU */}
         <ul className={styles.menu_container}>
@@ -72,7 +71,11 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <NavUrl url="/" icon={<RiTableAltFill />} description="Dashboard" />
+          <NavUrl
+            url="dashboard"
+            icon={<RiTableAltFill />}
+            description="Dashboard"
+          />
           <NavUrl
             url="announcement"
             icon={<ImBullhorn />}

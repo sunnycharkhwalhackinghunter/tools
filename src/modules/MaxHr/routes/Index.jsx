@@ -1,30 +1,28 @@
-import "../../App.css";
 import { useState } from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Container from "../components/Container/Container";
 import RightNavbar from "../components/RightNavbar/RightNavbar";
-import Dashboard from "../MaxHr/page/Dashboard";
-import Announcement from "../MaxHr/page/Announcement";
-import Profile from "../MaxHr/page/Profile";
+import Dashboard from "../page/Dashboard";
+import Announcement from "../page/Announcement";
+import Profile from "../page/Profile";
 import NavContext from "../Context/NavContext";
-import Finance from "../MaxHr/page/Finance";
-import Attendence from "../MaxHr/page/Attendence";
-import Performance from "../MaxHr/page/Performance";
-import OrganizationChart from "../MaxHr/page/OrganizationChart";
-import Hiring from "../MaxHr/page/Hiring";
-import Training from "../MaxHr/page/Training";
-import TaskManagement from "../MaxHr/page/TaskManagement";
-import Payroll from "../MaxHr/page/Payroll";
-import Reports from "../MaxHr/page/Reports";
-import Settings from "../MaxHr/page/Settings";
-import Messages from "../MaxHr/page/Messages";
-function Routess() {
+import Finance from "../page/Finance";
+import Attendence from "../page/Attendence";
+import Performance from "../page/Performance";
+import OrganizationChart from "../page/OrganizationChart";
+import Hiring from "../page/Hiring";
+import Training from "../page/Training";
+import TaskManagement from "../page/TaskManagement";
+import Payroll from "../page/Payroll";
+import Reports from "../page/Reports";
+import Settings from "../page/Settings";
+import Messages from "../page/Messages";
+const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
-
   return (
-    <BrowserRouter>
+    <>
       <div className="App">
         <NavContext.Provider value={value}>
           <Navbar />
@@ -32,8 +30,8 @@ function Routess() {
             stickyNav={<RightNavbar />}
             content={
               <Routes>
-                <Route path="*" element={<main>NOT FOUND</main>} />
                 <Route path="/" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/announcement" element={<Announcement />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/finance" element={<Finance />} />
@@ -50,13 +48,14 @@ function Routess() {
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/Settings" element={<Settings />} />
                 <Route path="/messages" element={<Messages />} />
+                <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }
           />
         </NavContext.Provider>
       </div>
-    </BrowserRouter>
+    </>
   );
-}
+};
 
-export default Routess;
+export default Index;

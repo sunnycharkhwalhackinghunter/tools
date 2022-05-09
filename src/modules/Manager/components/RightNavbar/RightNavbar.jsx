@@ -12,7 +12,7 @@ import { MdOutlineMenu } from "react-icons/md";
 //Components
 import MyProfile from "./Submenus/MyProfile";
 import Notifications from "./Submenus/Notifications";
-import Input from "../input/Input";
+import Input from "../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const RightNavbar = () => {

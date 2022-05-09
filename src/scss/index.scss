@@ -14,7 +14,7 @@ body {
 // nav
 .logo_div {
   background: $c2;
-  height: 80px;
+  height: 83px;
   display: flex;
   img {
     @include bg_img;
@@ -73,5 +73,20 @@ ul {
 .messages_icon_top_nav {
   font-size: 25px;
   color: white;
+}
+.profile_img {
+  @include bg_img;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+}
+.profile_img_div {
+  border: 1.5px solid $cor;
+  padding: 4px;
+  border-radius: 100%;
+}
+.profile_img_top_div {
+  padding: 0 40px;
+  cursor: pointer;
 }
 // top nav end

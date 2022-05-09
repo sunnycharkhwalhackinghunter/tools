@@ -1,8 +1,8 @@
-import Routess from "./modules/Routes/Routess";
+import MaxHrRoutes from "./Routes/Routes";
 const App = () => {
   return (
     <>
-      <Routess />
+      <MaxHrRoutes />
     </>
   );
 };

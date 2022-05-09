@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .profile_img_top_div {
+    padding: 0 25px;
+  }
 }
 @media (min-width: 768px) {
   .top_nav_iner_div_input {
