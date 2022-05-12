@@ -1,4 +1,4 @@
-import styles from "./RightNavbar.module.scss";
+import styles from "./TopNavbar.module.scss";
 import { useContext } from "react";
 import NavContext from "../../Context/NavContext";
 import { MdOutlineMenu } from "react-icons/md";

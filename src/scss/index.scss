@@ -192,9 +192,12 @@ ul {
 .user_profile_top_card_div {
   padding: 1rem;
 }
+.user_profile_hr2 {
+  margin-top: 2rem;
+}
 .user_profile_hr {
   hr {
-    background-color: $text;
+    background-color: #d0d4ee;
     opacity: 1;
   }
 }
@@ -333,7 +336,6 @@ ul {
   background: #f4f4f4;
   position: absolute;
   width: 100%;
-  border-radius: 10px;
   padding: 1rem;
   text-transform: capitalize;
   svg {
@@ -378,6 +380,80 @@ ul {
 }
 .user_input_main_div {
   margin-top: 1rem;
+}
+.profile_list_title_div {
+  display: flex;
+}
+.profile_list_title_first_li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  div {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+  }
+}
+.profile_list_title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: IBM Plex sans-serif;
+  color: black;
+}
+.profile_list_date_div {
+  p {
+    margin: 0;
+    font-size: 14px;
+    padding-top: 2px;
+    font-family: IBM Plex sans;
+    color: text;
+  }
+}
+.profile_list_title_main_div {
+  margin-bottom: 2px;
+  ul {
+    margin: 0;
+  }
+}
+.profile_list_top_div {
+  overflow: scroll;
+  height: 5rem;
+}
+.logout_btn {
+  background-color: $blue;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 14px 40px;
+  font-family: IBM Plex sans-serif;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: all 0.3s;
+  &:hover {
+    color: white;
+    background-color: $hover;
+  }
+}
+.logout_btn_div {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+a {
+  text-decoration: none !important;
+}
+.user_profile_bottom_link {
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+  transition: all 0.3s;
+  a {
+    color: $text;
+    font-size: 12px;
+  }
 }
 // top nav end
 //

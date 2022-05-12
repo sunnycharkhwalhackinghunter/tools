@@ -22,6 +22,8 @@
     opacity: 0;
     transition: all ease-in-out 300ms;
     width: 37rem;
+    overflow: scroll;
+    height: 35rem;
     @media screen and (max-width: 600px) {
       right: 60%;
       transform: translateY(95%) translateX(60%);
@@ -93,6 +95,7 @@
 
     @media screen and (max-width: 576px) {
       width: 18rem;
+      height: 30rem;
       right: 50%;
       transform: translateY(100%) translateX(33%);
     }

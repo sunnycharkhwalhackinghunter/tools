@@ -25,6 +25,36 @@ const Index = (props) => {
       text: "I have bought a new car",
       time: "3 Seconds ago",
     },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
   ];
   return (
     <>

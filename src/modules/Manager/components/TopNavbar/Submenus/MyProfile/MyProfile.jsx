@@ -11,8 +11,9 @@ import { BiChevronDown } from "react-icons/bi";
 import { MdDinnerDining, MdLocalHospital } from "react-icons/md";
 import { CgCoffee } from "react-icons/cg";
 import { RiHotelBedLine } from "react-icons/ri";
-import UserBreks from "./userBreks/UserBreks";
-import UserInput from "./UserInput/UserInput";
+import UserBreks from "./subPages/UserBreaks";
+import UserInput from "./subPages/UserInput";
+import ProfileList from "./subPages/ProfileList";
 const MyProfile = () => {
   const [userBreks, setUserBreks] = useState(true);
   const [isOnline, setIsOnline] = useState(true);
@@ -47,6 +48,28 @@ const MyProfile = () => {
       icon: <MdLocalHospital />,
       title: " Emergrncy ",
       time: "2 hr",
+    },
+  ];
+  const ProfileListData = [
+    {
+      color: "#DA1E28",
+      title: "Maxlence HR Tool ",
+      date: "25 sep 21 to 26 sep 21",
+    },
+    {
+      color: "#0043CE",
+      title: "Maxlence Tool",
+      date: "25 oct 21 to 26 nov 21",
+    },
+    {
+      color: "#24A148",
+      title: "Maxlence",
+      date: "25 oct 21 to 26 nov 21",
+    },
+    {
+      color: "#0043CE",
+      title: "Maxlence Tool",
+      date: "25 oct 21 to 26 nov 21",
     },
   ];
   return (
@@ -119,6 +142,7 @@ const MyProfile = () => {
                 </div>
               </div>
             </div>
+
             <div className={`${userBreks ? "online3" : "offline3"}`}>
               <div className="user_breks_main_div" onClick={changNameUser}>
                 {UserBreksData.map((val, i) => {
@@ -132,9 +156,9 @@ const MyProfile = () => {
                   );
                 })}
               </div>
-              <div className=" user_input_main_div">
+              <div className="user_input_main_div">
                 <div className="row m-0">
-                  <div className="col-8">
+                  <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                     <UserInput
                       title="title"
                       type="text"
@@ -142,7 +166,7 @@ const MyProfile = () => {
                       placeholder="Type new"
                     />
                   </div>
-                  <div className="col-4">
+                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
                     <UserInput
                       title="time"
                       type="text"
@@ -150,6 +174,38 @@ const MyProfile = () => {
                       placeholder="30 mints"
                     />
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="profile_switch_main_div">
+              <div className="profile_list_top_div">
+                {ProfileListData.map((val, i) => {
+                  return (
+                    <ProfileList
+                      key={i}
+                      color={val.color}
+                      title={val.title}
+                      date={val.date}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+            <div className="user_profile_hr user_profile_hr2">
+              <hr />
+            </div>
+            <div className="logout_btn_div">
+              <NavLink className="logout_btn" to="/">
+                log out
+              </NavLink>
+            </div>
+            <div className=" text-center user_profile_bottom_link">
+              <div className="row m-0">
+                <div className="col-6">
+                  <NavLink to="/">Privacy Policy</NavLink>
+                </div>
+                <div className="col-6">
+                  <NavLink to="/">Terms and condition</NavLink>
                 </div>
               </div>
             </div>

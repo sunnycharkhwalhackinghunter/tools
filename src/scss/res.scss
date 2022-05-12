@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .user_input {
+    margin-bottom: 1rem;
+  }
   .profile_img_top_div {
     padding: 0 25px;
   }

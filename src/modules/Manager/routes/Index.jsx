@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Container from "../components/Container/Container";
-import RightNavbar from "../components/RightNavbar/RightNavbar";
+import TopNavbar from "../components/TopNavbar/TopNavbar";
 import Dashboard from "../page/Dashboard";
 import NavContext from "../Context/NavContext";
 
@@ -15,7 +15,7 @@ const Index = () => {
         <NavContext.Provider value={value}>
           <Navbar />
           <Container
-            stickyNav={<RightNavbar />}
+            stickyNav={<TopNavbar />}
             content={
               <Routes>
                 <Route path="/" element={<Dashboard />} />
