@@ -11,7 +11,7 @@ import Logo from "../../../../pics/Logo.png";
 import LogoImg from "../../../common/components/NavLogo/Logo";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiTableAltFill } from "react-icons/ri";
-import Input from "../input/Input";
+import Input from "../../../common/components/input/Input";
 const NavUrl = ({ url, icon, description }) => {
   const { nav, setNav } = useContext(NavContext);
   const checkWindowSize = () => {

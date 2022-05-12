@@ -1,17 +1,61 @@
-//ICONS , STYLES
+import Card from "./Card";
+import Notification from "../../../../../../pics/profile.jpeg";
 import { MdNotifications } from "react-icons/md";
 import { BsFillChatLeftFill } from "react-icons/bs";
 import styles from "./Notifications.module.scss";
-
-//HOOKS
 import { useState } from "react";
-import useClickOutside from "../../../CustomHooks/ClickOutside";
+import useClickOutside from "../../../../CustomHooks/ClickOutside";
 import { NavLink } from "react-router-dom";
-const Notifications = () => {
+
+const Index = (props) => {
   const [isNotificationsOpen, setisNotificationsOpen] = useState(false);
   let domNode = useClickOutside(() => {
     setisNotificationsOpen(false);
   });
+  const CardData = [
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+  ];
   return (
     <>
       <div>
@@ -55,16 +99,21 @@ const Notifications = () => {
         >
           <h3 className={styles.title}>Notifications</h3>
           <div className={styles.notifications}>
-            <div className=" d-flex">
-              <div>Notifications</div>
-              <div>Notifications</div>
-              <div>Notifications</div>
-            </div>
+            {CardData.map((val, i) => {
+              return (
+                <Card
+                  key={i}
+                  img={val.img}
+                  name={val.name}
+                  text={val.text}
+                  time={val.time}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-export default Notifications;
+export default Index;

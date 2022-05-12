@@ -1,20 +1,10 @@
-//STYLES
 import styles from "./RightNavbar.module.scss";
-
-//HOOKS
 import { useContext } from "react";
-
-//CONTEXT
 import NavContext from "../../Context/NavContext";
-
-//ICONS , IMAGES
 import { MdOutlineMenu } from "react-icons/md";
-//Components
-import MyProfile from "./Submenus/MyProfile";
-import Notifications from "./Submenus/Notifications";
-import Input from "../../../common/components/input/Input";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import MyProfile from "./Submenus/MyProfile/MyProfile";
+import Notifications from "./Submenus/NotificationCard/Index";
+import SearchBar from "./Submenus/SearchBar/SearchBar";
 const RightNavbar = () => {
   const { nav, setNav } = useContext(NavContext);
 
@@ -30,18 +20,7 @@ const RightNavbar = () => {
       >
         <MdOutlineMenu />
       </div>
-      <div className="top_nav_man_input_div d-none d-xxl-block d-xl-block d-md-block">
-        <div className="top_nav_iner_div_input">
-          <span>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </span>
-          <Input
-            type="text"
-            className="form-control"
-            placeholder="What are you looking for today?"
-          />
-        </div>
-      </div>
+      <SearchBar />
       {/* ACTIONS */}
       <div className={styles.actions}>
         <Notifications />

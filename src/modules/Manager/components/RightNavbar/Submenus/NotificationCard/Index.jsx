@@ -1,18 +1,31 @@
-//ICONS , STYLES
+import Card from "./Card";
+import Notification from "../../../../../../pics/profile.jpeg";
 import { MdNotifications } from "react-icons/md";
 import { BsFillChatLeftFill } from "react-icons/bs";
 import styles from "./Notifications.module.scss";
-import NotificationImg from "../../../../common/components/img/Img";
-import Notification from "../../../../../pics/profile.jpeg";
-//HOOKS
 import { useState } from "react";
-import useClickOutside from "../../../CustomHooks/ClickOutside";
+import useClickOutside from "../../../../CustomHooks/ClickOutside";
 import { NavLink } from "react-router-dom";
-const Notifications = () => {
+
+const Index = (props) => {
   const [isNotificationsOpen, setisNotificationsOpen] = useState(false);
   let domNode = useClickOutside(() => {
     setisNotificationsOpen(false);
   });
+  const CardData = [
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+    {
+      img: Notification,
+      name: "Gaurav Kaushik",
+      text: "I have bought a new car",
+      time: "3 Seconds ago",
+    },
+  ];
   return (
     <>
       <div>
@@ -56,38 +69,21 @@ const Notifications = () => {
         >
           <h3 className={styles.title}>Notifications</h3>
           <div className={styles.notifications}>
-            <div className="notification_top_div">
-              <div className=" row m-0">
-                <div className="notification_img_col col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3">
-                  <div className="notification_img_div">
-                    <NotificationImg
-                      className="notification_img"
-                      backgroundImage={Notification}
-                    />
-                  </div>
-                </div>
-                <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9">
-                  <div>
-                    <div className="notification_text">
-                      <p className="notification_name">Gaurav Kaushik</p>
-                      <p className="notification_mess">
-                        I have bought a new car
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                  <div className="notification_time_div">
-                    <p>3 Seconds ago</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {CardData.map((val, i) => {
+              return (
+                <Card
+                  key={i}
+                  img={val.img}
+                  name={val.name}
+                  text={val.text}
+                  time={val.time}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-export default Notifications;
+export default Index;

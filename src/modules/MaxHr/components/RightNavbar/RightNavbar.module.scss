@@ -1,6 +1,12 @@
-@use "./Submenus/Icons";
 @import "../../../../scss/--mixing.scss";
 @import "../../../../scss/--var.scss";
+.icon_container {
+  position: relative;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
 .container {
   display: flex;
   align-items: center;

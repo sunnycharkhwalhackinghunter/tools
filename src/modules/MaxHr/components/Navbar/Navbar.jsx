@@ -18,7 +18,7 @@ import { RiTableAltFill, RiBankFill } from "react-icons/ri";
 import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
 import { BsCalendarX, BsCalendar2CheckFill } from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Input from "../input/Input";
+import Input from "../../../common/components/input/Input";
 import {
   faGaugeHigh,
   faPersonChalkboard,

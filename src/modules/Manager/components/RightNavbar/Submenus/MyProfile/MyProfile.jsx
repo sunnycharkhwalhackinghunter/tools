@@ -1,13 +1,13 @@
 //REACT ROUTER
 import { Link } from "react-router-dom";
-
+import NavProfile from "../../../../../common/components/NavProfile/NavProfile";
 //HOOKS
-import useClickOutside from "../../../CustomHooks/ClickOutside";
+import useClickOutside from "../../../../CustomHooks/ClickOutside";
 import { useState } from "react";
 
 //ICONS , PICS , STYLES
 import styles from "./MyProfile.module.scss";
-import NavProfile from "../../../../common/components/NavProfile/NavProfile";
+
 const MyProfile = () => {
   const [isProfileOpen, setisProfileOpen] = useState(false);
   let domNode = useClickOutside(() => {

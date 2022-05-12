@@ -4,6 +4,18 @@
   .profile_img_top_div {
     padding: 0 25px;
   }
+  .notification_time_div {
+    text-align: center;
+    p {
+      font-size: 14px;
+    }
+  }
+  .notification_mess {
+    font-size: 13px;
+  }
+  .notification_top_div {
+    background-color: #dde2ff;
+  }
 }
 @media (min-width: 768px) {
   .top_nav_iner_div_input {
