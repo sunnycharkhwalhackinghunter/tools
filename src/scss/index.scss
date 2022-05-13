@@ -460,6 +460,16 @@ a {
 .custom_container {
   padding: 1rem;
 }
+.page_top_title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  h3 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
 // all pages end
 // Dashboard
 .dashboard_top_user_name {
@@ -470,6 +480,50 @@ a {
       font-family: IBM Plex Mono;
       font-size: 15px;
     }
+  }
+}
+.dashboard_top_week_Select {
+  text-transform: capitalize;
+
+  .css-1s2u09g-control {
+    border: none;
+    border-bottom: 1px solid $red;
+  }
+  .css-1pahdxg-control {
+    &:hover {
+      border-color: $red;
+    }
+  }
+}
+.dashbaord_imfo_card {
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.dashbaord_imfo_card_text {
+  h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 550;
+    margin-top: 5px;
+  }
+}
+.dashbaord_imfo_card_icon_col_div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.dashbaord_imfo_card_icon_div {
+  margin: auto;
+  border-radius: 100%;
+  padding: 13px;
+  svg {
+    font-size: 25px;
   }
 }
 // Dashboard end
