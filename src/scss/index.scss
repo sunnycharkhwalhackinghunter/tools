@@ -456,5 +456,20 @@ a {
   }
 }
 // top nav end
-//
-//
+// all pages
+.custom_container {
+  padding: 1rem;
+}
+// all pages end
+// Dashboard
+.dashboard_top_user_name {
+  h3 {
+    font-family: IBM Plex Sans;
+    font-size: 25px;
+    span {
+      font-family: IBM Plex Mono;
+      font-size: 15px;
+    }
+  }
+}
+// Dashboard end

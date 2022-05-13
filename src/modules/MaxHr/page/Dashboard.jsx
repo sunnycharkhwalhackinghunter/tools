@@ -1,14 +1,20 @@
-import { useState } from "react";
 const Dashboard = () => {
-  const [userBreks, setUserBreks] = useState(true);
-  const changNameUser = () => {
-    setUserBreks(!userBreks);
-  };
   return (
     <>
-      <h1>Dashboard</h1>
-      <div className={`${userBreks ? "online3" : "offline3"}`}>sunny</div>
-      <button onClick={changNameUser}>v</button>
+      <div className="custom_container">
+        <div>
+          <div className="row">
+            <div className="col-6">
+              <div className="dashboard_top_user_name">
+                <h3>
+                  Hello Gaurav <span>Good Morning</span>
+                </h3>
+              </div>
+            </div>
+            <div className="col-6"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

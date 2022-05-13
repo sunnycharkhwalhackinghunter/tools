@@ -3,7 +3,7 @@
 .navbar_container {
   background-color: white;
   --nav_width: 14rem;
-  height: 100vh;
+  height: 100%;
   transition: transform 300ms ease-in-out;
 
   @media screen and (max-width: 1024px) {
