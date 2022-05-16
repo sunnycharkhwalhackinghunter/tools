@@ -522,8 +522,10 @@ a {
   margin: auto;
   border-radius: 100%;
   padding: 13px;
-  svg {
-    font-size: 25px;
-  }
+}
+.dashbaord_img {
+  @include bg_img;
+  width: 2rem;
+  height: 2rem;
 }
 // Dashboard end

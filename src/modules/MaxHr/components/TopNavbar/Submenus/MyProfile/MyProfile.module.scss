@@ -38,7 +38,12 @@
 }
 @media (max-width: 576px) {
   .menu {
-    right: 0 !important;
-    width: 18rem !important;
+    right: -18px !important;
+    width: 100vw !important;
+  }
+}
+@media (max-width: 320px) {
+  .menu {
+    right: -3px !important;
   }
 }

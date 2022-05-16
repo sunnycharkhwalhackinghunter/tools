@@ -94,14 +94,17 @@
     width: 37rem;
 
     @media screen and (max-width: 576px) {
-      width: 18rem;
+      width: 100vw;
       height: 30rem;
-      right: 50%;
+      right: 0%;
       transform: translateY(100%) translateX(33%);
     }
 
     @media screen and (max-width: 420px) {
-      right: -2rem;
+      right: -1rem;
+    }
+    @media screen and (max-width: 320px) {
+      right: -24px;
     }
   }
 }

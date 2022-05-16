@@ -1,9 +1,10 @@
 import Select from "react-select";
 import { NavLink } from "react-router-dom";
-import { MdGroups } from "react-icons/md";
-import { BsCalendar2Fill } from "react-icons/bs";
-import { FaUserAlt } from "react-icons/fa";
-import { IoLogOut } from "react-icons/io5";
+import IconImg from "../../../../common/components/img/Img";
+import D1 from "../../../.././../pics/d1.png";
+import D2 from "../../../.././../pics/d2.png";
+import D4 from "../../../.././../pics/d3.png";
+import D3 from "../../../.././../pics/d4.png";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -56,7 +57,10 @@ export const InfoCard = (props) => {
                     className="dashbaord_imfo_card_icon_div"
                     style={{ backgroundColor: props.iconbackgroundcolor }}
                   >
-                    <span style={{ color: props.iconcolor }}>{props.icon}</span>
+                    <IconImg
+                      className="dashbaord_img"
+                      backgroundImage={props.dashbaordIcon}
+                    />
                   </div>
                 </div>
                 <div className="col-9">
@@ -81,8 +85,7 @@ export const InfoCard = (props) => {
       textcolor: "white",
       cardtitle: "Total Employees",
       date: "28",
-      icon: <MdGroups />,
-      iconcolor: "white",
+      dashbaordIcon: D1,
       iconbackgroundcolor: "#2062ec",
       url: "/hr/organizationchart",
     },
@@ -91,8 +94,7 @@ export const InfoCard = (props) => {
       textcolor: "black",
       cardtitle: "Onboarding This Week",
       date: "12",
-      icon: <BsCalendar2Fill />,
-      iconcolor: "black",
+      dashbaordIcon: D2,
       iconbackgroundcolor: "#FEDA5A",
       url: "/hr/organizationchart",
     },
@@ -101,8 +103,7 @@ export const InfoCard = (props) => {
       textcolor: "white",
       cardtitle: "Interviews This week",
       date: "12",
-      icon: <FaUserAlt />,
-      iconcolor: "white",
+      dashbaordIcon: D3,
       iconbackgroundcolor: "#B916C7",
       url: "/hr/organizationchart",
     },
@@ -111,8 +112,7 @@ export const InfoCard = (props) => {
       textcolor: "white",
       cardtitle: "Releiving This Week",
       date: "12",
-      icon: <IoLogOut />,
-      iconcolor: "white",
+      dashbaordIcon: D4,
       iconbackgroundcolor: "#FB404A",
       url: "/hr/organizationchart",
     },
@@ -129,8 +129,8 @@ export const InfoCard = (props) => {
                 textcolor={val.textcolor}
                 cardtitle={val.cardtitle}
                 date={val.date}
-                icon={val.icon}
-                iconcolor={val.iconcolor}
+                // icon={val.icon}
+                dashbaordIcon={val.dashbaordIcon}
                 iconbackgroundcolor={val.iconbackgroundcolor}
                 url={val.url}
               />
