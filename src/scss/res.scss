@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .celebrations_card_user_info {
+    text-align: center;
+  }
   .profile_list_title {
     font-size: 12px;
   }
@@ -50,6 +53,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .celebrations_card_user_info {
+    p {
+      font-size: 11px;
+    }
+  }
   .dashbaord_imfo_card_text {
     h4 {
       font-size: 11px;
@@ -63,6 +71,11 @@
   }
 }
 @media (min-width: 1440px) {
+  .celebrations_card_user_info {
+    p {
+      font-size: 12px;
+    }
+  }
   .dashbaord_imfo_card_text {
     h4 {
       font-size: 15px;

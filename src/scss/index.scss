@@ -544,7 +544,7 @@ a {
 }
 .dashbaord_white_card {
   background-color: white;
-  padding: 1rem;
+  padding: 1rem 20px;
   border-radius: 10px;
 }
 .dashbaord_white_title {
@@ -553,11 +553,93 @@ a {
   margin-bottom: 10px;
   p {
     margin-bottom: 0;
-    font-size: 15px;
-    font-weight: 550;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
     span {
       font-weight: 300;
+      font-size: 15px;
     }
   }
+}
+.celebrations_card_setting_icon_div {
+  text-align: end;
+  margin-right: 0rem;
+  svg {
+    color: $text;
+    font-size: 17px;
+  }
+}
+.celebrations_card_line_title {
+  margin-top: 1rem;
+  p {
+    margin-bottom: 0;
+    color: $text;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+  hr {
+    margin: 6px 0;
+    opacity: 1;
+    background: #dde2ff;
+  }
+}
+.celebrations_card_img {
+  @include bg_img;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 100%;
+}
+.celebrations_card_user_info {
+  text-transform: capitalize;
+  h5 {
+    margin: 0;
+    font-weight: 550;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: $text;
+  }
+}
+.celebrations_card_img_top_div {
+  padding: 10px 0;
+}
+.celebrations_card_img_icon {
+  @include bg_img;
+  height: 2rem;
+  width: 2rem;
+  margin: auto;
+  margin-right: 0;
+}
+.celebrations_card_icon_div {
+  display: flex;
+}
+.celebrations_card_overflow_div {
+  overflow: scroll;
+  height: 18rem;
+}
+.holidays_card {
+  text-transform: capitalize;
+  margin-bottom: 23px;
+  h5 {
+    margin: 0;
+    font-weight: 550;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: $text;
+    span {
+      padding-left: 1rem;
+    }
+  }
+}
+.holidays_card_top_main_div {
+  margin-top: 20px;
 }
 // Dashboard end

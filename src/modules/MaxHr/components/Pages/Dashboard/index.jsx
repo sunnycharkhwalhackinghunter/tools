@@ -6,6 +6,10 @@ import D2 from "../../../.././../pics/d2.png";
 import D4 from "../../../.././../pics/d3.png";
 import D3 from "../../../.././../pics/d4.png";
 import Chart from "react-apexcharts";
+import { AiTwotoneSetting } from "react-icons/ai";
+import CardIconImg from "../../../../../pics/profile.jpeg";
+import Birthday from "../../../../../pics/b.png";
+import Anniversiry from "../../../../../pics/p.png";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -142,7 +146,121 @@ export const InfoCard = (props) => {
     </>
   );
 };
-export const EmployeesChart = () => {
+export const EmployeesChart = (props) => {
+  const CelebrationsData = [
+    {
+      toptitle: "Today(01)",
+      cat1: [
+        {
+          userImg: CardIconImg,
+          name: "Suman Gupta",
+          DOB: "27th Nov - Happy Birthday!",
+          BirthdayImg: Birthday,
+        },
+      ],
+    },
+    {
+      toptitle: "Tomorrow(01)",
+      cat1: [
+        {
+          userImg: CardIconImg,
+          name: "Suman Gupta",
+          DOB: "01st Dec - Happy  Anniversiry!",
+          BirthdayImg: Anniversiry,
+        },
+        {
+          userImg: CardIconImg,
+          name: "Suman Gupta",
+          DOB: "29th Nov - Happy Birthday!",
+          BirthdayImg: Birthday,
+        },
+        {
+          userImg: CardIconImg,
+          name: "Suman Gupta",
+          DOB: "31th Nov - Happy Birthday!",
+          BirthdayImg: Birthday,
+        },
+      ],
+    },
+  ];
+
+  const Celebrations = (props) => {
+    return (
+      <>
+        <div>
+          <div className="celebrations_card_line_title">
+            <p>{props.toptitle}</p>
+            <hr />
+          </div>
+          {props.arr.cat1.map((val, i) => {
+            return (
+              <div key={i} className="celebrations_card_img_top_div">
+                <div className="row ">
+                  <div className="col-2">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={val.userImg}
+                    />
+                  </div>
+                  <div className="col-7">
+                    <div className="celebrations_card_user_info">
+                      <h5>{val.name}</h5>
+                      <p>{val.DOB}</p>
+                    </div>
+                  </div>
+                  <div className="col-3 celebrations_card_icon_div">
+                    <IconImg
+                      className="celebrations_card_img_icon"
+                      backgroundImage={val.BirthdayImg}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+  };
+  const HolidaysData = [
+    {
+      name: "Diwali",
+      day: "Monday",
+      date: "30th Nov, 2021",
+    },
+    {
+      name: "Ramnavami",
+      day: "Monday",
+      date: "30th Nov, 2021",
+    },
+    {
+      name: "Dussehara",
+      day: "Monday",
+      date: "30th Nov, 2021",
+    },
+    {
+      name: "Christmas",
+      day: "Monday",
+      date: "30th Nov, 2021",
+    },
+    {
+      name: "Diwali",
+      day: "Monday",
+      date: "30th Nov, 2021",
+    },
+  ];
+  const Holidays = (props) => {
+    return (
+      <>
+        <div className="holidays_card">
+          <h5>{props.name}</h5>
+          <p>
+            {props.day} <span>{props.date}</span>
+          </p>
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <div>
@@ -161,6 +279,7 @@ export const EmployeesChart = () => {
                   options={{
                     colors: ["#DA1E28", "#2DCD1F"],
                     labels: ["Leave", "Working"],
+
                     dataLabels: {
                       enabled: true,
                       background: {
@@ -203,16 +322,14 @@ export const EmployeesChart = () => {
             <NavLink to="/hr/attendence">
               <div className="dashbaord_white_card">
                 <div className="dashbaord_white_title">
-                  <p>
-                    total employees: <span>20</span>
-                  </p>
+                  <p>Working Format</p>
                 </div>
                 <Chart
                   type="donut"
                   series={[23, 80]}
                   options={{
-                    colors: ["#DA1E28", "#2DCD1F"],
-                    labels: ["Leave", "Working"],
+                    colors: ["#85E57D", "#2DCD1F"],
+                    labels: ["Office", "Home"],
                     dataLabels: {
                       enabled: true,
                       background: {
@@ -250,6 +367,81 @@ export const EmployeesChart = () => {
                 ></Chart>
               </div>
             </NavLink>
+          </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+            <NavLink to="/hr/attendence">
+              <div className="dashbaord_white_card">
+                <div className="dashbaord_white_title">
+                  <p>Who’s Away</p>
+                </div>
+                d
+              </div>
+            </NavLink>
+          </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+            <div className="dashbaord_white_card">
+              <div className="dashbaord_white_title">
+                <div className="row">
+                  <div className="col-6">
+                    <div>
+                      <p>Celebrations</p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div>
+                      <div className="celebrations_card_setting_icon_div">
+                        <NavLink to="/hr/Settings">
+                          <AiTwotoneSetting />
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="celebrations_card_overflow_div">
+                {CelebrationsData.map((val, i) => {
+                  return (
+                    <Celebrations key={i} toptitle={val.toptitle} arr={val} />
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+            <div className="dashbaord_white_card">
+              <div className="dashbaord_white_title">
+                <div className="row">
+                  <div className="col-6">
+                    <div>
+                      <p>Holidays</p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div>
+                      <div className="celebrations_card_setting_icon_div">
+                        <NavLink to="/hr/Settings">
+                          <AiTwotoneSetting />
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="celebrations_card_overflow_div">
+                <div className="holidays_card_top_main_div">
+                  {HolidaysData.map((val, i) => {
+                    return (
+                      <Holidays
+                        key={i}
+                        name={val.name}
+                        day={val.day}
+                        date={val.date}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

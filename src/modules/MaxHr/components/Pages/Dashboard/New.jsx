@@ -1,51 +1,42 @@
-import Chart from "react-apexcharts";
+import IconImg from "../../../../common/components/img/Img";
 
-const EmployeesChart = () => {
+const New = (props) => {
   return (
     <>
-      <Chart
-        type="donut"
-        series={[23, 80]}
-        options={{
-          colors: ["#DA1E28", "#2DCD1F"],
-          labels: ["Leave", "Working"],
-          dataLabels: {
-            enabled: true,
-            background: {
-              enabled: true,
-              foreColor: "black",
-              opacity: 1,
-            },
-            dropShadow: {
-              enabled: false,
-              opacity: 1,
-            },
-          },
-          chart: {
-            height: "100%",
-            width: "100%",
-          },
-          legend: {
-            show: true,
-            position: "bottom",
-            horizontalAlign: "center",
-            fontSize: "18px",
-            markers: {
-              width: 12,
-              height: 12,
-              radius: 12,
-              offsetX: 0,
-              offsetY: 0,
-            },
-            itemMargin: {
-              horizontal: 5,
-              vertical: 0,
-            },
-          },
-        }}
-      ></Chart>
+      <div>
+        <div className="celebrations_card_line_title">
+          <p>{props.toptitle}</p>
+          <hr />
+        </div>
+        {props.arr.cat1.map((val, i) => {
+          return (
+            <div key={i} className="celebrations_card_img_top_div">
+              <div className="row ">
+                <div className="col-2">
+                  <IconImg
+                    className="celebrations_card_img"
+                    backgroundImage={val.userImg}
+                  />
+                </div>
+                <div className="col-7">
+                  <div className="celebrations_card_user_info">
+                    <h5>{val.name}</h5>
+                    <p>{val.DOB}</p>
+                  </div>
+                </div>
+                <div className="col-3 celebrations_card_icon_div">
+                  <IconImg
+                    className="celebrations_card_img_icon"
+                    backgroundImage={val.BirthdayImg}
+                  />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
 
-export default EmployeesChart;
+export default New;
