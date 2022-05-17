@@ -4,7 +4,6 @@ import {
   InfoCard,
   EmployeesChart,
 } from "../components/Pages/Dashboard/index";
-import { NavLink } from "react-router-dom";
 const Dashboard = () => {
   return (
     <>
