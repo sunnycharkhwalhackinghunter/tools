@@ -12,7 +12,7 @@ const Card = (props) => {
               />
             </div>
           </div>
-          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9">
+          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-6 col-6">
             <div>
               <div className="notification_text">
                 <p className="notification_name">{props.name}</p>
@@ -20,7 +20,7 @@ const Card = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
             <div className="notification_time_div">
               <p>{props.time}</p>
             </div>

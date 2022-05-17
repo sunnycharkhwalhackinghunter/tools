@@ -25,36 +25,6 @@ const Index = (props) => {
       text: "I have bought a new car",
       time: "3 Seconds ago",
     },
-    {
-      img: Notification,
-      name: "Gaurav Kaushik",
-      text: "I have bought a new car",
-      time: "3 Seconds ago",
-    },
-    {
-      img: Notification,
-      name: "Gaurav Kaushik",
-      text: "I have bought a new car",
-      time: "3 Seconds ago",
-    },
-    {
-      img: Notification,
-      name: "Gaurav Kaushik",
-      text: "I have bought a new car",
-      time: "3 Seconds ago",
-    },
-    {
-      img: Notification,
-      name: "Gaurav Kaushik",
-      text: "I have bought a new car",
-      time: "3 Seconds ago",
-    },
-    {
-      img: Notification,
-      name: "Gaurav Kaushik",
-      text: "I have bought a new car",
-      time: "3 Seconds ago",
-    },
   ];
   return (
     <>
@@ -97,7 +67,7 @@ const Index = (props) => {
             isNotificationsOpen ? styles.submenu_active : ""
           }`}
         >
-          <h3 className={styles.title}>Notifications</h3>
+          {/* <h3 className={styles.title}>Notifications</h3> */}
           <div className={styles.notifications}>
             {CardData.map((val, i) => {
               return (
@@ -110,6 +80,13 @@ const Index = (props) => {
                 />
               );
             })}
+            <div>
+              <div className="notifications_btn">
+                <NavLink className="" to="/">
+                  view more
+                </NavLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

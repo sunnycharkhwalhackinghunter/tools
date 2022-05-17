@@ -2,8 +2,9 @@ import {
   PagesTopTitle,
   UserName,
   InfoCard,
+  EmployeesChart,
 } from "../components/Pages/Dashboard/index";
-
+import { NavLink } from "react-router-dom";
 const Dashboard = () => {
   return (
     <>
@@ -11,15 +12,7 @@ const Dashboard = () => {
         <UserName />
         <PagesTopTitle title="dashbaord" />
         <InfoCard />
-        <div>
-          <div className="row">
-            <div className="col-4">
-              <div className=" bg-white">
-                <p>Total Employees: 20</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <EmployeesChart />
       </div>
     </>
   );

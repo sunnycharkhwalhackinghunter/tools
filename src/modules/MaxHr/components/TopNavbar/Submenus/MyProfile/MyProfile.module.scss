@@ -26,14 +26,14 @@
     opacity: 0;
     pointer-events: none;
     transition: all ease-in-out 0.3s;
-    width: 25rem;
+    width: 22rem;
   }
 
   .menu_active {
     display: block;
     pointer-events: initial;
     opacity: 1;
-    transform: translateY(100%);
+    transform: translateY(102%);
   }
 }
 @media (max-width: 576px) {

@@ -15,15 +15,15 @@
     bottom: -0.5rem;
     transform: translateY(95%);
     background: white;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
     pointer-events: none;
     opacity: 0;
     transition: all ease-in-out 300ms;
     width: 37rem;
-    overflow: scroll;
-    height: 35rem;
+
     @media screen and (max-width: 600px) {
       right: 60%;
       transform: translateY(95%) translateX(60%);
@@ -46,7 +46,7 @@
     .notifications {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      // gap: 0.5rem;
 
       .notification {
         transition: background ease-in-out 300ms;
@@ -89,15 +89,14 @@
   .submenu_active {
     opacity: 1;
     pointer-events: initial;
-    transform: translateY(100%);
-    padding: 1rem;
-    width: 37rem;
+    transform: translateY(113%) translateX(26%);
+    // padding: 1rem;
+    width: 28rem;
 
     @media screen and (max-width: 576px) {
       width: 100vw;
-      height: 30rem;
       right: 0%;
-      transform: translateY(100%) translateX(33%);
+      transform: translateY(113%) translateX(33%);
     }
 
     @media screen and (max-width: 420px) {

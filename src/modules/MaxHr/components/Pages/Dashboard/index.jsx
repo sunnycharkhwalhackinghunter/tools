@@ -5,6 +5,7 @@ import D1 from "../../../.././../pics/d1.png";
 import D2 from "../../../.././../pics/d2.png";
 import D4 from "../../../.././../pics/d3.png";
 import D3 from "../../../.././../pics/d4.png";
+import Chart from "react-apexcharts";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -136,6 +137,120 @@ export const InfoCard = (props) => {
               />
             );
           })}
+        </div>
+      </div>
+    </>
+  );
+};
+export const EmployeesChart = () => {
+  return (
+    <>
+      <div>
+        <div className="row ">
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+            <NavLink to="/hr/attendence">
+              <div className="dashbaord_white_card">
+                <div className="dashbaord_white_title">
+                  <p>
+                    total employees: <span>20</span>
+                  </p>
+                </div>
+                <Chart
+                  type="donut"
+                  series={[23, 80]}
+                  options={{
+                    colors: ["#DA1E28", "#2DCD1F"],
+                    labels: ["Leave", "Working"],
+                    dataLabels: {
+                      enabled: true,
+                      background: {
+                        enabled: true,
+                        foreColor: "black",
+                        opacity: 1,
+                      },
+                      dropShadow: {
+                        enabled: false,
+                        opacity: 1,
+                      },
+                    },
+                    chart: {
+                      height: "100%",
+                      width: "100%",
+                    },
+                    legend: {
+                      show: true,
+                      position: "bottom",
+                      horizontalAlign: "center",
+                      fontSize: "18px",
+                      markers: {
+                        width: 12,
+                        height: 12,
+                        radius: 12,
+                        offsetX: 0,
+                        offsetY: 0,
+                      },
+                      itemMargin: {
+                        horizontal: 5,
+                        vertical: 0,
+                      },
+                    },
+                  }}
+                ></Chart>
+              </div>
+            </NavLink>
+          </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+            <NavLink to="/hr/attendence">
+              <div className="dashbaord_white_card">
+                <div className="dashbaord_white_title">
+                  <p>
+                    total employees: <span>20</span>
+                  </p>
+                </div>
+                <Chart
+                  type="donut"
+                  series={[23, 80]}
+                  options={{
+                    colors: ["#DA1E28", "#2DCD1F"],
+                    labels: ["Leave", "Working"],
+                    dataLabels: {
+                      enabled: true,
+                      background: {
+                        enabled: true,
+                        foreColor: "black",
+                        opacity: 1,
+                      },
+                      dropShadow: {
+                        enabled: false,
+                        opacity: 1,
+                      },
+                    },
+                    chart: {
+                      height: "100%",
+                      width: "100%",
+                    },
+                    legend: {
+                      show: true,
+                      position: "bottom",
+                      horizontalAlign: "center",
+                      fontSize: "18px",
+                      markers: {
+                        width: 12,
+                        height: 12,
+                        radius: 12,
+                        offsetX: 0,
+                        offsetY: 0,
+                      },
+                      itemMargin: {
+                        horizontal: 5,
+                        vertical: 0,
+                      },
+                    },
+                  }}
+                ></Chart>
+              </div>
+            </NavLink>
+          </div>
         </div>
       </div>
     </>

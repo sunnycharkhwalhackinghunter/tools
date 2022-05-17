@@ -32,12 +32,12 @@ const MyProfile = () => {
     {
       icon: <MdDinnerDining />,
       title: "Lunch Break ",
-      time: "30 mint",
+      time: "30 min",
     },
     {
       icon: <CgCoffee />,
       title: " Break ",
-      time: "15 mint",
+      time: "15 min",
     },
     {
       icon: <RiHotelBedLine />,
@@ -46,7 +46,7 @@ const MyProfile = () => {
     },
     {
       icon: <MdLocalHospital />,
-      title: " Emergrncy ",
+      title: " Emergency ",
       time: "2 hr",
     },
   ];
@@ -202,10 +202,14 @@ const MyProfile = () => {
             <div className=" text-center user_profile_bottom_link">
               <div className="row m-0">
                 <div className="col-6">
-                  <NavLink to="/">Privacy Policy</NavLink>
+                  <div className="user_profile_page_link">
+                    <NavLink to="/">Privacy policy</NavLink>
+                  </div>
                 </div>
                 <div className="col-6">
-                  <NavLink to="/">Terms and condition</NavLink>
+                  <div className="user_profile_page_link2">
+                    <NavLink to="/">Terms and condition</NavLink>
+                  </div>
                 </div>
               </div>
             </div>

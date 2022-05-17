@@ -1,6 +1,12 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .profile_list_title {
+    font-size: 12px;
+  }
+  .user_profile_name {
+    font-size: 25px;
+  }
   .dashboard_top_user_name {
     text-align: center;
     h3 {

@@ -130,15 +130,14 @@ ul {
 .notification_time_div {
   p {
     color: $cgr;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 550;
   }
 }
 .notification_top_div {
   background-color: #dde2ff54;
   padding: 15px 10px;
-  border-radius: 10px;
-  margin-top: 10px;
+
   transition: all 0.3s ease-out;
   &:hover {
     background-color: #dde2ff;
@@ -168,8 +167,8 @@ ul {
   }
 }
 .user_profile_name {
-  font-size: 20px;
-  font-weight: 550;
+  font-size: 30px;
+  font-weight: 300;
   color: $c2;
 }
 .user_profile_work {
@@ -182,8 +181,8 @@ ul {
 }
 .user_profile_icon_div {
   position: absolute;
-  right: 22%;
-  bottom: 0%;
+  right: 10%;
+  bottom: 4%;
 }
 .user_profile_icon {
   color: $text !important;
@@ -193,13 +192,22 @@ ul {
   padding: 1rem;
 }
 .user_profile_hr2 {
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .user_profile_hr {
   hr {
     background-color: #d0d4ee;
     opacity: 1;
+    margin: 0;
   }
+}
+.user_profile_page_link {
+  text-align: start;
+  padding-left: 7px;
+}
+.user_profile_page_link2 {
+  text-align: end;
+  padding-right: 7px;
 }
 .switch {
   position: relative;
@@ -397,18 +405,18 @@ ul {
 }
 .profile_list_title {
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
-  font-family: IBM Plex sans-serif;
   color: black;
 }
 .profile_list_date_div {
   p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     padding-top: 2px;
     font-family: IBM Plex sans;
-    color: text;
+    color: $text;
+    padding-left: 5px;
   }
 }
 .profile_list_title_main_div {
@@ -426,11 +434,10 @@ ul {
   color: white;
   outline: none;
   border: none;
-  font-size: 18px;
+  font-size: 15px;
   text-transform: capitalize;
   padding: 14px 40px;
-  font-family: IBM Plex sans-serif;
-  font-weight: 400;
+  font-weight: 550;
   border-radius: 10px;
   transition: all 0.3s;
   &:hover {
@@ -438,16 +445,23 @@ ul {
     background-color: $hover;
   }
 }
+.notifications_btn {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 4px 0;
+  a {
+    font-size: 13px;
+  }
+}
 .logout_btn_div {
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 a {
   text-decoration: none !important;
 }
 .user_profile_bottom_link {
-  text-transform: capitalize;
   padding-bottom: 1rem;
   transition: all 0.3s;
   a {
@@ -527,5 +541,23 @@ a {
   @include bg_img;
   width: 2rem;
   height: 2rem;
+}
+.dashbaord_white_card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.dashbaord_white_title {
+  text-transform: capitalize;
+  color: black;
+  margin-bottom: 10px;
+  p {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 550;
+    span {
+      font-weight: 300;
+    }
+  }
 }
 // Dashboard end
