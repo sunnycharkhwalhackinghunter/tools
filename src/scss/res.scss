@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  custom_container {
+    padding: 10px;
+  }
   .celebrations_card_user_info {
     text-align: center;
   }

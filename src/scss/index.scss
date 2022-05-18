@@ -11,6 +11,7 @@
 body {
   background-color: #dde2ff !important;
 }
+
 // nav
 .logo_div {
   background: $c2;
@@ -371,6 +372,7 @@ ul {
 .online3 {
   display: none;
 }
+
 .user_input {
   label {
     font-size: 15px;
@@ -472,7 +474,7 @@ a {
 // top nav end
 // all pages
 .custom_container {
-  padding: 1rem;
+  padding: 1.3rem;
 }
 .page_top_title {
   margin-top: 2rem;
@@ -566,7 +568,7 @@ a {
   text-align: end;
   margin-right: 0rem;
   svg {
-    color: $text;
+    color: #525252;
     font-size: 17px;
   }
 }
@@ -574,7 +576,7 @@ a {
   margin-top: 1rem;
   p {
     margin-bottom: 0;
-    color: $text;
+    color: #161616;
     text-transform: capitalize;
     font-size: 12px;
   }
@@ -593,8 +595,9 @@ a {
 .celebrations_card_user_info {
   text-transform: capitalize;
   h5 {
+    color: #0a0e30;
     margin: 0;
-    font-weight: 550;
+    // font-weight: 550;
     margin-bottom: 5px;
     font-size: 16px;
   }
@@ -606,13 +609,15 @@ a {
 }
 .celebrations_card_img_top_div {
   padding: 10px 0;
+  position: relative;
+  transition: all 0.3s;
 }
 .celebrations_card_img_icon {
   @include bg_img;
   height: 2rem;
   width: 2rem;
   margin: auto;
-  margin-right: 0;
+  margin-right: 8px;
 }
 .celebrations_card_icon_div {
   display: flex;
@@ -626,7 +631,7 @@ a {
   margin-bottom: 23px;
   h5 {
     margin: 0;
-    font-weight: 550;
+    // font-weight: 550;
     margin-bottom: 5px;
     font-size: 16px;
   }
@@ -641,5 +646,61 @@ a {
 }
 .holidays_card_top_main_div {
   margin-top: 20px;
+}
+.reimbursement_top_title {
+  display: flex;
+  align-items: baseline;
+  text-transform: capitalize;
+  a {
+    font-size: 13px;
+    margin-left: 9px;
+  }
+}
+.reimbursement_top_title_link_page {
+  text-transform: capitalize;
+  text-align: end;
+  margin-top: 3px;
+  a {
+    font-size: 13px;
+    margin-left: 9px;
+  }
+}
+.reimbursement_card_right_icon {
+  margin: auto;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.approve {
+  display: none;
+  transition: all 0.3s;
+}
+.reject {
+  color: black;
+  display: block;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.reimbursement_card_options {
+  text-transform: capitalize;
+  position: absolute;
+  background: white;
+  color: white;
+  z-index: 1;
+  top: 0%;
+  right: 0%;
+  transition: all 0.3s;
+  p {
+    transition: all 0.3s;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: $red;
+    padding: 6px 40px 6px 10px;
+    font-size: 15px;
+    &:hover {
+      color: black;
+      background-color: #f5ecec;
+      padding: 6px 40px 6px 10px;
+    }
+  }
 }
 // Dashboard end

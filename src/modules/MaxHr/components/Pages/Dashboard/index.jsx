@@ -6,10 +6,13 @@ import D2 from "../../../.././../pics/d2.png";
 import D4 from "../../../.././../pics/d3.png";
 import D3 from "../../../.././../pics/d4.png";
 import Chart from "react-apexcharts";
+import ReactApexChart from "react-apexcharts";
 import { AiTwotoneSetting } from "react-icons/ai";
 import CardIconImg from "../../../../../pics/profile.jpeg";
 import Birthday from "../../../../../pics/b.png";
 import Anniversiry from "../../../../../pics/p.png";
+import { useState } from "react";
+import React, { Component } from "react";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -57,7 +60,7 @@ export const InfoCard = (props) => {
               style={{ backgroundColor: props.backgroundcolor }}
             >
               <div className="row">
-                <div className="col-3 dashbaord_imfo_card_icon_col_div">
+                <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-3 col-sm-3 col-3 dashbaord_imfo_card_icon_col_div">
                   <div
                     className="dashbaord_imfo_card_icon_div"
                     style={{ backgroundColor: props.iconbackgroundcolor }}
@@ -68,7 +71,7 @@ export const InfoCard = (props) => {
                     />
                   </div>
                 </div>
-                <div className="col-9">
+                <div className="col-xxl-9 col-xl-9 col-lg-8 col-md-9 col-sm-9 col-9">
                   <div
                     className="dashbaord_imfo_card_text"
                     style={{ color: props.textcolor }}
@@ -147,6 +150,137 @@ export const InfoCard = (props) => {
   );
 };
 export const EmployeesChart = (props) => {
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <NavLink to="/hr/attendence">
+          <div className="dashbaord_white_card">
+            <div className="dashbaord_white_title">
+              <p>
+                total employees: <span>20</span>
+              </p>
+            </div>
+            <Chart
+              type="donut"
+              series={[23, 80]}
+              options={{
+                colors: ["#DA1E28", "#2DCD1F"],
+                labels: ["Leave", "Working"],
+
+                dataLabels: {
+                  enabled: true,
+                  background: {
+                    enabled: true,
+                    foreColor: "black",
+                    opacity: 1,
+                  },
+                  dropShadow: {
+                    enabled: false,
+                    opacity: 1,
+                  },
+                },
+                chart: {
+                  height: "100%",
+                  width: "100%",
+                },
+                legend: {
+                  show: true,
+                  position: "bottom",
+                  horizontalAlign: "center",
+                  fontSize: "18px",
+                  markers: {
+                    width: 12,
+                    height: 12,
+                    radius: 12,
+                    offsetX: 0,
+                    offsetY: 0,
+                  },
+                  itemMargin: {
+                    horizontal: 5,
+                    vertical: 0,
+                  },
+                },
+              }}
+            ></Chart>
+          </div>
+        </NavLink>
+      </div>
+    </>
+  );
+};
+export const WorkingFormatChart = () => {
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <NavLink to="/hr/attendence">
+          <div className="dashbaord_white_card">
+            <div className="dashbaord_white_title">
+              <p>Working Format</p>
+            </div>
+            <Chart
+              type="donut"
+              series={[23, 80]}
+              options={{
+                colors: ["#85E57D", "#2DCD1F"],
+                labels: ["Office", "Home"],
+                dataLabels: {
+                  enabled: true,
+                  background: {
+                    enabled: true,
+                    foreColor: "black",
+                    opacity: 1,
+                  },
+                  dropShadow: {
+                    enabled: false,
+                    opacity: 1,
+                  },
+                },
+                chart: {
+                  height: "100%",
+                  width: "100%",
+                },
+                legend: {
+                  show: true,
+                  position: "bottom",
+                  horizontalAlign: "center",
+                  fontSize: "18px",
+                  markers: {
+                    width: 12,
+                    height: 12,
+                    radius: 12,
+                    offsetX: 0,
+                    offsetY: 0,
+                  },
+                  itemMargin: {
+                    horizontal: 5,
+                    vertical: 0,
+                  },
+                },
+              }}
+            ></Chart>
+          </div>
+        </NavLink>
+      </div>
+    </>
+  );
+};
+export const WhoAwayApp = () => {
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <NavLink to="/hr/attendence">
+          <div className="dashbaord_white_card">
+            <div className="dashbaord_white_title">
+              <p>Who’s Away</p>
+            </div>
+            d
+          </div>
+        </NavLink>
+      </div>
+    </>
+  );
+};
+export const CelebrationsApp = () => {
   const CelebrationsData = [
     {
       toptitle: "Today(01)",
@@ -222,6 +356,39 @@ export const EmployeesChart = (props) => {
       </>
     );
   };
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-6">
+                <div>
+                  <p>Celebrations</p>
+                </div>
+              </div>
+              <div className="col-6">
+                <div>
+                  <div className="celebrations_card_setting_icon_div">
+                    <NavLink to="/hr/Settings">
+                      <AiTwotoneSetting />
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="celebrations_card_overflow_div">
+            {CelebrationsData.map((val, i) => {
+              return <Celebrations key={i} toptitle={val.toptitle} arr={val} />;
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export const HolidaysApp = () => {
   const HolidaysData = [
     {
       name: "Diwali",
@@ -263,182 +430,55 @@ export const EmployeesChart = (props) => {
   };
   return (
     <>
-      <div>
-        <div className="row ">
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
-            <NavLink to="/hr/attendence">
-              <div className="dashbaord_white_card">
-                <div className="dashbaord_white_title">
-                  <p>
-                    total employees: <span>20</span>
-                  </p>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-6">
+                <div>
+                  <p>Holidays</p>
                 </div>
-                <Chart
-                  type="donut"
-                  series={[23, 80]}
-                  options={{
-                    colors: ["#DA1E28", "#2DCD1F"],
-                    labels: ["Leave", "Working"],
-
-                    dataLabels: {
-                      enabled: true,
-                      background: {
-                        enabled: true,
-                        foreColor: "black",
-                        opacity: 1,
-                      },
-                      dropShadow: {
-                        enabled: false,
-                        opacity: 1,
-                      },
-                    },
-                    chart: {
-                      height: "100%",
-                      width: "100%",
-                    },
-                    legend: {
-                      show: true,
-                      position: "bottom",
-                      horizontalAlign: "center",
-                      fontSize: "18px",
-                      markers: {
-                        width: 12,
-                        height: 12,
-                        radius: 12,
-                        offsetX: 0,
-                        offsetY: 0,
-                      },
-                      itemMargin: {
-                        horizontal: 5,
-                        vertical: 0,
-                      },
-                    },
-                  }}
-                ></Chart>
               </div>
-            </NavLink>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
-            <NavLink to="/hr/attendence">
-              <div className="dashbaord_white_card">
-                <div className="dashbaord_white_title">
-                  <p>Working Format</p>
-                </div>
-                <Chart
-                  type="donut"
-                  series={[23, 80]}
-                  options={{
-                    colors: ["#85E57D", "#2DCD1F"],
-                    labels: ["Office", "Home"],
-                    dataLabels: {
-                      enabled: true,
-                      background: {
-                        enabled: true,
-                        foreColor: "black",
-                        opacity: 1,
-                      },
-                      dropShadow: {
-                        enabled: false,
-                        opacity: 1,
-                      },
-                    },
-                    chart: {
-                      height: "100%",
-                      width: "100%",
-                    },
-                    legend: {
-                      show: true,
-                      position: "bottom",
-                      horizontalAlign: "center",
-                      fontSize: "18px",
-                      markers: {
-                        width: 12,
-                        height: 12,
-                        radius: 12,
-                        offsetX: 0,
-                        offsetY: 0,
-                      },
-                      itemMargin: {
-                        horizontal: 5,
-                        vertical: 0,
-                      },
-                    },
-                  }}
-                ></Chart>
-              </div>
-            </NavLink>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
-            <NavLink to="/hr/attendence">
-              <div className="dashbaord_white_card">
-                <div className="dashbaord_white_title">
-                  <p>Who’s Away</p>
-                </div>
-                d
-              </div>
-            </NavLink>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
-            <div className="dashbaord_white_card">
-              <div className="dashbaord_white_title">
-                <div className="row">
-                  <div className="col-6">
-                    <div>
-                      <p>Celebrations</p>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div>
-                      <div className="celebrations_card_setting_icon_div">
-                        <NavLink to="/hr/Settings">
-                          <AiTwotoneSetting />
-                        </NavLink>
-                      </div>
-                    </div>
+              <div className="col-6">
+                <div>
+                  <div className="celebrations_card_setting_icon_div">
+                    <NavLink to="/hr/Settings">
+                      <AiTwotoneSetting />
+                    </NavLink>
                   </div>
                 </div>
-              </div>
-              <div className="celebrations_card_overflow_div">
-                {CelebrationsData.map((val, i) => {
-                  return (
-                    <Celebrations key={i} toptitle={val.toptitle} arr={val} />
-                  );
-                })}
               </div>
             </div>
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
-            <div className="dashbaord_white_card">
-              <div className="dashbaord_white_title">
-                <div className="row">
-                  <div className="col-6">
-                    <div>
-                      <p>Holidays</p>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div>
-                      <div className="celebrations_card_setting_icon_div">
-                        <NavLink to="/hr/Settings">
-                          <AiTwotoneSetting />
-                        </NavLink>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="celebrations_card_overflow_div">
-                <div className="holidays_card_top_main_div">
-                  {HolidaysData.map((val, i) => {
-                    return (
-                      <Holidays
-                        key={i}
-                        name={val.name}
-                        day={val.day}
-                        date={val.date}
-                      />
-                    );
-                  })}
+          <div className="celebrations_card_overflow_div">
+            <div className="holidays_card_top_main_div">
+              {HolidaysData.map((val, i) => {
+                return (
+                  <Holidays
+                    key={i}
+                    name={val.name}
+                    day={val.day}
+                    date={val.date}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export const CalendarApp = () => {
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-6">
+                <div>
+                  <p>calendar</p>
                 </div>
               </div>
             </div>
@@ -448,3 +488,192 @@ export const EmployeesChart = (props) => {
     </>
   );
 };
+export const ApprovalsCard = (props) => {
+  const Approvals = (props) => {
+    const [userApprove, setUserApprove] = useState(-1);
+    const changApprove = (i) => {
+      setUserApprove(i);
+    };
+    return (
+      <>
+        <div>
+          <div className="celebrations_card_line_title">
+            <p>{props.toptitle}</p>
+            <hr />
+          </div>
+          {props.arr.cat1.map((val, i) => {
+            return (
+              <div key={i} className="celebrations_card_img_top_div">
+                <div className="row ">
+                  <div className="col-2">
+                    <NavLink to={val.link}>
+                      <IconImg
+                        className="celebrations_card_img"
+                        backgroundImage={val.userImg}
+                      />
+                    </NavLink>
+                  </div>
+                  <div className="col-7">
+                    <NavLink to={val.link}>
+                      <div className="celebrations_card_user_info">
+                        <h5>{val.name}</h5>
+                        <p>{val.DOB}</p>
+                      </div>
+                    </NavLink>
+                  </div>
+                  <div className="col-3 celebrations_card_icon_div">
+                    <span
+                      className="reimbursement_card_right_icon"
+                      onClick={() => changApprove(i)}
+                    >
+                      {val.ApprovalsCardIcon}
+                    </span>
+
+                    <div
+                      className={`${userApprove !== i ? "approve" : "reject"}`}
+                    >
+                      <div
+                        className="reimbursement_card_options"
+                        onClick={() => changApprove(-1)}
+                      >
+                        <p>approve</p>
+                        <p>reject</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+  };
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-8">
+                <div className=" d-flex reimbursement_top_title">
+                  <p>{props.title}</p>
+                  <NavLink to="/hr/Settings">3 new</NavLink>
+                </div>
+              </div>
+              <div className="col-4">
+                <div className="reimbursement_top_title_link_page">
+                  <div>
+                    <NavLink to="/hr/Settings">View All</NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="celebrations_card_overflow_div">
+            {props.data.map((val, i) => {
+              return <Approvals key={i} toptitle={val.toptitle} arr={val} />;
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export class ApexChart extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      series: [
+        {
+          name: "Cashflow",
+          type: "column",
+          data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5],
+        },
+        {
+          name: "Revenue",
+          type: "column",
+          data: [20, 29, 37, 36, 44, 45, 50, 58],
+        },
+      ],
+      options: {
+        chart: {
+          height: 350,
+          type: "line",
+          stacked: false,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          width: [1, 1, 4],
+        },
+        xaxis: {
+          categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+        },
+        yaxis: [
+          {
+            axisTicks: {
+              show: false,
+            },
+            axisBorder: {
+              show: true,
+              color: "#008FFB",
+            },
+            labels: {
+              style: {
+                colors: "#008FFB",
+              },
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          {
+            opposite: true,
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: "#00E396",
+            },
+            labels: {
+              style: {
+                colors: "#00E396",
+              },
+            },
+          },
+        ],
+
+        legend: {
+          horizontalAlign: "left",
+          offsetX: 40,
+        },
+      },
+    };
+  }
+
+  render() {
+    return (
+      <>
+        <div className=" col-8">
+          <div className="dashbaord_white_card">
+            <div class="dashbaord_white_title">
+              <p>Working Time</p>
+            </div>
+            <div id="chart">
+              <ReactApexChart
+                options={this.state.options}
+                series={this.state.series}
+                type="line"
+                height={350}
+              />
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
