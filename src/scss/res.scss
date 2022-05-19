@@ -79,6 +79,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .working_time_info {
+    p {
+      font-size: 15px;
+    }
+  }
   .reimbursement_top_title_link_page {
     margin-top: 0px;
   }
@@ -105,6 +110,11 @@
   }
 }
 @media (min-width: 1440px) {
+  .working_time_info {
+    p {
+      font-size: 17px;
+    }
+  }
   .reimbursement_top_title_link_page {
     margin-top: 3px;
   }
