@@ -1,6 +1,14 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .celebrations_card_user_info {
+    h5 {
+      font-size: 14px;
+    }
+  }
+  .reimbursement_top_title_link_page {
+    margin-top: -4px;
+  }
   .working_time_info_main_div {
     height: 89%;
   }
@@ -19,7 +27,7 @@
 
   .dashbaord_white_title {
     p {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   .custom_container {
