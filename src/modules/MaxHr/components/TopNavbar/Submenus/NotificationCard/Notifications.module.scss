@@ -89,14 +89,14 @@
   .submenu_active {
     opacity: 1;
     pointer-events: initial;
-    transform: translateY(113%) translateX(26%);
+    transform: translateY(111%) translateX(26%);
     // padding: 1rem;
     width: 28rem;
 
     @media screen and (max-width: 576px) {
       width: 100vw;
       right: 0%;
-      transform: translateY(113%) translateX(33%);
+      transform: translateY(111%) translateX(33%);
     }
 
     @media screen and (max-width: 360px) {

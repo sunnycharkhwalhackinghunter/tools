@@ -14,6 +14,7 @@ import { RiHotelBedLine } from "react-icons/ri";
 import UserBreks from "./subPages/UserBreaks";
 import UserInput from "./subPages/UserInput";
 import ProfileList from "./subPages/ProfileList";
+import { IoLogOutOutline } from "react-icons/io5";
 const MyProfile = () => {
   const [userBreks, setUserBreks] = useState(true);
   const [isOnline, setIsOnline] = useState(true);
@@ -200,7 +201,7 @@ const MyProfile = () => {
                 log out
               </NavLink>
             </div>
-            <div className=" text-center user_profile_bottom_link">
+            {/* <div className=" text-center user_profile_bottom_link">
               <div className="row m-0">
                 <div className="col-6">
                   <div className="user_profile_page_link">
@@ -213,7 +214,7 @@ const MyProfile = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
