@@ -703,4 +703,60 @@ a {
     }
   }
 }
+.dashboard_top_week_Select2 {
+  text-transform: capitalize;
+
+  .css-1s2u09g-control {
+    border: none;
+    border-bottom: 1px solid $red;
+  }
+  .css-1pahdxg-control {
+    &:hover {
+      border-color: $red;
+    }
+  }
+  .css-1okebmr-indicatorSeparator {
+    display: none;
+  }
+  .css-tlfecz-indicatorContainer {
+    padding: 0;
+  }
+  .css-14el2xx-placeholder {
+    font-size: 14px;
+  }
+}
+.working_time_info_main_div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.working_time_info {
+  width: 100%;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  text-align: center;
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 550;
+    margin-bottom: 1rem;
+  }
+  .span1 {
+    color: $green;
+  }
+  .span2 {
+    color: $red;
+  }
+  .span3 {
+    color: #525252;
+  }
+}
 // Dashboard end

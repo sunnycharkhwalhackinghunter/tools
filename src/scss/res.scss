@@ -1,7 +1,30 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
-  custom_container {
+  .working_time_info_main_div {
+    height: 89%;
+  }
+  .page_top_title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+  .page_top_title {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .reimbursement_top_title_link_page {
+    margin-top: 0px;
+  }
+  .dashbaord_white_title {
+    p {
+      font-size: 15px;
+    }
+  }
+  .custom_container {
     padding: 10px;
   }
   .celebrations_card_user_info {
@@ -56,6 +79,14 @@
   }
 }
 @media (min-width: 1024px) {
+  .reimbursement_top_title_link_page {
+    margin-top: 0px;
+  }
+  .dashbaord_white_title {
+    p {
+      font-size: 15px;
+    }
+  }
   .celebrations_card_user_info {
     p {
       font-size: 11px;
@@ -74,6 +105,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .reimbursement_top_title_link_page {
+    margin-top: 3px;
+  }
+  .dashbaord_white_title {
+    p {
+      font-size: 18px;
+    }
+  }
   .celebrations_card_user_info {
     p {
       font-size: 12px;

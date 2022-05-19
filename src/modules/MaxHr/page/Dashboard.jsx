@@ -9,7 +9,7 @@ import {
   WhoAwayApp,
   WorkingFormatChart,
   ApprovalsCard,
-  ApexChart,
+  WorkingTimeChart,
 } from "../components/Pages/Dashboard/index";
 import CardIconImg from "../../../pics/profile.jpeg";
 import CardIconImg2 from "../../../pics/profile2.jpeg";
@@ -106,7 +106,7 @@ const Dashboard = () => {
           <CelebrationsApp />
           <HolidaysApp />
           <CalendarApp />
-          <ApexChart />
+          <WorkingTimeChart />
         </div>
         <PagesTopTitle title="Request for Approvals" />
         <div className="row g-4">

@@ -12,7 +12,6 @@ import CardIconImg from "../../../../../pics/profile.jpeg";
 import Birthday from "../../../../../pics/b.png";
 import Anniversiry from "../../../../../pics/p.png";
 import { useState } from "react";
-import React, { Component } from "react";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -187,16 +186,16 @@ export const EmployeesChart = (props) => {
                   show: true,
                   position: "bottom",
                   horizontalAlign: "center",
-                  fontSize: "18px",
+                  fontSize: "15px",
                   markers: {
                     width: 12,
                     height: 12,
-                    radius: 12,
-                    offsetX: 0,
+                    radius: 0,
+                    offsetX: -10,
                     offsetY: 0,
                   },
                   itemMargin: {
-                    horizontal: 5,
+                    horizontal: 40,
                     vertical: 0,
                   },
                 },
@@ -243,16 +242,16 @@ export const WorkingFormatChart = () => {
                   show: true,
                   position: "bottom",
                   horizontalAlign: "center",
-                  fontSize: "18px",
+                  fontSize: "15px",
                   markers: {
                     width: 12,
                     height: 12,
-                    radius: 12,
-                    offsetX: 0,
+                    radius: 0,
+                    offsetX: -10,
                     offsetY: 0,
                   },
                   itemMargin: {
-                    horizontal: 5,
+                    horizontal: 40,
                     vertical: 0,
                   },
                 },
@@ -580,100 +579,113 @@ export const ApprovalsCard = (props) => {
     </>
   );
 };
-export class ApexChart extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      series: [
-        {
-          name: "Cashflow",
-          type: "column",
-          data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5],
-        },
-        {
-          name: "Revenue",
-          type: "column",
-          data: [20, 29, 37, 36, 44, 45, 50, 58],
-        },
-      ],
-      options: {
-        chart: {
-          height: 350,
-          type: "line",
-          stacked: false,
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          width: [1, 1, 4],
-        },
-        xaxis: {
-          categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
-        },
-        yaxis: [
-          {
-            axisTicks: {
-              show: false,
-            },
-            axisBorder: {
-              show: true,
-              color: "#008FFB",
-            },
-            labels: {
-              style: {
-                colors: "#008FFB",
-              },
-            },
-            tooltip: {
-              enabled: false,
-            },
-          },
-          {
-            opposite: true,
-            axisTicks: {
-              show: true,
-            },
-            axisBorder: {
-              show: true,
-              color: "#00E396",
-            },
-            labels: {
-              style: {
-                colors: "#00E396",
-              },
-            },
-          },
-        ],
-
-        legend: {
-          horizontalAlign: "left",
-          offsetX: 40,
+export const WorkingTimeChart = () => {
+  const [state] = useState({
+    series: [
+      {
+        name: "Overtime",
+        type: "column",
+        data: [11, 30, 31, 40, 41, 49, 65],
+      },
+      {
+        name: "Working Time",
+        type: "column",
+        data: [20, 29, 37, 36, 44, 45, 70],
+      },
+    ],
+    options: {
+      colors: ["#2DCD1F", "#DA1E28"],
+      chart: {
+        type: "line",
+        stacked: false,
+        toolbar: {
+          show: false,
         },
       },
-    };
-  }
-
-  render() {
-    return (
-      <>
-        <div className=" col-8">
-          <div className="dashbaord_white_card">
-            <div class="dashbaord_white_title">
-              <p>Working Time</p>
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        width: [1, 1, 4],
+      },
+      xaxis: {
+        categories: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+      },
+      yaxis: {
+        categories: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+      },
+      legend: {
+        show: true,
+        position: "top",
+        horizontalAlign: "right",
+        fontSize: "15px",
+        markers: {
+          width: 12,
+          height: 12,
+          radius: 0,
+          offsetX: -10,
+          offsetY: 0,
+        },
+        itemMargin: {
+          horizontal: 40,
+          vertical: 0,
+        },
+      },
+    },
+  });
+  const options = [
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
+  ];
+  return (
+    <>
+      <div className="col-12">
+        <div className="dashbaord_white_card">
+          <div className="row">
+            <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+              <div className="dashbaord_white_title">
+                <p>Working Time</p>
+              </div>
+              <div id="chart">
+                <ReactApexChart
+                  options={state.options}
+                  series={state.series}
+                  type="line"
+                  height={300}
+                />
+              </div>
             </div>
-            <div id="chart">
-              <ReactApexChart
-                options={this.state.options}
-                series={this.state.series}
-                type="line"
-                height={350}
-              />
+            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div className="row">
+                <div className="col-6">
+                  <div className="dashboard_top_week_Select2">
+                    <Select options={options} placeholder="All Department" />
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div className="dashboard_top_week_Select2">
+                    <Select options={options} placeholder="This week" />
+                  </div>
+                </div>
+              </div>
+              <div className="working_time_info_main_div">
+                <div className="working_time_info">
+                  <p>
+                    Scheduled Hours: <span className="span1">120:00:00</span>
+                  </p>
+                  <p>
+                    Overtime Hours: <span className="span2">120:00:00</span>
+                  </p>
+                  <p>
+                    Total Hours: <span className="span3">131:27:34</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
