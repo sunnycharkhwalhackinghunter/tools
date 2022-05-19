@@ -631,6 +631,9 @@ export const WorkingTimeChart = () => {
           vertical: 0,
         },
       },
+      bar: {
+        barWidth: "10%",
+      },
     },
   });
   const options = [

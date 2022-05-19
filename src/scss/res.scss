@@ -1,6 +1,19 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .dashboard_top_week_Select2 {
+    .css-14el2xx-placeholder {
+      font-size: 12px;
+    }
+    .css-319lph-ValueContainer {
+      padding: 0;
+    }
+  }
+  .working_time_info {
+    p {
+      font-size: 13px;
+    }
+  }
   .celebrations_card_user_info {
     h5 {
       font-size: 14px;
