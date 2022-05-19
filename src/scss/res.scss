@@ -1,6 +1,11 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .working_time_info {
+    &:hover {
+      box-shadow: none;
+    }
+  }
   .dashboard_top_week_Select2 {
     .css-14el2xx-placeholder {
       font-size: 12px;
