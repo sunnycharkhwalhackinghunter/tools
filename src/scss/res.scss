@@ -85,11 +85,13 @@
     }
   }
   .reimbursement_top_title_link_page {
-    margin-top: 0px;
+    a {
+      margin-top: 0px;
+    }
   }
   .dashbaord_white_title {
     p {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
   .celebrations_card_user_info {
