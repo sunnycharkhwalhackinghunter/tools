@@ -98,7 +98,7 @@ const Dashboard = () => {
         <UserName />
         <PagesTopTitle title="dashbaord" />
 
-        <div className="row g-4">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
           <InfoCard />
           <EmployeesChart />
           <WorkingFormatChart />
@@ -109,7 +109,7 @@ const Dashboard = () => {
           <WorkingTimeChart />
         </div>
         <PagesTopTitle title="Request for Approvals" />
-        <div className="row g-4">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           <ApprovalsCard data={ApprovalsCardData} title="Reimbursement" />
           <ApprovalsCard data={ApprovalsCardData} title="Leave" />
           <ApprovalsCard data={ApprovalsCardData2} title="Timesheet" />

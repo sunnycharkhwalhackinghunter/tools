@@ -127,7 +127,7 @@ export const InfoCard = (props) => {
   return (
     <>
       <div>
-        <div className="row gy-3">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           {InfoCardAppData.map((val, i) => {
             return (
               <InfoCardApp
