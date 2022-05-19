@@ -12,6 +12,8 @@ import CardIconImg from "../../../../../pics/profile.jpeg";
 import Birthday from "../../../../../pics/b.png";
 import Anniversiry from "../../../../../pics/p.png";
 import { useState } from "react";
+import Calendar from "react-calendar";
+import { useNavigate } from "react-router-dom";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -469,17 +471,22 @@ export const HolidaysApp = () => {
   );
 };
 export const CalendarApp = () => {
+  const [value, onChangee] = useState(new Date());
+  const navigate = useNavigate();
   return (
     <>
       <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-        <div className="dashbaord_white_card">
+        <div className="dashbaord_white_card dashbaord_white_card2">
           <div className="dashbaord_white_title">
-            <div className="row">
-              <div className="col-6">
-                <div>
-                  <p>calendar</p>
-                </div>
-              </div>
+            <div>
+              <Calendar
+                className="dashbaord_calendar"
+                onChange={(date) => {
+                  onChangee(date);
+                  navigate("/");
+                }}
+                value={value}
+              />
             </div>
           </div>
         </div>

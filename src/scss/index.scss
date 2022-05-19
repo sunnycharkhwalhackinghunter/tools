@@ -549,6 +549,9 @@ a {
   padding: 1rem 20px;
   border-radius: 10px;
 }
+.dashbaord_white_card2 {
+  height: 22.3rem;
+}
 .dashbaord_white_title {
   text-transform: capitalize;
   color: black;
@@ -757,6 +760,32 @@ a {
   }
   .span3 {
     color: #525252;
+  }
+}
+.dashbaord_calendar {
+  border: none !important;
+
+  .react-calendar__tile {
+    padding: 6.6px 6.6667px;
+  }
+  .react-calendar__year-view .react-calendar__tile,
+  .react-calendar__decade-view .react-calendar__tile,
+  .react-calendar__century-view .react-calendar__tile {
+    padding: 19.7px 0.5em;
+  }
+  abbr[data-bs-original-title],
+  abbr[title] {
+    text-decoration: none;
+  }
+  // .react-calendar__navigation__prev2-button {
+  //   display: none;
+  // }
+
+  // .react-calendar__navigation__next2-button {
+  //   display: none;
+  // }
+  .react-calendar__month-view__weekdays__weekday {
+    font-weight: 400;
   }
 }
 // Dashboard end
