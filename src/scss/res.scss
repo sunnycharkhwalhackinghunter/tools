@@ -16,9 +16,7 @@
       font-size: 16px;
     }
   }
-  .reimbursement_top_title_link_page {
-    margin-top: 0px;
-  }
+
   .dashbaord_white_title {
     p {
       font-size: 15px;
@@ -79,16 +77,15 @@
   }
 }
 @media (min-width: 1024px) {
+  .reimbursement_top_title_link_page {
+    margin-top: -3px;
+  }
   .working_time_info {
     p {
       font-size: 15px;
     }
   }
-  .reimbursement_top_title_link_page {
-    a {
-      margin-top: 0px;
-    }
-  }
+
   .dashbaord_white_title {
     p {
       font-size: 14px;
@@ -112,14 +109,15 @@
   }
 }
 @media (min-width: 1440px) {
+  .reimbursement_top_title_link_page {
+    margin-top: 3px;
+  }
   .working_time_info {
     p {
       font-size: 17px;
     }
   }
-  .reimbursement_top_title_link_page {
-    margin-top: 3px;
-  }
+
   .dashbaord_white_title {
     p {
       font-size: 18px;
