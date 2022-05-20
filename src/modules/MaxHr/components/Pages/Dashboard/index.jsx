@@ -483,7 +483,7 @@ export const CalendarApp = () => {
                 className="dashbaord_calendar"
                 onChange={(date) => {
                   onChangee(date);
-                  navigate("/");
+                  navigate("/hr/calendar");
                 }}
                 value={value}
               />
@@ -564,13 +564,13 @@ export const ApprovalsCard = (props) => {
               <div className="col-8">
                 <div className=" d-flex reimbursement_top_title">
                   <p>{props.title}</p>
-                  <NavLink to="/hr/Settings">3 new</NavLink>
+                  <NavLink to="/hr/approval-details">3 new</NavLink>
                 </div>
               </div>
               <div className="col-4">
                 <div className="reimbursement_top_title_link_page">
                   <div>
-                    <NavLink to="/hr/Settings">View All</NavLink>
+                    <NavLink to="/hr/approval-details">View All</NavLink>
                   </div>
                 </div>
               </div>

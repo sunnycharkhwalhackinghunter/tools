@@ -473,6 +473,11 @@ a {
 }
 // top nav end
 // all pages
+.custom_container_iner {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
 .custom_container {
   padding: 1.3rem;
 }
@@ -537,7 +542,7 @@ a {
 .dashbaord_imfo_card_icon_div {
   margin: auto;
   border-radius: 100%;
-  padding: 13px;
+  padding: 10px;
 }
 .dashbaord_img {
   @include bg_img;
@@ -690,8 +695,12 @@ a {
   color: white;
   z-index: 1;
   top: 0%;
-  right: 0%;
+  right: 1%;
   transition: all 0.3s;
+  border: 1px solid;
+  border-radius: 6px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  padding: 1px;
   p {
     transition: all 0.3s;
     margin-bottom: 0;
@@ -703,6 +712,7 @@ a {
       color: black;
       background-color: #f5ecec;
       padding: 6px 40px 6px 10px;
+      border-radius: 3px;
     }
   }
 }
@@ -711,7 +721,7 @@ a {
 
   .css-1s2u09g-control {
     border: none;
-    border-bottom: 1px solid $red;
+    border-bottom: 1px solid #8d8d8d;
   }
   .css-1pahdxg-control {
     &:hover {
@@ -789,3 +799,57 @@ a {
   }
 }
 // Dashboard end
+// ApprovalDetailsPage
+.ApprovalDetailsPage_ul_top_div {
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 11px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+  a {
+    svg {
+      font-size: 20px;
+      color: black;
+    }
+  }
+}
+.ApprovalDetailsPage_date_picker {
+  text-transform: capitalize;
+  label {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: $text;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid $red;
+    letter-spacing: 1.2px;
+    color: $text;
+    background-color: #f4f4f4;
+    font-size: 14px;
+  }
+}
+.ApprovalDetailsPage_search_input {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.ApprovalDetailsPage_search_input_iner_div {
+  position: relative;
+  span {
+    position: absolute;
+    font-size: 15px;
+    top: 19%;
+    left: 5%;
+    svg {
+      color: $text !important;
+    }
+  }
+  input {
+    padding-left: 35px;
+  }
+}
+// ApprovalDetailsPage end

@@ -14,7 +14,7 @@ import {
 import CardIconImg from "../../../pics/profile.jpeg";
 import CardIconImg2 from "../../../pics/profile2.jpeg";
 import { IoEllipsisVerticalSharp } from "react-icons/io5";
-const Dashboard = () => {
+const Dashboard = (props) => {
   const ApprovalsCardData = [
     {
       toptitle: "Today(01)",
@@ -110,8 +110,12 @@ const Dashboard = () => {
         </div>
         <PagesTopTitle title="Request for Approvals" />
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-          <ApprovalsCard data={ApprovalsCardData} title="Reimbursement" />
-          <ApprovalsCard data={ApprovalsCardData} title="Leave" />
+          <ApprovalsCard
+            data={ApprovalsCardData}
+            title="Reimbursement"
+            pageTitle
+          />
+          <ApprovalsCard data={ApprovalsCardData} title="Leave"></ApprovalsCard>
           <ApprovalsCard data={ApprovalsCardData2} title="Timesheet" />
           <ApprovalsCard data={ApprovalsCardData} title="Notice Period" />
           <ApprovalsCard data={ApprovalsCardData} title="Resignation" />

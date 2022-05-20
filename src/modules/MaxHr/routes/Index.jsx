@@ -18,6 +18,8 @@ import Payroll from "../page/Payroll";
 import Reports from "../page/Reports";
 import Settings from "../page/Settings";
 import Messages from "../page/Messages";
+import Calendar from "../page/Calendar";
+import ApprovalDetailsPage from "../page/ApprovalDetailsPage";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -48,7 +50,12 @@ const Index = () => {
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/Settings" element={<Settings />} />
                 <Route path="/messages" element={<Messages />} />
-                {/* <Route path="*" element={<main>NOT FOUND</main>} /> */}
+                <Route path="/calendar" element={<Calendar />} />
+                <Route
+                  path="/approval-details"
+                  element={<ApprovalDetailsPage />}
+                />
+                <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }
           />
