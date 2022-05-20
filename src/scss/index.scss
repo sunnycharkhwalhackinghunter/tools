@@ -827,7 +827,7 @@ a {
     border: none;
     border-bottom: 1px solid $red;
     letter-spacing: 1.2px;
-    color: $text;
+    color: $text !important;
     background-color: #f4f4f4;
     font-size: 14px;
   }
