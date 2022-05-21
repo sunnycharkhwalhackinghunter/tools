@@ -11,7 +11,6 @@
   }
   .ApprovalDetailsPage_date_picker {
     input {
-      // font-size: 13px;
       letter-spacing: normal;
     }
   }
@@ -155,8 +154,8 @@
   }
   .ApprovalDetailsPage_search_input {
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
   .reimbursement_top_title_link_page {
     margin-top: -3px;

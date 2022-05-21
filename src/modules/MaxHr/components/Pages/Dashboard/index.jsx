@@ -564,13 +564,21 @@ export const ApprovalsCard = (props) => {
               <div className="col-8">
                 <div className=" d-flex reimbursement_top_title">
                   <p>{props.title}</p>
-                  <NavLink to="/hr/approval-details">3 new</NavLink>
+                  <NavLink
+                    to={props.pagelink ? props.pagelink : "/hr/not-found"}
+                  >
+                    3 new
+                  </NavLink>
                 </div>
               </div>
               <div className="col-4">
                 <div className="reimbursement_top_title_link_page">
                   <div>
-                    <NavLink to="/hr/approval-details">View All</NavLink>
+                    <NavLink
+                      to={props.pagelink ? props.pagelink : "/hr/not-found"}
+                    >
+                      View All
+                    </NavLink>
                   </div>
                 </div>
               </div>

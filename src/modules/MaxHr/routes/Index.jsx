@@ -19,7 +19,7 @@ import Reports from "../page/Reports";
 import Settings from "../page/Settings";
 import Messages from "../page/Messages";
 import Calendar from "../page/Calendar";
-import ApprovalDetailsPage from "../page/ApprovalDetailsPage";
+import Reimbursement from "../page/Reimbursement";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -51,10 +51,7 @@ const Index = () => {
                 <Route path="/Settings" element={<Settings />} />
                 <Route path="/messages" element={<Messages />} />
                 <Route path="/calendar" element={<Calendar />} />
-                <Route
-                  path="/approval-details"
-                  element={<ApprovalDetailsPage />}
-                />
+                <Route path="/reimbursement" element={<Reimbursement />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

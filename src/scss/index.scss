@@ -508,7 +508,7 @@ a {
 
   .css-1s2u09g-control {
     border: none;
-    border-bottom: 1px solid $red;
+    border-bottom: 2px solid $text;
   }
   .css-1pahdxg-control {
     &:hover {
@@ -721,7 +721,7 @@ a {
 
   .css-1s2u09g-control {
     border: none;
-    border-bottom: 1px solid #8d8d8d;
+    border-bottom: 2px solid $text;
   }
   .css-1pahdxg-control {
     &:hover {
@@ -825,7 +825,7 @@ a {
   }
   input {
     border: none;
-    border-bottom: 1px solid $red;
+    border-bottom: 2px solid $text;
     letter-spacing: 1.2px;
     color: $text !important;
     background-color: #f4f4f4;
@@ -834,8 +834,8 @@ a {
 }
 .ApprovalDetailsPage_search_input {
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .ApprovalDetailsPage_search_input_iner_div {
   position: relative;
@@ -851,5 +851,21 @@ a {
   input {
     padding-left: 35px;
   }
+}
+.ApprovalDetailsPage_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.ApprovalDetailsPage_thead_tr {
+  border: none;
+  th {
+    background-color: $c2 !important;
+    color: white;
+    font-weight: 500;
+  }
+}
+.ApprovalDetailsPage_top_div {
+  padding: 1.5rem 0;
 }
 // ApprovalDetailsPage end

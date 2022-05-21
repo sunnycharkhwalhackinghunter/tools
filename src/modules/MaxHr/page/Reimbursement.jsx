@@ -3,7 +3,25 @@ import { BsArrowLeft } from "react-icons/bs";
 import Input from "../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-const ApprovalDetailsPage = (props) => {
+const Reimbursement = (props) => {
+  const ApprovalDetailsPageTd = () => {
+    return (
+      <>
+        <tr>
+          <td>01</td>
+          <td>roushan Kumar</td>
+          <td>Printer</td>
+          <td>05/25/2021</td>
+          <td>
+            <NavLink to="/">view</NavLink>
+          </td>
+          <td>NA</td>
+          <td>Much Needed.</td>
+          <td>Approved</td>
+        </tr>
+      </>
+    );
+  };
   return (
     <>
       <div className="custom_container">
@@ -54,9 +72,28 @@ const ApprovalDetailsPage = (props) => {
               </div>
             </div>
           </div>
+          <div className="ApprovalDetailsPage_top_div">
+            <table className="table table-hover ApprovalDetailsPage_main_div text-center text-capitalize">
+              <thead>
+                <tr className="ApprovalDetailsPage_thead_tr">
+                  <th scope="col">E. ID</th>
+                  <th scope="col">From</th>
+                  <th scope="col">Item Name</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Document</th>
+                  <th scope="col">E. Comment</th>
+                  <th scope="col">Remarks</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ApprovalDetailsPageTd />
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
   );
 };
-export default ApprovalDetailsPage;
+export default Reimbursement;
