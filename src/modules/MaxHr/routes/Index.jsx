@@ -22,6 +22,7 @@ import Calendar from "../page/Calendar";
 import Reimbursement from "../page/Reimbursement";
 import NoticePeriod from "../page/NoticePeriod";
 import TimesheetReview from "../page/TimesheetReview";
+import Resignation from "../page/Resignation";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -56,6 +57,7 @@ const Index = () => {
                 <Route path="/reimbursement" element={<Reimbursement />} />
                 <Route path="/notice_period" element={<NoticePeriod />} />
                 <Route path="/timesheet_review" element={<TimesheetReview />} />
+                <Route path="/resignation" element={<Resignation />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }
