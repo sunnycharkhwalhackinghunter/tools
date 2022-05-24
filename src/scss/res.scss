@@ -1,6 +1,17 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .TimesheetReview_main_div {
+    display: block;
+  }
+  .ApprovalDetailsPage_btn {
+    height: 50px;
+    width: 220px;
+    margin: 8px 0 !important;
+  }
+  .ApprovalDetailsPage_main_div {
+    display: block;
+  }
   .ApprovalDetailsPage_search_input_iner_div {
     span {
       left: 2%;
@@ -118,6 +129,9 @@
   }
 }
 @media (min-width: 768px) {
+  .ApprovalDetailsPage_main_div {
+    display: block;
+  }
   .ApprovalDetailsPage_search_input_iner_div {
     span {
       left: 2%;
@@ -144,6 +158,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .ApprovalDetailsPage_main_div {
+    display: inline-table;
+  }
   .ApprovalDetailsPage_search_input_iner_div {
     span {
       left: 5%;

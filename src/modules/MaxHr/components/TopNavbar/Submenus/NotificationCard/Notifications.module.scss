@@ -17,11 +17,10 @@
     background: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
     pointer-events: none;
     opacity: 0;
-    transition: all ease-in-out 300ms;
+    // transition: all ease-in-out 300ms;
     width: 37rem;
 
     @media screen and (max-width: 600px) {

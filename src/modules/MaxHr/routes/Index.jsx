@@ -20,6 +20,8 @@ import Settings from "../page/Settings";
 import Messages from "../page/Messages";
 import Calendar from "../page/Calendar";
 import Reimbursement from "../page/Reimbursement";
+import NoticePeriod from "../page/NoticePeriod";
+import TimesheetReview from "../page/TimesheetReview";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -52,6 +54,8 @@ const Index = () => {
                 <Route path="/messages" element={<Messages />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/reimbursement" element={<Reimbursement />} />
+                <Route path="/notice_period" element={<NoticePeriod />} />
+                <Route path="/timesheet_review" element={<TimesheetReview />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

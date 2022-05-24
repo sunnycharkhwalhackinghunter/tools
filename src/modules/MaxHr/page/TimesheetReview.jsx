@@ -3,138 +3,97 @@ import { BsArrowLeft } from "react-icons/bs";
 import Input from "../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
+
 import { Modal } from "react-bootstrap";
 import React from "react";
-import { FiChevronDown } from "react-icons/fi";
 import url from "../../../pics/profile.jpeg";
-const Reimbursement = (props) => {
-  const ReimbursementData = [
+const TimesheetReview = (props) => {
+  const TimesheetReviewData = [
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      ProjectName: "Maxlence HR",
+      StartingFrom: "11 Oct 2022",
+      Endson: "11 Oct 2022",
+      Duration: "08 Hours",
     },
   ];
-  const ReimbursementApp = (props) => {
+  const TimesheetReviewApp = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
-    const [userApprove, setUserApprove] = useState(true);
-    const [userBreks, setUserBreks] = useState(true);
 
-    const changNameUser = () => {
-      setUserBreks(!userBreks);
-    };
-    const changApprove = () => {
-      setUserApprove(!userApprove);
-    };
     return (
       <>
         <tr className="ApprovalDetailsPage_thead_td">
           <td>{props.EID}</td>
-          <td>{props.From}</td>
-          <td>{props.ItemName}</td>
-          <td>{props.date}</td>
+          <td>{props.EmployeeName}</td>
+          <td>{props.ProjectName}</td>
+          <td>{props.StartingFrom}</td>
+          <td>{props.Endson}</td>
+          <td>{props.Duration}</td>
           <td>
             <span
               className="reimbursement_view_btn"
@@ -146,49 +105,6 @@ const Reimbursement = (props) => {
               show={modalShow}
               onHide={() => setModalShow(false)}
             />
-          </td>
-          <td>{props.EComment}</td>
-          <td>
-            <div
-              className={`${
-                userBreks ? "add_remarks_title" : "add_remarks_title2"
-              }`}
-            >
-              <div className="add_remarks_title" onClick={changNameUser}>
-                Add Remarks
-                <span>
-                  <AiOutlinePlus />
-                </span>
-              </div>
-            </div>
-            <div
-              className={`${userBreks ? "AddRemarksRemover" : "AddRemarks"}`}
-            >
-              <div className="add_remarks_input_div">
-                <Input
-                  type="text"
-                  className="form-control"
-                  placeholder=" Add Remarks..."
-                />
-              </div>
-            </div>
-          </td>
-          <td className=" position-relative">
-            <div className="add_remarks_title3">
-              Pending
-              <span onClick={changApprove}>
-                <FiChevronDown />
-              </span>
-            </div>
-            <div className={`${userApprove ? "approve2" : "reject2"}`}>
-              <div
-                className="reimbursement_card_options"
-                onClick={changApprove}
-              >
-                <p className="">approve</p>
-                <p>reject</p>
-              </div>
-            </div>
           </td>
         </tr>
       </>
@@ -209,7 +125,7 @@ const Reimbursement = (props) => {
                     </NavLink>
                   </li>
                   <li>
-                    <h3>Reimbursement</h3>
+                    <h3>Timesheet Review</h3>
                   </li>
                 </ul>
               </div>
@@ -246,29 +162,29 @@ const Reimbursement = (props) => {
             </div>
           </div>
           <div className="ApprovalDetailsPage_top_div">
-            <table className="table table-hover ApprovalDetailsPage_main_div text-center text-capitalize">
+            <table className="table table-hover TimesheetReview_main_div text-center text-capitalize">
               <thead>
                 <tr className="ApprovalDetailsPage_thead_tr">
                   <th scope="col">E. ID</th>
-                  <th scope="col">From</th>
-                  <th scope="col">Item Name</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Document</th>
-                  <th scope="col">E. Comment</th>
-                  <th scope="col">Remarks</th>
-                  <th scope="col">Status</th>
+                  <th scope="col">Employee Name</th>
+                  <th scope="col">Project Name</th>
+                  <th scope="col">Starting From</th>
+                  <th scope="col">Ends on</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">View</th>
                 </tr>
               </thead>
               <tbody>
-                {ReimbursementData.map((val, i) => {
+                {TimesheetReviewData.map((val, i) => {
                   return (
-                    <ReimbursementApp
+                    <TimesheetReviewApp
                       key={i}
                       EID={val.EID}
-                      From={val.From}
-                      ItemName={val.ItemName}
-                      date={val.date}
-                      EComment={val.EComment}
+                      EmployeeName={val.EmployeeName}
+                      ProjectName={val.ProjectName}
+                      StartingFrom={val.StartingFrom}
+                      Endson={val.Endson}
+                      Duration={val.Duration}
                     />
                   );
                 })}
@@ -283,7 +199,7 @@ const Reimbursement = (props) => {
     </>
   );
 };
-export default Reimbursement;
+export default TimesheetReview;
 // Modal
 const MyVerticallyCenteredModal = (props) => {
   const changNameUser = (url) => {

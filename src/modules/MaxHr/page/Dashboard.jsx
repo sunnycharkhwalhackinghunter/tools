@@ -116,8 +116,16 @@ const Dashboard = (props) => {
             pagelink="/hr/reimbursement"
           />
           <ApprovalsCard data={ApprovalsCardData} title="Leave" />
-          <ApprovalsCard data={ApprovalsCardData2} title="Timesheet" />
-          <ApprovalsCard data={ApprovalsCardData} title="Notice Period" />
+          <ApprovalsCard
+            data={ApprovalsCardData2}
+            title="Timesheet"
+            pagelink="/hr/timesheet_review"
+          />
+          <ApprovalsCard
+            data={ApprovalsCardData}
+            title="Notice Period"
+            pagelink="/hr/notice_period"
+          />
           <ApprovalsCard data={ApprovalsCardData} title="Resignation" />
         </div>
       </div>

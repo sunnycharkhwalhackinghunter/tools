@@ -9,8 +9,8 @@ import { Modal } from "react-bootstrap";
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 import url from "../../../pics/profile.jpeg";
-const Reimbursement = (props) => {
-  const ReimbursementData = [
+const NoticePeriod = (props) => {
+  const NoticePeriodData = [
     {
       EID: "01",
       From: "Roushan Kumar",
@@ -117,7 +117,7 @@ const Reimbursement = (props) => {
       EComment: "NA",
     },
   ];
-  const ReimbursementApp = (props) => {
+  const NoticePeriodApp = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
     const [userApprove, setUserApprove] = useState(true);
     const [userBreks, setUserBreks] = useState(true);
@@ -209,7 +209,7 @@ const Reimbursement = (props) => {
                     </NavLink>
                   </li>
                   <li>
-                    <h3>Reimbursement</h3>
+                    <h3>Notice Period</h3>
                   </li>
                 </ul>
               </div>
@@ -260,9 +260,9 @@ const Reimbursement = (props) => {
                 </tr>
               </thead>
               <tbody>
-                {ReimbursementData.map((val, i) => {
+                {NoticePeriodData.map((val, i) => {
                   return (
-                    <ReimbursementApp
+                    <NoticePeriodApp
                       key={i}
                       EID={val.EID}
                       From={val.From}
@@ -283,7 +283,7 @@ const Reimbursement = (props) => {
     </>
   );
 };
-export default Reimbursement;
+export default NoticePeriod;
 // Modal
 const MyVerticallyCenteredModal = (props) => {
   const changNameUser = (url) => {
