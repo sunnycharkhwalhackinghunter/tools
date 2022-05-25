@@ -1,5 +1,6 @@
 @import "../../../../scss/--var.scss";
 @import "../../../../scss/--mixing.scss";
+
 .navbar_container {
   background-color: white;
   --nav_width: 14rem;
@@ -73,7 +74,7 @@ nav {
   flex-direction: column;
   position: relative;
   overflow: scroll;
-  height: 100vh;
+  height: 36rem;
 }
 
 .categories {
@@ -193,7 +194,7 @@ nav {
 }
 @media (min-width: 1024px) {
   .menu_container {
-    height: 100vh;
+    height: 36rem;
   }
 }
 @media (min-width: 1440px) {

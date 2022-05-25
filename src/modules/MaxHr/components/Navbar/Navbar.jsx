@@ -56,75 +56,77 @@ const Navbar = () => {
         <LogoImg className="logo_div" img={Logo} alt="logo" />
 
         {/* MENU */}
-        <ul className={styles.menu_container}>
-          <div className=" d-block d-xxl-none d-xl-none d-md-none">
-            <div className="nav_mobile_search_main_div">
-              <div className="nav_mobile_search_iner_div">
-                <span>
-                  <AiOutlineSearch />
-                </span>
-                <Input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search..."
-                />
+        <div className="menu_container_new">
+          <ul className={styles.menu_container}>
+            <div className=" d-block d-xxl-none d-xl-none d-md-none">
+              <div className="nav_mobile_search_main_div">
+                <div className="nav_mobile_search_iner_div">
+                  <span>
+                    <AiOutlineSearch />
+                  </span>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search..."
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <NavUrl
-            url="dashboard"
-            icon={<RiTableAltFill />}
-            description="Dashboard"
-          />
-          <NavUrl
-            url="announcement"
-            icon={<ImBullhorn />}
-            description="Announcement"
-          />
-          <NavUrl url="profile" icon={<FaUserTie />} description="profile" />
-          <NavUrl url="finance" icon={<MdPayments />} description="finance" />
-          <NavUrl
-            url="attendence"
-            icon={<BsCalendarX />}
-            description="attendence"
-          />
-          <NavUrl
-            url="performance"
-            icon={<FontAwesomeIcon icon={faGaugeHigh} />}
-            description="performance"
-          />
-          <NavUrl
-            url="organizationchart"
-            icon={<FaUsers />}
-            description="organization chart"
-          />
-          <NavUrl
-            url="hiring"
-            icon={<BsCalendar2CheckFill />}
-            description="hiring"
-          />
-          <NavUrl
-            url="training"
-            icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
-            description="training"
-          />
-          <NavUrl
-            url="taskmanagement"
-            icon={<FaBook />}
-            description="task management"
-          />
-          <NavUrl url="Payroll" icon={<RiBankFill />} description="Payroll" />
-          <NavUrl
-            url="reports"
-            icon={<FaClipboardList />}
-            description="reports"
-          />
-          <NavUrl
-            url="settings"
-            icon={<FaClipboardList />}
-            description="Settings"
-          />
-        </ul>
+            <NavUrl
+              url="dashboard"
+              icon={<RiTableAltFill />}
+              description="Dashboard"
+            />
+            <NavUrl
+              url="announcement"
+              icon={<ImBullhorn />}
+              description="Announcement"
+            />
+            <NavUrl url="profile" icon={<FaUserTie />} description="profile" />
+            <NavUrl url="finance" icon={<MdPayments />} description="finance" />
+            <NavUrl
+              url="attendence"
+              icon={<BsCalendarX />}
+              description="attendence"
+            />
+            <NavUrl
+              url="performance"
+              icon={<FontAwesomeIcon icon={faGaugeHigh} />}
+              description="performance"
+            />
+            <NavUrl
+              url="organizationchart"
+              icon={<FaUsers />}
+              description="organization chart"
+            />
+            <NavUrl
+              url="hiring"
+              icon={<BsCalendar2CheckFill />}
+              description="hiring"
+            />
+            <NavUrl
+              url="training"
+              icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
+              description="training"
+            />
+            <NavUrl
+              url="taskmanagement"
+              icon={<FaBook />}
+              description="task management"
+            />
+            <NavUrl url="Payroll" icon={<RiBankFill />} description="Payroll" />
+            <NavUrl
+              url="reports"
+              icon={<FaClipboardList />}
+              description="reports"
+            />
+            <NavUrl
+              url="settings"
+              icon={<FaClipboardList />}
+              description="Settings"
+            />
+          </ul>
+        </div>
 
         {/* LOGOUT BUTTON */}
         {/* <div
