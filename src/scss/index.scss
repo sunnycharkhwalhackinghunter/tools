@@ -1,5 +1,7 @@
 @import "--var.scss";
 @import "--mixing.scss";
+@import "../../node_modules/@ibm//plex/css/ibm-plex.css";
+$font-prefix: "./custom/path/to/font/files";
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,27 @@
 }
 body {
   background-color: #dde2ff !important;
+}
+code,
+kbd,
+pre,
+samp,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ol,
+ul,
+span,
+div,
+a,
+button,
+strong {
+  font-family: IBM Plex Sans !important;
 }
 .online4 {
   display: none;
@@ -431,7 +454,7 @@ ul {
   }
 }
 .profile_list_title_main_div {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   ul {
     margin: 0;
   }
