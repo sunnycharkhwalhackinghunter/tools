@@ -603,6 +603,11 @@ a {
       font-size: 15px;
     }
   }
+  .dashboard_top_week_Select {
+    position: absolute;
+    top: 2%;
+    right: 7%;
+  }
 }
 .celebrations_card_setting_icon_div {
   text-align: end;
@@ -1286,3 +1291,84 @@ a {
   }
 }
 // UserDetails end
+// Who Away
+.whp_away_card_overflow_div {
+  overflow: scroll;
+  height: 15.4rem;
+  .celebrations_card_img_top_div {
+    padding: 0;
+  }
+}
+.WhoAwayAppCard_top_img_div {
+  display: inline-block;
+  border: 2px solid $red;
+  border-radius: 50px;
+  padding: 5px;
+  padding-right: 0px;
+  margin-right: 2rem;
+  margin-top: 10px;
+  .celebrations_card_img {
+    margin-right: 5px;
+  }
+}
+.WhoAwayAppPopup1 {
+  display: none;
+}
+.WhoAwayAppPopup2 {
+  display: block;
+}
+.WhoAwayAppPopup_top_div {
+  top: 24%;
+  left: -3%;
+  background-color: #f1e7e7;
+  width: 17rem;
+  z-index: 1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  .celebrations_card_img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+.WhoAwayAppPopup_text {
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    span {
+      svg {
+        margin-top: -4px;
+        margin-right: 5px;
+      }
+    }
+  }
+  h5 {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text;
+  }
+}
+.WhoAwayAppPopup_text_subname {
+  font-size: 14px;
+  color: $text;
+}
+.WhoAwayAppPopup_bottom_text {
+  padding-top: 8px;
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $text;
+  }
+}
+.WhoAwayAppPopup_bottom_text2 {
+  padding-top: 8px;
+  float: right;
+  margin-right: -17px;
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #9fa2b4;
+  }
+}
+// Who Away emd

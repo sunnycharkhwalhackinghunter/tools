@@ -1,6 +1,18 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .WhoAwayAppPopup_top_div {
+    top: -10%;
+    left: 6%;
+  }
+  .WhoAwayAppCard_top_img_div {
+    margin-right: 1rem;
+    .celebrations_card_img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   .UserDetailsList_icon_top_div {
     span {
       color: $blue;
@@ -155,6 +167,9 @@
   }
 }
 @media (min-width: 768px) {
+  .WhoAwayAppCard_top_img_div {
+    margin-right: 1rem;
+  }
   .ApprovalsCard_modal_pic_overlay {
     width: 14rem;
   }
@@ -193,6 +208,13 @@
   }
 }
 @media (min-width: 1024px) {
+  .whp_away_card_overflow_div {
+    overflow: scroll;
+    height: 12rem;
+  }
+  .WhoAwayAppCard_top_img_div {
+    margin-right: 5px;
+  }
   .ApprovalsCard_modal_pic_overlay {
     width: 15rem;
   }
@@ -250,6 +272,13 @@
   }
 }
 @media (min-width: 1440px) {
+  .whp_away_card_overflow_div {
+    overflow: scroll;
+    height: 15.4rem;
+  }
+  .WhoAwayAppCard_top_img_div {
+    margin-right: 2rem;
+  }
   .reimbursement_top_title_link_page {
     margin-top: 3px;
   }

@@ -23,6 +23,7 @@ import ModalIcon3 from "../../../../../pics/modal3.png";
 import PdfIcon from "../../../../../pics/pdf.png";
 import DocIcon from "../../../../../pics/Doc.png";
 import { FaDownload } from "react-icons/fa";
+import { AiOutlineCalendar } from "react-icons/ai";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -170,48 +171,50 @@ export const EmployeesChart = (props) => {
                 total employees: <span>20</span>
               </p>
             </div>
-            <Chart
-              type="donut"
-              series={[23, 80]}
-              options={{
-                colors: ["#DA1E28", "#2DCD1F"],
-                labels: ["Leave", "Working"],
+            <div className="whp_away_card_overflow_div">
+              <Chart
+                type="donut"
+                series={[23, 80]}
+                options={{
+                  colors: ["#DA1E28", "#2DCD1F"],
+                  labels: ["Leave", "Working"],
 
-                dataLabels: {
-                  enabled: true,
-                  background: {
+                  dataLabels: {
                     enabled: true,
-                    foreColor: "black",
-                    opacity: 1,
+                    background: {
+                      enabled: true,
+                      foreColor: "black",
+                      opacity: 1,
+                    },
+                    dropShadow: {
+                      enabled: false,
+                      opacity: 1,
+                    },
                   },
-                  dropShadow: {
-                    enabled: false,
-                    opacity: 1,
+                  chart: {
+                    height: "100%",
+                    width: "100%",
                   },
-                },
-                chart: {
-                  height: "100%",
-                  width: "100%",
-                },
-                legend: {
-                  show: true,
-                  position: "bottom",
-                  horizontalAlign: "center",
-                  fontSize: "15px",
-                  markers: {
-                    width: 12,
-                    height: 12,
-                    radius: 0,
-                    offsetX: -10,
-                    offsetY: 0,
+                  legend: {
+                    show: true,
+                    position: "bottom",
+                    horizontalAlign: "center",
+                    fontSize: "15px",
+                    markers: {
+                      width: 12,
+                      height: 12,
+                      radius: 0,
+                      offsetX: -10,
+                      offsetY: 0,
+                    },
+                    itemMargin: {
+                      horizontal: 40,
+                      vertical: 0,
+                    },
                   },
-                  itemMargin: {
-                    horizontal: 40,
-                    vertical: 0,
-                  },
-                },
-              }}
-            ></Chart>
+                }}
+              ></Chart>
+            </div>
           </div>
         </NavLink>
       </div>
@@ -227,47 +230,49 @@ export const WorkingFormatChart = () => {
             <div className="dashbaord_white_title">
               <p>Working Format</p>
             </div>
-            <Chart
-              type="donut"
-              series={[23, 80]}
-              options={{
-                colors: ["#85E57D", "#2DCD1F"],
-                labels: ["Office", "Home"],
-                dataLabels: {
-                  enabled: true,
-                  background: {
+            <div className="whp_away_card_overflow_div">
+              <Chart
+                type="donut"
+                series={[23, 80]}
+                options={{
+                  colors: ["#85E57D", "#2DCD1F"],
+                  labels: ["Office", "Home"],
+                  dataLabels: {
                     enabled: true,
-                    foreColor: "black",
-                    opacity: 1,
+                    background: {
+                      enabled: true,
+                      foreColor: "black",
+                      opacity: 1,
+                    },
+                    dropShadow: {
+                      enabled: false,
+                      opacity: 1,
+                    },
                   },
-                  dropShadow: {
-                    enabled: false,
-                    opacity: 1,
+                  chart: {
+                    height: "100%",
+                    width: "100%",
                   },
-                },
-                chart: {
-                  height: "100%",
-                  width: "100%",
-                },
-                legend: {
-                  show: true,
-                  position: "bottom",
-                  horizontalAlign: "center",
-                  fontSize: "15px",
-                  markers: {
-                    width: 12,
-                    height: 12,
-                    radius: 0,
-                    offsetX: -10,
-                    offsetY: 0,
+                  legend: {
+                    show: true,
+                    position: "bottom",
+                    horizontalAlign: "center",
+                    fontSize: "15px",
+                    markers: {
+                      width: 12,
+                      height: 12,
+                      radius: 0,
+                      offsetX: -10,
+                      offsetY: 0,
+                    },
+                    itemMargin: {
+                      horizontal: 40,
+                      vertical: 0,
+                    },
                   },
-                  itemMargin: {
-                    horizontal: 40,
-                    vertical: 0,
-                  },
-                },
-              }}
-            ></Chart>
+                }}
+              ></Chart>
+            </div>
           </div>
         </NavLink>
       </div>
@@ -275,17 +280,184 @@ export const WorkingFormatChart = () => {
   );
 };
 export const WhoAwayApp = () => {
+  const [WhoAwayAppPopup, setWhoAwayAppPopup] = useState(true);
+  const WhoAwayAppPopupOpen = () => {
+    setWhoAwayAppPopup(!WhoAwayAppPopup);
+  };
+  const options = [
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
+  ];
   return (
     <>
-      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-        <NavLink to="/hr/attendence">
-          <div className="dashbaord_white_card">
-            <div className="dashbaord_white_title">
-              <p>Who’s Away</p>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 position-relative">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-xxl-6 col-xl-6 col-lg-5 col-md-6 col-sm-6 col-6">
+                <p>Who’s Away</p>
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-7 col-md-6 col-sm-6 col-6 ">
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="This week" />
+                </div>
+              </div>
             </div>
-            d
           </div>
-        </NavLink>
+          <div
+            className={`${
+              WhoAwayAppPopup ? "WhoAwayAppPopup1" : "WhoAwayAppPopup2"
+            }`}
+          >
+            <div className=" position-absolute WhoAwayAppPopup_top_div">
+              <div>
+                <div className="row ">
+                  <div className="col-3">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                      onClick={WhoAwayAppPopupOpen}
+                    />
+                  </div>
+                  <div className="col-9">
+                    <div className="WhoAwayAppPopup_text">
+                      <h5>Employee Name</h5>
+                      <p className="WhoAwayAppPopup_text_subname">
+                        Social Media Marketer
+                      </p>
+                      <p>
+                        <span>
+                          <AiOutlineCalendar />
+                        </span>
+                        12:30 01:00
+                      </p>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="WhoAwayAppPopup_bottom_text">
+                        <p>30 Minutes</p>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="WhoAwayAppPopup_bottom_text2">
+                        <p>lunch Break</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="whp_away_card_overflow_div">
+            <div className="celebrations_card_img_top_div ">
+              <div className="celebrations_card_line_title">
+                <p>today (02)</p>
+                <hr />
+              </div>
+              <div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />{" "}
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                  </div>
+                </div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                      onClick={WhoAwayAppPopupOpen}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="celebrations_card_img_top_div ">
+              <div className="celebrations_card_line_title">
+                <p>today (02)</p>
+                <hr />
+              </div>
+              <div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />{" "}
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                  </div>
+                </div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                      onClick={WhoAwayAppPopupOpen}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />{" "}
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                    />
+                  </div>
+                </div>
+                <div className="WhoAwayAppCard_top_img_div">
+                  <div className=" d-flex">
+                    <IconImg
+                      className="celebrations_card_img"
+                      backgroundImage={CardIconImg}
+                      onClick={WhoAwayAppPopupOpen}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

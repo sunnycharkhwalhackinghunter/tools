@@ -6,6 +6,7 @@ const Img = (props) => {
         style={{
           backgroundImage: `url(${props.backgroundImage})`,
         }}
+        onClick={props.onClick}
       ></div>
     </>
   );
