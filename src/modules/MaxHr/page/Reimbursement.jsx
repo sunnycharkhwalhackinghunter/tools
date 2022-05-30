@@ -5,10 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
-import { Modal } from "react-bootstrap";
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
-import url from "../../../pics/profile.jpeg";
 const Reimbursement = (props) => {
   const ReimbursementData = [
     {
@@ -118,7 +116,6 @@ const Reimbursement = (props) => {
     },
   ];
   const ReimbursementApp = (props) => {
-    const [modalShow, setModalShow] = React.useState(false);
     const [userApprove, setUserApprove] = useState(true);
     const [userBreks, setUserBreks] = useState(true);
 
@@ -136,16 +133,9 @@ const Reimbursement = (props) => {
           <td>{props.ItemName}</td>
           <td>{props.date}</td>
           <td>
-            <span
-              className="reimbursement_view_btn"
-              onClick={() => setModalShow(true)}
-            >
-              view
+            <span className="reimbursement_view_btn">
+              <NavLink to="/hr/user_details">view</NavLink>
             </span>
-            <MyVerticallyCenteredModal
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-            />
           </td>
           <td>{props.EComment}</td>
           <td>
@@ -284,63 +274,3 @@ const Reimbursement = (props) => {
   );
 };
 export default Reimbursement;
-// Modal
-const MyVerticallyCenteredModal = (props) => {
-  const changNameUser = (url) => {
-    window.open(url, "__blank");
-  };
-  return (
-    <>
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Reimbursement
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className=" text-capitalize text-center">
-          <div className="row">
-            <div className="col-6">
-              <div className="dowload_title" onClick={() => changNameUser(url)}>
-                profile.jpeg
-              </div>
-            </div>
-            <div className="col-6">
-              <button className="dowload_title_download">download</button>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <div>
-                <a
-                  className="dowload_title"
-                  href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                  download
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  dummy.pdf
-                </a>
-              </div>
-            </div>
-            <div className="col-6">
-              <a
-                className="dowload_title_download"
-                href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                download
-                rel="noreferrer"
-                target="_blank"
-              >
-                download
-              </a>
-            </div>
-          </div>
-        </Modal.Body>
-      </Modal>
-    </>
-  );
-};

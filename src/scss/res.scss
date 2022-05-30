@@ -1,6 +1,32 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .UserDetailsList_icon_top_div {
+    span {
+      color: $blue;
+    }
+  }
+  .table_top_div {
+    display: block;
+  }
+  .ApprovalsCard_modal_icon_btn_div {
+    display: block;
+    top: 41%;
+    left: 40%;
+  }
+  .ApprovalsCard_modal_pic_overlay {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  .ApprovalsCard_modal_pic_bottom_title_div {
+    width: 100%;
+    display: none;
+  }
+  .ApprovalsCard_modal_pic {
+    width: 100%;
+    height: 20rem;
+  }
   .TimesheetReview_main_div {
     display: block;
   }
@@ -129,6 +155,15 @@
   }
 }
 @media (min-width: 768px) {
+  .ApprovalsCard_modal_pic_overlay {
+    width: 14rem;
+  }
+  .ApprovalsCard_modal_pic {
+    width: 14rem;
+  }
+  .ApprovalsCard_modal_pic_bottom_title_div {
+    width: 14rem;
+  }
   .ApprovalDetailsPage_main_div {
     display: block;
   }
@@ -158,6 +193,15 @@
   }
 }
 @media (min-width: 1024px) {
+  .ApprovalsCard_modal_pic_overlay {
+    width: 15rem;
+  }
+  .ApprovalsCard_modal_pic_bottom_title_div {
+    width: 15rem;
+  }
+  .ApprovalsCard_modal_pic {
+    width: 15rem;
+  }
   .ApprovalDetailsPage_main_div {
     display: inline-table;
   }

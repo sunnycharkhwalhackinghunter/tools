@@ -4,117 +4,109 @@ import Input from "../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
+import { FiPlusCircle } from "react-icons/fi";
+import React from "react";
 import { FiChevronDown } from "react-icons/fi";
-const NoticePeriod = (props) => {
-  const NoticePeriodData = [
+const Leave = (props) => {
+  const LeaveData = [
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
-    },
-    {
-      EID: "01",
-      From: "Roushan Kumar",
-      ItemName: "Printer",
-      date: "05/25/2021",
-      EComment: "NA",
+      EmployeeName: "Roushan Kumar",
+      LeaveType: "Sick Leave",
+      RemainingLeaves: "05",
+      From: "10/05/2021",
+      To: "10/07/2021",
     },
   ];
-  const NoticePeriodApp = (props) => {
+  const LeaveApp = (props) => {
     const [userApprove, setUserApprove] = useState(true);
     const [userBreks, setUserBreks] = useState(true);
 
@@ -128,25 +120,20 @@ const NoticePeriod = (props) => {
       <>
         <tr className="ApprovalDetailsPage_thead_td">
           <td>{props.EID}</td>
+          <td>{props.EmployeeName}</td>
+          <td>{props.LeaveType}</td>
+          <td>{props.RemainingLeaves}</td>
           <td>{props.From}</td>
-          <td>{props.ItemName}</td>
-          <td>{props.date}</td>
-          <td>
-            <span className="reimbursement_view_btn">
-              <NavLink to="/hr/user_details">view</NavLink>
-            </span>
-          </td>
-          <td>{props.EComment}</td>
+          <td>{props.To}</td>
           <td>
             <div
               className={`${
-                userBreks ? "add_remarks_title" : "add_remarks_title2"
+                userBreks ? "add_remarks_title_leave" : "add_remarks_title2"
               }`}
             >
-              <div className="add_remarks_title" onClick={changNameUser}>
-                Add Remarks
+              <div className="add_remarks_title_leave" onClick={changNameUser}>
                 <span>
-                  <AiOutlinePlus />
+                  <FiPlusCircle />
                 </span>
               </div>
             </div>
@@ -198,7 +185,7 @@ const NoticePeriod = (props) => {
                     </NavLink>
                   </li>
                   <li>
-                    <h3>Notice Period</h3>
+                    <h3>Leave</h3>
                   </li>
                 </ul>
               </div>
@@ -239,25 +226,26 @@ const NoticePeriod = (props) => {
               <thead>
                 <tr className="ApprovalDetailsPage_thead_tr">
                   <th scope="col">E. ID</th>
+                  <th scope="col">Employee Name</th>
+                  <th scope="col">Leave Type</th>
+                  <th scope="col">Remaining Leaves</th>
                   <th scope="col">From</th>
-                  <th scope="col">Item Name</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Document</th>
-                  <th scope="col">E. Comment</th>
+                  <th scope="col">To</th>
                   <th scope="col">Remarks</th>
                   <th scope="col">Status</th>
                 </tr>
               </thead>
               <tbody>
-                {NoticePeriodData.map((val, i) => {
+                {LeaveData.map((val, i) => {
                   return (
-                    <NoticePeriodApp
+                    <LeaveApp
                       key={i}
                       EID={val.EID}
+                      EmployeeName={val.EmployeeName}
+                      LeaveType={val.LeaveType}
+                      RemainingLeaves={val.RemainingLeaves}
                       From={val.From}
-                      ItemName={val.ItemName}
-                      date={val.date}
-                      EComment={val.EComment}
+                      To={val.To}
                     />
                   );
                 })}
@@ -272,4 +260,4 @@ const NoticePeriod = (props) => {
     </>
   );
 };
-export default NoticePeriod;
+export default Leave;

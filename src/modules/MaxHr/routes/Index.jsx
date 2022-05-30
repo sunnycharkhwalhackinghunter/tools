@@ -23,6 +23,8 @@ import Reimbursement from "../page/Reimbursement";
 import NoticePeriod from "../page/NoticePeriod";
 import TimesheetReview from "../page/TimesheetReview";
 import Resignation from "../page/Resignation";
+import Leave from "../page/Leave";
+import { UserDetails } from "../page/UserDetails";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -58,6 +60,8 @@ const Index = () => {
                 <Route path="/notice_period" element={<NoticePeriod />} />
                 <Route path="/timesheet_review" element={<TimesheetReview />} />
                 <Route path="/resignation" element={<Resignation />} />
+                <Route path="/leave" element={<Leave />} />
+                <Route path="/user_details" element={<UserDetails />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

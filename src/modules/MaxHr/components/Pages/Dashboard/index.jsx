@@ -14,6 +14,15 @@ import Anniversiry from "../../../../../pics/p.png";
 import { useState } from "react";
 import Calendar from "react-calendar";
 import { useNavigate } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import React from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
+import ModalIcon1 from "../../../../../pics/modal1.png";
+import ModalIcon2 from "../../../../../pics/modal2.png";
+import ModalIcon3 from "../../../../../pics/modal3.png";
+import PdfIcon from "../../../../../pics/pdf.png";
+import DocIcon from "../../../../../pics/Doc.png";
+import { FaDownload } from "react-icons/fa";
 export const UserName = () => {
   const options = [
     { value: "today", label: "today" },
@@ -494,106 +503,6 @@ export const CalendarApp = () => {
     </>
   );
 };
-export const ApprovalsCard = (props) => {
-  const Approvals = (props) => {
-    const [userApprove, setUserApprove] = useState(-1);
-    const changApprove = (i) => {
-      setUserApprove(i);
-    };
-    return (
-      <>
-        <div>
-          <div className="celebrations_card_line_title">
-            <p>{props.toptitle}</p>
-            <hr />
-          </div>
-          {props.arr.cat1.map((val, i) => {
-            return (
-              <div key={i} className="celebrations_card_img_top_div">
-                <div className="row ">
-                  <div className="col-2">
-                    <NavLink to={val.link}>
-                      <IconImg
-                        className="celebrations_card_img"
-                        backgroundImage={val.userImg}
-                      />
-                    </NavLink>
-                  </div>
-                  <div className="col-7">
-                    <NavLink to={val.link}>
-                      <div className="celebrations_card_user_info">
-                        <h5>{val.name}</h5>
-                        <p>{val.DOB}</p>
-                      </div>
-                    </NavLink>
-                  </div>
-                  <div className="col-3 celebrations_card_icon_div">
-                    <span
-                      className="reimbursement_card_right_icon"
-                      onClick={() => changApprove(i)}
-                    >
-                      {val.ApprovalsCardIcon}
-                    </span>
-
-                    <div
-                      className={`${userApprove !== i ? "approve" : "reject"}`}
-                    >
-                      <div
-                        className="reimbursement_card_options"
-                        onClick={() => changApprove(-1)}
-                      >
-                        <p>approve</p>
-                        <p>reject</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </>
-    );
-  };
-  return (
-    <>
-      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-        <div className="dashbaord_white_card">
-          <div className="dashbaord_white_title">
-            <div className="row">
-              <div className="col-8">
-                <div className=" d-flex reimbursement_top_title">
-                  <p>{props.title}</p>
-                  <NavLink
-                    to={props.pagelink ? props.pagelink : "/hr/not-found"}
-                  >
-                    3 new
-                  </NavLink>
-                </div>
-              </div>
-              <div className="col-4">
-                <div className="reimbursement_top_title_link_page">
-                  <div>
-                    <NavLink
-                      to={props.pagelink ? props.pagelink : "/hr/not-found"}
-                    >
-                      View All
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="celebrations_card_overflow_div">
-            {props.data.map((val, i) => {
-              return <Approvals key={i} toptitle={val.toptitle} arr={val} />;
-            })}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 export const WorkingTimeChart = () => {
   const [state] = useState({
     series: [
@@ -704,6 +613,230 @@ export const WorkingTimeChart = () => {
           </div>
         </div>
       </div>
+    </>
+  );
+};
+export const ApprovalsCard = (props) => {
+  let link = props.modallink;
+  const [modalShow, setModalShow] = React.useState(false);
+  const Approvals = (props) => {
+    return (
+      <>
+        <div>
+          <div className="celebrations_card_line_title">
+            <p>{props.toptitle}</p>
+            <hr />
+          </div>
+          {props.arr.cat1.map((val, i) => {
+            return (
+              <div key={i} className="celebrations_card_img_top_div">
+                <div className="row ">
+                  <div className="col-2">
+                    <NavLink to={val.link}>
+                      <IconImg
+                        className="celebrations_card_img"
+                        backgroundImage={val.userImg}
+                      />
+                    </NavLink>
+                  </div>
+                  <div className="col-7">
+                    <NavLink to={val.link}>
+                      <div className="celebrations_card_user_info">
+                        <h5>{val.name}</h5>
+                        <p>{val.DOB}</p>
+                      </div>
+                    </NavLink>
+                  </div>
+                  <div className="col-3 celebrations_card_icon_div2">
+                    <span onClick={() => setModalShow(true)}>view</span>
+                    <MyVerticallyCenteredModal
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                      modallink={link}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+  };
+  return (
+    <>
+      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="dashbaord_white_card">
+          <div className="dashbaord_white_title">
+            <div className="row">
+              <div className="col-8">
+                <div className=" d-flex reimbursement_top_title">
+                  <p>{props.title}</p>
+                  <NavLink
+                    to={props.pagelink ? props.pagelink : "/hr/not-found"}
+                  >
+                    3 new
+                  </NavLink>
+                </div>
+              </div>
+              <div className="col-4">
+                <div className="reimbursement_top_title_link_page">
+                  <div>
+                    <NavLink
+                      to={props.pagelink ? props.pagelink : "/hr/not-found"}
+                    >
+                      View All
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="celebrations_card_overflow_div">
+            {props.data.map((val, i) => {
+              return <Approvals key={i} toptitle={val.toptitle} arr={val} />;
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+// Modal
+const MyVerticallyCenteredModal = (props) => {
+  const changNameUser = (CardIconImg) => {
+    window.open(CardIconImg, "__blank");
+  };
+  const ApprovalsModalCard = (props) => {
+    return (
+      <>
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="ApprovalsCard_modal_pic_main_div">
+            <IconImg
+              className="ApprovalsCard_modal_pic"
+              backgroundImage={props.modalImg}
+            />
+            <div className="ApprovalsCard_modal_pic_bottom_title_div ApprovalsCard_modal_text_show_hide">
+              <div className="row ApprovalsCard_modal_icon_row">
+                <div className="col-2">
+                  <IconImg
+                    className="ApprovalsCard_modal_icon"
+                    backgroundImage={props.modalImgIcon}
+                  />
+                </div>
+                <div className="col-10">
+                  <div className="ApprovalsCard_modal_icon_name">
+                    {props.name}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="ApprovalsCard_modal_pic_overlay"
+              onClick={() => changNameUser(CardIconImg)}
+            >
+              <div className="row m-0 ApprovalsCard_modal_icon_row">
+                <div className="col-2">
+                  <IconImg
+                    className="ApprovalsCard_modal_icon"
+                    backgroundImage={props.modalImgIcon}
+                  />
+                </div>
+                <div className="col-10">
+                  <div className="ApprovalsCard_modal_icon_name text-white">
+                    {props.name}
+                    <div className="ApprovalsCard_modal_icon_size">
+                      <small> {props.fileSize}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="ApprovalsCard_modal_icon_btn_div">
+                <NavLink className="ApprovalsCard_modal_icon_btn" to="/">
+                  <FaDownload />
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const ApprovalsModalCardData = [
+    {
+      modalImg: CardIconImg,
+      modalImgIcon: ModalIcon1,
+      name: "name...",
+      fileSize: "28kb",
+    },
+    {
+      modalImg: DocIcon,
+      modalImgIcon: ModalIcon2,
+      name: "name...",
+      fileSize: "28kb",
+    },
+    {
+      modalImg: PdfIcon,
+      modalImgIcon: ModalIcon3,
+      name: "name...",
+      fileSize: "28kb",
+    },
+  ];
+  return (
+    <>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body className="text-capitalize">
+          <div className="ApprovalsCard_modal_title_top_div">
+            <div className="row">
+              <div className="col-8">
+                <div className="ApprovalsCard_modal_title">
+                  <h3>Sonali Bhagat</h3>
+                </div>
+              </div>
+              <div className="col-4">
+                <div className="ApprovalsCard_modal_hide_btn">
+                  <AiFillCloseCircle onClick={props.onHide} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="row g-4">
+              {ApprovalsModalCardData.map((val, i) => {
+                return (
+                  <ApprovalsModalCard
+                    key={i}
+                    modalImg={val.modalImg}
+                    modalImgIcon={val.modalImgIcon}
+                    name={val.name}
+                    fileSize={val.fileSize}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <div className=" text-capitalize text-center ApprovalDetailsPage_btn2_div">
+                <NavLink
+                  className=" ApprovalDetailsPage_btn2"
+                  to={props.modallink ? props.modallink : "/hr/not-found"}
+                >
+                  View All
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
