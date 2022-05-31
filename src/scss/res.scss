@@ -1,6 +1,31 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .PostUser_text {
+    padding: 1rem 0rem 0rem 0rem;
+    p {
+      font-size: 18px;
+    }
+  }
+  .PostUser_user_icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .PostUser_user_icon_name {
+    h3 {
+      font-size: 13px;
+    }
+  }
+  .PostUser_user_icon_ul {
+    li {
+      margin-right: 10px;
+    }
+  }
+  .PostUser_user_icon_name_star_top_div {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+  }
   .WhoAwayAppPopup_top_div {
     top: -10%;
     left: 6%;

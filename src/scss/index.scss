@@ -824,7 +824,9 @@ a {
 }
 .dashbaord_calendar {
   border: none !important;
-
+  .react-calendar__navigation__label {
+    font-weight: 500;
+  }
   .react-calendar__tile {
     padding: 6.6px 6.6667px;
   }
@@ -845,7 +847,7 @@ a {
   //   display: none;
   // }
   .react-calendar__month-view__weekdays__weekday {
-    font-weight: 400;
+    font-weight: 550;
   }
 }
 .ApprovalsCard_modal_hide_btn {
@@ -1371,4 +1373,285 @@ a {
     color: #9fa2b4;
   }
 }
+.dep_all {
+  display: flex;
+  align-items: flex-end;
+  .dashboard_top_week_Select {
+    width: 100%;
+    .css-1s2u09g-control {
+      background-color: #f4f4f4;
+    }
+  }
+}
 // Who Away emd
+// Announcement
+
+.Announcement_iner {
+  background-color: white;
+  border-radius: 10px;
+}
+.post_textarea {
+  padding: 1.5rem;
+  textarea {
+    border: none;
+    &::placeholder {
+      color: #9fa2b4;
+      font-size: 20px;
+    }
+  }
+}
+.post_textarea_option {
+  padding: 1.5rem;
+}
+.post_textarea_hr {
+  hr {
+    margin: 0;
+  }
+}
+.post_textarea_option_iner_main_div {
+  display: flex;
+  align-items: center;
+  color: $blue;
+  cursor: pointer;
+  span {
+    svg {
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+  }
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-left: 6px;
+    padding-right: 2px;
+  }
+  div {
+    svg {
+      color: black;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  }
+}
+.post_textarea_Attachment {
+  text-align: end;
+  cursor: pointer;
+}
+.PostTextareaOption {
+  display: none;
+}
+.PostTextareaOption2 {
+  display: block;
+  position: absolute;
+  left: 3%;
+  top: 94%;
+  background-color: #f7f3f3;
+  border-radius: 6px;
+  width: 9rem;
+  z-index: 1;
+}
+.post_textarea_option_iner_option {
+  ul {
+    margin: 0;
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 4px 0px 4px 15px;
+      transition: all 0.3s;
+      text-transform: capitalize;
+      &:hover {
+        background-color: #e6d8d8;
+      }
+    }
+  }
+}
+.PostUser_top_profile_div {
+  padding: 1.5rem;
+}
+.PostUser_user_icon_ul {
+  text-transform: capitalize;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 15px;
+  }
+}
+.PostUser_user_icon {
+  @include bg_img;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 100%;
+}
+.PostUser_user_icon_div {
+  border: 1.5px solid $green;
+  padding: 2px;
+  border-radius: 100%;
+}
+.PostUser_user_icon_name {
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #0a0e30;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #a8a8a8;
+  }
+}
+.PostUser_user_icon_name_prv {
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #525252;
+    cursor: pointer;
+  }
+}
+.PostUser_user_icon_name_share {
+  p {
+    color: $blue;
+    cursor: pointer;
+    svg {
+      font-size: 18px;
+    }
+  }
+}
+.PostUser_user_icon_name_star {
+  text-align: end;
+  transition: all 0.3s;
+  svg {
+    font-size: 23px;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
+.PostUser_user_icon_name_star2 {
+  text-align: end;
+  transition: all 0.3s;
+  svg {
+    font-size: 23px;
+    color: #fdcc0d;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
+.PostUser_Option {
+  display: none;
+}
+.PostUser_Option2 {
+  display: block;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  background-color: #f7f3f3;
+  border-radius: 6px;
+  width: 9rem;
+  z-index: 1;
+}
+.PostUser_text {
+  padding: 2rem 2rem 1rem 2rem;
+  text-transform: capitalize;
+  text-align: justify;
+  p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: $text;
+  }
+}
+.PostUser_post_edit {
+  text-align: end;
+  svg {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+.post_user_Comment_iner {
+  padding: 1.5rem;
+}
+.post_user_Comment {
+  .accordion-item:last-of-type .accordion-collapse {
+    border-top: 1px solid #c8c9ca;
+  }
+  .accordion-item {
+    border: none;
+  }
+  .accordion-button::after {
+    display: none;
+  }
+  .accordion-button {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    justify-content: flex-end;
+    span {
+      svg {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: black;
+  }
+  .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: transparent;
+    box-shadow: unset;
+  }
+}
+.PostUser_user_icon_name_Heart {
+  transition: all 0.3s;
+  cursor: pointer;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    margin: 0;
+    color: #525252;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    transition: all 0.3s;
+  }
+  svg {
+    font-size: 23px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
+.PostUser_user_icon_name_Heart2 {
+  cursor: pointer;
+  transition: all 0.3s;
+  div {
+    align-items: center;
+    display: flex;
+  }
+  p {
+    margin: 0;
+    color: $red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    transition: all 0.3s;
+  }
+  svg {
+    font-size: 23px;
+    color: $red;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
+// Announcement end

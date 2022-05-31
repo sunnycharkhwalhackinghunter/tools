@@ -3,6 +3,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import Input from "../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Select from "react-select";
 const TimesheetReview = (props) => {
   const TimesheetReviewData = [
     {
@@ -97,7 +98,10 @@ const TimesheetReview = (props) => {
       </>
     );
   };
-
+  const options = [
+    { value: " Developers", label: " Developers" },
+    { value: "Graphic Designer", label: "Graphic Designer" },
+  ];
   return (
     <>
       <div className="custom_container">
@@ -132,7 +136,12 @@ const TimesheetReview = (props) => {
                   <Input type="date" className="form-control" />
                 </div>
               </div>
-              <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="Departments" />
+                </div>
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
                 <div className="ApprovalDetailsPage_date_picker">
                   <div className="ApprovalDetailsPage_search_input_iner_div">
                     <span>

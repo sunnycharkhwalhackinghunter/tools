@@ -1,7 +1,11 @@
+import { Post, PostUser } from "../components/Pages/Announcement/Index";
 const Announcement = () => {
   return (
     <>
-      <h1>Announcement</h1>
+      <div className="custom_container">
+        <Post />
+        <PostUser />
+      </div>
     </>
   );
 };
