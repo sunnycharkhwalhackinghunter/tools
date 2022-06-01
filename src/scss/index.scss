@@ -10,9 +10,13 @@ $font-prefix: "./custom/path/to/font/files";
   line-height: 1.5;
   user-select: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   background-color: #dde2ff !important;
 }
+abbr,
 code,
 kbd,
 pre,
@@ -196,21 +200,24 @@ ul {
   p {
     margin: 0;
     text-transform: capitalize;
-    margin-bottom: 8px;
   }
 }
 .user_profile_name {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 400;
   color: $c2;
 }
 .user_profile_work {
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 400;
   color: $text;
+  margin-bottom: 5px !important;
 }
 .user_profile_id {
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 400;
   color: $text;
+  margin-bottom: 8px !important;
 }
 .user_profile_icon_div {
   position: absolute;
@@ -300,6 +307,7 @@ ul {
     margin-bottom: 0;
     margin-left: 1.5rem;
     font-size: 14px;
+    font-weight: 400;
   }
 }
 .profile_switch_onlin_div {
@@ -318,8 +326,8 @@ ul {
   text-align: end;
   p {
     margin-bottom: 0;
-    font-size: 15px;
-    font-weight: 550;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 .online {
@@ -447,8 +455,8 @@ ul {
   p {
     margin: 0;
     font-size: 12px;
+    font-weight: 400;
     padding-top: 2px;
-    font-family: IBM Plex sans;
     color: $text;
     padding-left: 5px;
   }
@@ -518,20 +526,23 @@ a {
   margin-bottom: 2rem;
   h3 {
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 0;
+    line-height: 22px;
   }
 }
 // all pages end
 // Dashboard
 .dashboard_top_user_name {
   h3 {
-    font-family: IBM Plex Sans;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
     span {
-      font-family: IBM Plex Mono;
-      font-size: 15px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
     }
   }
 }
@@ -555,15 +566,17 @@ a {
 }
 .dashbaord_imfo_card_text {
   h4 {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     font-weight: 400;
+    line-height: 18px;
   }
   p {
     margin-bottom: 0;
-    font-size: 20px;
-    font-weight: 550;
+    font-size: 16px;
+    font-weight: 600;
     margin-top: 5px;
+    line-height: 22px;
   }
 }
 .dashbaord_imfo_card_icon_col_div {
@@ -589,18 +602,25 @@ a {
 .dashbaord_white_card2 {
   height: 22.3rem;
 }
+.css-14el2xx-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+}
 .dashbaord_white_title {
   text-transform: capitalize;
-  color: black;
+  color: #0a0e30;
   margin-bottom: 10px;
   p {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
+    line-height: 22px;
     span {
-      font-weight: 300;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #161616;
     }
   }
   .dashboard_top_week_Select {
@@ -624,6 +644,8 @@ a {
     color: #161616;
     text-transform: capitalize;
     font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
   }
   hr {
     margin: 6px 0;
@@ -808,27 +830,36 @@ a {
   }
   p {
     margin-bottom: 0;
-    font-size: 17px;
-    font-weight: 550;
+    font-size: 16px;
+    font-weight: 600;
     margin-bottom: 1rem;
   }
   .span1 {
     color: $green;
+    font-size: 16px;
+    font-weight: 600;
   }
   .span2 {
     color: $red;
+    font-size: 16px;
+    font-weight: 600;
   }
   .span3 {
     color: #525252;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 .dashbaord_calendar {
   border: none !important;
   .react-calendar__navigation__label {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 14px;
   }
   .react-calendar__tile {
     padding: 6.6px 6.6667px;
+    font-size: 14px;
+    font-weight: 600;
   }
   .react-calendar__year-view .react-calendar__tile,
   .react-calendar__decade-view .react-calendar__tile,
@@ -847,7 +878,8 @@ a {
   //   display: none;
   // }
   .react-calendar__month-view__weekdays__weekday {
-    font-weight: 550;
+    font-weight: 400;
+    font-size: 14px;
   }
 }
 .ApprovalsCard_modal_hide_btn {
@@ -1450,6 +1482,8 @@ a {
   border-radius: 6px;
   width: 9rem;
   z-index: 1;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .post_textarea_option_iner_option {
   ul {
@@ -1460,6 +1494,7 @@ a {
       padding: 4px 0px 4px 15px;
       transition: all 0.3s;
       text-transform: capitalize;
+      cursor: pointer;
       &:hover {
         background-color: #e6d8d8;
       }
@@ -1502,6 +1537,15 @@ a {
     font-weight: 400;
     color: #a8a8a8;
   }
+  input {
+    background-color: #f4f4f4;
+    border: none;
+    border-bottom: 2px solid #8d8d8d;
+  }
+  .form-control:focus {
+    border-color: $red;
+    box-shadow: unset;
+  }
 }
 .PostUser_user_icon_name_prv {
   p {
@@ -1535,7 +1579,7 @@ a {
   transition: all 0.3s;
   svg {
     font-size: 23px;
-    color: #fdcc0d;
+    color: #f1c21b;
     cursor: pointer;
     transition: all 0.3s;
   }
@@ -1546,12 +1590,13 @@ a {
 .PostUser_Option2 {
   display: block;
   position: absolute;
-  left: 20%;
-  top: 40%;
+  left: 22%;
+  top: 70%;
   background-color: #f7f3f3;
   border-radius: 6px;
   width: 9rem;
   z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .PostUser_text {
   padding: 2rem 2rem 1rem 2rem;
@@ -1577,6 +1622,9 @@ a {
 .post_user_Comment {
   .accordion-item:last-of-type .accordion-collapse {
     border-top: 1px solid #c8c9ca;
+  }
+  .accordion-body {
+    padding: 1.5rem 2.5rem;
   }
   .accordion-item {
     border: none;
@@ -1612,11 +1660,9 @@ a {
 }
 .PostUser_user_icon_name_Heart {
   transition: all 0.3s;
-  cursor: pointer;
-  div {
-    display: flex;
-    align-items: center;
-  }
+
+  align-items: center;
+  display: flex;
   p {
     margin: 0;
     color: #525252;
@@ -1624,34 +1670,291 @@ a {
     font-weight: 400;
     margin-left: 10px;
     transition: all 0.3s;
+    text-transform: capitalize;
   }
   svg {
-    font-size: 23px;
+    cursor: pointer;
+    font-size: 18px;
     color: black;
     cursor: pointer;
     transition: all 0.3s;
+    margin-bottom: 3px;
   }
 }
 .PostUser_user_icon_name_Heart2 {
-  cursor: pointer;
   transition: all 0.3s;
-  div {
-    align-items: center;
-    display: flex;
-  }
+  align-items: center;
+  display: flex;
   p {
     margin: 0;
-    color: $red;
+    color: #525252;
     font-size: 14px;
     font-weight: 400;
     margin-left: 10px;
     transition: all 0.3s;
+    text-transform: capitalize;
   }
   svg {
-    font-size: 23px;
+    cursor: pointer;
+    font-size: 18px;
     color: $red;
     cursor: pointer;
     transition: all 0.3s;
+    margin-bottom: 3px;
   }
+}
+[id="toggle-heart"] {
+  position: absolute;
+  left: -100vw;
+}
+[id="toggle-heart"]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+[id="toggle-heart"]:checked + label:before,
+[id="toggle-heart"]:checked + label:after {
+  animation: inherit;
+  animation-timing-function: ease-out;
+}
+[id="toggle-heart"]:checked + label:before {
+  will-change: transform, border-width, border-color;
+  animation-name: bubble;
+}
+[id="toggle-heart"]:checked + label:after {
+  will-change: opacity, box-shadow;
+  animation-name: particles;
+}
+
+[for="toggle-heart"] {
+  align-self: center;
+  position: relative;
+  color: #e0e0e0;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+[for="toggle-heart"]:before,
+[for="toggle-heart"]:after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  content: "";
+}
+[for="toggle-heart"]:before {
+  box-sizing: border-box;
+  margin: -2.25rem;
+  border: solid 2.25rem #e2264d;
+  width: 4.5rem;
+  height: 4.5rem;
+  transform: scale(0);
+}
+[for="toggle-heart"]:after {
+  margin: -0.1875rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  box-shadow: 0.32476rem -3rem 0 -0.1875rem #ff8080,
+    -0.32476rem -2.625rem 0 -0.1875rem #ffed80,
+    2.54798rem -1.61656rem 0 -0.1875rem #ffed80,
+    1.84982rem -1.89057rem 0 -0.1875rem #a4ff80,
+    2.85252rem 0.98418rem 0 -0.1875rem #a4ff80,
+    2.63145rem 0.2675rem 0 -0.1875rem #80ffc8,
+    1.00905rem 2.84381rem 0 -0.1875rem #80ffc8,
+    1.43154rem 2.22414rem 0 -0.1875rem #80c8ff,
+    -1.59425rem 2.562rem 0 -0.1875rem #80c8ff,
+    -0.84635rem 2.50595rem 0 -0.1875rem #a480ff,
+    -2.99705rem 0.35095rem 0 -0.1875rem #a480ff,
+    -2.48692rem 0.90073rem 0 -0.1875rem #ff80ed,
+    -2.14301rem -2.12438rem 0 -0.1875rem #ff80ed,
+    -2.25479rem -1.38275rem 0 -0.1875rem #ff8080;
+}
+
+@keyframes bubble {
+  15% {
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 2.25rem;
+  }
+  30%,
+  100% {
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 0;
+  }
+}
+@keyframes particles {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    box-shadow: 0.32476rem -2.4375rem 0 0rem #ff8080,
+      -0.32476rem -2.0625rem 0 0rem #ffed80,
+      2.1082rem -1.26585rem 0 0rem #ffed80,
+      1.41004rem -1.53985rem 0 0rem #a4ff80,
+      2.30412rem 0.85901rem 0 0rem #a4ff80, 2.08305rem 0.14233rem 0 0rem #80ffc8,
+      0.76499rem 2.33702rem 0 0rem #80ffc8, 1.18748rem 1.71734rem 0 0rem #80c8ff,
+      -1.35019rem 2.0552rem 0 0rem #80c8ff,
+      -0.60229rem 1.99916rem 0 0rem #a480ff,
+      -2.44865rem 0.22578rem 0 0rem #a480ff,
+      -1.93852rem 0.77557rem 0 0rem #ff80ed,
+      -1.70323rem -1.77366rem 0 0rem #ff80ed,
+      -1.81501rem -1.03204rem 0 0rem #ff8080;
+  }
+}
+.PostUser_Comment_user_icon_div {
+  border: 1.5px solid $green;
+  padding: 2px;
+  border-radius: 100%;
+}
+.PostUser_Comment_user_icon_img {
+  @include bg_img;
+  width: 1.5rem;
+  height: 1.5rem;
+  float: right;
+  transform: rotate(34deg);
+}
+.PostUser_Comment_user_icon {
+  @include bg_img;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+.PostUser_Comment_user_icon_ul {
+  text-transform: capitalize;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 10px;
+  }
+}
+.PostUser_sub_Comment_user {
+  margin-left: 3rem;
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: justify;
+    margin-bottom: 0;
+    margin-top: -6px;
+    color: $text;
+    margin-right: 1rem;
+  }
+}
+.post_user_sub_Comment_iner {
+  display: flex;
+  .post_user_sub_option {
+    margin-right: 10px;
+    .PostUser_user_icon_name_Heart {
+      p {
+        font-weight: 500;
+        color: black;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.post_user_Comment2 {
+  .accordion-item:last-of-type .accordion-collapse {
+    border-top: none;
+  }
+  .accordion-body {
+    padding: 1.5rem 2.5rem;
+    padding-top: 0;
+  }
+  .accordion-item {
+    border: none;
+  }
+  .accordion-button::after {
+    display: none;
+  }
+  .accordion-button {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    justify-content: flex-end;
+    span {
+      svg {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: black;
+  }
+  .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: transparent;
+    box-shadow: unset;
+  }
+}
+.PostUser_user_icon_name_Heart3 {
+  transition: all 0.3s;
+  align-items: center;
+  display: flex;
+  p {
+    margin: 0;
+    color: #525252;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: all 0.3s;
+    text-transform: capitalize;
+  }
+  svg {
+    cursor: pointer;
+    font-size: 18px;
+    color: $red;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 3px;
+  }
+}
+.post_user_sub_option {
+  .accordion-button {
+    span {
+      svg {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+.Reply1 {
+  display: none;
+}
+.Reply2 {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.replay_user {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  cursor: pointer;
+  justify-content: flex-end;
+  svg {
+    font-size: 20px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+  }
+}
+.post_sub_user {
+  margin-left: 11px;
+}
+.ReplyTop1 {
+  display: block;
+}
+.ReplyTop2 {
+  display: none;
 }
 // Announcement end
