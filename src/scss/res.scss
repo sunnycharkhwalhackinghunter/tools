@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .UserPost_img {
+    height: 10rem;
+  }
   .PostUser_sub_Comment_user {
     margin-left: 0rem;
     p {
@@ -201,6 +204,9 @@
   }
 }
 @media (min-width: 768px) {
+  .UserPost_img {
+    height: 27rem;
+  }
   .whp_away_card_overflow_div {
     height: 18rem;
   }
@@ -245,6 +251,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .UserPost_img {
+    height: 33rem;
+  }
   .whp_away_card_overflow_div {
     overflow: scroll;
     height: 12rem;
@@ -350,5 +359,10 @@
     span {
       left: 1rem;
     }
+  }
+}
+@media (min-width: 1900px) {
+  .UserPost_img {
+    height: 45rem;
   }
 }

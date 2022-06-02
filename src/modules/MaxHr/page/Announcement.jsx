@@ -1,10 +1,15 @@
-import { Post, PostUser } from "../components/Pages/Announcement/Index";
+import {
+  Post,
+  PostUser,
+  UserPost,
+} from "../components/Pages/Announcement/Index";
 const Announcement = () => {
   return (
     <>
       <div className="custom_container">
         <Post />
         <PostUser />
+        <UserPost />
       </div>
     </>
   );
