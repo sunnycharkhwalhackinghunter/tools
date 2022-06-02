@@ -99,6 +99,12 @@
       transform: unset;
       top: 3.4rem;
     }
+    @media screen and (max-width: 400px) {
+      right: -8.7rem;
+    }
+    @media screen and (max-width: 360px) {
+      right: -10rem;
+    }
     // @media screen and (max-width: 320px) {
     //   right: -24px;
     // }
