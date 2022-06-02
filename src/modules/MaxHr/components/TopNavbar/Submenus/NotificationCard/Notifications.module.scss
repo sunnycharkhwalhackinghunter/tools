@@ -28,9 +28,9 @@
       transform: translateY(95%) translateX(60%);
     }
 
-    @media screen and (max-width: 420px) {
-      right: -2rem;
-    }
+    // @media screen and (max-width: 420px) {
+    //   right: -2rem;
+    // }
 
     .title {
       font-size: 0.9rem;
@@ -94,16 +94,17 @@
 
     @media screen and (max-width: 576px) {
       width: 100vw;
-      right: 0%;
-      transform: translateY(111%) translateX(33%);
+      // transform: translateY(111%) translateX(33%);
+      right: -9rem;
+      transform: unset;
+      top: 3.4rem;
     }
-
-    @media screen and (max-width: 360px) {
-      right: -3rem;
-    }
-    @media screen and (max-width: 320px) {
-      right: -24px;
-    }
+    // @media screen and (max-width: 320px) {
+    //   right: -24px;
+    // }
+    // @media screen and (max-width: 360px) {
+    //   right: -3rem;
+    // }
   }
 }
 @media (max-width: 576px) {
