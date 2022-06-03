@@ -273,9 +273,6 @@ const Resignation = (props) => {
               </tbody>
             </table>
           </div>
-          <div className=" text-capitalize text-center">
-            <button className=" ApprovalDetailsPage_btn">Dashboard</button>
-          </div>
         </div>
       </div>
     </>
