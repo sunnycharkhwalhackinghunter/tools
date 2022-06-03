@@ -1,6 +1,22 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .PostUser_Comment_user_icon_img {
+    margin-top: 1px;
+  }
+  .EditPost_attachment_teat {
+    p {
+      font-size: 17px;
+    }
+  }
+  .EditPost_img_post {
+    margin-top: 0rem;
+  }
+  .EditPost_img {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
   .UserPost_img {
     height: 10rem;
   }
@@ -204,6 +220,11 @@
   }
 }
 @media (min-width: 768px) {
+  .EditPost_img {
+    width: 100%;
+    height: 13rem;
+    margin-top: 1.5rem;
+  }
   .UserPost_img {
     height: 27rem;
   }
@@ -251,6 +272,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .EditPost_img {
+    height: 10rem;
+    width: 15rem;
+  }
   .UserPost_img {
     height: 33rem;
   }

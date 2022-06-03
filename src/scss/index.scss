@@ -1150,15 +1150,16 @@ a {
 .ApprovalDetailsPage_btn {
   font-size: 14px;
   font-weight: 400;
-  background-color: $blue;
+  background-color: #0f62fe;
   transition: all 0.3s;
   color: white;
   border: none;
   outline: none;
   height: 58px;
-  width: 240px;
+  width: 360px;
   border-radius: 8px;
   margin: 1.2rem 0 !important;
+  margin-top: 0 !important;
   &:hover {
     background-color: $hover;
   }
@@ -1996,5 +1997,48 @@ a {
   margin: auto;
   border-radius: 10px;
   margin-top: 1.5rem;
+}
+.EditPost_title {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 1.5rem;
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.EditPost_close_btn {
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 22px;
+}
+.EditPost_top_div {
+  padding: 0 !important;
+}
+.EditPost_img {
+  @include bg_img;
+  height: 10rem;
+  width: 15rem;
+  margin: auto;
+  border-radius: 10px;
+}
+.EditPost_img_post {
+  margin-top: -1rem;
+}
+.EditPost_main_itims {
+  padding: 1.5rem;
+}
+.EditPost_attachment_teat {
+  p {
+    margin: 0;
+    color: #525252;
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 // Announcement end
