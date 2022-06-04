@@ -178,7 +178,7 @@ ul {
 
   transition: all 0.3s ease-out;
   &:hover {
-    background-color: #dde2ff;
+    background-color: #d1d6f1;
     .notification_img_div {
       border: 1.5px solid $c2;
     }
@@ -2042,3 +2042,43 @@ a {
   }
 }
 // Announcement end
+//notification page
+.notification_top_new1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notification_top_new2 {
+  width: 41vw;
+  height: 43rem;
+  background: white;
+  overflow: scroll;
+  .notification_top_div {
+    border-bottom: 1px solid #c8cce6;
+  }
+}
+//notification page end
+// profile page
+.profile_tab_div {
+  .nav-pills {
+    .nav-link {
+      background: white;
+      color: #525252;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 25px;
+      cursor: pointer;
+    }
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: $c2;
+  }
+}
+.EmployeesTop_Select {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 100%;
+}
+// profile page end

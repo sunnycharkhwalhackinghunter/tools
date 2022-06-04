@@ -1,7 +1,10 @@
+import { Tabs } from "../components/Pages/Profile/Index";
 const Profile = () => {
   return (
     <>
-      <h1>Profile</h1>
+      <div className="custom_container">
+        <Tabs />
+      </div>
     </>
   );
 };

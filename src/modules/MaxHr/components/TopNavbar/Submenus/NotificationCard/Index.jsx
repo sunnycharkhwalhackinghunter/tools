@@ -82,7 +82,7 @@ const Index = (props) => {
             })}
             <div>
               <div className="notifications_btn">
-                <NavLink className="" to="/">
+                <NavLink className="" to="/hr/notification">
                   view more
                 </NavLink>
               </div>
