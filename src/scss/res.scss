@@ -1,6 +1,27 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .profile_tab_div {
+    .nav {
+      flex-wrap: nowrap;
+    }
+    .nav-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .profile_top_title_iner_div {
+    display: block;
+  }
+  .profile_top_title2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .profile_input_div {
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+  }
   .notification_top_new2 {
     width: 100%;
     height: 100%;

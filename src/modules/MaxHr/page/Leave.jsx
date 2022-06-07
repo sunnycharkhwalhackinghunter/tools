@@ -9,6 +9,11 @@ import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 import Select from "react-select";
 const Leave = (props) => {
+  const [userBreks, setUserBreks] = useState(true);
+
+  const changNameUser = () => {
+    setUserBreks(!userBreks);
+  };
   const LeaveData = [
     {
       EID: "01",
@@ -246,6 +251,86 @@ const Leave = (props) => {
                 </tr>
               </thead>
               <tbody>
+                <tr className="ApprovalDetailsPage_thead_td">
+                  <td>01</td>
+                  <td>Roushan Kumar</td>
+                  <td>Sick Leave</td>
+                  <td>05</td>
+                  <td>10/05/2021</td>
+                  <td>10/05/2021</td>
+                  <td>
+                    <div
+                      className={`${
+                        userBreks
+                          ? "add_remarks_title_leave"
+                          : "add_remarks_title2"
+                      }`}
+                    >
+                      <div
+                        className="add_remarks_title_leave"
+                        onClick={changNameUser}
+                      >
+                        <span>
+                          <FiPlusCircle />
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className={`${
+                        userBreks ? "AddRemarksRemover" : "AddRemarks"
+                      }`}
+                    >
+                      <div className="add_remarks_input_div">
+                        <Input
+                          type="text"
+                          className="form-control"
+                          placeholder=" Add Remarks..."
+                        />
+                      </div>
+                    </div>
+                  </td>
+                  <td className=" position-relative approve_tabel">approve</td>
+                </tr>
+                <tr className="ApprovalDetailsPage_thead_td">
+                  <td>01</td>
+                  <td>Roushan Kumar</td>
+                  <td>Sick Leave</td>
+                  <td>05</td>
+                  <td>10/05/2021</td>
+                  <td>10/05/2021</td>
+                  <td>
+                    <div
+                      className={`${
+                        userBreks
+                          ? "add_remarks_title_leave"
+                          : "add_remarks_title2"
+                      }`}
+                    >
+                      <div
+                        className="add_remarks_title_leave"
+                        onClick={changNameUser}
+                      >
+                        <span>
+                          <FiPlusCircle />
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className={`${
+                        userBreks ? "AddRemarksRemover" : "AddRemarks"
+                      }`}
+                    >
+                      <div className="add_remarks_input_div">
+                        <Input
+                          type="text"
+                          className="form-control"
+                          placeholder=" Add Remarks..."
+                        />
+                      </div>
+                    </div>
+                  </td>
+                  <td className=" position-relative reject_tabel">reject</td>
+                </tr>
                 {LeaveData.map((val, i) => {
                   return (
                     <LeaveApp

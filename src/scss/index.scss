@@ -2053,8 +2053,22 @@ a {
   height: 43rem;
   background: white;
   overflow: scroll;
+  margin-bottom: 10px;
   .notification_top_div {
     border-bottom: 1px solid #c8cce6;
+  }
+}
+.Notification_nner_title {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  p {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 550;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
   }
 }
 //notification page end
@@ -2073,6 +2087,7 @@ a {
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     background-color: $c2;
+    color: white !important;
   }
 }
 .EmployeesTop_Select {
@@ -2081,4 +2096,121 @@ a {
   right: 0;
   width: 100%;
 }
+.approve_tabel {
+  color: $green;
+}
+.reject_tabel {
+  color: $red;
+}
+.profile_input_div {
+  position: relative;
+  margin-left: 1rem;
+  width: 50%;
+  span {
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    font-size: 18px;
+  }
+  input {
+    padding-left: 40px;
+  }
+}
+.profile_top_title2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.profile_top_title_iner_div {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile_card_icon {
+  @include bg_img;
+  width: 6rem;
+  height: 6rem;
+  margin: auto;
+  border-radius: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    border: 2px solid $red;
+    border-radius: 100%;
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: all 0.3s;
+  }
+}
+.EmployeesCard_top_div_main {
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.EmployeesCard_top_div {
+  padding: 1.5rem 1rem;
+  color: black;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all 0.3s;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+}
+.EmployeesCard_top_div_link {
+  transition: all 0.3s;
+  &:hover {
+    .EmployeesCard_top_div_main {
+      color: white;
+      background-color: $c2;
+      transition: all 0.3s;
+    }
+    .EmployeesCard_top_div {
+      color: white;
+    }
+    .EmployeesCard_hr {
+      hr {
+        background-color: white;
+      }
+    }
+    .EmployeesCard_text_bottom {
+      color: white;
+    }
+  }
+}
+.EmployeesCard_text {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-transform: lowercase;
+  span {
+    svg {
+      font-size: 18px;
+      margin-right: 5px;
+      margin-bottom: 3px;
+    }
+  }
+}
+.EmployeesCard_hr {
+  hr {
+    margin: 0;
+    background-color: #dde2ff;
+    opacity: 1;
+  }
+}
+.EmployeesCard_text_bottom {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 1rem;
+}
+.EmployeesCard_container {
+  padding: 1.5rem 0;
+}
+
 // profile page end

@@ -120,19 +120,24 @@ const Notification = () => {
   ];
   return (
     <>
-      <div className="notification_top_new1">
-        <div className="notification_top_new2">
-          {CardData.map((val, i) => {
-            return (
-              <NotificationApp
-                key={i}
-                img={val.img}
-                name={val.name}
-                text={val.text}
-                time={val.time}
-              />
-            );
-          })}
+      <div>
+        <div className="Notification_nner_title">
+          <p>Notification</p>
+        </div>
+        <div className="notification_top_new1">
+          <div className="notification_top_new2">
+            {CardData.map((val, i) => {
+              return (
+                <NotificationApp
+                  key={i}
+                  img={val.img}
+                  name={val.name}
+                  text={val.text}
+                  time={val.time}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
