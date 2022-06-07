@@ -10,7 +10,13 @@ import ProfilPhoto2 from "../../../../../pics/profile2.jpeg";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { Post, PostUser } from "../Announcement/Index";
 export const Tabs = () => {
+  const options = [
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
+  ];
   return (
     <>
       <div className="profile_tab_div">
@@ -33,12 +39,62 @@ export const Tabs = () => {
           </Nav>
 
           <Tab.Content>
-            <Tab.Pane eventKey="first">
-              <EmployeesProfileCard />
-            </Tab.Pane>
-            <Tab.Pane eventKey="second">
-              <EmployeesCard />
-            </Tab.Pane>
+            <div className="profile_tab_div2">
+              <Tab.Pane eventKey="first">
+                <EmployeesProfileCard />
+                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                  <div>
+                    <div className="row">
+                      <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12 col-12">
+                        <Nav variant="pills" className="flex">
+                          <Nav.Item>
+                            <Nav.Link eventKey="first">Announcement</Nav.Link>
+                          </Nav.Item>
+                          <Nav.Item>
+                            <Nav.Link eventKey="second">About</Nav.Link>
+                          </Nav.Item>
+                          <Nav.Item>
+                            <Nav.Link eventKey="second1">Experience</Nav.Link>
+                          </Nav.Item>
+                          <Nav.Item>
+                            <Nav.Link eventKey="second2">Document</Nav.Link>
+                          </Nav.Item>
+                        </Nav>
+                      </div>
+                      <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
+                        <div>
+                          <div className="dashboard_top_week_Select">
+                            <Select options={options} placeholder="Select" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Tab.Content>
+                    <Tab.Pane eventKey="first">
+                      <div className="m_t"></div>
+                      <Post />
+                      <PostUser />
+                      <PostUser />
+                      <PostUser />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <div className="m_t"></div>2
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second1">
+                      <div className="m_t"></div>3
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="secon2">
+                      <div className="m_t"></div>4
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">
+                <EmployeesCard />
+              </Tab.Pane>
+            </div>
           </Tab.Content>
         </Tab.Container>
       </div>

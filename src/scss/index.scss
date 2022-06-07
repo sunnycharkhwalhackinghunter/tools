@@ -2082,6 +2082,7 @@ a {
       font-weight: 400;
       padding: 10px 25px;
       cursor: pointer;
+      border-radius: 0;
     }
   }
   .nav-pills .nav-link.active,
@@ -2284,5 +2285,8 @@ a {
 .EmployeesProfileCard_icon_div_main {
   display: flex;
   align-items: center;
+}
+.m_t {
+  margin-top: 1.5rem;
 }
 // profile page end

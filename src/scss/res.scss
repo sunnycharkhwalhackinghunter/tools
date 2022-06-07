@@ -1,6 +1,17 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .profile_tab_div {
+    .profile_tab_div2 {
+      .nav {
+        display: block;
+      }
+      .dashboard_top_week_Select {
+        margin-top: 1rem;
+      }
+    }
+  }
+
   .EmployeesProfileCard_div_info {
     border: none;
   }
