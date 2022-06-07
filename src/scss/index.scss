@@ -2342,4 +2342,15 @@ a {
     font-weight: 400;
   }
 }
+.form-check-input:focus {
+  box-shadow: unset !important;
+}
+.form_check_label {
+  margin-top: 7px;
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #525252;
+  }
+}
 // profile page end

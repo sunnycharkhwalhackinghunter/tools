@@ -1,6 +1,18 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .AboutProfile_img_div_col {
+    text-align: center;
+  }
+  .AboutProfile_img_div {
+    border-radius: 100%;
+    width: auto;
+  }
+  .AboutProfile_img {
+    height: 13rem;
+    border-radius: 100%;
+    width: 13rem;
+  }
   .profile_tab_div {
     .profile_tab_div2 {
       .nav {

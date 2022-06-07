@@ -377,11 +377,11 @@ const EmployeesProfileCard = () => {
 const AboutProfile = () => {
   return (
     <>
-      <div className="row">
-        <div className="col-9">
+      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
           <div className="profile_iner_cont">
             <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-              <div className="col-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 AboutProfile_img_div_col">
                 <div className="AboutProfile_img_div">
                   <ProfileIcon
                     className="AboutProfile_img"
@@ -389,9 +389,9 @@ const AboutProfile = () => {
                   />
                 </div>
               </div>
-              <div className="col-9">
+              <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
                 <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="first name"
                       type="text"
@@ -399,7 +399,7 @@ const AboutProfile = () => {
                       placeholder="Gaurav"
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       type="text"
                       label="last name"
@@ -407,7 +407,7 @@ const AboutProfile = () => {
                       placeholder="Kaushik"
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       type="text"
                       label="State"
@@ -415,7 +415,7 @@ const AboutProfile = () => {
                       placeholder="Utter Pradesh"
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="Gender"
                       type="text"
@@ -425,7 +425,7 @@ const AboutProfile = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <AboutProfileInput
                   label="Date of Bitrh"
                   type="date"
@@ -433,12 +433,46 @@ const AboutProfile = () => {
                   placeholder="Male"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="ApprovalDetailsPage_date_picker">
                   <label>Relationship Status</label>
                 </div>
+                <div className="row">
+                  <div className="col-6">
+                    <div className="form-check form_check_label">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexRadioDefault1"
+                      >
+                        Single
+                      </label>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="form-check form_check_label">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                      />
+                      <label
+                        className="form-check-label "
+                        htmlFor="flexRadioDefault2"
+                      >
+                        Married
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="ApprovalDetailsPage_date_picker">
                   <label>Blood Group</label>
                   <select className="form-select">
@@ -449,7 +483,7 @@ const AboutProfile = () => {
                   </select>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <AboutProfileInput
                   label="Personal Contact number"
                   type="number"
@@ -457,7 +491,7 @@ const AboutProfile = () => {
                   placeholder="982-492-0322"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <AboutProfileInput
                   label="Emergency Contact Number"
                   type="number"
@@ -465,7 +499,7 @@ const AboutProfile = () => {
                   placeholder="918-233-2345"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <AboutProfileInput
                   label="email"
                   type="email"
