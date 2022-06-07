@@ -1,6 +1,49 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .EmployeesProfileCard_div_info {
+    border: none;
+  }
+  .EmployeesProfileCard_text_div {
+    margin-top: 0px;
+  }
+  .EmployeesProfileCard_icon_div_main {
+    justify-content: center;
+    width: 100%;
+  }
+  .EmployeesProfileCard_info_user {
+    p {
+      font-size: 12px;
+    }
+  }
+  .EmployeesProfileCard_info {
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    p {
+      font-size: 12px;
+      margin-bottom: 4px;
+      span {
+        svg {
+          margin-right: 5px;
+          font-size: 15px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+  .EmployeesProfileCard_text_div {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  .EmployeesProfileCard_icon {
+    width: 3rem;
+    height: 3rem;
+  }
   .profile_tab_div {
     .nav {
       flex-wrap: nowrap;
@@ -248,6 +291,19 @@
   }
 }
 @media (min-width: 768px) {
+  .EmployeesProfileCard_text_div {
+    margin-top: 10px;
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  .EmployeesProfileCard_icon {
+    width: 3rem;
+    height: 3rem;
+  }
   .notification_top_new2 {
     width: 63vw;
     height: 37rem;
@@ -304,6 +360,16 @@
   }
 }
 @media (min-width: 1024px) {
+  .EmployeesProfileCard_icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .EmployeesProfileCard_text_div {
+    margin-top: 8px;
+    h3 {
+      font-size: 26px;
+    }
+  }
   .notification_top_new2 {
     width: 46vw;
     height: 51rem;
@@ -379,6 +445,24 @@
   }
 }
 @media (min-width: 1440px) {
+  .EmployeesProfileCard_text_div {
+    margin-left: 1rem;
+    margin-top: 13px;
+    h3 {
+      font-size: 28px;
+      font-weight: 400;
+      color: #161616;
+      margin-bottom: 4px;
+      text-transform: capitalize;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #525252;
+    }
+  }
   .notification_top_new2 {
     width: 41vw;
     height: 43rem;

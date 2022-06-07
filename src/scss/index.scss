@@ -2212,5 +2212,77 @@ a {
 .EmployeesCard_container {
   padding: 1.5rem 0;
 }
-
+.EmployeesProfileCard_top_div {
+  background-color: white;
+  padding: 1rem;
+  margin: 1.5rem 0rem;
+  border-radius: 10px;
+}
+.EmployeesProfileCard_icon_div {
+  border: 1.5px solid #2dcd1f;
+  padding: 4px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.EmployeesProfileCard_icon {
+  @include bg_img;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+.EmployeesProfileCard_text_div {
+  margin-left: 1rem;
+  margin-top: 13px;
+  h3 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #161616;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #525252;
+  }
+}
+.EmployeesProfileCard_div_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #dde2ff;
+  border-right: 1px solid #dde2ff;
+}
+.EmployeesProfileCard_info {
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    span {
+      svg {
+        margin-right: 10px;
+        font-size: 18px;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+.EmployeesProfileCard_info_user {
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    span {
+      color: $blue;
+      margin-left: 2px;
+    }
+  }
+}
+.EmployeesProfileCard_icon_div_main {
+  display: flex;
+  align-items: center;
+}
 // profile page end
