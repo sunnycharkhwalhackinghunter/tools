@@ -12,11 +12,6 @@ import { IoCallOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { Post, PostUser } from "../Announcement/Index";
 export const Tabs = () => {
-  const options = [
-    { value: "today", label: "today" },
-    { value: "tomorrow", label: "tomorrow" },
-    { value: "last week", label: "last week" },
-  ];
   return (
     <>
       <div className="profile_tab_div">
@@ -39,65 +34,78 @@ export const Tabs = () => {
           </Nav>
 
           <Tab.Content>
-            <div className="profile_tab_div2">
-              <Tab.Pane eventKey="first">
-                <EmployeesProfileCard />
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                  <div>
-                    <div className="row">
-                      <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12 col-12">
-                        <Nav variant="pills" className="flex">
-                          <Nav.Item>
-                            <Nav.Link eventKey="first">Announcement</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item>
-                            <Nav.Link eventKey="second">About</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item>
-                            <Nav.Link eventKey="second1">Experience</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item>
-                            <Nav.Link eventKey="second2">Document</Nav.Link>
-                          </Nav.Item>
-                        </Nav>
-                      </div>
-                      <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
-                        <div>
-                          <div className="dashboard_top_week_Select">
-                            <Select options={options} placeholder="Select" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <div className="m_t"></div>
-                      <Post />
-                      <PostUser />
-                      <PostUser />
-                      <PostUser />
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <div className="m_t"></div>2
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second1">
-                      <div className="m_t"></div>3
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="secon2">
-                      <div className="m_t"></div>4
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <EmployeesCard />
-              </Tab.Pane>
-            </div>
+            <Tab.Pane eventKey="first">
+              <EmployeesProfileCard />
+              <InerNewTab />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
+              <EmployeesCard />
+            </Tab.Pane>
           </Tab.Content>
         </Tab.Container>
       </div>
+    </>
+  );
+};
+const InerNewTab = () => {
+  const options = [
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
+  ];
+  return (
+    <>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <div className="profile_tab_div2">
+          <div className="row">
+            <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12 col-12">
+              <Nav variant="pills" className="flex">
+                <Nav.Item>
+                  <Nav.Link eventKey="first">Announcement</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second">About</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second1">Experience</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second2">Document</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </div>
+            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
+              <div>
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="Select" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Tab.Content>
+          <Tab.Pane eventKey="first">
+            <div className="m_t"></div>
+            <Post />
+            <PostUser />
+            <PostUser />
+            <PostUser />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second">
+            <div className="m_t"></div>
+            <div>
+              <AboutProfile />
+            </div>
+          </Tab.Pane>
+          <Tab.Pane eventKey="second1">
+            <div className="m_t"></div>3
+          </Tab.Pane>
+          <Tab.Pane eventKey="secon2">
+            <div className="m_t"></div>4
+          </Tab.Pane>
+        </Tab.Content>
+      </Tab.Container>
     </>
   );
 };
@@ -362,6 +370,158 @@ const EmployeesProfileCard = () => {
             </div>
           </div>
         </div>
+      </div>
+    </>
+  );
+};
+const AboutProfile = () => {
+  return (
+    <>
+      <div className="row">
+        <div className="col-9">
+          <div className="profile_iner_cont">
+            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+              <div className="col-3">
+                <div className="AboutProfile_img_div">
+                  <ProfileIcon
+                    className="AboutProfile_img"
+                    backgroundImage={ProfilPhoto2}
+                  />
+                </div>
+              </div>
+              <div className="col-9">
+                <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                  <div className="col-6">
+                    <AboutProfileInput
+                      label="first name"
+                      type="text"
+                      className="form-control"
+                      placeholder="Gaurav"
+                    />
+                  </div>
+                  <div className="col-6">
+                    <AboutProfileInput
+                      type="text"
+                      label="last name"
+                      className="form-control"
+                      placeholder="Kaushik"
+                    />
+                  </div>
+                  <div className="col-6">
+                    <AboutProfileInput
+                      type="text"
+                      label="State"
+                      className="form-control"
+                      placeholder="Utter Pradesh"
+                    />
+                  </div>
+                  <div className="col-6">
+                    <AboutProfileInput
+                      label="Gender"
+                      type="text"
+                      className="form-control"
+                      placeholder="Male"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <AboutProfileInput
+                  label="Date of Bitrh"
+                  type="date"
+                  className="form-control"
+                  placeholder="Male"
+                />
+              </div>
+              <div className="col-6">
+                <div className="ApprovalDetailsPage_date_picker">
+                  <label>Relationship Status</label>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className="ApprovalDetailsPage_date_picker">
+                  <label>Blood Group</label>
+                  <select className="form-select">
+                    <option>AB Positive</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                  </select>
+                </div>
+              </div>
+              <div className="col-6">
+                <AboutProfileInput
+                  label="Personal Contact number"
+                  type="number"
+                  className="form-control"
+                  placeholder="982-492-0322"
+                />
+              </div>
+              <div className="col-6">
+                <AboutProfileInput
+                  label="Emergency Contact Number"
+                  type="number"
+                  className="form-control"
+                  placeholder="918-233-2345"
+                />
+              </div>
+              <div className="col-6">
+                <AboutProfileInput
+                  label="email"
+                  type="email"
+                  className="form-control"
+                  placeholder="gaurav@maxlence.com.au"
+                />
+              </div>
+              <div className="col-12">
+                <div className="ApprovalDetailsPage_date_picker">
+                  <label>Local Address</label>
+                  <textarea
+                    className="form-control"
+                    placeholder="Street Name: 55 Railrode Ave, City: Norwood, State: Massachusetts, Zip: 02062,Country: India"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-check AboutProfile_check_btn">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="flexCheckDefault"
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexCheckDefault"
+                  >
+                    Same as Permanent address
+                  </label>
+                </div>
+                <div className=" text-capitalize text-center">
+                  <button className=" ApprovalDetailsPage_btn">save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-3">
+          <div>jfnvjf</div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const AboutProfileInput = (props) => {
+  return (
+    <>
+      <div className="ApprovalDetailsPage_date_picker">
+        <label>{props.label}</label>
+        <Input
+          type={props.type}
+          className={props.className}
+          placeholder={props.placeholder}
+        />
       </div>
     </>
   );

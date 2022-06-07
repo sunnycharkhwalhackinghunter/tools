@@ -1021,6 +1021,25 @@ a {
     color: $text !important;
     background-color: #f4f4f4;
     font-size: 14px;
+    font-weight: 400;
+  }
+  textarea {
+    border: none;
+    border-bottom: 2px solid $text;
+    letter-spacing: 1.2px;
+    color: $text !important;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  select {
+    border: none;
+    border-bottom: 2px solid $text;
+    letter-spacing: 1.2px;
+    color: $text !important;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 .ApprovalDetailsPage_search_input {
@@ -1160,6 +1179,7 @@ a {
   border-radius: 8px;
   margin: 1.2rem 0 !important;
   margin-top: 0 !important;
+  text-transform: capitalize;
   &:hover {
     background-color: $hover;
   }
@@ -2288,5 +2308,38 @@ a {
 }
 .m_t {
   margin-top: 1.5rem;
+}
+.profile_iner_cont {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+}
+.AboutProfile_img {
+  @include bg_img;
+  width: 100%;
+  height: 9rem;
+  margin: auto;
+  border-radius: 2px;
+}
+.AboutProfile_img_div {
+  border: 1.5px solid #2dcd1f;
+  padding: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+}
+.AboutProfile_check_btn {
+  display: flex !important;
+  justify-content: flex-end;
+  margin-bottom: 1.2rem !important;
+  .form-check-input {
+    margin-top: 3px !important;
+  }
+  label {
+    margin-left: 5px;
+    color: #525252;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 // profile page end
