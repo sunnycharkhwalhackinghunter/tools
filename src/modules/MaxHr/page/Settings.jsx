@@ -1,14 +1,14 @@
 import { useState } from "react";
 const Settings = () => {
-  const [ReplyTop, setReplyTop] = useState(true);
-  const ReplyTopOpen = () => {
-    setReplyTop(!ReplyTop);
+  const [AboutProfileBtn, setAboutProfileBtn] = useState(true);
+  const AboutProfileBtnOpen = () => {
+    setAboutProfileBtn(!AboutProfileBtn);
   };
   return (
     <>
       <h1>Settings</h1>
-      <span onClick={ReplyTopOpen}>o</span>
-      <div className={`${ReplyTop ? "online4" : "offline4"}`}>
+      <span onClick={AboutProfileBtnOpen}>o</span>
+      <div className={`${AboutProfileBtn ? "online4" : "offline4"}`}>
         <div>dddd</div>
       </div>
     </>

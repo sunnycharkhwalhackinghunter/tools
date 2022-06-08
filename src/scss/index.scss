@@ -2353,4 +2353,54 @@ a {
     color: #525252;
   }
 }
+.AboutProfileBtn_pss {
+  display: block;
+}
+.AboutProfileBtn_pss1 {
+  display: none;
+}
+.AboutProfileBtn_pss3 {
+  display: none;
+}
+.AboutProfileBtn_pss4 {
+  display: block;
+}
+.AboutProfileBtn_pss_top_div {
+  .ApprovalDetailsPage_date_picker {
+    margin-bottom: 15px;
+  }
+  label {
+    font-size: 16px;
+    width: 400;
+  }
+}
+.ApprovalDetailsPage_date_picker_iner {
+  position: relative;
+  span {
+    cursor: pointer;
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    color: #525252;
+    p {
+      margin: 0;
+    }
+  }
+}
+.AboutProfile_pss_btn {
+  outline: none;
+  border: none;
+  background-color: $blue;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $hover;
+  }
+}
 // profile page end

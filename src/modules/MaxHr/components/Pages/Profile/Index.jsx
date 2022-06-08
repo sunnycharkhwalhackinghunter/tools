@@ -11,6 +11,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { Post, PostUser } from "../Announcement/Index";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 export const Tabs = () => {
   return (
     <>
@@ -375,6 +376,10 @@ const EmployeesProfileCard = () => {
   );
 };
 const AboutProfile = () => {
+  const [AboutProfileBtn, setAboutProfileBtn] = useState(true);
+  const AboutProfileBtnOpen = () => {
+    setAboutProfileBtn(!AboutProfileBtn);
+  };
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
@@ -538,8 +543,56 @@ const AboutProfile = () => {
             </div>
           </div>
         </div>
-        <div className="col-3">
-          <div>jfnvjf</div>
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <div className="profile_iner_cont">
+            <div
+              className={`${
+                AboutProfileBtn ? "AboutProfileBtn_pss" : "AboutProfileBtn_pss1"
+              }`}
+            >
+              <div className="AboutProfileBtn_pss_top_div">
+                <AboutProfileInput
+                  label="Change Password"
+                  type="password"
+                  EyeIcon={true}
+                  className="form-control"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div
+              className={`${
+                AboutProfileBtn
+                  ? "AboutProfileBtn_pss3"
+                  : "AboutProfileBtn_pss4"
+              }`}
+            >
+              <div>
+                <div className="AboutProfileBtn_pss_top_div">
+                  <AboutProfileInput
+                    label="New Password"
+                    type="password"
+                    EyeIcon={true}
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                  <AboutProfileInput
+                    label="Confirm password"
+                    type="password"
+                    EyeIcon={true}
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+            </div>
+            <button
+              className="AboutProfile_pss_btn"
+              onClick={AboutProfileBtnOpen}
+            >
+              {AboutProfileBtn ? "Change" : "Set New Password"}
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -547,15 +600,24 @@ const AboutProfile = () => {
 };
 
 const AboutProfileInput = (props) => {
+  const [showPass, setShowPass] = useState(false);
   return (
     <>
       <div className="ApprovalDetailsPage_date_picker">
         <label>{props.label}</label>
-        <Input
-          type={props.type}
-          className={props.className}
-          placeholder={props.placeholder}
-        />
+        <div className="ApprovalDetailsPage_date_picker_iner">
+          <span onClick={() => setShowPass(!showPass)}>
+            <p>
+              {props.EyeIcon &&
+                (showPass ? <AiFillEye /> : <AiFillEyeInvisible />)}
+            </p>
+          </span>
+          <Input
+            type={props.EyeIcon ? (showPass ? "text" : props.type) : props.type}
+            className={props.className}
+            placeholder={props.placeholder}
+          />
+        </div>
       </div>
     </>
   );
