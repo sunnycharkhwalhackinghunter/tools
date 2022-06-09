@@ -649,6 +649,46 @@ const EmployeesDocument = () => {
       eventKey: "2",
       eventKeyName: "Offer Letter",
     },
+    {
+      eventKey: "3",
+      eventKeyName: "NDA",
+    },
+    {
+      eventKey: "4",
+      eventKeyName: "Voter ID Card",
+    },
+    {
+      eventKey: "5",
+      eventKeyName: "Aadhar Card",
+    },
+    {
+      eventKey: "6",
+      eventKeyName: "Bank Pasbook",
+    },
+    {
+      eventKey: "7",
+      eventKeyName: "Passport",
+    },
+    {
+      eventKey: "8",
+      eventKeyName: "6 Months Bank Statement",
+    },
+    {
+      eventKey: "9",
+      eventKeyName: "Signed Copy of NDA",
+    },
+    {
+      eventKey: "10",
+      eventKeyName: "Educational Certificate 01",
+    },
+    {
+      eventKey: "11",
+      eventKeyName: "Achievement Certificate 01",
+    },
+    {
+      eventKey: "12",
+      eventKeyName: "Add Others",
+    },
   ];
   const EmployeesDocumentTabPan = (props) => {
     return (
@@ -664,6 +704,46 @@ const EmployeesDocument = () => {
     },
     {
       eventKey: "2",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "3",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "4",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "5",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "6",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "7",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "8",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "9",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "10",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "11",
+      data: <EmployeesTabPanData />,
+    },
+    {
+      eventKey: "12",
       data: <EmployeesTabPanData />,
     },
   ];
