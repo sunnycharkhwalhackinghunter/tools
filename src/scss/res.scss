@@ -1,6 +1,42 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .UploadDocumentModal_body_btn {
+    padding: 10px 40px;
+  }
+  .UploadDocumentModal_body_btn2 {
+    padding: 10px 40px;
+  }
+  .EmployeesTabPanDataImg {
+    height: 4rem;
+    width: 4rem;
+  }
+  .btnupload_bottom {
+    height: 48px;
+    width: 200px;
+  }
+  .btnupload {
+    height: 48px;
+    width: 200px;
+  }
+  .UploadDocument_img_div {
+    margin: 0;
+    margin-top: 2rem;
+  }
+  .UploadDocument_img_div_iner {
+    width: 100%;
+  }
+  .UploadDocument_select {
+    display: block;
+  }
+  .EmployeesDocument_list_top_div {
+    .nav-item {
+      width: auto !important;
+    }
+    .nav {
+      flex-wrap: wrap !important;
+    }
+  }
   .AboutProfile_img_div_col {
     text-align: center;
   }
@@ -468,24 +504,6 @@
   }
 }
 @media (min-width: 1440px) {
-  .EmployeesProfileCard_text_div {
-    margin-left: 1rem;
-    margin-top: 13px;
-    h3 {
-      font-size: 28px;
-      font-weight: 400;
-      color: #161616;
-      margin-bottom: 4px;
-      text-transform: capitalize;
-    }
-    p {
-      margin: 0;
-      font-size: 14px;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #525252;
-    }
-  }
   .notification_top_new2 {
     width: 41vw;
     height: 43rem;

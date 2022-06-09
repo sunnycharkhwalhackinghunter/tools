@@ -2403,4 +2403,206 @@ a {
     background-color: $hover;
   }
 }
-// profile page end
+.EmployeesDocument_top_title {
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #161616;
+  }
+}
+.EmployeesDocument_list_top_div {
+  .nav-link {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    background-color: #e0e0e0 !important;
+    color: #525252 !important;
+    text-transform: capitalize !important;
+    padding: 5px 13px !important;
+    border-radius: 25px !important;
+    margin-bottom: 1rem !important;
+  }
+  .nav-pills .nav-link.active,
+  .profile_tab_div .nav-pills .show > .nav-link {
+    background-color: #0a0e30 !important;
+    color: white !important;
+  }
+  margin: 1.5rem 0;
+}
+.UploadDocument_select {
+  display: flex;
+  margin-top: 3rem;
+  label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #525252;
+  }
+  small {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+  }
+  .css-1s2u09g-control {
+    background-color: #f4f4f4;
+    border-radius: 0;
+  }
+}
+.UploadDocument_img_div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 5rem;
+  margin-bottom: 0;
+}
+.UploadDocument_img_div_iner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 4rem 0rem;
+  border: 1px dashed #9fa2b4;
+  border-radius: 8px;
+  width: 75%;
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
+.btnupload {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  height: 58px;
+  width: 240px;
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 8px;
+  &:hover {
+    background-color: $blue;
+    color: white;
+  }
+}
+.btnupload_bottom {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  height: 58px;
+  width: 240px;
+  color: white;
+  background-color: $blue;
+  transition: all 0.3s;
+  border-radius: 8px;
+  &:hover {
+    background-color: $hover;
+    color: white;
+  }
+}
+.btnupload_bottom_div {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.EmployeesTabPanDataImg {
+  @include bg_img;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 15px;
+  border-radius: 6px;
+}
+
+.EmployeesTabPanDataImg_div_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.EmployeesTabPanDataImg_iner_div {
+  position: relative;
+  background-color: #f4f4f4;
+  width: auto;
+  padding: 15px;
+  padding-right: 0;
+  padding-bottom: 0;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.EmployeesTabPanDataImg_div_bottom_inner {
+  display: flex;
+  margin-bottom: 15px;
+}
+.EmployeesTabPanDataImg_iner_icon_div {
+  svg {
+    position: absolute;
+    top: -4%;
+    right: -10%;
+    font-size: 20px;
+    color: $text;
+  }
+}
+.UploadDocumentModal_body {
+  position: relative;
+  background: #f4f4f4;
+  border-radius: 0.3rem;
+}
+.UploadDocumentModal_body_close_btn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+.UploadDocumentModal_body_title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #161616;
+}
+.UploadDocumentModal_body_text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #161616;
+}
+.UploadDocumentModal_body_btn {
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: white;
+  transition: all 0.3s;
+  color: black;
+  border: 1px solid black;
+  margin-right: 0.5rem;
+  padding: 10px 45px;
+  border-radius: 8px;
+  &:hover {
+    background-color: $hover;
+    color: white;
+    border: 1px solid transparent;
+  }
+}
+.UploadDocumentModal_body_btn2 {
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: $blue;
+  transition: all 0.3s;
+  margin-left: 0.5rem;
+  color: white;
+  padding: 10px 45px;
+  border-radius: 8px;
+  &:hover {
+    background-color: $hover;
+    border: 1px solid transparent;
+  }
+}
+.UploadDocumentModal_body_btn_div {
+  text-align: center;
+  margin-top: 2rem;
+}
+// profile page endisplay: flex;
