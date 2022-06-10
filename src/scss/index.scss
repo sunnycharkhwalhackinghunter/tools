@@ -2410,6 +2410,13 @@ a {
     text-transform: capitalize;
     color: #161616;
   }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #161616;
+    margin-top: 12px;
+  }
 }
 .EmployeesDocument_list_top_div {
   .nav-link {
@@ -2604,5 +2611,173 @@ a {
 .UploadDocumentModal_body_btn_div {
   text-align: center;
   margin-top: 2rem;
+}
+.Experience_top_btn {
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s;
+  margin-left: 0.5rem;
+  color: $blue;
+  padding: 10px 45px;
+  border-radius: 8px;
+  border: 1px solid $blue;
+  &:hover {
+    background-color: $hover;
+    color: white;
+    border: 1px solid transparent;
+  }
+}
+.Experience_top_btn_div {
+  text-align: end;
+}
+.Experience_timline_top_div {
+  position: relative;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-left: 5px;
+  li {
+    border-left: 1px solid $c2;
+    position: relative;
+    padding-left: 1rem;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: $c2;
+      border-radius: 100%;
+      top: 0%;
+      left: -6.1px;
+    }
+  }
+}
+.Experience_timline_top_div li:nth-last-child(1) {
+  border: none;
+}
+.Experience_timline_img {
+  @include bg_img;
+  width: 32px;
+  height: 32px;
+  margin: auto;
+}
+.Experience_timline_title {
+  margin-top: -5px;
+  margin-left: 1.5rem;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #161616;
+  }
+}
+.Experience_timline_title2 {
+  margin-top: -5px;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+    span {
+      color: $blue;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #161616;
+  }
+}
+
+.Experience_timline_title_iner {
+  h4 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #161616;
+  }
+}
+.Experience_timline_title_iner_text {
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #525252;
+    margin-bottom: 2rem;
+  }
+}
+
+.Experience_timline_edit_img {
+  position: absolute;
+  @include bg_img;
+  width: 16px;
+  height: 16px;
+  top: 0%;
+  right: 3%;
+  cursor: pointer;
+}
+.Experience_timline_edit_img2 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0%;
+  right: 0%;
+  cursor: pointer;
+}
+.Experience_timline_title2 {
+  margin-top: 0px;
+  margin-left: 6px;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #161616;
+  }
+}
+.ExperienceEditModal_body {
+  background-color: white;
+}
+.ExperienceEditModal_text {
+  margin-top: 1rem;
+  .ExperienceEditModal_text_label_div {
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      color: #525252;
+    }
+  }
+  .ExperienceEditModal_text_label_div2 {
+    text-align: end;
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      color: #525252;
+    }
+  }
+  textarea {
+    font-weight: 500;
+    font-size: 14px;
+    color: #a8a8a8;
+    background: #f4f4f4;
+    ::placeholder {
+      font-weight: 500;
+      font-size: 14px;
+      color: #a8a8a8;
+      background: #f4f4f4;
+    }
+  }
 }
 // profile page endisplay: flex;

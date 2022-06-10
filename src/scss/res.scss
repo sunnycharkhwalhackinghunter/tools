@@ -1,6 +1,22 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .Experience_timline_edit_img {
+    right: 8%;
+  }
+  .Experience_top_btn_div {
+    text-align: center;
+  }
+  .Experience_top_btn {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .Experience_timline_title_iner {
+    h4 {
+      margin-top: 1rem;
+    }
+  }
   .UploadDocumentModal_body_btn {
     padding: 10px 40px;
   }
@@ -350,6 +366,9 @@
   }
 }
 @media (min-width: 768px) {
+  .Experience_timline_edit_img {
+    right: 4%;
+  }
   .EmployeesProfileCard_text_div {
     margin-top: 10px;
     h3 {
@@ -419,6 +438,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .Experience_timline_edit_img {
+    right: 3%;
+  }
   .EmployeesProfileCard_icon {
     width: 4rem;
     height: 4rem;
