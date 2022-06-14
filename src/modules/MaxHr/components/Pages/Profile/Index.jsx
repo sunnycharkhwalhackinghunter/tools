@@ -1,26 +1,18 @@
 import { Nav, Tab } from "react-bootstrap";
 import { PagesTopTitle } from "../../../components/Pages/Dashboard/index";
-import Select from "react-select";
-import { useState } from "react";
-import Input from "../../../../common/components/input/Input";
-import { IoSearchOutline } from "react-icons/io5";
-import ProfileIcon from "../../../../common/components/img/Img";
-import ProfilPhoto from "../../../../../pics/profile.jpeg";
-import ProfilPhoto2 from "../../../../../pics/profile2.jpeg";
-import PDF from "../../../../../pics/pdfd.png";
-import DOC from "../../../../../pics/docsd.jpg";
-import ImagedDoc from "../../../../../pics/imaged.png";
-import EX from "../../../../../pics/ex.png";
-import EX2 from "../../../../../pics/ex2.png";
-import Edit from "../../../../../pics/edit.png";
-import { AiOutlineMail } from "react-icons/ai";
-import { IoCallOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
-import { Post, PostUser } from "../Announcement/Index";
-import { AiFillEye, AiFillEyeInvisible, AiOutlineClose } from "react-icons/ai";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { Modal } from "react-bootstrap";
 import React from "react";
+import { EmployeesProfileCard } from "./components/EmployeesProfileCard";
+import { EmployeesCard } from "./components/EmployeesCard";
+import { Announcement } from "./components/Announcement";
+import { AboutProfile } from "./components/AboutProfile";
+import {
+  EmployeesDocument,
+  EmployeesTabPanData,
+} from "./components/EmployeesDocument";
+import { Experience, PreviousExperiences } from "./components/Experience";
+import { EmployeesTop } from "./components/EmployeesTop";
+import { IssueAssets } from "./components/IssueAssets";
+import { SalaryStracture } from "./components/SalaryStracture";
 export const Tabs = () => {
   return (
     <>
@@ -58,17 +50,30 @@ export const Tabs = () => {
   );
 };
 const InerNewTab = () => {
-  const options = [
-    { value: "today", label: "today" },
-    { value: "tomorrow", label: "tomorrow" },
-    { value: "last week", label: "last week" },
+  const IssueAssetsAppData = [
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
   ];
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <div className="profile_tab_div2">
           <div className="row">
-            <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12 col-12">
+            <div className="col-12">
               <Nav variant="pills" className="flex">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Announcement</Nav.Link>
@@ -82,14 +87,22 @@ const InerNewTab = () => {
                 <Nav.Item>
                   <Nav.Link eventKey="second2">Document</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="Assets">Issue Assets</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="Return">Offer Letter</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="Board">Salary Stracture</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="Disable">Exit Letter</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="Hold">Orginazation Policy</Nav.Link>
+                </Nav.Item>
               </Nav>
-            </div>
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
-              <div>
-                <div className="dashboard_top_week_Select">
-                  <Select options={options} placeholder="Select" />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -97,10 +110,7 @@ const InerNewTab = () => {
         <Tab.Content>
           <Tab.Pane eventKey="first">
             <div className="m_t"></div>
-            <Post />
-            <PostUser />
-            <PostUser />
-            <PostUser />
+            <Announcement />
           </Tab.Pane>
           <Tab.Pane eventKey="second">
             <div className="m_t"></div>
@@ -118,1129 +128,74 @@ const InerNewTab = () => {
             <div className="m_t"></div>
             <EmployeesDocument />
           </Tab.Pane>
+          <Tab.Pane eventKey="Assets">
+            <div className="m_t"></div>
+            <IssueAssets
+              data={IssueAssetsAppData}
+              tableTopTitle="Issued Assets"
+              tableTitle="Assets Name"
+              tableTitle2="Assets Number"
+              tableTitle3="Remarks"
+              tableTitle4="Issue Date"
+              tableTitle5="Expected Return Date"
+              tableTitle6="Actual Return Date"
+            />
+            <div className="m_t"></div>
+            <IssueAssets
+              data={IssueAssetsAppData}
+              tableTopTitle="Returned Assets"
+              tableTitle="Assets Name"
+              tableTitle2="Assets Number"
+              tableTitle3="Remarks"
+              tableTitle4="Issue Date"
+              tableTitle5="Expected Return Date"
+              tableTitle6="Actual Return Date"
+            />
+          </Tab.Pane>
+          <Tab.Pane eventKey="Return">
+            <div className="m_t"></div>
+            <div className="profile_iner_cont pb-5">
+              <div className="EmployeesDocument_top_title">
+                <h3>Offer Letter</h3>
+              </div>
+              <EmployeesTabPanData />
+            </div>
+          </Tab.Pane>
+          <Tab.Pane eventKey="Board">
+            <div className="m_t"></div>
+
+            <div className="profile_iner_cont">
+              <div className="EmployeesDocument_top_title">
+                <h3> Salary Stracture</h3>
+              </div>
+              <SalaryStracture />
+            </div>
+          </Tab.Pane>
+          <Tab.Pane eventKey="Disable">
+            <div className="m_t"></div>
+
+            <div className="profile_iner_cont">
+              <div className="EmployeesDocument_top_title">
+                <h3>Exit Letter</h3>
+                <div className="ExitLetter_top_div">
+                  <div className="ExitLetter_inner_div">
+                    <h3>You do not have Exit Letter</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Tab.Pane>
+          <Tab.Pane eventKey="Hold">
+            <div className="m_t"></div>
+            <div className="profile_iner_cont pb-5">
+              <div className="EmployeesDocument_top_title">
+                <h3>Orginazation Policy</h3>
+              </div>
+              <EmployeesTabPanData />
+            </div>
+          </Tab.Pane>
         </Tab.Content>
       </Tab.Container>
     </>
-  );
-};
-const EmployeesTop = () => {
-  const options = [
-    { value: "today", label: "today" },
-    { value: "tomorrow", label: "tomorrow" },
-    { value: "last week", label: "last week" },
-  ];
-  return (
-    <>
-      <div className="row">
-        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-          <PagesTopTitle title="Employees Profile" />
-        </div>
-        <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 position-relative">
-          <div className="profile_top_title2">
-            <div className="profile_top_title_iner_div">
-              <div className="dashboard_top_week_Select">
-                <Select options={options} placeholder="Department" />
-              </div>
-              <div className="profile_input_div">
-                <span>
-                  <IoSearchOutline />
-                </span>
-                <Input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search by name, email or department"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const EmployeesCard = () => {
-  const EmployeesCardApp = (props) => {
-    const [EmployeesCard, setEmployeesCard] = useState(true);
-    const EmployeesCardImg = () => {
-      setEmployeesCard(!EmployeesCard);
-    };
-    return (
-      <>
-        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
-          <NavLink
-            to="/"
-            className="EmployeesCard_top_div_link"
-            onMouseEnter={EmployeesCardImg}
-            onMouseLeave={EmployeesCardImg}
-          >
-            <div className="EmployeesCard_top_div_main">
-              <div className="EmployeesCard_top_div_main"></div>
-              <div className="EmployeesCard_top_div">
-                <div className=" position-relative">
-                  <ProfileIcon
-                    className="profile_card_icon"
-                    backgroundImage={
-                      EmployeesCard ? props.userIcon : props.setUserIcon
-                    }
-                  />
-                </div>
-                <h3>{EmployeesCard ? props.name : props.setName}</h3>
-                <div className="EmployeesCard_text">
-                  <span>
-                    <AiOutlineMail />
-                  </span>
-                  <span>{EmployeesCard ? props.email : props.setEmail}</span>
-                </div>
-                <div className="EmployeesCard_text">
-                  <span>
-                    <IoCallOutline />
-                  </span>
-                  <span>
-                    {EmployeesCard ? props.phoneNumber : props.setPhoneNumber}
-                  </span>
-                </div>
-              </div>
-              <div className="EmployeesCard_hr">
-                <hr />
-              </div>
-              <div className="EmployeesCard_text_bottom">
-                {EmployeesCard ? props.footerName : props.setFooterName}
-              </div>
-            </div>
-          </NavLink>
-        </div>
-      </>
-    );
-  };
-  const EmployeesCardAppData = [
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-    {
-      setUserIcon: ProfilPhoto,
-      userIcon: ProfilPhoto2,
-      name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
-      email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
-      phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
-      footerName: "react js developer",
-      setFooterName: "HR Manager",
-    },
-  ];
-  return (
-    <>
-      <div className="EmployeesCard_container">
-        <div>
-          <div className="row  g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-            {EmployeesCardAppData.map((val, i) => {
-              return (
-                <EmployeesCardApp
-                  key={i}
-                  footerName={val.footerName}
-                  setFooterName={val.setFooterName}
-                  phoneNumber={val.phoneNumber}
-                  setPhoneNumber={val.setPhoneNumber}
-                  email={val.email}
-                  setEmail={val.setEmail}
-                  name={val.name}
-                  setName={val.setName}
-                  userIcon={val.userIcon}
-                  setUserIcon={val.setUserIcon}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const EmployeesProfileCard = () => {
-  return (
-    <>
-      <div className="EmployeesProfileCard_top_div">
-        <div className="row">
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-            <div className=" EmployeesProfileCard_icon_div_main">
-              <div className="EmployeesProfileCard_icon_div">
-                <ProfileIcon
-                  className="EmployeesProfileCard_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-              </div>
-              <div className="EmployeesProfileCard_text_div">
-                <h3>gaurav Kaushik</h3>
-                <p>
-                  hR Manager <span>ID: MXHR02</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info">
-            <div className="EmployeesProfileCard_info">
-              <p>
-                <span>
-                  <AiOutlineMail />
-                </span>
-                gaurav@maxlence.com.au
-              </p>
-              <p>
-                <span>
-                  <IoCallOutline />
-                </span>
-                +91 834 9933 768
-              </p>
-            </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info">
-            <div className="EmployeesProfileCard_info_user">
-              <p>
-                Reporting to:
-                <span> Shived Bansel</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const AboutProfile = () => {
-  const [AboutProfileBtn, setAboutProfileBtn] = useState(true);
-  const AboutProfileBtnOpen = () => {
-    setAboutProfileBtn(!AboutProfileBtn);
-  };
-  return (
-    <>
-      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-        <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-          <div className="profile_iner_cont">
-            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 AboutProfile_img_div_col">
-                <div className="AboutProfile_img_div">
-                  <ProfileIcon
-                    className="AboutProfile_img"
-                    backgroundImage={ProfilPhoto2}
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-                <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <AboutProfileInput
-                      label="first name"
-                      type="text"
-                      className="form-control"
-                      placeholder="Gaurav"
-                    />
-                  </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <AboutProfileInput
-                      type="text"
-                      label="last name"
-                      className="form-control"
-                      placeholder="Kaushik"
-                    />
-                  </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <AboutProfileInput
-                      type="text"
-                      label="State"
-                      className="form-control"
-                      placeholder="Utter Pradesh"
-                    />
-                  </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <AboutProfileInput
-                      label="Gender"
-                      type="text"
-                      className="form-control"
-                      placeholder="Male"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <AboutProfileInput
-                  label="Date of Bitrh"
-                  type="date"
-                  className="form-control"
-                  placeholder="Male"
-                />
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div className="ApprovalDetailsPage_date_picker">
-                  <label>Relationship Status</label>
-                </div>
-                <div className="row">
-                  <div className="col-6">
-                    <div className="form-check form_check_label">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="flexRadioDefault1"
-                      >
-                        Single
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="form-check form_check_label">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                      />
-                      <label
-                        className="form-check-label "
-                        htmlFor="flexRadioDefault2"
-                      >
-                        Married
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div className="ApprovalDetailsPage_date_picker">
-                  <label>Blood Group</label>
-                  <select className="form-select">
-                    <option>AB Positive</option>
-                    <option>One</option>
-                    <option>Two</option>
-                    <option>Three</option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <AboutProfileInput
-                  label="Personal Contact number"
-                  type="number"
-                  className="form-control"
-                  placeholder="982-492-0322"
-                />
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <AboutProfileInput
-                  label="Emergency Contact Number"
-                  type="number"
-                  className="form-control"
-                  placeholder="918-233-2345"
-                />
-              </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <AboutProfileInput
-                  label="email"
-                  type="email"
-                  className="form-control"
-                  placeholder="gaurav@maxlence.com.au"
-                />
-              </div>
-              <div className="col-12">
-                <div className="ApprovalDetailsPage_date_picker">
-                  <label>Local Address</label>
-                  <textarea
-                    className="form-control"
-                    placeholder="Street Name: 55 Railrode Ave, City: Norwood, State: Massachusetts, Zip: 02062,Country: India"
-                    rows="3"
-                  ></textarea>
-                </div>
-              </div>
-              <div className="col-12">
-                <div className="form-check AboutProfile_check_btn">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="flexCheckDefault"
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="flexCheckDefault"
-                  >
-                    Same as Permanent address
-                  </label>
-                </div>
-                <div className=" text-capitalize text-center">
-                  <button className=" ApprovalDetailsPage_btn">save</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-          <div className="profile_iner_cont">
-            <div
-              className={`${
-                AboutProfileBtn ? "AboutProfileBtn_pss" : "AboutProfileBtn_pss1"
-              }`}
-            >
-              <div className="AboutProfileBtn_pss_top_div">
-                <AboutProfileInput
-                  label="Change Password"
-                  type="password"
-                  EyeIcon={true}
-                  className="form-control"
-                  placeholder="Password"
-                />
-              </div>
-            </div>
-            <div
-              className={`${
-                AboutProfileBtn
-                  ? "AboutProfileBtn_pss3"
-                  : "AboutProfileBtn_pss4"
-              }`}
-            >
-              <div>
-                <div className="AboutProfileBtn_pss_top_div">
-                  <AboutProfileInput
-                    label="New Password"
-                    type="password"
-                    EyeIcon={true}
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                  <AboutProfileInput
-                    label="Confirm password"
-                    type="password"
-                    EyeIcon={true}
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                </div>
-              </div>
-            </div>
-            <button
-              className="AboutProfile_pss_btn"
-              onClick={AboutProfileBtnOpen}
-            >
-              {AboutProfileBtn ? "Change" : "Set New Password"}
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const AboutProfileInput = (props) => {
-  const [showPass, setShowPass] = useState(false);
-  return (
-    <>
-      <div className="ApprovalDetailsPage_date_picker">
-        <label>{props.label}</label>
-        <div className="ApprovalDetailsPage_date_picker_iner">
-          <span onClick={() => setShowPass(!showPass)}>
-            <p>
-              {props.EyeIcon &&
-                (showPass ? <AiFillEye /> : <AiFillEyeInvisible />)}
-            </p>
-          </span>
-          <Input
-            type={props.EyeIcon ? (showPass ? "text" : props.type) : props.type}
-            className={props.className}
-            placeholder={props.placeholder}
-          />
-        </div>
-      </div>
-    </>
-  );
-};
-
-const EmployeesDocument = () => {
-  const EmployeesDocumentTopNameApp = (props) => {
-    return (
-      <>
-        <Nav.Item>
-          <Nav.Link eventKey={props.eventKey}>{props.eventKeyName}</Nav.Link>
-        </Nav.Item>
-      </>
-    );
-  };
-  const EmployeesDocumentTopNameData = [
-    {
-      eventKey: "1",
-      eventKeyName: "Releaving Letter",
-    },
-    {
-      eventKey: "2",
-      eventKeyName: "Offer Letter",
-    },
-    {
-      eventKey: "3",
-      eventKeyName: "NDA",
-    },
-    {
-      eventKey: "4",
-      eventKeyName: "Voter ID Card",
-    },
-    {
-      eventKey: "5",
-      eventKeyName: "Aadhar Card",
-    },
-    {
-      eventKey: "6",
-      eventKeyName: "Bank Pasbook",
-    },
-    {
-      eventKey: "7",
-      eventKeyName: "Passport",
-    },
-    {
-      eventKey: "8",
-      eventKeyName: "6 Months Bank Statement",
-    },
-    {
-      eventKey: "9",
-      eventKeyName: "Signed Copy of NDA",
-    },
-    {
-      eventKey: "10",
-      eventKeyName: "Educational Certificate 01",
-    },
-    {
-      eventKey: "11",
-      eventKeyName: "Achievement Certificate 01",
-    },
-    {
-      eventKey: "12",
-      eventKeyName: "Add Others",
-    },
-  ];
-  const EmployeesDocumentTabPan = (props) => {
-    return (
-      <>
-        <Tab.Pane eventKey={props.eventKey}>{props.data}</Tab.Pane>
-      </>
-    );
-  };
-  const EmployeesDocumentTabPanData = [
-    {
-      eventKey: "1",
-      data: <UploadDocument />,
-    },
-    {
-      eventKey: "2",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "3",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "4",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "5",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "6",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "7",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "8",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "9",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "10",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "11",
-      data: <EmployeesTabPanData />,
-    },
-    {
-      eventKey: "12",
-      data: <EmployeesTabPanData />,
-    },
-  ];
-  return (
-    <>
-      <div className="profile_iner_cont">
-        <div className="EmployeesDocument_top_title">
-          <h3>documents</h3>
-        </div>
-        <div className="EmployeesDocument_list_top_div">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="1">
-            <Nav variant="pills" className="flex">
-              {EmployeesDocumentTopNameData.map((val, i) => {
-                return (
-                  <EmployeesDocumentTopNameApp
-                    key={i}
-                    eventKey={val.eventKey}
-                    eventKeyName={val.eventKeyName}
-                  />
-                );
-              })}
-            </Nav>
-
-            <Tab.Content>
-              {EmployeesDocumentTabPanData.map((val, i) => {
-                return (
-                  <EmployeesDocumentTabPan
-                    key={i}
-                    eventKey={val.eventKey}
-                    data={val.data}
-                  />
-                );
-              })}
-            </Tab.Content>
-          </Tab.Container>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const EmployeesTabPanData = () => {
-  const [modalShow, setModalShow] = React.useState(false);
-  return (
-    <>
-      <div>
-        <div className="EmployeesTabPanDataImg_div_top">
-          <div className="EmployeesTabPanDataImg_iner_div">
-            <div className="EmployeesTabPanDataImg_iner_icon_div">
-              <RiDeleteBin6Line
-                variant="primary"
-                onClick={() => setModalShow(true)}
-              />
-              <UploadDocumentModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-              />
-            </div>
-            <div className="EmployeesTabPanDataImg_div_bottom_inner">
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={PDF}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={DOC}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={ImagedDoc}
-              />
-            </div>
-            <div className="EmployeesTabPanDataImg_div_bottom_inner">
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={PDF}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={DOC}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={ImagedDoc}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="btnupload_bottom_div">
-          <button className="btnupload_bottom">Download</button>
-        </div>
-      </div>
-    </>
-  );
-};
-const UploadDocument = () => {
-  const options = [
-    { value: "today", label: "today" },
-    { value: "tomorrow", label: "tomorrow" },
-    { value: "last week", label: "last week" },
-  ];
-  return (
-    <>
-      <div className="EmployeesDocument_top_title mt-3">
-        <h3>Upload Document</h3>
-        <div className="UploadDocument_select">
-          <div className="dashboard_top_week_Select">
-            <label>Choose Document Type</label>
-            <Select options={options} placeholder="Select" />
-            <small>only .pdf and not more than 2mb in size</small>
-          </div>
-        </div>
-        <div className="UploadDocument_img_div">
-          <div className="UploadDocument_img_div_iner">
-            <div className=" text-center">
-              <button className="btnupload">Choose a file to upload</button>
-              <p>or drag file in here</p>
-            </div>
-          </div>
-        </div>
-        <div className="btnupload_bottom_div">
-          <button className="btnupload_bottom">Choose a file to upload</button>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const UploadDocumentModal = (props) => {
-  return (
-    <Modal
-      {...props}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Body className="UploadDocumentModal_body">
-        <div className="UploadDocumentModal_body_close_btn">
-          <span onClick={props.onHide}>
-            <AiOutlineClose />
-          </span>
-        </div>
-        <p className="UploadDocumentModal_body_title">Are you sure!</p>
-        <p className="UploadDocumentModal_body_text">
-          Once deleted it can not be reverted.
-        </p>
-        <div className="UploadDocumentModal_body_btn_div">
-          <button
-            className="UploadDocumentModal_body_btn"
-            onClick={props.onHide}
-          >
-            Close
-          </button>
-          <button className="UploadDocumentModal_body_btn2">Delete</button>
-        </div>
-      </Modal.Body>
-    </Modal>
-  );
-};
-const Experience = () => {
-  const ExperienceApp = (props) => {
-    const [modalShow, setModalShow] = React.useState(false);
-    const [editModalShow, setEditModalShow] = React.useState(false);
-    return (
-      <>
-        <li>
-          <div className="row">
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
-              <div className="row">
-                <div className="col-2">
-                  <ProfileIcon
-                    className="Experience_timline_img"
-                    backgroundImage={props.img}
-                  />
-                </div>
-                <div className="col-10">
-                  <div className="Experience_timline_title">
-                    <h3>{props.name}</h3>
-                    <p>{props.date}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-9 col-sm-12">
-              <div className="Experience_timline_title_iner">
-                <h4>{props.role}</h4>
-                <ProfileIcon
-                  className="Experience_timline_edit_img"
-                  backgroundImage={Edit}
-                  onClick={() => setEditModalShow(true)}
-                />
-                <RiDeleteBin6Line
-                  onClick={() => setModalShow(true)}
-                  className="Experience_timline_edit_img2"
-                />
-                <UploadDocumentModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                />
-                <ExperienceEditModal
-                  show={editModalShow}
-                  onHide={() => setEditModalShow(false)}
-                />
-              </div>
-              <div className="Experience_timline_title_iner_text">
-                <p>{props.text}</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </>
-    );
-  };
-  const ExperienceData = [
-    {
-      img: EX,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      img: EX2,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      img: EX,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      img: EX2,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      img: EX,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      img: EX2,
-      name: "design Head",
-      date: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-  ];
-  return (
-    <>
-      <div className="profile_iner_cont">
-        <div className="row">
-          <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 order-md-1 order-2 ">
-            <div className="EmployeesDocument_top_title">
-              <h3>Experience with Maxlence Consulting</h3>
-              <p>4 years 0 month 3 days</p>
-            </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 order-md-2 order-1">
-            <div className="Experience_top_btn_div">
-              <button className="Experience_top_btn">Add Experience</button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <ul className="Experience_timline_top_div">
-                {ExperienceData.map((val, i) => {
-                  return (
-                    <ExperienceApp
-                      key={i}
-                      img={val.img}
-                      name={val.name}
-                      date={val.date}
-                      role={val.role}
-                      text={val.text}
-                    />
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const PreviousExperiences = () => {
-  const PreviousExperiencesApp = (props) => {
-    const [modalShow, setModalShow] = React.useState(false);
-    const [editModalShow, setEditModalShow] = React.useState(false);
-    return (
-      <>
-        <li>
-          <div className="row">
-            <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-              <div className="row">
-                <div className="col-12">
-                  <div className="Experience_timline_title2">
-                    <h3>
-                      {props.name} <span>{props.subName}</span>
-                    </h3>
-                    <p>
-                      {props.date} to {props.subDate}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-12">
-              <div className="Experience_timline_title_iner">
-                <h4>{props.role}</h4>
-                <ProfileIcon
-                  className="Experience_timline_edit_img"
-                  backgroundImage={Edit}
-                  onClick={() => setEditModalShow(true)}
-                />
-                <RiDeleteBin6Line
-                  onClick={() => setModalShow(true)}
-                  className="Experience_timline_edit_img2"
-                />
-                <UploadDocumentModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                />
-                <ExperienceEditModal
-                  show={editModalShow}
-                  onHide={() => setEditModalShow(false)}
-                />
-              </div>
-              <div className="Experience_timline_title_iner_text">
-                <p>{props.text}</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </>
-    );
-  };
-  const PreviousExperiencesData = [
-    {
-      name: "Graphics Designer @",
-      subName: " XYZ",
-      date: "27 sep, 2020",
-      subDate: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      name: "Graphics Designer @",
-      subName: " XYZ",
-      date: "27 sep, 2020",
-      subDate: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      name: "Graphics Designer @",
-      subName: " XYZ",
-      date: "27 sep, 2020",
-      subDate: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      name: "Graphics Designer @",
-      subName: " XYZ",
-      date: "27 sep, 2020",
-      subDate: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-    {
-      name: "Graphics Designer @",
-      subName: " XYZ",
-      date: "27 sep, 2020",
-      subDate: "27 sep, 2020",
-      role: "role",
-      text: "lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
-    },
-  ];
-  return (
-    <>
-      <div className="profile_iner_cont">
-        <div className="row">
-          <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 order-md-1 order-2 ">
-            <div className="EmployeesDocument_top_title">
-              <h3>Previous Experiences</h3>
-              <p>4 years 0 month 3 days</p>
-            </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 order-md-2 order-1">
-            <div className="Experience_top_btn_div">
-              <button className="Experience_top_btn">Add Experience</button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <ul className="Experience_timline_top_div">
-                {PreviousExperiencesData.map((val, i) => {
-                  return (
-                    <PreviousExperiencesApp
-                      key={i}
-                      name={val.name}
-                      subName={val.subName}
-                      date={val.date}
-                      subDate={val.subDate}
-                      role={val.role}
-                      text={val.text}
-                    />
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const ExperienceEditModal = (props) => {
-  return (
-    <Modal
-      {...props}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Body className="UploadDocumentModal_body ExperienceEditModal_body">
-        <div className="UploadDocumentModal_body_close_btn">
-          <span onClick={props.onHide}>
-            <AiOutlineClose />
-          </span>
-        </div>
-        <div>
-          <div className=" d-flex">
-            <div>
-              <ProfileIcon
-                className="Experience_timline_img"
-                backgroundImage={EX}
-              />
-            </div>
-            <div>
-              <div className="Experience_timline_title2">
-                <h3>Design Head</h3>
-                <p>27 sep, 2020</p>
-              </div>
-            </div>
-          </div>
-          <div className="ExperienceEditModal_text">
-            <div className="row">
-              <div className="col-6">
-                <div className="ExperienceEditModal_text_label_div">
-                  <label className="form-label">Role</label>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="ExperienceEditModal_text_label_div2">
-                  <label className="form-label">0/100</label>
-                </div>
-              </div>
-            </div>
-            <textarea
-              className="form-control "
-              rows="5"
-              placeholder="lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua."
-            ></textarea>
-          </div>
-        </div>
-        <div className="UploadDocumentModal_body_btn_div">
-          <button
-            className="UploadDocumentModal_body_btn"
-            onClick={props.onHide}
-          >
-            Close
-          </button>
-          <button className="UploadDocumentModal_body_btn2">Save</button>
-        </div>
-      </Modal.Body>
-    </Modal>
   );
 };

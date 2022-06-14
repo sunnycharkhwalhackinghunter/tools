@@ -2093,6 +2093,17 @@ a {
 }
 //notification page end
 // profile page
+.profile_tab_div2 {
+  .nav-item {
+    margin: auto;
+  }
+  .nav-pills {
+    .nav-link {
+      border-radius: 6px !important;
+    }
+  }
+}
+
 .profile_tab_div {
   .nav-pills {
     .nav-link {
@@ -2550,6 +2561,7 @@ a {
     right: -10%;
     font-size: 20px;
     color: $text;
+    cursor: pointer;
   }
 }
 .UploadDocumentModal_body {
@@ -2778,6 +2790,122 @@ a {
       color: #a8a8a8;
       background: #f4f4f4;
     }
+  }
+}
+.profil_emp_inter_page_title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &:hover {
+    color: black;
+  }
+  svg {
+    font-size: 20px;
+    color: black;
+    margin-right: 11px;
+  }
+}
+.profil_emp_inter_page_tab {
+  display: flex;
+}
+.profil_emp_inter_page_tab_div {
+  a {
+    color: #525252;
+    &:hover {
+      color: #525252;
+    }
+  }
+  background: white;
+  color: #525252;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 0;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: #525252;
+  }
+}
+.profil_emp_inter_page_tab_activ {
+  background-color: $c2;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 0;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+.IssueAssets_top_div {
+  margin-top: 2rem;
+  text-transform: capitalize;
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+  thead {
+    tr {
+      th {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.IssueAssets_btn_bottom_div {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.IssueAssets_btn {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  height: 58px;
+  width: 240px;
+  color: #161616;
+  border: 1px solid #393939;
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 8px;
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $hover;
+    color: white;
+  }
+}
+.ExitLetter_top_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ExitLetter_inner_div {
+  padding: 8rem;
+  h3 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #a8a8a8;
+    text-transform: capitalize;
+    margin: 0;
   }
 }
 // profile page endisplay: flex;

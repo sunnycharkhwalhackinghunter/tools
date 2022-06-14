@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .IssueAssets_top_div {
+    display: block;
+  }
   .Experience_timline_edit_img {
     right: 8%;
   }
@@ -68,10 +71,18 @@
   .profile_tab_div {
     .profile_tab_div2 {
       .nav {
-        display: block;
+        display: flex;
       }
       .dashboard_top_week_Select {
         margin-top: 1rem;
+      }
+    }
+    .nav-pills {
+      .nav-link {
+        width: auto;
+        margin: 2px;
+        border-radius: 6px;
+        font-size: 12px;
       }
     }
   }
@@ -121,10 +132,10 @@
   }
   .profile_tab_div {
     .nav {
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
     .nav-item {
-      width: 100%;
+      width: 50%;
       text-align: center;
     }
   }
@@ -366,6 +377,19 @@
   }
 }
 @media (min-width: 768px) {
+  .profile_tab_div2 {
+    .nav-item {
+      margin: 2px;
+      margin-bottom: 2px;
+      width: 11.1rem;
+      text-align: center;
+    }
+    .nav-pills {
+      .nav-link {
+        border-radius: 6px !important;
+      }
+    }
+  }
   .Experience_timline_edit_img {
     right: 4%;
   }
@@ -438,6 +462,19 @@
   }
 }
 @media (min-width: 1024px) {
+  .profile_tab_div2 {
+    .nav-item {
+      margin: 2px;
+      margin-bottom: 2px;
+      width: 12rem;
+      text-align: center;
+    }
+    .nav-pills {
+      .nav-link {
+        border-radius: 6px !important;
+      }
+    }
+  }
   .Experience_timline_edit_img {
     right: 3%;
   }
@@ -526,6 +563,19 @@
   }
 }
 @media (min-width: 1440px) {
+  .profile_tab_div2 {
+    .nav-item {
+      margin: auto;
+      margin-bottom: unset;
+      width: auto;
+      text-align: center;
+    }
+    .nav-pills {
+      .nav-link {
+        border-radius: 6px !important;
+      }
+    }
+  }
   .notification_top_new2 {
     width: 41vw;
     height: 43rem;
