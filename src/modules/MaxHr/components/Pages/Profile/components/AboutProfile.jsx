@@ -227,7 +227,7 @@ export const AboutProfile = () => {
   );
 };
 
-const AboutProfileInput = (props) => {
+export const AboutProfileInput = (props) => {
   const [showPass, setShowPass] = useState(false);
   return (
     <>

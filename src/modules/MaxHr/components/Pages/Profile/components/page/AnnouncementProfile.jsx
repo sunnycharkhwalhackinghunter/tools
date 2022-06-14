@@ -12,7 +12,34 @@ import Input from "../../../../../../common/components/input/Input";
 import EX from "../../../../../../../pics/ex.png";
 import EX2 from "../../../../../../../pics/ex2.png";
 import { EmployeesDocument } from "../EmployeesDocument";
+import { IssueAssets, IssueAssetsAppTop } from "../IssueAssets";
 const Announcement = () => {
+  const IssueAssetsAppData = [
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
+  ];
   return (
     <>
       <div className="custom_container">
@@ -96,7 +123,18 @@ const Announcement = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="Assets">
                   <div className="m_t"></div>
-                  Assets
+                  <IssueAssetsAppTop />
+                  <div className="m_t"></div>
+                  <IssueAssets
+                    data={IssueAssetsAppData}
+                    tableTopTitle="Issued Assets"
+                    tableTitle="Assets Name"
+                    tableTitle2="Assets Number"
+                    tableTitle3="Remarks"
+                    tableTitle4="Issue Date"
+                    tableTitle5="Expected Return Date"
+                    tableTitle6="Actual Return Date"
+                  />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Return">
                   <div className="m_t"></div>

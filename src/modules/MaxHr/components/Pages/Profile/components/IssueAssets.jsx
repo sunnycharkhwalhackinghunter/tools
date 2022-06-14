@@ -1,3 +1,4 @@
+import { AboutProfileInput } from "./AboutProfile";
 export const IssueAssets = (props) => {
   const IssueAssetsApp = (props) => {
     return (
@@ -51,6 +52,71 @@ export const IssueAssets = (props) => {
           <div className="IssueAssets_btn_bottom_div">
             <button className="IssueAssets_btn">Download</button>
           </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const IssueAssetsAppTop = (props) => {
+  return (
+    <>
+      <div className="profile_iner_cont">
+        <div className="EmployeesDocument_top_title">
+          <h3>Issued Assets</h3>
+        </div>
+        <div className="IssueAssetsAppTop_main_div">
+          <div className="row  g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-6">
+              <div className="row">
+                <div className="col-6">
+                  <AboutProfileInput
+                    label="Assets Name"
+                    type="text"
+                    className="form-control"
+                    placeholder="What’s assets"
+                  />
+                </div>
+                <div className="col-6">
+                  <AboutProfileInput
+                    label="Assets Number"
+                    type="text"
+                    className="form-control"
+                    placeholder="What’s assets number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="row">
+                <div className="col-6">
+                  <AboutProfileInput
+                    label="Issue date"
+                    type="date"
+                    className="form-control"
+                  />
+                </div>
+                <div className="col-6">
+                  <AboutProfileInput
+                    label="Expected Return date"
+                    type="date"
+                    className="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-12">
+              <AboutProfileInput
+                label="Remarks if any"
+                type="text"
+                className="form-control"
+                placeholder="Add Remarks if any"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="IssueAssets_btn_bottom_div">
+          <button className="IssueAssets_btn">Issue Assets</button>
         </div>
       </div>
     </>
