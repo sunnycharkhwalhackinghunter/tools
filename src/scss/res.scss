@@ -1,6 +1,12 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .SalaryStracture_top_tabel_top_div1 {
+    display: block;
+  }
+  .SalaryStracture_top_tabel_top_div {
+    display: block;
+  }
   .IssueAssets_top_div {
     display: block;
   }

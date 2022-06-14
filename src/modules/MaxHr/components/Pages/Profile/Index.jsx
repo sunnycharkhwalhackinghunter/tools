@@ -67,6 +67,14 @@ const InerNewTab = () => {
       ExpectedReturnDate: "NA",
       ActualReturnDate: "NA",
     },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      Remarks: "NA",
+      IssueDate: "09/23/2021",
+      ExpectedReturnDate: "NA",
+      ActualReturnDate: "NA",
+    },
   ];
   return (
     <>

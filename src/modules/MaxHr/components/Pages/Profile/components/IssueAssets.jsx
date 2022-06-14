@@ -13,6 +13,7 @@ export const IssueAssets = (props) => {
       </>
     );
   };
+
   return (
     <>
       <div className="profile_iner_cont">

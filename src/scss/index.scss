@@ -2908,4 +2908,64 @@ a {
     margin: 0;
   }
 }
+
+.SalaryStracture_top_tabel_main_title {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+.SalaryStracture_bottom_left_title {
+  p {
+    font-weight: 600;
+    color: $red;
+    margin-bottom: 0;
+    padding: 0.5rem 0.5rem;
+  }
+}
+.SalaryStracture_bottom_left_title2 {
+  text-align: end;
+  p {
+    font-weight: 600;
+    color: $red;
+    margin-bottom: 0;
+    padding: 0.5rem 0.5rem;
+  }
+}
+.SalaryStracture_top_tabel_top_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  margin: 0 !important;
+  tbody {
+    tr {
+      border-top-width: 2px !important;
+      border-top: 1px solid #dee2e6;
+    }
+  }
+}
+.SalaryStracture_top_tabel_top_div1 {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  margin: 0 !important;
+  tbody {
+    tr {
+      border-top-width: 2px !important;
+      border-top: 1px solid #dee2e6;
+    }
+  }
+}
+.SalaryStracture_top_tabel_top_div_bottom {
+  border-bottom-width: 2px !important;
+  border-bottom: 1px solid #dee2e6;
+}
+
 // profile page endisplay: flex;
