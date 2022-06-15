@@ -27,6 +27,7 @@ import Leave from "../page/Leave";
 import Notification from "../page/Notification";
 import AnnouncementProfile from "../components/Pages/Profile/components/page/AnnouncementProfile";
 import { UserDetails } from "../page/UserDetails";
+import OffBoardEmployee from "../page/OffBoardEmployee";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -69,7 +70,10 @@ const Index = () => {
                   path="/announcement_profile"
                   element={<AnnouncementProfile />}
                 />
-
+                <Route
+                  path="/off_board_employee"
+                  element={<OffBoardEmployee />}
+                />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

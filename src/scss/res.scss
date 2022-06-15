@@ -1,6 +1,14 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .IssueAssets_btn_bottom_div2 {
+    display: block;
+    button {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
   .SalaryStracture_top_tabel_top_div1 {
     display: block;
   }

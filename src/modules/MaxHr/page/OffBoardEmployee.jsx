@@ -1,11 +1,59 @@
-import ProfilPhoto from "../../../../../../pics/profile.jpeg";
+import { NavLink } from "react-router-dom";
+import { BsArrowLeft } from "react-icons/bs";
+import Select from "react-select";
+import React from "react";
+import { useState } from "react";
+import Input from "../../common/components/input/Input";
+import { IoSearchOutline } from "react-icons/io5";
+import ProfilPhoto from "../../../pics/profile.jpeg";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import ProfileIcon from "../../../../../common/components/img/Img";
-import ProfilPhoto2 from "../../../../../../pics/profile2.jpeg";
-export const EmployeesCard = () => {
+import ProfileIcon from "../../common/components/img/Img";
+import ProfilPhoto2 from "../../../pics/profile2.jpeg";
+const OffBoardEmployee = () => {
+  const options = [
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
+  ];
+  return (
+    <>
+      <div className="custom_container">
+        <div className="row">
+          <div className=" col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <NavLink to={-1} className="profil_emp_inter_page_title">
+              <BsArrowLeft />
+              Off Board Employee
+            </NavLink>
+          </div>
+          <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <div className="profile_top_title2">
+              <div className="profile_top_title_iner_div">
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="Department" />
+                </div>
+                <div className="profile_input_div">
+                  <span>
+                    <IoSearchOutline />
+                  </span>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search by name, email or department"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <EmployeesCard />
+      </div>
+    </>
+  );
+};
+export default OffBoardEmployee;
+
+const EmployeesCard = () => {
   const EmployeesCardApp = (props) => {
     const [EmployeesCard, setEmployeesCard] = useState(true);
     const EmployeesCardImg = () => {
@@ -15,7 +63,7 @@ export const EmployeesCard = () => {
       <>
         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
           <NavLink
-            to={props.pagelink ? props.pagelink : "/hr/not-found"}
+            to={-1}
             className="EmployeesCard_top_div_link"
             onMouseEnter={EmployeesCardImg}
             onMouseLeave={EmployeesCardImg}
@@ -61,7 +109,6 @@ export const EmployeesCard = () => {
   };
   const EmployeesCardAppData = [
     {
-      pagelink: "/hr/announcement_profile",
       setUserIcon: ProfilPhoto,
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
@@ -167,7 +214,6 @@ export const EmployeesCard = () => {
               return (
                 <EmployeesCardApp
                   key={i}
-                  pagelink={val.pagelink}
                   footerName={val.footerName}
                   setFooterName={val.setFooterName}
                   phoneNumber={val.phoneNumber}

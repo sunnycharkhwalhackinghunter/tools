@@ -300,6 +300,18 @@ ul {
 .slider.round:before {
   border-radius: 50%;
 }
+.slider2 {
+  background-color: #9fa2b4;
+  &::before {
+    background-color: black;
+  }
+}
+.switch .switch_input:checked + .slider2 {
+  background-color: $red;
+}
+.switch .switch_input:checked + .slider2::before {
+  background-color: white;
+}
 .profile_switch_top {
   text-transform: capitalize;
   display: flex;
@@ -2969,5 +2981,59 @@ a {
 }
 .IssueAssetsAppTop_main_div {
   margin-top: 2rem;
+}
+.IssueAssetsAppTop_right_div {
+  display: flex;
+  justify-content: flex-end;
+}
+.OffBoard_tabel_title {
+  margin-top: 2rem;
+  margin-bottom: 6px;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #525252;
+  }
+}
+.IssueAssets_btn2 {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 45px;
+  color: white;
+  border: 1px solid transparent;
+  background-color: $blue;
+  transition: all 0.3s;
+  border-radius: 8px;
+  margin-right: 5px;
+  &:hover {
+    border: 1px solid #393939;
+    background-color: transparent;
+    color: #393939;
+  }
+}
+.IssueAssets_btn3 {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 45px;
+  color: #393939;
+  border: 1px solid #393939;
+  background-color: transparent;
+  transition: all 0.3s;
+  border-radius: 8px;
+  margin-left: 5px;
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $blue;
+    color: white;
+  }
+}
+.IssueAssets_btn_bottom_div2 {
+  display: flex;
+  justify-content: center;
 }
 // profile page endisplay: flex;

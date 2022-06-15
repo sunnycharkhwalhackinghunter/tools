@@ -12,7 +12,13 @@ import Input from "../../../../../../common/components/input/Input";
 import EX from "../../../../../../../pics/ex.png";
 import EX2 from "../../../../../../../pics/ex2.png";
 import { EmployeesDocument } from "../EmployeesDocument";
-import { IssueAssets, IssueAssetsAppTop } from "../IssueAssets";
+import {
+  IssueAssets,
+  IssueAssetsAppTop,
+  EmployeesReturnAssets,
+  Disable,
+  OffBoard,
+} from "../IssueAssets";
 const Announcement = () => {
   const IssueAssetsAppData = [
     {
@@ -138,19 +144,30 @@ const Announcement = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="Return">
                   <div className="m_t"></div>
-                  Return Assets
+                  <EmployeesReturnAssets />
+                  <div className="m_t"></div>
+                  <IssueAssets
+                    data={IssueAssetsAppData}
+                    tableTopTitle="Return Assets"
+                    tableTitle="Assets Name"
+                    tableTitle2="Assets Number"
+                    tableTitle3="Remarks"
+                    tableTitle4="Issue Date"
+                    tableTitle5="Expected Return Date"
+                    tableTitle6="Actual Return Date"
+                  />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Board">
                   <div className="m_t"></div>
-                  Off Board
+                  <OffBoard />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Disable">
                   <div className="m_t"></div>
-                  Disable Login
+                  <Disable title="Disable Login" />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Hold">
                   <div className="m_t"></div>
-                  Hold Salary
+                  <Disable title="Hold Salary" />
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
