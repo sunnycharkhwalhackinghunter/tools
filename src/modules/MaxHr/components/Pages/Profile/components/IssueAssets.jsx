@@ -51,9 +51,6 @@ export const IssueAssets = (props) => {
               })}
             </tbody>
           </table>
-          <div className="IssueAssets_btn_bottom_div">
-            <button className="IssueAssets_btn">Download</button>
-          </div>
         </div>
       </div>
     </>
@@ -362,12 +359,12 @@ export const OffBoard = () => {
         </div>
         <div className="IssueAssets_btn_bottom_div IssueAssets_btn_bottom_div2">
           <div>
-            <NavLink to="/hr/off_board_employee">
+            <NavLink to="/">
               <button className="IssueAssets_btn2"> Schedule</button>
             </NavLink>
           </div>
           <div>
-            <NavLink to="/hr/off_board_employee">
+            <NavLink to="/">
               <button className="IssueAssets_btn3"> Schedule Off Board</button>
             </NavLink>
           </div>

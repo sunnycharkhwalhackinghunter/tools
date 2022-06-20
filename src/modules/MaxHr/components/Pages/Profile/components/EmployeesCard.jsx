@@ -1,24 +1,16 @@
-import ProfilPhoto from "../../../../../../pics/profile.jpeg";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import ProfileIcon from "../../../../../common/components/img/Img";
 import ProfilPhoto2 from "../../../../../../pics/profile2.jpeg";
 export const EmployeesCard = () => {
   const EmployeesCardApp = (props) => {
-    const [EmployeesCard, setEmployeesCard] = useState(true);
-    const EmployeesCardImg = () => {
-      setEmployeesCard(!EmployeesCard);
-    };
     return (
       <>
         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
           <NavLink
             to={props.pagelink ? props.pagelink : "/hr/not-found"}
             className="EmployeesCard_top_div_link"
-            onMouseEnter={EmployeesCardImg}
-            onMouseLeave={EmployeesCardImg}
           >
             <div className="EmployeesCard_top_div_main">
               <div className="EmployeesCard_top_div_main"></div>
@@ -26,32 +18,28 @@ export const EmployeesCard = () => {
                 <div className=" position-relative">
                   <ProfileIcon
                     className="profile_card_icon"
-                    backgroundImage={
-                      EmployeesCard ? props.userIcon : props.setUserIcon
-                    }
+                    backgroundImage={props.userIcon}
                   />
                 </div>
-                <h3>{EmployeesCard ? props.name : props.setName}</h3>
+                <h3>{props.name}</h3>
                 <div className="EmployeesCard_text">
                   <span>
                     <AiOutlineMail />
                   </span>
-                  <span>{EmployeesCard ? props.email : props.setEmail}</span>
+                  <span>{props.email}</span>
                 </div>
                 <div className="EmployeesCard_text">
                   <span>
                     <IoCallOutline />
                   </span>
-                  <span>
-                    {EmployeesCard ? props.phoneNumber : props.setPhoneNumber}
-                  </span>
+                  <span>{props.phoneNumber}</span>
                 </div>
               </div>
               <div className="EmployeesCard_hr">
                 <hr />
               </div>
               <div className="EmployeesCard_text_bottom">
-                {EmployeesCard ? props.footerName : props.setFooterName}
+                {props.footerName}
               </div>
             </div>
           </NavLink>
@@ -62,100 +50,75 @@ export const EmployeesCard = () => {
   const EmployeesCardAppData = [
     {
       pagelink: "/hr/announcement_profile",
-      setUserIcon: ProfilPhoto,
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
     },
     {
-      setUserIcon: ProfilPhoto,
+      pagelink: "/hr/announcement_profile",
       userIcon: ProfilPhoto2,
       name: "sunny charkhwl",
-      setName: "Gaurav Kaushik",
       email: "sunny@maxlence.com.au",
-      setEmail: "gaurav@maxlence.com.au",
       phoneNumber: "+91 834 9933 768",
-      setPhoneNumber: "+91 000 1234 123",
       footerName: "react js developer",
-      setFooterName: "HR Manager",
+    },
+    {
+      pagelink: "/hr/announcement_profile",
+      userIcon: ProfilPhoto2,
+      name: "sunny charkhwl",
+      email: "sunny@maxlence.com.au",
+      phoneNumber: "+91 834 9933 768",
+      footerName: "react js developer",
     },
   ];
   return (
@@ -168,16 +131,11 @@ export const EmployeesCard = () => {
                 <EmployeesCardApp
                   key={i}
                   pagelink={val.pagelink}
-                  footerName={val.footerName}
-                  setFooterName={val.setFooterName}
-                  phoneNumber={val.phoneNumber}
-                  setPhoneNumber={val.setPhoneNumber}
-                  email={val.email}
-                  setEmail={val.setEmail}
-                  name={val.name}
-                  setName={val.setName}
                   userIcon={val.userIcon}
-                  setUserIcon={val.setUserIcon}
+                  footerName={val.footerName}
+                  phoneNumber={val.phoneNumber}
+                  email={val.email}
+                  name={val.name}
                 />
               );
             })}

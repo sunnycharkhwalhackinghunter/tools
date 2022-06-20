@@ -1052,6 +1052,7 @@ a {
     background-color: #f4f4f4;
     font-size: 14px;
     font-weight: 400;
+    text-transform: capitalize;
   }
 }
 .ApprovalDetailsPage_search_input {
@@ -1340,6 +1341,7 @@ a {
         padding-bottom: 12px;
         color: black;
         font-size: 13px;
+        text-transform: capitalize;
       }
     }
   }
@@ -2350,6 +2352,29 @@ a {
   border-radius: 4px;
   display: inline-block;
   width: 100%;
+  position: relative;
+  &:hover {
+    .AboutProfile_img_div_edit_top {
+      display: block;
+    }
+  }
+}
+.AboutProfile_img_div_edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000063;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+.AboutProfile_img_div_edit_top {
+  display: none;
 }
 .AboutProfile_check_btn {
   display: flex !important;
@@ -2426,6 +2451,7 @@ a {
     background-color: $hover;
   }
 }
+
 .EmployeesDocument_top_title {
   h3 {
     font-size: 20px;
@@ -3037,3 +3063,120 @@ a {
   justify-content: center;
 }
 // profile page endisplay: flex;
+// finance page
+.finance1 {
+  display: block;
+}
+.finance2 {
+  display: none;
+}
+.finance3 {
+  display: none;
+}
+.finance4 {
+  display: block;
+}
+.finance5 {
+  display: none;
+  .finance1 {
+    display: block;
+  }
+}
+.finance6 {
+  display: block;
+}
+.finance7 {
+  display: block;
+}
+.finance8 {
+  display: none;
+}
+.finance9 {
+  display: block;
+}
+.finance10 {
+  display: none;
+}
+.finance11 {
+  display: none;
+}
+.finance12 {
+  display: block;
+}
+.fin .finance_inter_page_title {
+  cursor: pointer;
+}
+.all_page_my_label {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #525252;
+  text-transform: capitalize;
+}
+.finance_inter_select_right {
+  display: flex;
+  justify-content: flex-end;
+}
+.finance_inter_select_top_div {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.SalarySlipDownload_top_div {
+  border: 1px solid #f4f4f4;
+  text-transform: capitalize;
+  padding: 10px 1rem;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #161616;
+    margin-bottom: 0;
+  }
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    color: $blue;
+    &:hover {
+      span {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+.SalarySlipDownload_side_btn {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  .SalarySlipDownload_side_iner_div {
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      color: #525252;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-left: 5px;
+      }
+    }
+    p {
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 16px;
+      color: #525252;
+    }
+  }
+}
+.profile_input_div_finance {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+// finance page end

@@ -126,7 +126,7 @@ export const UserDetails = () => {
   );
 };
 
-const UserDetailsList = () => {
+export const UserDetailsList = () => {
   const changNameUser = (PdfIcon) => {
     window.open(PdfIcon, "__blank");
   };

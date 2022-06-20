@@ -1,7 +1,10 @@
+import { Index } from "../components/Pages/Finance/Index";
 const Finance = () => {
   return (
     <>
-      <h1>Finance</h1>
+      <div className="custom_container">
+        <Index />
+      </div>
     </>
   );
 };

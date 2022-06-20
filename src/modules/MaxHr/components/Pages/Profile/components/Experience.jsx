@@ -6,7 +6,9 @@ import React from "react";
 import ProfileIcon from "../../../../../common/components/img/Img";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { AboutProfileInput } from "../components/AboutProfile";
 export const Experience = () => {
+  const [NewExperiencesModal, setNewExperiencesModal] = React.useState(false);
   const ExperienceApp = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
     const [editModalShow, setEditModalShow] = React.useState(false);
@@ -116,7 +118,16 @@ export const Experience = () => {
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 order-md-2 order-1">
             <div className="Experience_top_btn_div">
-              <button className="Experience_top_btn">Add Experience</button>
+              <button
+                onClick={() => setNewExperiencesModal(true)}
+                className="Experience_top_btn"
+              >
+                Add New Experience
+              </button>
+              <AddNewExperiencesModal
+                show={NewExperiencesModal}
+                onHide={() => setNewExperiencesModal(false)}
+              />
             </div>
           </div>
         </div>
@@ -145,6 +156,8 @@ export const Experience = () => {
   );
 };
 export const PreviousExperiences = () => {
+  const [PreviousExperiencesModal, setPreviousExperiencesModal] =
+    React.useState(false);
   const PreviousExperiencesApp = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
     const [editModalShow, setEditModalShow] = React.useState(false);
@@ -250,7 +263,16 @@ export const PreviousExperiences = () => {
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 order-md-2 order-1">
             <div className="Experience_top_btn_div">
-              <button className="Experience_top_btn">Add Experience</button>
+              <button
+                onClick={() => setPreviousExperiencesModal(true)}
+                className="Experience_top_btn"
+              >
+                Add Experience
+              </button>
+              <AddPreviousExperiencesModal
+                show={PreviousExperiencesModal}
+                onHide={() => setPreviousExperiencesModal(false)}
+              />
             </div>
           </div>
         </div>
@@ -367,6 +389,165 @@ const UploadDocumentModal = (props) => {
             Close
           </button>
           <button className="UploadDocumentModal_body_btn2">Delete</button>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+const AddPreviousExperiencesModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="UploadDocumentModal_body ExperienceEditModal_body">
+        <div className="UploadDocumentModal_body_close_btn">
+          <span onClick={props.onHide}>
+            <AiOutlineClose />
+          </span>
+        </div>
+        <div>
+          <div className=" d-flex">
+            <div>
+              <div className="Experience_timline_title2">
+                <h3>Add Previous Experiences</h3>
+              </div>
+            </div>
+          </div>
+          <div className="ExperienceEditModal_text">
+            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="job title"
+                  type="text"
+                  className="form-control"
+                  placeholder="Job Title"
+                />
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="company name"
+                  type="text"
+                  className="form-control"
+                  placeholder="Company Name"
+                />
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="start date"
+                  type="date"
+                  className="form-control"
+                />
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="end date"
+                  type="date"
+                  className="form-control"
+                />
+              </div>
+            </div>
+            <div className="row mt-4">
+              <div className="col-6">
+                <div className="ExperienceEditModal_text_label_div">
+                  <label className="form-label">Role</label>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className="ExperienceEditModal_text_label_div2">
+                  <label className="form-label">0/100</label>
+                </div>
+              </div>
+            </div>
+            <textarea
+              className="form-control "
+              rows="5"
+              placeholder="lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua."
+            ></textarea>
+          </div>
+        </div>
+        <div className="UploadDocumentModal_body_btn_div">
+          <button
+            className="UploadDocumentModal_body_btn"
+            onClick={props.onHide}
+          >
+            Close
+          </button>
+          <button className="UploadDocumentModal_body_btn2">Save</button>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+const AddNewExperiencesModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="UploadDocumentModal_body ExperienceEditModal_body">
+        <div className="UploadDocumentModal_body_close_btn">
+          <span onClick={props.onHide}>
+            <AiOutlineClose />
+          </span>
+        </div>
+        <div>
+          <div className=" d-flex">
+            <div>
+              <div className="Experience_timline_title2">
+                <h3>Add New Experiences</h3>
+              </div>
+            </div>
+          </div>
+          <div className="ExperienceEditModal_text">
+            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="job title"
+                  type="text"
+                  className="form-control"
+                  placeholder="Job Title"
+                />
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <AboutProfileInput
+                  label="Select Date (when you got this post)"
+                  type="date"
+                  className="form-control"
+                />
+              </div>
+            </div>
+            <div className="row mt-4">
+              <div className="col-6">
+                <div className="ExperienceEditModal_text_label_div">
+                  <label className="form-label">Role</label>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className="ExperienceEditModal_text_label_div2">
+                  <label className="form-label">0/100</label>
+                </div>
+              </div>
+            </div>
+            <textarea
+              className="form-control "
+              rows="5"
+              placeholder="lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua."
+            ></textarea>
+          </div>
+        </div>
+        <div className="UploadDocumentModal_body_btn_div">
+          <button
+            className="UploadDocumentModal_body_btn"
+            onClick={props.onHide}
+          >
+            Close
+          </button>
+          <button className="UploadDocumentModal_body_btn2">Save</button>
         </div>
       </Modal.Body>
     </Modal>

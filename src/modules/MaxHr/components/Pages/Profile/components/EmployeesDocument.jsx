@@ -2,12 +2,17 @@ import ProfileIcon from "../../../../../common/components/img/Img";
 import PDF from "../../../../../../pics/pdfd.png";
 import DOC from "../../../../../../pics/docsd.jpg";
 import ImagedDoc from "../../../../../../pics/imaged.png";
+import ModalIcon1 from "../../../../../../pics/modal1.png";
+import ModalIcon2 from "../../../../../../pics/modal2.png";
+import ModalIcon3 from "../../../../../../pics/modal3.png";
 import { Nav, Tab } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Modal } from "react-bootstrap";
 import Select from "react-select";
 import React from "react";
+import PdfIcon from "../../../../../../pics/docnew.png";
+import { NavLink } from "react-router-dom";
 export const EmployeesDocument = () => {
   const EmployeesDocumentTopNameApp = (props) => {
     return (
@@ -27,6 +32,7 @@ export const EmployeesDocument = () => {
       eventKey: "2",
       eventKeyName: "Offer Letter",
     },
+
     {
       eventKey: "3",
       eventKeyName: "NDA",
@@ -64,6 +70,10 @@ export const EmployeesDocument = () => {
       eventKeyName: "Achievement Certificate 01",
     },
     {
+      eventKey: "13",
+      eventKeyName: "Orginazation Policy",
+    },
+    {
       eventKey: "12",
       eventKeyName: "Add Others",
     },
@@ -82,47 +92,51 @@ export const EmployeesDocument = () => {
     },
     {
       eventKey: "2",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "3",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "4",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "5",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "6",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "7",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "8",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "9",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "10",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "11",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
     },
     {
       eventKey: "12",
-      data: <EmployeesTabPanData />,
+      data: <DocumentDetailsList />,
+    },
+    {
+      eventKey: "13",
+      data: <DocumentDetailsList />,
     },
   ];
   return (
@@ -164,54 +178,61 @@ export const EmployeesDocument = () => {
 };
 
 export const EmployeesTabPanData = () => {
-  const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
       <div>
-        <div className="EmployeesTabPanDataImg_div_top">
-          <div className="EmployeesTabPanDataImg_iner_div">
-            <div className="EmployeesTabPanDataImg_iner_icon_div">
-              <RiDeleteBin6Line
-                variant="primary"
-                onClick={() => setModalShow(true)}
-              />
-              <UploadDocumentModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-              />
-            </div>
-            <div className="EmployeesTabPanDataImg_div_bottom_inner">
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={PDF}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={DOC}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={ImagedDoc}
-              />
-            </div>
-            <div className="EmployeesTabPanDataImg_div_bottom_inner">
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={PDF}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={DOC}
-              />
-              <ProfileIcon
-                className="EmployeesTabPanDataImg"
-                backgroundImage={ImagedDoc}
-              />
-            </div>
-          </div>
-        </div>
+        <EmployeesTabPanDataIner />
         <div className="btnupload_bottom_div">
           <button className="btnupload_bottom">Download</button>
+        </div>
+      </div>
+    </>
+  );
+};
+export const EmployeesTabPanDataIner = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  return (
+    <>
+      <div className="EmployeesTabPanDataImg_div_top">
+        <div className="EmployeesTabPanDataImg_iner_div">
+          <div className="EmployeesTabPanDataImg_iner_icon_div">
+            <RiDeleteBin6Line
+              variant="primary"
+              onClick={() => setModalShow(true)}
+            />
+            <UploadDocumentModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
+          </div>
+          <div className="EmployeesTabPanDataImg_div_bottom_inner">
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={PDF}
+            />
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={DOC}
+            />
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={ImagedDoc}
+            />
+          </div>
+          <div className="EmployeesTabPanDataImg_div_bottom_inner">
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={PDF}
+            />
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={DOC}
+            />
+            <ProfileIcon
+              className="EmployeesTabPanDataImg"
+              backgroundImage={ImagedDoc}
+            />
+          </div>
         </div>
       </div>
     </>
@@ -279,5 +300,194 @@ const UploadDocumentModal = (props) => {
         </div>
       </Modal.Body>
     </Modal>
+  );
+};
+export const DocumentDetailsList = () => {
+  const changNameUser = (PdfIcon) => {
+    window.open(PdfIcon, "__blank");
+  };
+  const UserDetailsListData = [
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon1,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
+      type: "image",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon2,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
+      type: "doc",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+    {
+      ListIcon: ModalIcon3,
+      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
+      type: "pdf",
+      Owner: "Roushan Kumar",
+      modified: "28 Apr 2022",
+    },
+  ];
+  const UserDetailsListCard = (props) => {
+    return (
+      <>
+        <tr>
+          <td className="UserDetailsList_icon_top_div">
+            <div className=" d-flex align-items-center">
+              <ProfileIcon
+                className="UserDetailsList_icon"
+                backgroundImage={props.ListIcon}
+              />
+              <span onClick={() => changNameUser(PdfIcon)}>
+                {props.ListName}
+              </span>
+            </div>
+          </td>
+          <td>{props.type}</td>
+          <td>{props.Owner}</td>
+          <td>{props.modified}</td>
+          <td>
+            <NavLink to="/">download</NavLink>
+          </td>
+        </tr>
+      </>
+    );
+  };
+  return (
+    <>
+      <div className=" px-3">
+        <table className="table text-capitalize mt-4 table_top_div">
+          <thead>
+            <tr className="UserDetails_list_th">
+              <th scope="col">name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Owner</th>
+              <th scope="col">Last modified</th>
+              <th scope="col">action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {UserDetailsListData.map((val, i) => {
+              return (
+                <UserDetailsListCard
+                  key={i}
+                  ListIcon={val.ListIcon}
+                  ListName={val.ListName}
+                  type={val.type}
+                  Owner={val.Owner}
+                  modified={val.modified}
+                />
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 };

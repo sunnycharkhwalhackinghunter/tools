@@ -5,10 +5,7 @@ import { EmployeesProfileCard } from "./components/EmployeesProfileCard";
 import { EmployeesCard } from "./components/EmployeesCard";
 import { Announcement } from "./components/Announcement";
 import { AboutProfile } from "./components/AboutProfile";
-import {
-  EmployeesDocument,
-  EmployeesTabPanData,
-} from "./components/EmployeesDocument";
+import { EmployeesDocument } from "./components/EmployeesDocument";
 import { Experience, PreviousExperiences } from "./components/Experience";
 import { EmployeesTop } from "./components/EmployeesTop";
 import { IssueAssets } from "./components/IssueAssets";
@@ -96,19 +93,10 @@ const InerNewTab = () => {
                   <Nav.Link eventKey="second2">Document</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="Assets">Issue Assets</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="Return">Offer Letter</Nav.Link>
+                  <Nav.Link eventKey="Assets">Assets</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="Board">Salary Stracture</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="Disable">Exit Letter</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="Hold">Orginazation Policy</Nav.Link>
                 </Nav.Item>
               </Nav>
             </div>
@@ -160,15 +148,6 @@ const InerNewTab = () => {
               tableTitle6="Actual Return Date"
             />
           </Tab.Pane>
-          <Tab.Pane eventKey="Return">
-            <div className="m_t"></div>
-            <div className="profile_iner_cont pb-5">
-              <div className="EmployeesDocument_top_title">
-                <h3>Offer Letter</h3>
-              </div>
-              <EmployeesTabPanData />
-            </div>
-          </Tab.Pane>
           <Tab.Pane eventKey="Board">
             <div className="m_t"></div>
 
@@ -177,29 +156,6 @@ const InerNewTab = () => {
                 <h3> Salary Stracture</h3>
               </div>
               <SalaryStracture />
-            </div>
-          </Tab.Pane>
-          <Tab.Pane eventKey="Disable">
-            <div className="m_t"></div>
-
-            <div className="profile_iner_cont">
-              <div className="EmployeesDocument_top_title">
-                <h3>Exit Letter</h3>
-                <div className="ExitLetter_top_div">
-                  <div className="ExitLetter_inner_div">
-                    <h3>You do not have Exit Letter</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Tab.Pane>
-          <Tab.Pane eventKey="Hold">
-            <div className="m_t"></div>
-            <div className="profile_iner_cont pb-5">
-              <div className="EmployeesDocument_top_title">
-                <h3>Orginazation Policy</h3>
-              </div>
-              <EmployeesTabPanData />
             </div>
           </Tab.Pane>
         </Tab.Content>

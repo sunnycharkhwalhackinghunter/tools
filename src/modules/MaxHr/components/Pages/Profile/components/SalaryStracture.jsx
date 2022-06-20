@@ -95,8 +95,8 @@ export const SalaryStracture = () => {
           </div>
         </div>
       </div>
-      <div class="IssueAssets_btn_bottom_div">
-        <button class="IssueAssets_btn">Download</button>
+      <div className="IssueAssets_btn_bottom_div">
+        <button className="IssueAssets_btn">Download</button>
       </div>
     </>
   );

@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .profile_input_div_finance {
+    display: block;
+  }
   .IssueAssets_btn_bottom_div2 {
     display: block;
     button {
@@ -41,8 +44,8 @@
     padding: 10px 40px;
   }
   .EmployeesTabPanDataImg {
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
   }
   .btnupload_bottom {
     height: 48px;
@@ -391,6 +394,9 @@
   }
 }
 @media (min-width: 768px) {
+  .profile_input_div_finance {
+    display: block;
+  }
   .profile_tab_div2 {
     .nav-item {
       margin: 2px;
@@ -476,6 +482,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .profile_input_div_finance {
+    display: flex;
+  }
   .profile_tab_div2 {
     .nav-item {
       margin: 2px;
