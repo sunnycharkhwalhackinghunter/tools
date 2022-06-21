@@ -1,7 +1,10 @@
+import { MyAttendence } from "../components/Pages/attendence/MyAttendence";
 const Attendence = () => {
   return (
     <>
-      <h1>Attendence</h1>
+      <div className="custom_container">
+        <MyAttendence />
+      </div>
     </>
   );
 };

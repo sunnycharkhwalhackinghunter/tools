@@ -128,6 +128,43 @@ nav {
     color: var(--color_nav_active);
   }
 }
+.test {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 15px 5px 15px 15px;
+  text-decoration: none;
+  color: $c2;
+  transition: all ease-in-out 0.2s;
+  background-color: white;
+  cursor: pointer;
+  border-left: 3px solid white;
+
+  .description {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 15px;
+    transition: opacity 200ms ease;
+    text-transform: capitalize;
+  }
+
+  svg {
+    font-size: 18px;
+    color: var(--color_nav_not_active);
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: $c2;
+    border-left: 3px solid white;
+    color: white;
+  }
+
+  &:hover svg {
+    color: var(--color_nav_active);
+  }
+}
 
 .li_navlink .active {
   background: $c1;

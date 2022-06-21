@@ -11,25 +11,75 @@ import Logo from "../../../../pics/Logo.png";
 import LogoImg from "../../../common/components/NavLogo/Logo";
 //ICONS
 import { MdPayments } from "react-icons/md";
-
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { ImBullhorn } from "react-icons/im";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiTableAltFill, RiBankFill } from "react-icons/ri";
 import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
-import { BsCalendarX, BsCalendar2CheckFill } from "react-icons/bs";
+import {
+  BsCalendarX,
+  BsCalendar2CheckFill,
+  BsFillCalendar2WeekFill,
+} from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from "../../../common/components/input/Input";
+import { useState } from "react";
 import {
   faGaugeHigh,
   faPersonChalkboard,
 } from "@fortawesome/free-solid-svg-icons";
-const NavUrl = ({ url, icon, description }) => {
+const NavUrl = ({ url, icon, description, navItems }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   const { nav, setNav } = useContext(NavContext);
   const checkWindowSize = () => {
     if (window.innerWidth < 1024) setNav(!nav);
   };
-  return (
-    <li className={styles.li_navlink}>
+  const DropdownItem = () => (
+    <>
+      <div
+        className={styles.test}
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      >
+        {icon}
+        <span className={styles.description}>
+          {description}
+          <span className="last_icon">
+            {navItems ? (
+              isDropdownOpen ? (
+                <FiChevronRight />
+              ) : (
+                <FiChevronDown />
+              )
+            ) : null}
+          </span>
+        </span>
+      </div>
+      <div
+        className={`${
+          isDropdownOpen ? "isDropdownOpen_show" : "isDropdownOpen_hide"
+        }`}
+      >
+        {navItems.map((item, i) => (
+          <div className="isDropdownOpen_sub_menu" key={i}>
+            <NavLink
+              to={item.link}
+              onClick={() => checkWindowSize()}
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              <span>
+                {item.iconIner}
+                {item.title}
+              </span>
+            </NavLink>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+  const NavItem = () => (
+    <div>
       <NavLink
         to={`${url}`}
         className={({ isActive }) => (isActive ? styles.active : undefined)}
@@ -38,6 +88,11 @@ const NavUrl = ({ url, icon, description }) => {
         {icon}
         <span className={styles.description}>{description}</span>
       </NavLink>
+    </div>
+  );
+  return (
+    <li className={styles.li_navlink}>
+      {navItems ? <DropdownItem /> : <NavItem />}
     </li>
   );
 };
@@ -85,7 +140,18 @@ const Navbar = () => {
             <NavUrl url="profile" icon={<FaUserTie />} description="profile" />
             <NavUrl url="finance" icon={<MdPayments />} description="finance" />
             <NavUrl
-              url="attendence"
+              navItems={[
+                {
+                  title: "My Attendence",
+                  link: "/hr/attendence",
+                  iconIner: <BsCalendar2CheckFill />,
+                },
+                {
+                  title: "Employees Attendence",
+                  link: "/hr/finance",
+                  iconIner: <BsFillCalendar2WeekFill />,
+                },
+              ]}
               icon={<BsCalendarX />}
               description="attendence"
             />

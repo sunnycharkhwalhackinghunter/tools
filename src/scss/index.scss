@@ -535,7 +535,7 @@ a {
   padding: 1.3rem;
 }
 .page_top_title {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   h3 {
     text-transform: capitalize;
@@ -2835,9 +2835,10 @@ a {
   align-items: center;
   font-weight: 600;
   font-size: 16px;
-  color: black;
-  margin-top: 2rem;
+  color: black !important;
+  margin-top: 1rem;
   margin-bottom: 2rem;
+
   &:hover {
     color: black;
   }
@@ -3180,3 +3181,135 @@ a {
   justify-content: flex-end;
 }
 // finance page end
+// attendence
+.isDropdownOpen_show {
+  display: none;
+}
+.isDropdownOpen_hide {
+  display: block;
+}
+.isDropdownOpen_sub_menu {
+  a {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    font-size: 12px;
+    margin-left: 1rem;
+    font-weight: 600 !important;
+    svg {
+      margin-right: 10px;
+      font-size: 15px !important;
+    }
+  }
+}
+.last_icon {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+}
+.MyAttendence_dashbaord_calendar_iner_div {
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.MyAttendence_dashbaord_calendar {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 10px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  height: 42rem !important;
+  padding: 1rem !important;
+  .react-calendar__tile {
+    padding: 30px 10px !important;
+    // border-radius: 8px !important;
+    border-bottom: 1px solid #dde2ff !important;
+    border-right: 1px solid #dde2ff !important;
+  }
+  abbr[data-bs-original-title],
+  abbr[title] {
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+  }
+  .react-calendar__month-view__weekdays__weekday {
+    border-bottom: 1px solid #dde2ff;
+    padding-bottom: 25px !important;
+  }
+  .react-calendar__navigation__label {
+    flex-grow: unset !important;
+  }
+
+  .react-calendar__navigation {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em !important;
+    button {
+      font-size: 23px !important;
+    }
+  }
+  .react-calendar__navigation__label {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+  }
+}
+.MyAttendence_dashbaord_calendar_iner_text_div {
+  display: flex;
+  text-transform: capitalize;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 1rem;
+    span {
+      font-weight: 600;
+    }
+    .iner_color {
+      color: $red;
+    }
+  }
+}
+.MyAttendence_next_page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    border-radius: 6px;
+    margin-right: 1rem;
+    background-color: white;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s;
+    svg {
+      margin-left: 10px;
+    }
+  }
+}
+.ApplyLeave_right_card {
+  padding: 1rem;
+  text-transform: capitalize;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0a0e30;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #525252;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+// attendence end
