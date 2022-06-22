@@ -28,6 +28,8 @@ import Notification from "../page/Notification";
 import AnnouncementProfile from "../components/Pages/Profile/components/page/AnnouncementProfile";
 import { UserDetails } from "../page/UserDetails";
 import { ApplyLeave } from "../components/Pages/attendence/ApplyLeave";
+import { PreviousLeaves } from "../components/Pages/attendence/PreviousLeaves";
+import { EmployeesAttendance } from "../components/Pages/attendence/EmployeesAttendance";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -71,6 +73,11 @@ const Index = () => {
                   element={<AnnouncementProfile />}
                 />
                 <Route path="/apply_leave" element={<ApplyLeave />} />
+                <Route path="/previous_leaves" element={<PreviousLeaves />} />
+                <Route
+                  path="/employees_attendance"
+                  element={<EmployeesAttendance />}
+                />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

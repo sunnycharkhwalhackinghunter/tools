@@ -148,7 +148,7 @@ const Navbar = () => {
                 },
                 {
                   title: "Employees Attendence",
-                  link: "/hr/finance",
+                  link: "/hr/employees_attendance",
                   iconIner: <BsFillCalendar2WeekFill />,
                 },
               ]}

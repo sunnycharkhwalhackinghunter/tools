@@ -5,7 +5,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 export const MyAttendence = () => {
-  const [value, onChange] = useState(new Date());
+  const [value, onChangee] = useState(new Date());
   return (
     <>
       <div className="row">
@@ -22,7 +22,11 @@ export const MyAttendence = () => {
       <EmployeesProfileCard />
       <Calendar
         className="MyAttendence_dashbaord_calendar"
-        onChange={onChange}
+        onChange={(date) => {
+          onChangee(date);
+          alert(date);
+          // navigate("/hr/calendar");
+        }}
         value={value}
       />
       <div className="MyAttendence_dashbaord_calendar_iner_div">

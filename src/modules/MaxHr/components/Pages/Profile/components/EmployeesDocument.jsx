@@ -256,13 +256,9 @@ const UploadDocument = () => {
           </div>
         </div>
         <div className="UploadDocument_img_div">
-          <div className="UploadDocument_img_div_iner">
-            <div className=" text-center">
-              <button className="btnupload">Choose a file to upload</button>
-              <p>or drag file in here</p>
-            </div>
-          </div>
+          <UploadDocumentIner />
         </div>
+
         <div className="btnupload_bottom_div">
           <button className="btnupload_bottom">Choose a file to upload</button>
         </div>
@@ -270,7 +266,18 @@ const UploadDocument = () => {
     </>
   );
 };
-
+export const UploadDocumentIner = () => {
+  return (
+    <>
+      <div className="UploadDocument_img_div_iner">
+        <div className=" text-center">
+          <button className="btnupload">Choose a file to upload</button>
+          <p>or drag file in here</p>
+        </div>
+      </div>
+    </>
+  );
+};
 const UploadDocumentModal = (props) => {
   return (
     <Modal
