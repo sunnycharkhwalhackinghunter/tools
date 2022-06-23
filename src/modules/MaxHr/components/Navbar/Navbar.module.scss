@@ -200,7 +200,11 @@ nav {
     z-index: -1;
   }
 }
-
+.EmployeesAttendanceList_main_div {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 //NAVIGATION SMALL
 .nav_small {
   width: 3rem;
@@ -235,6 +239,11 @@ nav {
   }
 }
 @media (min-width: 1440px) {
+  .nav_small {
+    .EmployeesAttendanceList_main_div {
+      display: inline-block !important;
+    }
+  }
 }
 @media (min-width: 1700px) {
 }

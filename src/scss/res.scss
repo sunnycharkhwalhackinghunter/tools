@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .GreenModal_card {
+    margin-bottom: 1rem !important;
+  }
   .profil_emp_inter_page_title {
     font-size: 14px;
   }
@@ -508,6 +511,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .EmployeesAttendanceList_main_div {
+    display: block;
+  }
   .profile_input_div_finance {
     display: flex;
   }
@@ -612,6 +618,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .EmployeesAttendanceList_main_div {
+    display: block;
+  }
   .profile_tab_div2 {
     .nav-item {
       margin: auto;
@@ -662,6 +671,11 @@
   }
   .top_nav_iner_div_input {
     margin: 0 8rem;
+  }
+}
+@media (min-width: 1558px) {
+  .EmployeesAttendanceList_main_div {
+    display: inline-table;
   }
 }
 @media (min-width: 1700px) {
