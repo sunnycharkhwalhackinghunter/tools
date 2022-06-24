@@ -3289,6 +3289,10 @@ a {
     font-size: 14px;
     color: black;
     transition: all 0.3s;
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
     svg {
       margin-left: 10px;
     }
@@ -3536,3 +3540,18 @@ a {
 }
 
 // attendence end
+// Performance
+.top_inner_title {
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+}
+.MyPerformance_chart_div {
+  background-color: white;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+// Performance end

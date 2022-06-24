@@ -90,7 +90,7 @@ const InerNewTab = () => {
                   <Nav.Link eventKey="second1">Experience</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second2">Document</Nav.Link>
+                  <Nav.Link eventKey="second2">Documents</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="Assets">Assets</Nav.Link>

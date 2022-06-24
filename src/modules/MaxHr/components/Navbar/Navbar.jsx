@@ -13,7 +13,7 @@ import LogoImg from "../../../common/components/NavLogo/Logo";
 import { MdPayments } from "react-icons/md";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { ImBullhorn } from "react-icons/im";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineLineChart } from "react-icons/ai";
 import { RiTableAltFill, RiBankFill } from "react-icons/ri";
 import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
 import {
@@ -28,6 +28,7 @@ import {
   faGaugeHigh,
   faPersonChalkboard,
 } from "@fortawesome/free-solid-svg-icons";
+import { CgPerformance } from "react-icons/cg";
 const NavUrl = ({ url, icon, description, navItems }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   const { nav, setNav } = useContext(NavContext);
@@ -156,6 +157,18 @@ const Navbar = () => {
               description="attendence"
             />
             <NavUrl
+              navItems={[
+                {
+                  title: "My performance",
+                  link: "/hr/performance",
+                  iconIner: <AiOutlineLineChart />,
+                },
+                {
+                  title: "Employees performance",
+                  link: "/",
+                  iconIner: <CgPerformance />,
+                },
+              ]}
               url="performance"
               icon={<FontAwesomeIcon icon={faGaugeHigh} />}
               description="performance"

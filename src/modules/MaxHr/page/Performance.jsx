@@ -1,7 +1,10 @@
+import { MyPerformance } from "../components/Pages/Performance/MyPerformance";
 const Performance = () => {
   return (
     <>
-      <h1>Performance</h1>
+      <div className="custom_container">
+        <MyPerformance />
+      </div>
     </>
   );
 };

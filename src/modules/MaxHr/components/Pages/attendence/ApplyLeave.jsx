@@ -187,7 +187,7 @@ const ApplyLeaveInput = () => {
             </div>
           </div>
           <div className="col-12">
-            <label className="all_page_my_label">Choose leave type</label>
+            <label className="all_page_my_label">Upload Document if any</label>
             <div className="ApplyLeave_leave_upload_div">
               <UploadDocumentIner />
             </div>

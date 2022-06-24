@@ -82,7 +82,7 @@ const Announcement = () => {
                         <Nav.Link eventKey="2">Experience</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="3">Document</Nav.Link>
+                        <Nav.Link eventKey="3">Documents</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="Assets">Issue Assets</Nav.Link>

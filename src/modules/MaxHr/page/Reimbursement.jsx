@@ -233,7 +233,12 @@ const Reimbursement = (props) => {
                   <Select options={options} placeholder="Departments" />
                 </div>
               </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="Item Name" />
+                </div>
+              </div>
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
                 <div className="ApprovalDetailsPage_date_picker">
                   <div className="ApprovalDetailsPage_search_input_iner_div">
                     <span>
