@@ -3583,7 +3583,11 @@ a {
   }
 }
 .Appraisal_progress_bar_custom_container {
+  position: relative;
   margin: 0 10rem;
+  .IssueAssets_btn_bottom_div {
+    margin-top: 1.5rem;
+  }
   .IssueAssets_btn_bottom_div2 {
     .IssueAssets_btn2 {
       margin-left: 5px;
@@ -3626,7 +3630,7 @@ a {
 }
 .Appraisal_stap_1_text_div {
   text-transform: capitalize;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   p {
     margin-bottom: 10px;
     font-weight: 400;
@@ -3639,9 +3643,7 @@ a {
     color: #0a0e30;
   }
 }
-.Appraisal_stap_1_like_top_div {
-  margin-bottom: 3rem;
-}
+
 .Appraisal_stap_1_like_btn {
   cursor: pointer;
   background-color: #fff;
@@ -3695,5 +3697,10 @@ a {
       color: black;
     }
   }
+}
+.Appraisal_stap_1_top_btn {
+  position: absolute;
+  top: -4rem;
+  right: -10rem;
 }
 // Performance end

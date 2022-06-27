@@ -6,6 +6,7 @@ import { RiCheckboxBlankCircleLine } from "react-icons/ri";
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { UploadDocumentIner } from "../Profile/components/EmployeesDocument";
 export const Appraisal = () => {
   const steps = [<Stap1 />, <Stap2 />, <Stap3 />, <Stap4 />];
   const [currentStep, setCurrentStep] = useState(0);
@@ -18,18 +19,12 @@ export const Appraisal = () => {
     <>
       <div className="custom_container">
         <div className="row">
-          <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-6 col-sm-5 col-5">
+          <div className="col-12">
             <TopPageTitle
               TilelIcon={<BsArrowLeft />}
               TitleLink={-1}
               Name="Appraisal"
             />
-          </div>
-          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-7 col-7 MyAttendence_next_page">
-            <NavLink to="/">
-              <span>Previous Appraisal</span>
-              <BsArrowRight />
-            </NavLink>
           </div>
         </div>
         <div className="Appraisal_progress_bar_custom_container">
@@ -64,7 +59,7 @@ export const Appraisal = () => {
           </div>
           <div>{steps[currentStep]}</div>
           <div>
-            <div className="IssueAssets_btn_bottom_div IssueAssets_btn_bottom_div2 mt-0">
+            <div className="IssueAssets_btn_bottom_div IssueAssets_btn_bottom_div2">
               <div>
                 <button
                   className="IssueAssets_btn3"
@@ -107,20 +102,22 @@ const Stap1 = () => {
   };
   return (
     <>
-      <div className="Appraisal_stap_1_text_div">
-        <p>Question 1</p>
-        <h3>
-          Can you observe any meaningful relationship between what you do and
-          overall goals of the company?
-        </h3>
+      <div className="row Appraisal_stap_1_top_btn">
+        <div className="col-12 MyAttendence_next_page">
+          <NavLink to="/">
+            <span>Previous Appraisal</span>
+            <BsArrowRight />
+          </NavLink>
+        </div>
       </div>
+      <StapText
+        question="Question 1"
+        questiontext="1. Can you observe any meaningful relationship between what you do and overall goals of the company?"
+      />
       <div>
-        <div
-          onClick={LikeColorChang}
-          className="row Appraisal_stap_1_like_top_div"
-        >
+        <div className="row ">
           <div className="col-6">
-            <div className="Appraisal_stap_1_like_btn">
+            <div onClick={LikeColorChang} className="Appraisal_stap_1_like_btn">
               <p className={`${LikeBtn ? "LikeBtn_color" : " LikeBtn_color2"}`}>
                 <span>
                   <AiFillLike />
@@ -152,14 +149,47 @@ const Stap1 = () => {
 const Stap2 = () => {
   return (
     <>
-      <h3>stap 2</h3>
+      <StapText
+        question="Question 2"
+        questiontext="2. What elements of your job interest you the most?"
+      />
+      <div className="ApprovalDetailsPage_date_picker">
+        <textarea
+          className="form-control"
+          placeholder="Placeholder text"
+          rows="6"
+        ></textarea>
+      </div>
     </>
   );
 };
 const Stap3 = () => {
   return (
     <>
-      <h3>stap 3</h3>
+      <StapText
+        question="Question 3"
+        questiontext="3. What elements of your job interest you the most?"
+      />
+      <div className="ApprovalDetailsPage_date_picker">
+        <textarea
+          className="form-control"
+          placeholder="Placeholder text"
+          rows="6"
+        ></textarea>
+      </div>
+      <div className="row mt-3">
+        <div className="col-12">
+          <label className="all_page_my_label">
+            Upload Reimbursement Document
+          </label>
+          <div className="ApplyLeave_leave_upload_div">
+            <UploadDocumentIner />
+          </div>
+          <small className="all_page_my_label">
+            Only .jpg and .png files. 500kb max file size.
+          </small>
+        </div>
+      </div>
     </>
   );
 };
@@ -167,6 +197,16 @@ const Stap4 = () => {
   return (
     <>
       <h3>stap 4</h3>
+    </>
+  );
+};
+const StapText = (props) => {
+  return (
+    <>
+      <div className="Appraisal_stap_1_text_div">
+        <p>{props.question}</p>
+        <h3>{props.questiontext}</h3>
+      </div>
     </>
   );
 };

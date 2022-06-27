@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .Appraisal_stap_1_top_btn {
+    right: 0;
+  }
   .Appraisal_stap_1_like_btn {
     padding: 3rem 1rem;
     p {
@@ -13,6 +16,9 @@
   }
   .Appraisal_progress_bar_custom_container {
     margin: 0 0;
+    .IssueAssets_btn_bottom_div2 {
+      display: flex;
+    }
   }
   .MyPerformance_chart_div2 {
     margin-top: 8px;
@@ -439,6 +445,9 @@
   }
 }
 @media (min-width: 768px) {
+  .Appraisal_stap_1_top_btn {
+    right: -2rem;
+  }
   .Appraisal_progress_bar_custom_container {
     margin: 0 2rem;
   }
@@ -533,6 +542,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .Appraisal_stap_1_top_btn {
+    right: -10rem;
+  }
   .Appraisal_progress_bar_custom_container {
     margin: 0 10rem;
   }
