@@ -165,7 +165,7 @@ const Navbar = () => {
                 },
                 {
                   title: "Employees performance",
-                  link: "/",
+                  link: "/hr/employees_performance",
                   iconIner: <CgPerformance />,
                 },
               ]}

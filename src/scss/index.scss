@@ -3282,7 +3282,6 @@ a {
   justify-content: flex-end;
   a {
     border-radius: 6px;
-    margin-right: 1rem;
     background-color: white;
     padding: 7px 20px;
     font-weight: 600;
@@ -3553,5 +3552,148 @@ a {
   margin-top: 1.5rem;
   border-radius: 10px;
   padding: 1rem;
+}
+.MyPerformance_chart_div2 {
+  background-color: white;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.user_icon_MyPerformance {
+  @include bg_img;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+}
+.user_icon_MyPerformance_text_top_div {
+  display: flex;
+  align-items: center;
+}
+.user_icon_MyPerformance_text_div {
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #0a0e30;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #525252;
+  }
+}
+.Appraisal_progress_bar_custom_container {
+  margin: 0 10rem;
+  .IssueAssets_btn_bottom_div2 {
+    .IssueAssets_btn2 {
+      margin-left: 5px;
+      transition: all 0.3s;
+      &:hover {
+        background-color: white;
+      }
+    }
+    .IssueAssets_btn3 {
+      margin-right: 5px;
+      background-color: #fff;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $hover;
+      }
+    }
+  }
+}
+.Appraisal_progress_bar {
+  height: 10px;
+  width: 100%;
+}
+.Appraisal_progress_text_bar {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: capitalize;
+      span {
+        svg {
+          font-size: 17px;
+          margin-right: 5px;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+.Appraisal_stap_1_text_div {
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+  p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #525252;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0a0e30;
+  }
+}
+.Appraisal_stap_1_like_top_div {
+  margin-bottom: 3rem;
+}
+.Appraisal_stap_1_like_btn {
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 6rem 1rem;
+  p {
+    margin-bottom: 0;
+    span {
+      padding: 25px 25px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 50px;
+      }
+    }
+  }
+}
+.LikeBtn_color {
+  span {
+    background-color: $blue;
+    svg {
+      color: white;
+    }
+  }
+}
+.LikeBtn_color2 {
+  span {
+    background-color: #e9e6e1;
+    svg {
+      color: $red;
+    }
+  }
+}
+.DisLikeBtn_color {
+  span {
+    background-color: $blue;
+    svg {
+      color: white;
+    }
+  }
+}
+.DisLikeBtn_color2 {
+  span {
+    background-color: #e9e6e1;
+    svg {
+      color: black;
+    }
+  }
 }
 // Performance end

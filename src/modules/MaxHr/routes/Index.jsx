@@ -30,6 +30,8 @@ import { UserDetails } from "../page/UserDetails";
 import { ApplyLeave } from "../components/Pages/attendence/ApplyLeave";
 import { PreviousLeaves } from "../components/Pages/attendence/PreviousLeaves";
 import { EmployeesAttendance } from "../components/Pages/attendence/EmployeesAttendance";
+import { EmployeesPerformance } from "../components/Pages/Performance/EmployeesPerformance";
+import { Appraisal } from "../components/Pages/Performance/Appraisal";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -78,6 +80,11 @@ const Index = () => {
                   path="/employees_attendance"
                   element={<EmployeesAttendance />}
                 />
+                <Route
+                  path="/employees_performance"
+                  element={<EmployeesPerformance />}
+                />
+                <Route path="/appraisal" element={<Appraisal />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

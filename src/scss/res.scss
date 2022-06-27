@@ -1,6 +1,22 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .Appraisal_stap_1_like_btn {
+    padding: 3rem 1rem;
+    p {
+      span {
+        svg {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .Appraisal_progress_bar_custom_container {
+    margin: 0 0;
+  }
+  .MyPerformance_chart_div2 {
+    margin-top: 8px;
+  }
   .GreenModal_card {
     margin-bottom: 1rem !important;
   }
@@ -423,6 +439,12 @@
   }
 }
 @media (min-width: 768px) {
+  .Appraisal_progress_bar_custom_container {
+    margin: 0 2rem;
+  }
+  .MyPerformance_chart_div2 {
+    margin-top: 8px;
+  }
   .profile_input_div_finance {
     display: block;
   }
@@ -511,6 +533,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .Appraisal_progress_bar_custom_container {
+    margin: 0 10rem;
+  }
+  .MyPerformance_chart_div2 {
+    margin-top: 1.5rem;
+  }
   .EmployeesAttendanceList_main_div {
     display: block;
   }
