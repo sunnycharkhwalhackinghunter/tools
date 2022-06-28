@@ -3703,4 +3703,145 @@ a {
   top: -4rem;
   right: -10rem;
 }
+.UserAppraisal_top_title {
+  margin-bottom: 1.5rem;
+  h3 {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #525252;
+  }
+}
+.UserAppraisalDate_list_btn {
+  margin-bottom: 1.5rem;
+  .nav {
+    margin-bottom: 1.5rem;
+  }
+  .nav-item {
+    margin-bottom: 10px;
+    background: #f4f4f4;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    a {
+      font-weight: 600;
+      font-size: 16px;
+      color: $blue;
+      transition: all 0.3s;
+      &:hover {
+        color: white;
+        background-color: $blue;
+      }
+    }
+  }
+}
+.Question_top_div {
+  p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #525252;
+    span {
+      margin-right: 10px;
+    }
+  }
+  textarea {
+    margin-top: 10px;
+  }
+  .ApprovalDetailsPage_date_picker {
+    margin-bottom: 1rem;
+  }
+}
+.feedback_main_div {
+  background-color: white;
+  padding: 1rem;
+  padding-top: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.feedback_icon {
+  @include bg_img;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+.feedback_icon_top_div {
+  display: flex;
+  align-items: center;
+
+  p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      color: #525252;
+      margin-left: 5px;
+    }
+  }
+}
+.Feedback_Ratings_div {
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    // margin-right: 8px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  span {
+    margin-left: 8px;
+    font-size: 18px !important;
+  }
+  h6 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+}
+.Feedback_Ratings_btn {
+  background-color: $blue;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 8px 40px;
+  transition: all 0.3s;
+  &:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
+}
+.Feedback_Ratings_main_div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.TeamApperaisalList_list {
+  .UserDetails_list_th {
+    background-color: $c2;
+    th {
+      color: white;
+    }
+  }
+  a {
+    color: $blue;
+    width: 550;
+    transition: all 0.3s;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
 // Performance end

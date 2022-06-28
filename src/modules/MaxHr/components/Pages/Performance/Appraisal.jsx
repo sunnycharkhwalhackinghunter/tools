@@ -104,7 +104,7 @@ const Stap1 = () => {
     <>
       <div className="row Appraisal_stap_1_top_btn">
         <div className="col-12 MyAttendence_next_page">
-          <NavLink to="/">
+          <NavLink to="/hr/user_appraisal">
             <span>Previous Appraisal</span>
             <BsArrowRight />
           </NavLink>

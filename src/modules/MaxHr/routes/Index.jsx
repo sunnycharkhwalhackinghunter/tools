@@ -32,6 +32,8 @@ import { PreviousLeaves } from "../components/Pages/attendence/PreviousLeaves";
 import { EmployeesAttendance } from "../components/Pages/attendence/EmployeesAttendance";
 import { EmployeesPerformance } from "../components/Pages/Performance/EmployeesPerformance";
 import { Appraisal } from "../components/Pages/Performance/Appraisal";
+import { UserAppraisal } from "../components/Pages/Performance/UserAppraisal";
+import { TeamApperaisal } from "../components/Pages/Performance/TeamApperaisal";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -85,6 +87,8 @@ const Index = () => {
                   element={<EmployeesPerformance />}
                 />
                 <Route path="/appraisal" element={<Appraisal />} />
+                <Route path="/user_appraisal" element={<UserAppraisal />} />
+                <Route path="/team_apperaisal" element={<TeamApperaisal />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

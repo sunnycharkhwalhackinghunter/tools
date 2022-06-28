@@ -1,6 +1,28 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .feedback_main_div {
+    padding-top: 1rem;
+  }
+  .Feedback_Ratings_btn_div {
+    text-align: center;
+  }
+  .Feedback_Ratings_div {
+    margin-bottom: 1.5rem;
+  }
+  .Feedback_Ratings_main_div {
+    display: block;
+  }
+  .feedback_icon_top_div {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .UserAppraisalDate_list_btn {
+    .nav-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
   .Appraisal_stap_1_top_btn {
     right: 0;
   }
