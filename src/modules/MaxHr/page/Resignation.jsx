@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiChevronDown } from "react-icons/fi";
 import Select from "react-select";
-const Resignation = (props) => {
+const Resignation = () => {
   const [userBreks, setUserBreks] = useState(true);
 
   const changNameUser = () => {
@@ -16,105 +16,105 @@ const Resignation = (props) => {
   const ResignationData = [
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
@@ -265,7 +265,7 @@ const Resignation = (props) => {
               <tbody>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Printer</td>
                   <td>05/25/2021</td>
                   <td>
@@ -308,7 +308,7 @@ const Resignation = (props) => {
                 </tr>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Printer</td>
                   <td>05/25/2021</td>
                   <td>

@@ -176,7 +176,7 @@ const Navbar = () => {
             <NavUrl
               url="organizationchart"
               icon={<FaUsers />}
-              description="organization chart"
+              description="role"
             />
             <NavUrl
               url="hiring"

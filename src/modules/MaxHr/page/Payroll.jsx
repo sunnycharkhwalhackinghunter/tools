@@ -1,7 +1,10 @@
+import { PayrollIndex } from "../components/Pages/Payroll/PayrollIndex";
 const Payroll = () => {
   return (
     <>
-      <h1>Payroll</h1>
+      <div className="custom_container">
+        <PayrollIndex />
+      </div>
     </>
   );
 };

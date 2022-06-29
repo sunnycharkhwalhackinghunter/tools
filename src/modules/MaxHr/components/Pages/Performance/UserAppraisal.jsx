@@ -150,7 +150,7 @@ const Feedback = () => {
                 />
                 <p>
                   Self
-                  <span>(Roushan Kumar)</span>
+                  <span>(sunny charkhwal)</span>
                 </p>
               </div>
             </div>
@@ -192,7 +192,7 @@ const Feedback = () => {
                 />
                 <p>
                   Self
-                  <span>(Roushan Kumar)</span>
+                  <span>(sunny charkhwal)</span>
                 </p>
               </div>
             </div>
@@ -234,7 +234,7 @@ const Feedback = () => {
                 />
                 <p>
                   Self
-                  <span>(Roushan Kumar)</span>
+                  <span>(sunny charkhwal)</span>
                 </p>
               </div>
             </div>

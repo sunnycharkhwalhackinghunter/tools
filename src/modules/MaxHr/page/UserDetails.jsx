@@ -99,7 +99,7 @@ export const UserDetails = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <h3>Roushan Kumar</h3>
+                    <h3>sunny charkhwal</h3>
                   </li>
                 </ul>
               </div>
@@ -134,73 +134,73 @@ export const UserDetailsList = () => {
     {
       ListIcon: ModalIcon1,
       ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "28 Apr 2022",
     },
     {
       ListIcon: ModalIcon2,
       ListName: "Roushan Kuma.doc",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon3,
       ListName: "Roushan Kuma.pdf",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon1,
       ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "28 Apr 2022",
     },
     {
       ListIcon: ModalIcon2,
       ListName: "Roushan Kuma.doc",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon3,
       ListName: "Roushan Kuma.pdf",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon1,
       ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "28 Apr 2022",
     },
     {
       ListIcon: ModalIcon2,
       ListName: "Roushan Kuma.doc",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon3,
       ListName: "Roushan Kuma.pdf",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon1,
       ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "28 Apr 2022",
     },
     {
       ListIcon: ModalIcon2,
       ListName: "Roushan Kuma.doc",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
     {
       ListIcon: ModalIcon3,
       ListName: "Roushan Kuma.pdf",
-      Owner: "Roushan Kumar",
+      Owner: "sunny charkhwal",
       modified: "29 Apr 2022",
     },
   ];

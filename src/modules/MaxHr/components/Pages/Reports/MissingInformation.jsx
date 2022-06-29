@@ -1,98 +1,95 @@
 import { NavLink } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
-import Input from "../../common/components/input/Input";
+import Input from "../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Select from "react-select";
-const TimesheetReview = (props) => {
-  const TimesheetReviewData = [
+export const MissingInformation = () => {
+  return (
+    <>
+      <div className="custom_container">
+        <MissingInformationList />
+      </div>
+    </>
+  );
+};
+
+const MissingInformationList = () => {
+  const MissingInformationData = [
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
     {
-      EID: "01",
       EmployeeName: "sunny charkhwal",
-      ProjectName: "Maxlence HR",
-      StartingFrom: "11 Oct 2022",
-      Endson: "11 Oct 2022",
-      Duration: "08 Hours",
+      Missinginformation: "ID Card, NDA, Bank Account",
+    },
+    {
+      EmployeeName: "sunny charkhwal",
+      Missinginformation: "ID Card, NDA, Bank Account",
+    },
+    {
+      EmployeeName: "sunny charkhwal",
+      Missinginformation: "ID Card, NDA, Bank Account",
+    },
+    {
+      EmployeeName: "sunny charkhwal",
+      Missinginformation: "ID Card, NDA, Bank Account",
+    },
+    {
+      EmployeeName: "sunny charkhwal",
+      Missinginformation: "ID Card, NDA, Bank Account",
+    },
+    {
+      EmployeeName: "sunny charkhwal",
+      Missinginformation: "ID Card, NDA, Bank Account",
     },
   ];
-  const TimesheetReviewApp = (props) => {
+  const MissingInformationApp = (props) => {
     return (
       <>
         <tr className="ApprovalDetailsPage_thead_td">
-          <td>{props.EID}</td>
-          <td>{props.EmployeeName}</td>
-          <td>{props.ProjectName}</td>
-          <td>{props.StartingFrom}</td>
-          <td>{props.Endson}</td>
-          <td>{props.Duration}</td>
+          <td className="MissingInformation_td">
+            <input className="form-check-input" type="checkbox" />
+          </td>
+          <td className="MissingInformation_td">{props.EmployeeName}</td>
+          <td className="MissingInformation_td">{props.Missinginformation}</td>
           <td>
-            <span className="reimbursement_view_btn">
-              <NavLink to="/hr/user_details">view</NavLink>
-            </span>
+            <div className="add_remarks_input_div">
+              <input
+                type="text"
+                className="form-control w-100"
+                placeholder="Add custome message or other stuff required or request"
+              />
+            </div>
           </td>
         </tr>
       </>
@@ -104,19 +101,19 @@ const TimesheetReview = (props) => {
   ];
   return (
     <>
-      <div className="custom_container">
+      <div>
         <div className="custom_container_iner">
           <div>
             <div className="row">
               <div className="col-12">
                 <ul className="d-flex align-content-center ApprovalDetailsPage_ul_top_div">
                   <li>
-                    <NavLink to="/hr/dashboard">
+                    <NavLink to={-1}>
                       <BsArrowLeft />
                     </NavLink>
                   </li>
                   <li>
-                    <h3>Timesheet Review</h3>
+                    <h3>missing information</h3>
                   </li>
                 </ul>
               </div>
@@ -141,7 +138,12 @@ const TimesheetReview = (props) => {
                   <Select options={options} placeholder="Departments" />
                 </div>
               </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
+                <div className="dashboard_top_week_Select">
+                  <Select options={options} placeholder="Sort by" />
+                </div>
+              </div>
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
                 <div className="ApprovalDetailsPage_date_picker">
                   <div className="ApprovalDetailsPage_search_input_iner_div">
                     <span>
@@ -157,30 +159,29 @@ const TimesheetReview = (props) => {
               </div>
             </div>
           </div>
-          <div className="ApprovalDetailsPage_top_div">
-            <table className="table table-hover TimesheetReview_main_div text-center text-capitalize">
+          <div className="MissingInformation_alert" role="alert">
+            To send a reminder to your employees to fill up their missing
+            information, Please choose the employee below.
+          </div>
+          <div className="ApprovalDetailsPage_top_div pt-0">
+            <table className="table table-hover MissingInformation_main_div text-center text-capitalize">
               <thead>
                 <tr className="ApprovalDetailsPage_thead_tr">
-                  <th scope="col">E. ID</th>
+                  <th scope="col">
+                    <input className="form-check-input" type="checkbox" />
+                  </th>
                   <th scope="col">Employee Name</th>
-                  <th scope="col">Project Name</th>
-                  <th scope="col">Starting From</th>
-                  <th scope="col">Ends on</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">View</th>
+                  <th scope="col">Missing information</th>
+                  <th scope="col">Add Custom message</th>
                 </tr>
               </thead>
               <tbody>
-                {TimesheetReviewData.map((val, i) => {
+                {MissingInformationData.map((val, i) => {
                   return (
-                    <TimesheetReviewApp
+                    <MissingInformationApp
                       key={i}
-                      EID={val.EID}
                       EmployeeName={val.EmployeeName}
-                      ProjectName={val.ProjectName}
-                      StartingFrom={val.StartingFrom}
-                      Endson={val.Endson}
-                      Duration={val.Duration}
+                      Missinginformation={val.Missinginformation}
                     />
                   );
                 })}
@@ -192,4 +193,3 @@ const TimesheetReview = (props) => {
     </>
   );
 };
-export default TimesheetReview;

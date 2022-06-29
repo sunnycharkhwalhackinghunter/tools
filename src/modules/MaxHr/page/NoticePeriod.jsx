@@ -17,105 +17,105 @@ const NoticePeriod = (props) => {
   const NoticePeriodData = [
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
     },
     {
       EID: "01",
-      From: "Roushan Kumar",
+      From: "sunny charkhwal",
       ItemName: "Printer",
       date: "05/25/2021",
       EComment: "NA",
@@ -266,7 +266,7 @@ const NoticePeriod = (props) => {
               <tbody>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Printer</td>
                   <td>05/25/2021</td>
                   <td>
@@ -309,7 +309,7 @@ const NoticePeriod = (props) => {
                 </tr>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Printer</td>
                   <td>05/25/2021</td>
                   <td>

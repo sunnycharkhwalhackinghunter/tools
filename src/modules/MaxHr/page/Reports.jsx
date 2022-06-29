@@ -1,7 +1,10 @@
+import { ReportsIndex } from "../components/Pages/Reports/ReportsIndex";
 const Reports = () => {
   return (
     <>
-      <h1>Reports</h1>
+      <div className="custom_container">
+        <ReportsIndex />
+      </div>
     </>
   );
 };

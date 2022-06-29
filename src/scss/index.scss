@@ -3845,3 +3845,64 @@ a {
   }
 }
 // Performance end
+// Payroll
+.ApprovalDetailsPage_input {
+  margin-right: 5px;
+}
+// Payroll end
+// Reports
+.Reports_card_main_div {
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #161616;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+  }
+}
+.Reports_card_inner_div {
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  color: black;
+  h4 {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+    span {
+      margin-left: 10px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+.Reports_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+// Reports end
+// MissingInformation
+.MissingInformation_alert {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #393939;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.MissingInformation_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.MissingInformation_td {
+  padding-top: 13px !important;
+}
+// MissingInformation end

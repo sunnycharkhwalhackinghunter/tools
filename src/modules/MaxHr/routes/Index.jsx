@@ -34,6 +34,11 @@ import { EmployeesPerformance } from "../components/Pages/Performance/EmployeesP
 import { Appraisal } from "../components/Pages/Performance/Appraisal";
 import { UserAppraisal } from "../components/Pages/Performance/UserAppraisal";
 import { TeamApperaisal } from "../components/Pages/Performance/TeamApperaisal";
+import { SalaryRegister } from "../components/Pages/Reports/SalaryRegister";
+import { AttendenceInner } from "../components/Pages/Reports/Attendence";
+import { TaxDeductions } from "../components/Pages/Reports/TaxDeductions";
+import { MissingInformation } from "../components/Pages/Reports/MissingInformation";
+
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -89,6 +94,14 @@ const Index = () => {
                 <Route path="/appraisal" element={<Appraisal />} />
                 <Route path="/user_appraisal" element={<UserAppraisal />} />
                 <Route path="/team_apperaisal" element={<TeamApperaisal />} />
+                <Route path="/salary_register" element={<SalaryRegister />} />
+                <Route path="/attendence_inner" element={<AttendenceInner />} />
+                <Route path="/tax_deductions" element={<TaxDeductions />} />
+                <Route
+                  path="/missing_information"
+                  element={<MissingInformation />}
+                />
+
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

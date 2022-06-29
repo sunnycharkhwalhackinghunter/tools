@@ -17,7 +17,7 @@ export const PreviousLeaves = (props) => {
   const LeaveData = [
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -25,7 +25,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -33,7 +33,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -41,7 +41,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -49,7 +49,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -57,7 +57,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -65,7 +65,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -73,7 +73,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -81,7 +81,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -89,7 +89,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -97,7 +97,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -105,7 +105,7 @@ export const PreviousLeaves = (props) => {
     },
     {
       EID: "01",
-      EmployeeName: "Roushan Kumar",
+      EmployeeName: "sunny charkhwal",
       LeaveType: "Sick Leave",
       RemainingLeaves: "05",
       From: "10/05/2021",
@@ -240,7 +240,7 @@ export const PreviousLeaves = (props) => {
               <tbody>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Sick Leave</td>
                   <td>05</td>
                   <td>10/05/2021</td>
@@ -280,7 +280,7 @@ export const PreviousLeaves = (props) => {
                 </tr>
                 <tr className="ApprovalDetailsPage_thead_td">
                   <td>01</td>
-                  <td>Roushan Kumar</td>
+                  <td>sunny charkhwal</td>
                   <td>Sick Leave</td>
                   <td>05</td>
                   <td>10/05/2021</td>
