@@ -1,6 +1,19 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .CompanySetup_tab {
+    .nav {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .CompanySetup_checkbox_div {
+    .CompanySetup_checkbox_label {
+      font-size: 12px;
+    }
+  }
+  .CompanySetup_inner_main_div {
+    width: 100%;
+  }
   .MissingInformation_main_div {
     display: block;
   }
@@ -478,6 +491,9 @@
   }
 }
 @media (min-width: 768px) {
+  .CompanySetup_inner_main_div {
+    width: 100%;
+  }
   .Reports_main_div {
     display: block;
   }
@@ -583,6 +599,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .CompanySetup_inner_main_div {
+    width: 80%;
+  }
   .Reports_main_div {
     display: inline-table;
   }
@@ -707,6 +726,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .CompanySetup_inner_main_div {
+    width: 60%;
+  }
   .Reports_card_inner_div {
     p {
       font-size: 16px;
@@ -783,5 +805,15 @@
 @media (min-width: 1900px) {
   .UserPost_img {
     height: 45rem;
+  }
+}
+@media (min-width: 2000px) {
+  .HrRegister_main_div {
+    display: block;
+  }
+}
+@media (min-width: 2100px) {
+  .HrRegister_main_div {
+    display: inline-table;
   }
 }

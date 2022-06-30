@@ -38,6 +38,10 @@ import { SalaryRegister } from "../components/Pages/Reports/SalaryRegister";
 import { AttendenceInner } from "../components/Pages/Reports/Attendence";
 import { TaxDeductions } from "../components/Pages/Reports/TaxDeductions";
 import { MissingInformation } from "../components/Pages/Reports/MissingInformation";
+import { ReportReimbursements } from "../components/Pages/Reports/ReportReimbursements";
+import { UpcomingContractorPayments } from "../components/Pages/Reports/UpcomingContractorPayments";
+import { HrRegister } from "../components/Pages/Reports/HrRegister";
+import { CompanySetup } from "../components/Pages/Settings/pages/CompanySetup";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -101,6 +105,16 @@ const Index = () => {
                   path="/missing_information"
                   element={<MissingInformation />}
                 />
+                <Route
+                  path="/report_reimbursements"
+                  element={<ReportReimbursements />}
+                />
+                <Route
+                  path="/upcoming_contractor_payments"
+                  element={<UpcomingContractorPayments />}
+                />
+                <Route path="/hr_register" element={<HrRegister />} />
+                <Route path="/company_setup" element={<CompanySetup />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

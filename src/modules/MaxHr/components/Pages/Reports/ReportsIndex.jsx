@@ -49,6 +49,42 @@ export const ReportsIndex = () => {
       inertitle: "Missing Information",
       text: "Send reminder for missing information",
     },
+    {
+      toptile: "Audit Report",
+      link: "/",
+      inertitle: "Audit Report",
+      text: "Changes made by your employees’",
+    },
+    {
+      toptile: "Reimbursements",
+      link: "/hr/report_reimbursements",
+      inertitle: "Reimbursements",
+      text: "View pending and approved one’",
+    },
+    {
+      toptile: "Payroll Diary",
+      link: "/",
+      inertitle: "Payroll Diary",
+      text: "View Account transactions",
+    },
+    {
+      toptile: "TDS",
+      link: "/",
+      inertitle: "TDS",
+      text: "View TDS and other Filings",
+    },
+    {
+      toptile: "Contractor Payments",
+      link: "/hr/upcoming_contractor_payments",
+      inertitle: "Contractor Payments",
+      text: "View upcoming contractor payments",
+    },
+    {
+      toptile: "HR Register",
+      link: "/hr/hr_register",
+      inertitle: "Personal Information",
+      text: "View all documents uploaded by employee",
+    },
   ];
   return (
     <>
