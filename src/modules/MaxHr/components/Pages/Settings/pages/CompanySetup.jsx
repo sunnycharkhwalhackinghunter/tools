@@ -9,6 +9,7 @@ import GifPhoto from "../../../../../../pics/su.gif";
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import Select from "react-select";
+import { UploadDocumentIner } from "../../Profile/components/EmployeesDocument";
 export const CompanySetup = () => {
   return (
     <>
@@ -279,7 +280,6 @@ const Automation = () => {
                 className="form-check-input"
                 type="checkbox"
                 id="flexCheckDefault1"
-                checked
               />
               <label
                 className="form-check-label automation_checkbox_label"
@@ -317,6 +317,11 @@ const DocumentCompanySetup = () => {
             className="form-control"
             placeholder="Add title of your document"
           />
+        </div>
+        <div className="col-12">
+          <div className="DocumentCompanySetup_upload">
+            <UploadDocumentIner />
+          </div>
         </div>
         <div className="col-12 company_setup_bottom_btn">
           <div className=" text-capitalize text-center">

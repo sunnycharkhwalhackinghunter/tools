@@ -42,6 +42,7 @@ import { ReportReimbursements } from "../components/Pages/Reports/ReportReimburs
 import { UpcomingContractorPayments } from "../components/Pages/Reports/UpcomingContractorPayments";
 import { HrRegister } from "../components/Pages/Reports/HrRegister";
 import { CompanySetup } from "../components/Pages/Settings/pages/CompanySetup";
+import { DashboardSetup } from "../components/Pages/Settings/pages/DashboardSetup";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -115,6 +116,7 @@ const Index = () => {
                 />
                 <Route path="/hr_register" element={<HrRegister />} />
                 <Route path="/company_setup" element={<CompanySetup />} />
+                <Route path="/dashboard_setup" element={<DashboardSetup />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

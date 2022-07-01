@@ -18,58 +18,7 @@ const MissingInformationList = () => {
   const MissingInformationData = [
     {
       EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
-      Missinginformation: "ID Card, NDA, Bank Account",
-    },
-    {
-      EmployeeName: "sunny charkhwal",
+      date: "05/25/2021",
       Missinginformation: "ID Card, NDA, Bank Account",
     },
   ];
@@ -81,6 +30,8 @@ const MissingInformationList = () => {
             <input className="form-check-input" type="checkbox" />
           </td>
           <td className="MissingInformation_td">{props.EmployeeName}</td>
+          <td className="MissingInformation_td">{props.date}</td>
+
           <td className="MissingInformation_td">{props.Missinginformation}</td>
           <td>
             <div className="add_remarks_input_div">
@@ -90,6 +41,11 @@ const MissingInformationList = () => {
                 placeholder="Add custome message or other stuff required or request"
               />
             </div>
+          </td>
+          <td>
+            <button className="missing_information_td_button">
+              send reminder
+            </button>
           </td>
         </tr>
       </>
@@ -171,8 +127,10 @@ const MissingInformationList = () => {
                     <input className="form-check-input" type="checkbox" />
                   </th>
                   <th scope="col">Employee Name</th>
+                  <th scope="col">send date</th>
                   <th scope="col">Missing information</th>
                   <th scope="col">Add Custom message</th>
+                  <th scope="col">action</th>
                 </tr>
               </thead>
               <tbody>
@@ -181,12 +139,18 @@ const MissingInformationList = () => {
                     <MissingInformationApp
                       key={i}
                       EmployeeName={val.EmployeeName}
+                      date={val.date}
                       Missinginformation={val.Missinginformation}
                     />
                   );
                 })}
               </tbody>
             </table>
+          </div>
+          <div className="col-12 company_setup_bottom_btn">
+            <div className="IssueAssets_btn_bottom_div">
+              <button className="IssueAssets_btn">Send Reminder</button>
+            </div>
           </div>
         </div>
       </div>

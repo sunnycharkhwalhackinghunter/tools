@@ -140,6 +140,11 @@ const AttendenceList = () => {
               </tbody>
             </table>
           </div>
+          <div className="col-12 company_setup_bottom_btn">
+            <div className="IssueAssets_btn_bottom_div">
+              <button className="IssueAssets_btn">Download</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

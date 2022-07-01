@@ -3678,7 +3678,7 @@ a {
   span {
     background-color: #e9e6e1;
     svg {
-      color: $red;
+      color: $green;
     }
   }
 }
@@ -3909,6 +3909,34 @@ a {
 }
 .MissingInformation_td {
   padding-top: 13px !important;
+  button {
+    border: none;
+    outline: none;
+    background-color: $blue;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+    &:hover {
+      background-color: $c2;
+    }
+  }
+}
+.missing_information_td_button {
+  padding: 5px 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: $blue;
+  transition: all 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+  &:hover {
+    background-color: $c2;
+  }
 }
 // MissingInformation end
 // HrRegister
@@ -4005,6 +4033,74 @@ a {
     font-weight: 400;
     margin-bottom: 5px;
     color: #666;
+    text-transform: capitalize;
+  }
+}
+.DocumentCompanySetup_upload {
+  .UploadDocument_img_div_iner {
+    width: 100%;
   }
 }
 // CompanySetup
+// DashboardSetup
+.dashboard_setup_top_main_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard_setup_top_main_div_inner {
+  width: 50%;
+}
+.dashboard_setup_title {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  h3 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin: 0;
+  }
+}
+.dashboard_setup_select_div {
+  width: 10rem;
+  .css-1s2u09g-control {
+    background-color: #f4f4f4;
+  }
+}
+.dashboard_setup_text_div {
+  margin: 1rem 1rem;
+}
+.dashboard_setup_icon_div {
+  display: flex;
+  align-items: center;
+}
+.dashboard_setup_icon {
+  @include bg_img;
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+}
+.dashboard_setup_color {
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.dashboard_setup_title_inner {
+  position: relative;
+  span {
+    position: absolute;
+    top: 3px;
+    right: 0;
+  }
+}
+.color_picker {
+  display: none;
+}
+.color_picker2 {
+  position: absolute;
+}
+// DashboardSetup end

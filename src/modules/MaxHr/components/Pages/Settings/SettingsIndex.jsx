@@ -44,6 +44,11 @@ export const SettingsIndex = () => {
           inertitle: "Company Setup",
           text: "Add your company details here",
         },
+        {
+          link: "/hr/dashboard_setup",
+          inertitle: "Dashboard Setup",
+          text: "Customize your dashboard",
+        },
       ],
     },
   ];

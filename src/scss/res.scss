@@ -1,6 +1,16 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 576px) {
+  .dashboard_setup_top_main_div {
+    display: block;
+  }
+  .dashboard_setup_select {
+    width: 100%;
+    margin-left: 0;
+  }
+  .dashboard_setup_title {
+    padding: 1rem 1rem;
+  }
   .CompanySetup_tab {
     .nav {
       margin-bottom: 1.5rem;
