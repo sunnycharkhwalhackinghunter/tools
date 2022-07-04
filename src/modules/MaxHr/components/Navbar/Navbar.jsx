@@ -13,7 +13,11 @@ import LogoImg from "../../../common/components/NavLogo/Logo";
 import { MdPayments } from "react-icons/md";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { ImBullhorn } from "react-icons/im";
-import { AiOutlineSearch, AiOutlineLineChart } from "react-icons/ai";
+import {
+  AiOutlineSearch,
+  AiOutlineLineChart,
+  AiTwotoneSetting,
+} from "react-icons/ai";
 import { RiTableAltFill, RiBankFill } from "react-icons/ri";
 import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
 import {
@@ -201,7 +205,7 @@ const Navbar = () => {
             />
             <NavUrl
               url="settings"
-              icon={<FaClipboardList />}
+              icon={<AiTwotoneSetting />}
               description="Settings"
             />
           </ul>

@@ -1,8 +1,16 @@
 @import "--var.scss";
 @import "--mixing.scss";
-@media (max-width: 576px) {
-  .dashboard_setup_top_main_div {
+@media (max-width: 320px) {
+  .HolidaysSetting_main_div {
     display: block;
+  }
+}
+@media (max-width: 576px) {
+  .default_salary_stracture_main_div {
+    display: grid;
+  }
+  .dashboard_setup_top_main_div_inner {
+    width: 100%;
   }
   .dashboard_setup_select {
     width: 100%;
@@ -501,6 +509,9 @@
   }
 }
 @media (min-width: 768px) {
+  .default_salary_stracture_main_div {
+    display: grid;
+  }
   .CompanySetup_inner_main_div {
     width: 100%;
   }
@@ -609,6 +620,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .default_salary_stracture_main_div {
+    display: grid;
+  }
   .CompanySetup_inner_main_div {
     width: 80%;
   }
@@ -736,6 +750,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .default_salary_stracture_main_div {
+    display: block;
+  }
   .CompanySetup_inner_main_div {
     width: 60%;
   }

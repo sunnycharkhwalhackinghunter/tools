@@ -51,6 +51,36 @@ export const SettingsIndex = () => {
         },
       ],
     },
+    {
+      toptile: "Payroll Setup",
+      cat1: [
+        {
+          link: "/hr/payroll_setup",
+          inertitle: "Payroll Setup",
+          text: "Payroll Date, Auto Pilot, Advance Salary",
+        },
+        {
+          link: "/hr/default_salary_stracture",
+          inertitle: "Default Salary Stracture",
+          text: "Create / Change Salary Stracture",
+        },
+        {
+          link: "/hr/employee_notification",
+          inertitle: "Employee Notification",
+          text: "Notify Your Employee",
+        },
+      ],
+    },
+    {
+      toptile: "Holidays, Leave & Attendence",
+      cat1: [
+        {
+          link: "/hr/holidays_setting",
+          inertitle: "Holidays",
+          text: "Choose / Create Holidays",
+        },
+      ],
+    },
   ];
   return (
     <>

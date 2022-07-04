@@ -43,6 +43,10 @@ import { UpcomingContractorPayments } from "../components/Pages/Reports/Upcoming
 import { HrRegister } from "../components/Pages/Reports/HrRegister";
 import { CompanySetup } from "../components/Pages/Settings/pages/CompanySetup";
 import { DashboardSetup } from "../components/Pages/Settings/pages/DashboardSetup";
+import { PayrollSetup } from "../components/Pages/Settings/pages/PayrollSetup";
+import { DefaultSalaryStracture } from "../components/Pages/Settings/pages/DefaultSalaryStracture";
+import { EmployeeNotification } from "../components/Pages/Settings/pages/EmployeeNotification";
+import { HolidaysSetting } from "../components/Pages/Settings/pages/HolidaysSetting";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -117,6 +121,16 @@ const Index = () => {
                 <Route path="/hr_register" element={<HrRegister />} />
                 <Route path="/company_setup" element={<CompanySetup />} />
                 <Route path="/dashboard_setup" element={<DashboardSetup />} />
+                <Route path="/payroll_setup" element={<PayrollSetup />} />
+                <Route
+                  path="/default_salary_stracture"
+                  element={<DefaultSalaryStracture />}
+                />
+                <Route
+                  path="/employee_notification"
+                  element={<EmployeeNotification />}
+                />
+                <Route path="/holidays_setting" element={<HolidaysSetting />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

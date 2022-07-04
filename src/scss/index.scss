@@ -4053,6 +4053,7 @@ a {
 }
 .dashboard_setup_title {
   background-color: #fff;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 8px;
   h3 {
@@ -4071,6 +4072,7 @@ a {
 }
 .dashboard_setup_text_div {
   margin: 1rem 1rem;
+  margin-bottom: 0;
 }
 .dashboard_setup_icon_div {
   display: flex;
@@ -4103,4 +4105,64 @@ a {
 .color_picker2 {
   position: absolute;
 }
+.dashboard_setup_label {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #525252;
+  text-transform: capitalize;
+}
+.dashboard_setup_label_div {
+  padding-left: 1rem;
+}
 // DashboardSetup end
+// DefaultSalaryStracture
+.default_salary_stracture_main_div {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.default_salary_stracture_input {
+  input {
+    border: none;
+    border-bottom: 2px solid #666;
+    letter-spacing: 1.2px;
+    color: #666 !important;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  select {
+    border: none;
+    border-bottom: 2px solid #666;
+    letter-spacing: 1.2px;
+    color: #666 !important;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    height: 33px;
+  }
+}
+.default_salary_tbody {
+  background-color: #fff;
+  border-top: 1px solid white !important;
+}
+.salaryShow {
+  display: block;
+}
+.salaryHide {
+  display: none;
+}
+// DefaultSalaryStracture ens
+// HolidaysSetting
+.HolidaysSetting_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.DateDescriptionList_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+// HolidaysSetting end
