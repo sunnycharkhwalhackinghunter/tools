@@ -3860,6 +3860,7 @@ a {
     margin-bottom: 1.5rem;
   }
 }
+
 .Reports_card_inner_div {
   background-color: white;
   padding: 2rem 2rem;
@@ -4165,4 +4166,45 @@ a {
   overflow-x: auto;
   white-space: nowrap;
 }
+.setting_text {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.setting_text2 {
+  background-color: #f4f4f4;
+}
+.setting_text3 {
+  font-weight: 400;
+  font-size: 14px;
+  background-color: $c2;
+  padding: 1rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  color: white;
+}
 // HolidaysSetting end
+// ReimbursementSetup
+.reimbursement_setup_lisl {
+  text-align: right;
+  button {
+    border: 1px solid black;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s;
+    background-color: white;
+    padding: 5px 30px;
+    border-radius: 6px;
+    &:hover {
+      border: 1px solid transparent;
+      color: white;
+      background-color: $hover;
+    }
+  }
+}
+// ReimbursementSetup end

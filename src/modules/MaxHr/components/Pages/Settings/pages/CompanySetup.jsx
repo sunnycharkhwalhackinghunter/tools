@@ -225,12 +225,12 @@ const Automation = () => {
                 Payroll Enabled
               </label>
             </div>
-            <div className="ApprovalDetailsPage_date_picker">
-              <textarea
-                className="form-control"
-                placeholder="Choose when you would like to pay your employees. Select a date after the 15th to pay your employees for the same month eg. if you pick 31, then your employees will get paid for January on 31st January. Or, if you pick 1, then your employees will get paid for January on 1st February."
-                rows="5"
-              ></textarea>
+            <div className="setting_text setting_text2">
+              Choose when you would like to pay your employees. Select a date
+              after the 15th to pay your employees for the same month eg. if you
+              pick 31, then your employees will get paid for January on 31st
+              January. Or, if you pick 1, then your employees will get paid for
+              January on 1st February.
             </div>
           </div>
         </div>
@@ -241,12 +241,12 @@ const Automation = () => {
           </div>
         </div>
         <div className="col-12">
-          <div className="ApprovalDetailsPage_date_picker">
-            <textarea
-              className="form-control"
-              placeholder="Choose when you would like to pay your employees. Select a date after the 15th to pay your employees for the same month eg. if you pick 31, then your employees will get paid for January on 31st January. Or, if you pick 1, then your employees will get paid for January on 1st February."
-              rows="5"
-            ></textarea>
+          <div className=" setting_text setting_text2">
+            Choose when you would like to pay your employees. Select a date
+            after the 15th to pay your employees for the same month eg. if you
+            pick 31, then your employees will get paid for January on 31st
+            January. Or, if you pick 1, then your employees will get paid for
+            January on 1st February.
           </div>
         </div>
         <div className="col-12">
@@ -264,12 +264,11 @@ const Automation = () => {
                 Automatically run payroll on selected date
               </label>
             </div>
-            <div className="ApprovalDetailsPage_date_picker">
-              <textarea
-                className="form-control"
-                placeholder="Employees can request salary advances through XPayroll. If approved, the advance amount will be paid immediately and automatically recovered from future payments to the employees."
-                rows="5"
-              ></textarea>
+
+            <div className=" setting_text setting_text2">
+              Employees can request salary advances through XPayroll. If
+              approved, the advance amount will be paid immediately and
+              automatically recovered from future payments to the employees.
             </div>
           </div>
         </div>
@@ -307,16 +306,30 @@ const Automation = () => {
 };
 const DocumentCompanySetup = () => {
   const [modalShow, setModalShow] = React.useState(false);
+  const options = [
+    {
+      value: " Privacy Policy (It will be updated in Footer)",
+      label: " Privacy Policy (It will be updated in Footer)",
+    },
+    {
+      value: " Terms and Condition (It will be updated in Footer)",
+      label: " Terms and Condition (It will be updated in Footer)",
+    },
+    {
+      value:
+        "Salary Structure (It will be updated in each employee profile section)",
+      label:
+        "Salary Structure (It will be updated in each employee profile section)",
+    },
+  ];
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
         <div className="col-12">
-          <AboutProfileInput
-            label="Add Title"
-            type="text"
-            className="form-control"
-            placeholder="Add title of your document"
-          />
+          <div className="dashboard_top_week_Select">
+            <label className="all_page_my_label">Document Type</label>
+            <Select options={options} placeholder="Privacy Policy" />
+          </div>
         </div>
         <div className="col-12">
           <div className="DocumentCompanySetup_upload">

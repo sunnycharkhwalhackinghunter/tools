@@ -47,6 +47,12 @@ import { PayrollSetup } from "../components/Pages/Settings/pages/PayrollSetup";
 import { DefaultSalaryStracture } from "../components/Pages/Settings/pages/DefaultSalaryStracture";
 import { EmployeeNotification } from "../components/Pages/Settings/pages/EmployeeNotification";
 import { HolidaysSetting } from "../components/Pages/Settings/pages/HolidaysSetting";
+import { PaymentSetup } from "../components/Pages/Settings/pages/PaymentSetup";
+import { AutomateFilings } from "../components/Pages/Settings/pages/AutomateFilings";
+import { EmployeeData } from "../components/Pages/Settings/pages/EmployeeData";
+import { ReimbursementSetup } from "../components/Pages/Settings/pages/ReimbursementSetup";
+import { TaxDeductionSetup } from "../components/Pages/Settings/pages/TaxDeductionSetup";
+import { DocumentSetup } from "../components/Pages/Settings/pages/DocumentSetup";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -131,6 +137,18 @@ const Index = () => {
                   element={<EmployeeNotification />}
                 />
                 <Route path="/holidays_setting" element={<HolidaysSetting />} />
+                <Route path="/payment_setup" element={<PaymentSetup />} />
+                <Route path="/automate_filings" element={<AutomateFilings />} />
+                <Route path="/employee_data" element={<EmployeeData />} />
+                <Route
+                  path="/reimbursement_setup"
+                  element={<ReimbursementSetup />}
+                />
+                <Route
+                  path="/tax_deduction_setup"
+                  element={<TaxDeductionSetup />}
+                />
+                <Route path="/document_setup" element={<DocumentSetup />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

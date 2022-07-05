@@ -20,11 +20,10 @@ export const EmployeeNotification = () => {
                       <label className="all_page_my_label">
                         Employee notifications after payroll execution
                       </label>
-                      <textarea
-                        className="form-control"
-                        placeholder="Choose how you would like to inform your employees after their payroll has been executed."
-                        rows="5"
-                      ></textarea>
+                      <div className=" setting_text mt-2">
+                        Choose how you would like to inform your employees after
+                        their payroll has been executed.
+                      </div>
                     </div>
                   </div>
                   <div className="col-12">

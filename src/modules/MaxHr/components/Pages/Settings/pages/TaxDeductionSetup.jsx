@@ -1,13 +1,6 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
-import Select from "react-select";
-
-export const PayrollSetup = () => {
-  const options = [
-    { value: " 01", label: " 01" },
-    { value: " 02", label: " 02" },
-    { value: "03", label: "03" },
-  ];
+export const TaxDeductionSetup = () => {
   return (
     <>
       <div className="custom_container">
@@ -22,35 +15,13 @@ export const PayrollSetup = () => {
               <div>
                 <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                   <div className="col-12">
-                    <div className="automation_checkbox_div">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id="1"
-                        />
-                        <label
-                          className="form-check-label automation_checkbox_label"
-                          htmlFor="1"
-                        >
-                          Payroll Enabled
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12">
+                    <label className="all_page_my_label">
+                      Tax Deductions Setup
+                    </label>
                     <div className="setting_text">
-                      Choose when you would like to pay your employees. Select a
-                      date after the 15th to pay your employees for the same
-                      month eg. if you pick 31, then your employees will get
-                      paid for January on 31st January. Or, if you pick 1, then
-                      your employees will get paid for January on 1st February.
-                    </div>
-                  </div>
-                  <div className="col-12 dep_all">
-                    <div className="dashboard_top_week_Select">
-                      <label className="all_page_my_label">Payroll Date</label>
-                      <Select options={options} placeholder="01" />
+                      Maxlence HR can automatically use any tax deductions
+                      updates that your employees put in, or ask for your
+                      approval before they are used to calculate payroll.
                     </div>
                   </div>
                   <div className="col-12">
@@ -60,22 +31,22 @@ export const PayrollSetup = () => {
                           className="form-check-input"
                           type="checkbox"
                           id="2"
+                          defaultChecked="false"
                         />
                         <label
                           className="form-check-label automation_checkbox_label"
                           htmlFor="2"
                         >
-                          Automatically run payroll on selected date
+                          Require admin approval for deductions updates
                         </label>
                       </div>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="setting_text">
-                      Employees can request salary advances through XPayroll. If
-                      approved, the advance amount will be paid immediately and
-                      automatically recovered from future payments to the
-                      employees.
+                      Please select if you would like Maxlence HR to verify your
+                      employee's tax declarations. This is a one-time process
+                      usually carried out in January.
                     </div>
                   </div>
                   <div className="col-12">
@@ -84,14 +55,14 @@ export const PayrollSetup = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          id="4"
+                          id="3"
                           defaultChecked="false"
                         />
                         <label
                           className="form-check-label automation_checkbox_label"
-                          htmlFor="4"
+                          htmlFor="3"
                         >
-                          Let employees request salary advances
+                          Let Maxlence HR verify tax deductions
                         </label>
                       </div>
                     </div>

@@ -1,13 +1,6 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
-import Select from "react-select";
-
-export const PayrollSetup = () => {
-  const options = [
-    { value: " 01", label: " 01" },
-    { value: " 02", label: " 02" },
-    { value: "03", label: "03" },
-  ];
+export const ReimbursementSetup = () => {
   return (
     <>
       <div className="custom_container">
@@ -28,29 +21,21 @@ export const PayrollSetup = () => {
                           className="form-check-input"
                           type="checkbox"
                           id="1"
+                          defaultChecked="false"
                         />
                         <label
                           className="form-check-label automation_checkbox_label"
                           htmlFor="1"
                         >
-                          Payroll Enabled
+                          Reimbursements Enabled
                         </label>
                       </div>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="setting_text">
-                      Choose when you would like to pay your employees. Select a
-                      date after the 15th to pay your employees for the same
-                      month eg. if you pick 31, then your employees will get
-                      paid for January on 31st January. Or, if you pick 1, then
-                      your employees will get paid for January on 1st February.
-                    </div>
-                  </div>
-                  <div className="col-12 dep_all">
-                    <div className="dashboard_top_week_Select">
-                      <label className="all_page_my_label">Payroll Date</label>
-                      <Select options={options} placeholder="01" />
+                      If you make attachments compulsory, then any reimbursement
+                      request will require an attachment.
                     </div>
                   </div>
                   <div className="col-12">
@@ -60,22 +45,23 @@ export const PayrollSetup = () => {
                           className="form-check-input"
                           type="checkbox"
                           id="2"
+                          defaultChecked="false"
                         />
                         <label
                           className="form-check-label automation_checkbox_label"
                           htmlFor="2"
                         >
-                          Automatically run payroll on selected date
+                          Make attachments compulsary
                         </label>
                       </div>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="setting_text">
-                      Employees can request salary advances through XPayroll. If
-                      approved, the advance amount will be paid immediately and
-                      automatically recovered from future payments to the
-                      employees.
+                      Maxlence HR can either automatically include
+                      reimbursements when payroll is executed, or you can choose
+                      to manually trigger reimbursements payout whenever you
+                      like.
                     </div>
                   </div>
                   <div className="col-12">
@@ -84,17 +70,20 @@ export const PayrollSetup = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          id="4"
+                          id="3"
                           defaultChecked="false"
                         />
                         <label
                           className="form-check-label automation_checkbox_label"
-                          htmlFor="4"
+                          htmlFor="3"
                         >
-                          Let employees request salary advances
+                          Include reimbursements with payroll
                         </label>
                       </div>
                     </div>
+                  </div>
+                  <div className="col-12">
+                    <ReimbursementSetupList />
                   </div>
                   <div className="col-12  mb-4 company_setup_bottom_btn">
                     <div className=" text-capitalize text-center">
@@ -107,6 +96,87 @@ export const PayrollSetup = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const ReimbursementSetupList = () => {
+  const ReimbursementSetupListApp = (props) => {
+    return (
+      <>
+        <tr className="ApprovalDetailsPage_thead_td">
+          <td className=" p-3">{props.title}</td>
+          <td className=" text-end p-3">
+            <input className="form-check-input" type="checkbox" />
+          </td>
+        </tr>
+      </>
+    );
+  };
+  const ReimbursementSetupListData = [
+    {
+      title: "Travel",
+    },
+    {
+      title: "Hotel and Accomodation",
+    },
+    {
+      title: "Food",
+    },
+    {
+      title: "Medical",
+    },
+    {
+      title: "Telephone",
+    },
+    {
+      title: "Fuel",
+    },
+    {
+      title: "Imprest",
+    },
+    {
+      title: "Other",
+    },
+  ];
+  return (
+    <>
+      <div>
+        <div className="ApprovalDetailsPage_top_div pt-0">
+          <table className="table table-hover DateDescriptionList_main_div  text-capitalize">
+            <thead>
+              <tr className="ApprovalDetailsPage_thead_tr">
+                <th scope="col" className=" p-3">
+                  Reimbursement Type
+                </th>
+                <th scope="col" className=" text-end p-3">
+                  Enabled
+                </th>
+              </tr>
+            </thead>
+            <tbody className="default_salary_tbody">
+              {ReimbursementSetupListData.map((val, i) => {
+                return <ReimbursementSetupListApp key={i} title={val.title} />;
+              })}
+              <tr className="ApprovalDetailsPage_thead_td">
+                <td>
+                  <div className="add_remarks_input_div default_salary_stracture_input">
+                    <input
+                      type="text"
+                      className="form-control w-100 "
+                      placeholder="New Type"
+                    />
+                  </div>
+                </td>
+                <td>
+                  <div className="reimbursement_setup_lisl">
+                    <button>Add</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </>

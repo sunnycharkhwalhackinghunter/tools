@@ -13,7 +13,7 @@ export const SettingsIndex = () => {
                 return (
                   <div
                     key={i}
-                    className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12"
+                    className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "
                   >
                     <NavLink to={val.link}>
                       <div className="Reports_card_inner_div">
@@ -79,6 +79,16 @@ export const SettingsIndex = () => {
           inertitle: "Holidays",
           text: "Choose / Create Holidays",
         },
+        {
+          link: "/hr/holidays_setting",
+          inertitle: "Leave",
+          text: "Choose / Create Leave Types",
+        },
+        {
+          link: "/hr/holidays_setting",
+          inertitle: "Attendence",
+          text: "Define timings for attendence",
+        },
       ],
     },
   ];
@@ -88,6 +98,86 @@ export const SettingsIndex = () => {
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
         {SettingsIndexData.map((val, i) => {
           return <SettingsIndexApp key={i} toptile={val.toptile} arr={val} />;
+        })}
+      </div>
+      <SettingsBottomBtn />
+    </>
+  );
+};
+const SettingsBottomBtn = () => {
+  const SettingsBottomBtnApp = (props) => {
+    return (
+      <>
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="Reports_card_main_div">
+            <h3>{props.toptile}</h3>
+            <NavLink to={props.link}>
+              <div className="Reports_card_inner_div">
+                <h4>
+                  {props.inertitle}
+                  <span>
+                    <BsArrowRight />
+                  </span>
+                </h4>
+                <p>{props.text}</p>
+              </div>
+            </NavLink>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const SettingsBottomBtnData = [
+    {
+      toptile: "Payment Setup",
+      link: "/hr/payment_setup",
+      inertitle: "Payment Setup",
+      text: "Salary Transfer, Tax Payment, PF, ESI",
+    },
+    {
+      toptile: "TDS Filing Setup",
+      link: "/hr/automate_filings",
+      inertitle: "Automate filings",
+      text: "24Q, 26Q Filing",
+    },
+    {
+      toptile: "Employee Data",
+      link: "/hr/employee_data",
+      inertitle: "Employee Data",
+      text: "ID, Directory, Additional Info Request",
+    },
+    {
+      toptile: "Reimbursement Setup",
+      link: "/hr/reimbursement_setup",
+      inertitle: "Reimbursement Setup",
+      text: "Define Reimbursement Criteria",
+    },
+    {
+      toptile: "Tax deducation Setup",
+      link: "/hr/tax_deduction_setup",
+      inertitle: "Tax deducation Setup",
+      text: "Update Require Admin Approvals?",
+    },
+    {
+      toptile: "Document Setup",
+      link: "/hr/document_setup",
+      inertitle: "Document Setup",
+      text: "Add Document, you need from Employee",
+    },
+  ];
+  return (
+    <>
+      <div className="row mt-0 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        {SettingsBottomBtnData.map((val, i) => {
+          return (
+            <SettingsBottomBtnApp
+              key={i}
+              toptile={val.toptile}
+              link={val.link}
+              inertitle={val.inertitle}
+              text={val.text}
+            />
+          );
         })}
       </div>
     </>

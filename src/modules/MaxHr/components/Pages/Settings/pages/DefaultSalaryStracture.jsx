@@ -21,15 +21,13 @@ export const DefaultSalaryStracture = () => {
               <div>
                 <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                   <div className="col-12">
-                    <label className="all_page_my_label">
-                      Default Salary Structure
-                    </label>
-                    <div className="ApprovalDetailsPage_date_picker">
-                      <textarea
-                        className="form-control"
-                        placeholder="1.You can customize the default salary structure that Maxlence HR uses for your employees. 2.Employer contributions to PF and ESI (if applicable) are applied after the salary has been bifurcated into the components in the ratio defined. Hence, the final salary structure can have a slightly different ratio."
-                        rows="5"
-                      ></textarea>
+                    <div className=" setting_text">
+                      1.You can customize the default salary structure that
+                      Maxlence HR uses for your employees. <br /> 2.Employer
+                      contributions to PF and ESI (if applicable) are applied
+                      after the salary has been bifurcated into the components
+                      in the ratio defined. Hence, the final salary structure
+                      can have a slightly different ratio.
                     </div>
                   </div>
                   <div className="col-12">
@@ -52,12 +50,13 @@ export const DefaultSalaryStracture = () => {
                   </div>
                   <div className="col-12">
                     <div className={`${salary ? "salaryShow" : "salaryHide"}`}>
-                      <div className="ApprovalDetailsPage_date_picker">
-                        <textarea
-                          className="form-control"
-                          placeholder="1.You can customize the default salary structure that Maxlence HR uses for your employees. 2.Employer contributions to PF and ESI (if applicable) are applied after the salary has been bifurcated into the components in the ratio defined. Hence, the final salary structure can have a slightly different ratio."
-                          rows="5"
-                        ></textarea>
+                      <div className=" setting_text">
+                        1.You can customize the default salary structure that
+                        Maxlence HR uses for your employees. <br /> 2.Employer
+                        contributions to PF and ESI (if applicable) are applied
+                        after the salary has been bifurcated into the components
+                        in the ratio defined. Hence, the final salary structure
+                        can have a slightly different ratio.
                       </div>
                     </div>
                   </div>
@@ -65,12 +64,13 @@ export const DefaultSalaryStracture = () => {
                     <DefaultSalaryStractureList />
                   </div>
                   <div className="col-12">
-                    <div className="ApprovalDetailsPage_date_picker">
-                      <textarea
-                        className="form-control"
-                        placeholder="1.You can customize the default salary structure that Maxlence HR uses for your employees. 2.Employer contributions to PF and ESI (if applicable) are applied after the salary has been bifurcated into the components in the ratio defined. Hence, the final salary structure can have a slightly different ratio."
-                        rows="5"
-                      ></textarea>
+                    <div className=" setting_text">
+                      1.You can customize the default salary structure that
+                      Maxlence HR uses for your employees. <br /> 2.Employer
+                      contributions to PF and ESI (if applicable) are applied
+                      after the salary has been bifurcated into the components
+                      in the ratio defined. Hence, the final salary structure
+                      can have a slightly different ratio.
                     </div>
                   </div>
                   <div className="col-12">

@@ -319,12 +319,9 @@ export const HolidaysSetting = () => {
                     <label className="all_page_my_label">
                       Add Custom Holidays
                     </label>
-                    <div className="ApprovalDetailsPage_date_picker">
-                      <textarea
-                        className="form-control"
-                        placeholder="After adding custom holidays, Please come back to this page to select it for your locations."
-                        rows="5"
-                      ></textarea>
+                    <div className="setting_text">
+                      After adding custom holidays, Please come back to this
+                      page to select it for your locations.
                     </div>
                   </div>
                   <div className="col-12">
