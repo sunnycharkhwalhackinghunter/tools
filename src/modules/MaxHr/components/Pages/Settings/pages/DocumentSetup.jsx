@@ -86,7 +86,7 @@ const ReimbursementSetupList = () => {
     <>
       <div>
         <div className="ApprovalDetailsPage_top_div pt-0">
-          <table className="table table-hover DateDescriptionList_main_div  text-capitalize">
+          <table className="table table-hover ReimbursementSetup_main_div  text-capitalize">
             <thead>
               <tr className="ApprovalDetailsPage_thead_tr">
                 <th scope="col" className=" p-3">
@@ -114,7 +114,7 @@ const ReimbursementSetupList = () => {
                     />
                   </div>
                 </td>
-                <td>
+                <td colSpan="2">
                   <div className="reimbursement_setup_lisl">
                     <button>Add</button>
                   </div>

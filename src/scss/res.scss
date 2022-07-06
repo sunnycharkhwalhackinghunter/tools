@@ -6,6 +6,12 @@
   }
 }
 @media (max-width: 576px) {
+  .AppraisalSetting_inner_main_div {
+    width: 100%;
+  }
+  .ReimbursementSetup_main_div {
+    display: block;
+  }
   .default_salary_stracture_main_div {
     display: grid;
   }
@@ -509,6 +515,9 @@
   }
 }
 @media (min-width: 768px) {
+  .AppraisalSetting_inner_main_div {
+    width: 70%;
+  }
   .default_salary_stracture_main_div {
     display: grid;
   }
@@ -620,6 +629,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .AppraisalSetting_inner_main_div {
+    width: 50%;
+  }
   .default_salary_stracture_main_div {
     display: grid;
   }

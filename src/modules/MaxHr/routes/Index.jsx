@@ -53,6 +53,9 @@ import { EmployeeData } from "../components/Pages/Settings/pages/EmployeeData";
 import { ReimbursementSetup } from "../components/Pages/Settings/pages/ReimbursementSetup";
 import { TaxDeductionSetup } from "../components/Pages/Settings/pages/TaxDeductionSetup";
 import { DocumentSetup } from "../components/Pages/Settings/pages/DocumentSetup";
+import { ContractorSetup } from "../components/Pages/Settings/pages/ContractorSetup";
+import { UserRole } from "../components/Pages/Settings/pages/UserRole";
+import { AppraisalSetting } from "../components/Pages/Settings/pages/AppraisalSetting";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -149,6 +152,12 @@ const Index = () => {
                   element={<TaxDeductionSetup />}
                 />
                 <Route path="/document_setup" element={<DocumentSetup />} />
+                <Route path="/contractor_setup" element={<ContractorSetup />} />
+                <Route path="/user_role" element={<UserRole />} />
+                <Route
+                  path="/appraisal_setting"
+                  element={<AppraisalSetting />}
+                />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

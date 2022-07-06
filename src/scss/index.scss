@@ -4207,4 +4207,95 @@ a {
     }
   }
 }
+.ReimbursementSetup_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 // ReimbursementSetup end
+// UserRole
+.user_role_main_div {
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.user_role_top_title_div {
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+  }
+}
+// UserRole end
+// AppraisalSetting
+.AppraisalSetting_top_title {
+  text-align: center;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.AppraisalSetting_inner_main_div {
+  width: 50%;
+}
+.setting1_text {
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.Frequency_month_top_div {
+  margin-top: 1rem;
+}
+.Frequency_reset_btn {
+  text-align: center;
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: $blue;
+    padding: 7px 18px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    span {
+      border-bottom: 1px solid $blue;
+    }
+    &:hover {
+      background-color: $blue;
+      color: white;
+      span {
+        border-bottom: none;
+      }
+    }
+  }
+}
+.Frequency_save_btn {
+  text-align: center;
+  button {
+    border: none;
+    outline: none;
+    background-color: $blue;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 6px;
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: $hover;
+      color: white;
+    }
+  }
+}
+
+// AppraisalSetting end

@@ -164,6 +164,24 @@ const SettingsBottomBtn = () => {
       inertitle: "Document Setup",
       text: "Add Document, you need from Employee",
     },
+    {
+      toptile: "Contractor Setup",
+      link: "/hr/contractor_setup",
+      inertitle: "Contractor Setup",
+      text: "Define Contractor",
+    },
+    {
+      toptile: "User Role",
+      link: "/hr/user_role",
+      inertitle: "User Role",
+      text: "Define user role and its permission",
+    },
+    {
+      toptile: "Appraisal",
+      link: "/hr/appraisal_setting",
+      inertitle: "Appraisal",
+      text: "Define everything about appraisal",
+    },
   ];
   return (
     <>
