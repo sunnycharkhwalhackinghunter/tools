@@ -4297,5 +4297,320 @@ a {
     }
   }
 }
-
+.frequency_add_new {
+  padding: 1rem;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+.frequency_add_new_btn {
+  margin-top: 1.5rem;
+}
 // AppraisalSetting end
+// Questions
+.questions_top_div {
+  overflow: scroll;
+  height: 32rem;
+}
+// Questions end
+// HiringIndex page
+.HiringIndex_top_title {
+  display: flex;
+  align-items: center;
+  .profil_emp_inter_page_title {
+    margin: 0;
+  }
+}
+.DashbordBg_img {
+  @include bg_img;
+  width: 100%;
+  height: 13.6rem;
+  border-radius: 10px;
+}
+.DashbordBg_img_div {
+  position: relative;
+}
+.DashbordBg_img_div_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.DashbordBg_icon_img {
+  @include bg_img;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.DashbordBg_icon_img_text {
+  span {
+    svg {
+      transform: rotate(136deg);
+      margin-left: 3px;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    color: white;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.DashbordBg_icon_img_text_TOP {
+  display: flex;
+  justify-content: flex-end;
+}
+.DashbordBg_img_div_inner_bottom_text {
+  color: white;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  h3 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+.DashbordBg_icon1_div {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+.DashbordBg_icon1 {
+  @include bg_img;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+.DashbordBg_icon_top_div_iner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  h3 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 28px;
+    color: #525252;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #525252;
+  }
+}
+
+.DashbordBg_icon_top_div_iner2 {
+  position: absolute;
+
+  top: 19px;
+  right: 4%;
+
+  span {
+    svg {
+      transform: rotate(136deg);
+      margin-left: 3px;
+      font-size: 13px;
+      margin-bottom: 2px;
+      color: #f43d03;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #525252;
+    text-transform: capitalize;
+  }
+}
+.DashbordBg_icon1_div2 {
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.HiringIndexCard_more_card_div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background-color: $c2;
+  border-radius: 10px;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    text-transform: capitalize;
+    span {
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.upcoming_interviews_main_div {
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+.upcoming_interviews_icon {
+  @include bg_img;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+.upcoming_interviews_icon_div {
+  display: flex;
+  align-items: center;
+}
+.upcoming_interviews_icon_div_text {
+  margin-left: 1rem;
+  color: #0a0e30;
+  h5 {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+.upcoming_interviews_main_div_inner {
+  border: 1px solid $blue;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.upcoming_interviews_time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #525252;
+  }
+  span {
+    svg {
+      margin-right: 5px;
+      font-size: 15px;
+    }
+  }
+}
+.upcoming_interviews_ul {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 15px;
+  li {
+    background-color: $c2;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 6px 25px;
+    border-radius: 25px;
+    margin: auto;
+    text-transform: capitalize;
+  }
+}
+.upcoming_interviews_top_title_div {
+  margin-bottom: 1.5rem;
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}
+.upcoming_interviews_overflow {
+  overflow: scroll;
+  height: 16rem;
+}
+.TotalOpenings_input_main_div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  .profil_emp_inter_page_title {
+    margin: 0;
+  }
+}
+.TotalOpenings_input_div {
+  position: relative;
+  span {
+    svg {
+      position: absolute;
+      top: 11px;
+      left: 8px;
+      font-size: 18px;
+    }
+  }
+  input {
+    padding-left: 2rem;
+    width: 70%;
+  }
+}
+.JobCardsOne {
+  padding: 2rem !important;
+  p {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.JobCards_main_div {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #525252;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #0a0e30;
+  }
+}
+.JobCards_main_div_round {
+  height: 35px;
+  width: 35px;
+  background-color: #f1c21b;
+  border-radius: 100%;
+}
+// HiringIndex page end

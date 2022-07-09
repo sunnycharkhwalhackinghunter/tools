@@ -56,6 +56,7 @@ import { DocumentSetup } from "../components/Pages/Settings/pages/DocumentSetup"
 import { ContractorSetup } from "../components/Pages/Settings/pages/ContractorSetup";
 import { UserRole } from "../components/Pages/Settings/pages/UserRole";
 import { AppraisalSetting } from "../components/Pages/Settings/pages/AppraisalSetting";
+import { TotalOpenings } from "../components/Pages/Hiring/page/TotalOpenings";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -158,6 +159,7 @@ const Index = () => {
                   path="/appraisal_setting"
                   element={<AppraisalSetting />}
                 />
+                <Route path="/total_openings" element={<TotalOpenings />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

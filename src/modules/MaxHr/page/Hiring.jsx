@@ -1,7 +1,10 @@
+import { HiringIndex } from "../components/Pages/Hiring/HiringIndex";
 const Hiring = () => {
   return (
     <>
-      <h1>Hiring</h1>
+      <div className="custom_container">
+        <HiringIndex />
+      </div>
     </>
   );
 };

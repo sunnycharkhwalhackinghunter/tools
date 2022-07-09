@@ -6,6 +6,19 @@
   }
 }
 @media (max-width: 576px) {
+  .TotalOpenings_input_div {
+    input {
+      width: 100%;
+    }
+  }
+  .upcoming_interviews_ul {
+    li {
+      padding: 6px 15px;
+    }
+  }
+  .HiringIndexCard_more_card_div {
+    padding: 2.4rem;
+  }
   .AppraisalSetting_inner_main_div {
     width: 100%;
   }
@@ -515,6 +528,14 @@
   }
 }
 @media (min-width: 768px) {
+  .TotalOpenings_input_div {
+    input {
+      width: 100%;
+    }
+  }
+  .HiringIndexCard_more_card_div {
+    padding: 2.4rem;
+  }
   .AppraisalSetting_inner_main_div {
     width: 70%;
   }
@@ -629,6 +650,28 @@
   }
 }
 @media (min-width: 1024px) {
+  .TotalOpenings_input_div {
+    input {
+      width: 70%;
+    }
+  }
+  .upcoming_interviews_ul {
+    li {
+      padding: 6px 15px;
+    }
+  }
+  .HiringIndexCard_more_card_div {
+    padding: 0;
+  }
+  .DashbordBg_icon1 {
+    width: 3rem;
+    height: 3rem;
+  }
+  .DashbordBg_icon_top_div_iner {
+    p {
+      font-size: 14px;
+    }
+  }
   .AppraisalSetting_inner_main_div {
     width: 50%;
   }
@@ -762,6 +805,23 @@
   }
 }
 @media (min-width: 1440px) {
+  .upcoming_interviews_ul {
+    li {
+      padding: 6px 25px;
+    }
+  }
+  .HiringIndexCard_more_card_div {
+    padding: 0;
+  }
+  .DashbordBg_icon_top_div_iner {
+    p {
+      font-size: 16px;
+    }
+  }
+  .DashbordBg_icon1 {
+    width: 4rem;
+    height: 4rem;
+  }
   .default_salary_stracture_main_div {
     display: block;
   }
