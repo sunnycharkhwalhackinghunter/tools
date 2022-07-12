@@ -57,6 +57,8 @@ import { ContractorSetup } from "../components/Pages/Settings/pages/ContractorSe
 import { UserRole } from "../components/Pages/Settings/pages/UserRole";
 import { AppraisalSetting } from "../components/Pages/Settings/pages/AppraisalSetting";
 import { TotalOpenings } from "../components/Pages/Hiring/page/TotalOpenings";
+import { CreateNewJobs } from "../components/Pages/Hiring/page/CreateNewJobs";
+import { NewApplication } from "../components/Pages/Hiring/page/NewApplication";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -160,6 +162,8 @@ const Index = () => {
                   element={<AppraisalSetting />}
                 />
                 <Route path="/total_openings" element={<TotalOpenings />} />
+                <Route path="/create_new_jobs" element={<CreateNewJobs />} />
+                <Route path="/new_application" element={<NewApplication />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

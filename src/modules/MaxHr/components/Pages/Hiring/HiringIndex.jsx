@@ -66,7 +66,7 @@ const HiringIndexCard = () => {
         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-12 col-12">
           <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
             <div className="col-xxl-6 col-xl-6 col-lg-7 col-md-6 col-sm-12 col-12">
-              <NavLink to="/">
+              <NavLink to="/hr/new_application">
                 <div className="DashbordBg_img_div">
                   <Image
                     className="DashbordBg_img"
@@ -204,7 +204,7 @@ const HiringIndexCard = () => {
               </div>
             </div>
             <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-              <NavLink to="/">
+              <NavLink to="/hr/create_new_jobs">
                 <div className="HiringIndexCard_more_card_div">
                   <p>
                     Create New Job

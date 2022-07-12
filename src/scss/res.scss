@@ -6,6 +6,17 @@
   }
 }
 @media (max-width: 576px) {
+  .new_application_tabs_div {
+    .nav-item {
+      width: 100%;
+    }
+  }
+  .new_application_item {
+    .new_application_tabs1 {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
   .TotalOpenings_input_div {
     input {
       width: 100%;
@@ -528,6 +539,12 @@
   }
 }
 @media (min-width: 768px) {
+  .new_application_item {
+    .new_application_tabs1 {
+      width: 21.4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
   .TotalOpenings_input_div {
     input {
       width: 100%;
@@ -650,6 +667,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .new_application_item {
+    .new_application_tabs1 {
+      width: 98%;
+    }
+  }
   .TotalOpenings_input_div {
     input {
       width: 70%;
@@ -805,6 +827,11 @@
   }
 }
 @media (min-width: 1440px) {
+  .new_application_item {
+    .new_application_tabs1 {
+      width: 17rem;
+    }
+  }
   .upcoming_interviews_ul {
     li {
       padding: 6px 25px;

@@ -1,8 +1,9 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
 import Select from "react-select";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiDotsVerticalRounded } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export const TotalOpenings = () => {
   return (
@@ -54,29 +55,222 @@ const TotalOpeningsTop = () => {
   );
 };
 const JobCards = () => {
+  const JobCardsApp = (props) => {
+    const [JobCardsLists, setJobCardsLists] = useState(false);
+    const JobCardsListsOpen = () => {
+      setJobCardsLists(!JobCardsLists);
+    };
+    return (
+      <>
+        <div className="col-xx-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="JobCards_main_div">
+            <div className="row">
+              <div className="col-3">
+                <NavLink to="/">
+                  <div
+                    className="JobCards_main_div_round"
+                    style={{ backgroundColor: props.color }}
+                  ></div>
+                </NavLink>
+              </div>
+              <div className="col-6">
+                <NavLink to="/">
+                  <h3>{props.name}</h3>
+                  <p>{props.applicationsNumber}</p>
+                </NavLink>
+              </div>
+              <div className="col-1">
+                <div className="JobCards_main_div_menu">
+                  <BiDotsVerticalRounded
+                    style={{ color: props.color }}
+                    onClick={JobCardsListsOpen}
+                  />
+                  {JobCardsLists ? <JobCardsList /> : null}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const JobCardsData = [
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F1C21B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#900F9B",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#0043CE",
+    },
+    {
+      name: "HR Manager",
+      applicationsNumber: "12 Applications",
+      color: "#F43D03",
+    },
+  ];
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-        <div className="col-3">
-          <NavLink to="/">
+        <div className="col-xx-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <NavLink to="/hr/create_new_jobs">
             <div className="HiringIndexCard_more_card_div JobCardsOne">
               <p>Add New Job</p>
             </div>
           </NavLink>
         </div>
-        <div className="col-3">
-          <NavLink to="/">
-            <div className="row JobCards_main_div">
-              <div className="col-4">
-                <div className="JobCards_main_div_round"></div>
-              </div>
-              <div className="col-8">
-                <h3>HR Manager</h3>
-                <p>12 Applications</p>
-              </div>
-            </div>
+
+        {JobCardsData.map((val, i) => {
+          return (
+            <JobCardsApp
+              key={i}
+              name={val.name}
+              applicationsNumber={val.applicationsNumber}
+              color={val.color}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
+};
+const JobCardsList = () => {
+  return (
+    <>
+      <div className="JobCards_main_list_div">
+        <ul>
+          <NavLink to="/hr/create_new_jobs">
+            <li>elit</li>
           </NavLink>
-        </div>
+          <li>close</li>
+        </ul>
       </div>
     </>
   );
