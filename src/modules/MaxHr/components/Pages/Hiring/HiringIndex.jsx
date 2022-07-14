@@ -229,7 +229,7 @@ const UpcomingInterviews = () => {
     return (
       <>
         <div className="col-12">
-          <NavLink to="/">
+          <NavLink to="/hr/interviews">
             <div className="upcoming_interviews_main_div_inner">
               <div className="row">
                 <div className="col-6">

@@ -1,11 +1,26 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 320px) {
+  .JobsType_card {
+    ul {
+      .JobsType_card_menu {
+        right: 39px;
+      }
+    }
+  }
   .HolidaysSetting_main_div {
     display: block;
   }
 }
 @media (max-width: 576px) {
+  .interviews_round_tabs_div {
+    .nav-item {
+      width: 100% !important;
+    }
+    .nav {
+      flex-wrap: nowrap !important;
+    }
+  }
   .new_application_tabs_div {
     .nav-item {
       width: 100%;

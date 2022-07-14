@@ -7,6 +7,7 @@ import React from "react";
 import { Editor } from "react-draft-wysiwyg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+
 export const CreateNewJobs = () => {
   return (
     <>

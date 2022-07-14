@@ -4613,7 +4613,7 @@ a {
 .JobCards_main_div_round {
   height: 45px;
   width: 45px;
-  background-color: #f1c21b;
+  background-color: #0043ce;
   border-radius: 100%;
   margin-top: 6px;
 }
@@ -4624,7 +4624,7 @@ a {
   font-size: 20px;
   cursor: pointer;
   svg {
-    color: #f1c21b;
+    color: #0043ce;
   }
 }
 .JobCards_main_list_div {
@@ -4741,7 +4741,7 @@ a {
     .JobCards_main_div_round1 {
       height: 45px;
       width: 45px;
-      background-color: #f43d03;
+      background-color: #0043ce;
       border-radius: 100%;
       margin-top: 0px;
     }
@@ -4751,46 +4751,6 @@ a {
       right: 10px;
       font-size: 20px;
       cursor: pointer;
-      svg {
-        color: #f43d03;
-      }
-    }
-  }
-  .active,
-  .nav-pills .show > .nav-link {
-    background-color: transparent !important;
-    .new_application_tabs1 {
-      background-color: #f43d03;
-      h3 {
-        color: white;
-      }
-      p {
-        color: white;
-      }
-      .JobCards_main_div_round1 {
-        background-color: white;
-      }
-      .JobCards_main_div_menu2 {
-        svg {
-          color: white;
-        }
-      }
-    }
-  }
-}
-.new_application_item2 {
-  .new_application_tabs1 {
-    background-color: white;
-    h3 {
-      color: black;
-    }
-    p {
-      color: black;
-    }
-    .JobCards_main_div_round1 {
-      background-color: #0043ce;
-    }
-    .JobCards_main_div_menu2 {
       svg {
         color: #0043ce;
       }
@@ -4818,84 +4778,338 @@ a {
     }
   }
 }
-.new_application_item3 {
-  .new_application_tabs1 {
-    background-color: white;
-    h3 {
-      color: black;
-    }
-    p {
-      color: black;
-    }
-    .JobCards_main_div_round1 {
-      background-color: #900f9b;
-    }
-    .JobCards_main_div_menu2 {
-      svg {
-        color: #900f9b;
-      }
-    }
+// .new_application_item2 {
+//   .new_application_tabs1 {
+//     background-color: white;
+//     h3 {
+//       color: black;
+//     }
+//     p {
+//       color: black;
+//     }
+//     .JobCards_main_div_round1 {
+//       background-color: #0043ce;
+//     }
+//     .JobCards_main_div_menu2 {
+//       svg {
+//         color: #0043ce;
+//       }
+//     }
+//   }
+//   .active,
+//   .nav-pills .show > .nav-link {
+//     background-color: transparent !important;
+//     .new_application_tabs1 {
+//       background-color: #0043ce;
+//       h3 {
+//         color: white;
+//       }
+//       p {
+//         color: white;
+//       }
+//       .JobCards_main_div_round1 {
+//         background-color: white;
+//       }
+//       .JobCards_main_div_menu2 {
+//         svg {
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+// }
+// .new_application_item3 {
+//   .new_application_tabs1 {
+//     background-color: white;
+//     h3 {
+//       color: black;
+//     }
+//     p {
+//       color: black;
+//     }
+//     .JobCards_main_div_round1 {
+//       background-color: #900f9b;
+//     }
+//     .JobCards_main_div_menu2 {
+//       svg {
+//         color: #900f9b;
+//       }
+//     }
+//   }
+//   .active,
+//   .nav-pills .show > .nav-link {
+//     background-color: transparent !important;
+//     .new_application_tabs1 {
+//       background-color: #900f9b;
+//       h3 {
+//         color: white;
+//       }
+//       p {
+//         color: white;
+//       }
+//       .JobCards_main_div_round1 {
+//         background-color: white;
+//       }
+//       .JobCards_main_div_menu2 {
+//         svg {
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+// }
+// .new_application_item4 {
+//   .new_application_tabs1 {
+//     background-color: white;
+//     h3 {
+//       color: black;
+//     }
+//     p {
+//       color: black;
+//     }
+//     .JobCards_main_div_round1 {
+//       background-color: #f1c21b;
+//     }
+//     .JobCards_main_div_menu2 {
+//       svg {
+//         color: #f1c21b;
+//       }
+//     }
+//   }
+//   .active,
+//   .nav-pills .show > .nav-link {
+//     background-color: transparent !important;
+//     .new_application_tabs1 {
+//       background-color: #f1c21b;
+//       h3 {
+//         color: black;
+//       }
+//       p {
+//         color: black;
+//       }
+//       .JobCards_main_div_round1 {
+//         background-color: white;
+//       }
+//       .JobCards_main_div_menu2 {
+//         svg {
+//           color: black;
+//         }
+//       }
+//     }
+//   }
+// }
+.new_application_table_filter_div {
+  position: relative;
+}
+.new_application_table_filter {
+  display: grid;
+  font-size: 8px;
+  position: absolute;
+  top: 2px;
+  right: -15px;
+  svg {
+    cursor: pointer;
   }
-  .active,
+}
+.new_application_tabel_name_text {
+  h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    position: absolute;
+    color: black;
+    text-transform: capitalize;
+  }
+  background: #f4f4f4;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profile_tab_div {
+  .slick-next:before,
+  .slick-prev:before {
+    color: black;
+  }
+  .slick-prev {
+    left: -9px;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 3px;
+  }
+}
+.interviews_round_tabs_div {
+  .nav {
+    overflow-x: scroll;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .nav-item {
+    margin: 1rem;
+    margin-left: 0;
+  }
+  .nav-link {
+    padding: 0 !important;
+    border-radius: 10px !important;
+  }
+  .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
-    background-color: transparent !important;
-    .new_application_tabs1 {
-      background-color: #900f9b;
+    background-color: transparent;
+    .JobCards_main_div {
+      background-color: #0043ce;
       h3 {
         color: white;
       }
       p {
         color: white;
       }
-      .JobCards_main_div_round1 {
+      .JobCards_main_div_round {
         background-color: white;
       }
-      .JobCards_main_div_menu2 {
-        svg {
-          color: white;
-        }
+      svg {
+        color: white;
       }
+    }
+  }
+  .JobCards_main_div {
+    cursor: pointer;
+    width: 18rem;
+    .JobCards_main_div_round {
+      margin-top: 0;
+    }
+    h3 {
+      margin-top: 4px;
     }
   }
 }
-.new_application_item4 {
-  .new_application_tabs1 {
-    background-color: white;
+.JobsType_card {
+  .JobCards_main_div_round {
+    height: 50px;
+    width: 50px;
+  }
+  .JobCards_main_list_div ul {
+    margin-bottom: 0;
+    display: block !important;
+    width: 6rem !important;
+    height: 4rem !important;
+    padding: 0px !important;
+  }
+  ul {
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    padding: 1.5rem !important;
+    width: 20rem;
+    height: 8rem;
+    align-items: center;
+    align-items: center;
+    li {
+      margin: auto;
+    }
     h3 {
-      color: black;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 3px;
+      margin-top: 4px;
     }
     p {
-      color: black;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 12px;
     }
-    .JobCards_main_div_round1 {
-      background-color: #f1c21b;
-    }
-    .JobCards_main_div_menu2 {
-      svg {
-        color: #f1c21b;
-      }
+    .JobsType_card_menu {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
     }
   }
-  .active,
+  .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
-    background-color: transparent !important;
-    .new_application_tabs1 {
-      background-color: #f1c21b;
-      h3 {
-        color: black;
-      }
-      p {
-        color: black;
-      }
-      .JobCards_main_div_round1 {
-        background-color: white;
-      }
-      .JobCards_main_div_menu2 {
-        svg {
-          color: black;
-        }
-      }
+    background-color: #0043ce;
+    .JobCards_main_div_round {
+      background-color: #fff;
     }
   }
+}
+.JobsList_img {
+  @include bg_img;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+.JobsList_img_text {
+  margin-top: 6px;
+  h3 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+.JobsList_img_sub_text {
+  margin-top: 8px;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #525252;
+  }
+  svg {
+    margin-left: 5px;
+    color: black;
+  }
+}
+.JobsList_mid_title {
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #525252;
+  }
+}
+.JobsList_main_div {
+  .EmployeesProfileCard_div_info {
+    display: block;
+  }
+}
+.JobsList_copy_btn_div {
+  display: flex;
+  align-items: center;
+  button {
+    margin-left: 10px;
+    background-color: $blue;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    padding: 8px 25px;
+    border-radius: 8px;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+}
+.JobsList_copy_text {
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 10px 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #525252;
 }
 // HiringIndex page end

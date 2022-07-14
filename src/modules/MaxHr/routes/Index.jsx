@@ -59,6 +59,7 @@ import { AppraisalSetting } from "../components/Pages/Settings/pages/AppraisalSe
 import { TotalOpenings } from "../components/Pages/Hiring/page/TotalOpenings";
 import { CreateNewJobs } from "../components/Pages/Hiring/page/CreateNewJobs";
 import { NewApplication } from "../components/Pages/Hiring/page/NewApplication";
+import { Interviews } from "../components/Pages/Hiring/page/Interviews";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -164,6 +165,7 @@ const Index = () => {
                 <Route path="/total_openings" element={<TotalOpenings />} />
                 <Route path="/create_new_jobs" element={<CreateNewJobs />} />
                 <Route path="/new_application" element={<NewApplication />} />
+                <Route path="/interviews" element={<Interviews />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
