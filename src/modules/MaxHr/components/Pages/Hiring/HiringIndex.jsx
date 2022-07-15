@@ -195,7 +195,7 @@ const HiringIndexCard = () => {
                         />
                         <div>
                           <h3>23</h3>
-                          <p>Total Openings</p>
+                          <p>All Jobs</p>
                         </div>
                       </div>
                     </NavLink>

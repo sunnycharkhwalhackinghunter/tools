@@ -37,7 +37,7 @@ const PageTop = () => {
               Name="Interviews"
             />
           </div>
-          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
+          <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-6 col-sm-12 col-12">
             <div className="TotalOpenings_input_div">
               <span>
                 <BiSearch />
@@ -49,7 +49,7 @@ const PageTop = () => {
               />
             </div>
           </div>
-          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-12 col-12">
             <div className="dashboard_top_week_Select">
               <Select options={options} placeholder="All Department" />
             </div>

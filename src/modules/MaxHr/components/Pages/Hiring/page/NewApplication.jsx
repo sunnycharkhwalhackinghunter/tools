@@ -57,57 +57,7 @@ const NewApplicationTabs = () => {
   return (
     <>
       <div className="new_application_tabs_div">
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-          <Nav variant="pills" className="flex">
-            <Nav.Item className="new_application_item">
-              <Nav.Link eventKey="first">
-                <TabBtn
-                  jobName="Lead UX Designer"
-                  applicationsNumber="12 Applications"
-                />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="new_application_item ">
-              <Nav.Link eventKey="second">
-                <TabBtn
-                  jobName="UI Developer Intern"
-                  applicationsNumber="12 Applications"
-                />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="new_application_item ">
-              <Nav.Link eventKey="second1">
-                <TabBtn
-                  jobName="SEO Marketing"
-                  applicationsNumber="12 Applications"
-                />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="new_application_item ">
-              <Nav.Link eventKey="second2">
-                <TabBtn
-                  jobName="HR Manager"
-                  applicationsNumber="12 Applications"
-                />
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-
-          <Tab.Content>
-            <Tab.Pane eventKey="first">
-              <NewApplicationTabel />
-            </Tab.Pane>
-            <Tab.Pane eventKey="second">
-              <NewApplicationTabel />
-            </Tab.Pane>
-            <Tab.Pane eventKey="second1">
-              <NewApplicationTabel />
-            </Tab.Pane>
-            <Tab.Pane eventKey="second2">
-              <NewApplicationTabel />
-            </Tab.Pane>
-          </Tab.Content>
-        </Tab.Container>
+        <NewApplicationSlider />
       </div>
     </>
   );
@@ -122,33 +72,6 @@ const JobCardsList = () => {
           </NavLink>
           <li>close</li>
         </ul>
-      </div>
-    </>
-  );
-};
-const TabBtn = (props) => {
-  const [JobCardsLists, setJobCardsLists] = useState(false);
-  const JobCardsListsOpen = () => {
-    setJobCardsLists(!JobCardsLists);
-  };
-  return (
-    <>
-      <div className="new_application_tabs1">
-        <div className="row">
-          <div className="col-3">
-            <div className="JobCards_main_div_round1"></div>
-          </div>
-          <div className="col-8">
-            <h3>{props.jobName}</h3>
-            <p>{props.applicationsNumber}</p>
-          </div>
-          <div className="col-1">
-            <div className="JobCards_main_div_menu2">
-              <BiDotsVerticalRounded onClick={JobCardsListsOpen} />
-              {JobCardsLists ? <JobCardsList /> : null}
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
@@ -330,6 +253,94 @@ const Test1 = (props) => {
     <>
       <div className="new_application_tabel_name_text">
         <h3>{props.text}</h3>
+      </div>
+    </>
+  );
+};
+const NewApplicationSlider = () => {
+  return (
+    <>
+      <div className="interviews_round_tabs_div">
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Nav variant="pills" className="flex">
+            <Nav.Item>
+              <Nav.Link eventKey="first">
+                <JobCards
+                  roundName=" UX Designer"
+                  candidatesNumber="12 Applications"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second">
+                <JobCards
+                  roundName="UI Developer "
+                  candidatesNumber="12 Applications"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second3">
+                <JobCards roundName="SEO " candidatesNumber="12 Applications" />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second4">
+                <JobCards
+                  roundName="HR Manager"
+                  candidatesNumber="HR Manager"
+                />
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+
+          <Tab.Content>
+            <Tab.Pane eventKey="first">
+              <div className="m_t"></div>
+              <NewApplicationTabel />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
+              <div className="m_t"></div>
+              <NewApplicationTabel />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second3">
+              <div className="m_t"></div>
+              <NewApplicationTabel />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second4">
+              <div className="m_t"></div>
+              <NewApplicationTabel />
+            </Tab.Pane>
+          </Tab.Content>
+        </Tab.Container>
+      </div>
+    </>
+  );
+};
+const JobCards = (props) => {
+  const [JobCardsLists, setJobCardsLists] = useState(false);
+  const JobCardsListsOpen = () => {
+    setJobCardsLists(!JobCardsLists);
+  };
+
+  return (
+    <>
+      <div className="JobCards_main_div">
+        <div className="row">
+          <div className="col-3">
+            <div className="JobCards_main_div_round"></div>
+          </div>
+          <div className="col-6">
+            <h3>{props.roundName}</h3>
+            <p>{props.candidatesNumber}</p>
+          </div>
+          <div className="col-1">
+            <div className="JobCards_main_div_menu">
+              <BiDotsVerticalRounded onClick={JobCardsListsOpen} />
+              {JobCardsLists ? <JobCardsList /> : null}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

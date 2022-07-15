@@ -54,14 +54,14 @@ const TotalOpeningsTop = () => {
     <>
       <div>
         <div className="row TotalOpenings_input_main_div g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
             <TopPageTitle
               TitleLink={-1}
               TilelIcon={<BsArrowLeft />}
               Name=" Jobs"
             />
           </div>
-          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
+          <div className="col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12 col-12">
             <div className="TotalOpenings_input_div">
               <span>
                 <BiSearch />
@@ -69,13 +69,18 @@ const TotalOpeningsTop = () => {
               <input
                 type="email"
                 className="form-control"
-                placeholder="Search by name, email or department"
+                placeholder="Search jobs by title or department"
               />
             </div>
           </div>
-          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12">
             <div className="dashboard_top_week_Select">
-              <Select options={options} placeholder="This week" />
+              <Select options={options} placeholder="All Department" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
+            <div className="dashboard_top_week_Select">
+              <Select options={options} placeholder="Job Title" />
             </div>
           </div>
         </div>
