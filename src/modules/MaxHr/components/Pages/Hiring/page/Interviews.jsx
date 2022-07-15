@@ -8,8 +8,9 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import PhotoApp from "../../../../../common/components/img/Img";
 import Icon from "../../../../../../pics/profile.jpeg";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineClockCircle } from "react-icons/ai";
 import InterviewedChip from "./InterviewedChip";
+import Schedule from "../../../../../../pics/edit.png";
 export const Interviews = () => {
   return (
     <>
@@ -44,7 +45,7 @@ const PageTop = () => {
               <input
                 type="email"
                 className="form-control"
-                placeholder="Search by name, email or department"
+                placeholder="Search jobs by title or department"
               />
             </div>
           </div>
@@ -78,7 +79,107 @@ const InterviewsTabs = () => {
               <MySlider />
             </Tab.Pane>
             <Tab.Pane eventKey="second">
-              <div className="m_t"></div>2
+              <div className="m_t"></div>
+              <CompletedSlider />
+            </Tab.Pane>
+          </Tab.Content>
+        </Tab.Container>
+      </div>
+    </>
+  );
+};
+const CompletedSlider = () => {
+  return (
+    <>
+      <div className="interviews_round_tabs_div">
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <div className="row align-items-center">
+            <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div className="JobsType_card JobsType_card2">
+                <div>
+                  <ul>
+                    <li>
+                      <div className="JobCards_main_div_round"></div>
+                    </li>
+                    <li>
+                      <h3>Lead UX Designer</h3>
+                      <p>12 Candidates</p>
+                    </li>
+                    <li>
+                      <div className="JobsType_card_menu">
+                        <BiDotsVerticalRounded />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-xxl-9 col-xl-9 col-lg-8 col-md-6 col-sm-12 col-12">
+              <Nav variant="pills" className="flex">
+                <Nav.Item>
+                  <Nav.Link eventKey="first">
+                    <JobCards
+                      roundName="1st Round"
+                      candidatesNumber="05 Candidates"
+                    />
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second">
+                    <JobCards
+                      roundName="2st Round"
+                      candidatesNumber="05 Candidates"
+                    />
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second3">
+                    <JobCards
+                      roundName="3st Round"
+                      candidatesNumber="05 Candidates"
+                    />
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second4">
+                    <JobCards
+                      roundName="HR Round"
+                      candidatesNumber="05 Candidates"
+                    />
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second5">
+                    <JobCards
+                      roundName="Final Round"
+                      candidatesNumber="05 Candidates"
+                    />
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </div>
+          </div>
+
+          <Tab.Content>
+            <Tab.Pane eventKey="first">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second3">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second4">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second5">
+              <div className="m_t"></div>
+              <JobsList />
             </Tab.Pane>
           </Tab.Content>
         </Tab.Container>
@@ -96,7 +197,20 @@ const MySlider = () => {
             <JobsType />
           </Tab.Pane>
           <Tab.Pane eventKey="second">
-            <div className="m_t"></div>2
+            <div className="m_t"></div>
+            <JobsType />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second3">
+            <div className="m_t"></div>
+            <JobsType />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second4">
+            <div className="m_t"></div>
+            <JobsType />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second5">
+            <div className="m_t"></div>
+            <JobsType />
           </Tab.Pane>
         </Tab.Content>
         <Nav variant="pills" className="flex">
@@ -117,7 +231,7 @@ const MySlider = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="">
+            <Nav.Link eventKey="second3">
               <JobCards
                 roundName="3st Round"
                 candidatesNumber="05 Candidates"
@@ -125,12 +239,12 @@ const MySlider = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="">
+            <Nav.Link eventKey="second4">
               <JobCards roundName="HR Round" candidatesNumber="05 Candidates" />
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="">
+            <Nav.Link eventKey="second5">
               <JobCards
                 roundName="Final Round"
                 candidatesNumber="05 Candidates"
@@ -145,7 +259,20 @@ const MySlider = () => {
             <JobsList />
           </Tab.Pane>
           <Tab.Pane eventKey="second">
-            <div className="m_t"></div>2
+            <div className="m_t"></div>
+            <JobsList />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second3">
+            <div className="m_t"></div>
+            <JobsList />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second4">
+            <div className="m_t"></div>
+            <JobsList />
+          </Tab.Pane>
+          <Tab.Pane eventKey="second5">
+            <div className="m_t"></div>
+            <JobsList />
           </Tab.Pane>
         </Tab.Content>
       </Tab.Container>
@@ -186,7 +313,7 @@ const JobCardsList = () => {
       <div className="JobCards_main_list_div">
         <ul>
           <NavLink to="/hr/create_new_jobs">
-            <li>elit</li>
+            <li>edit</li>
           </NavLink>
           <li>close</li>
         </ul>
@@ -261,6 +388,7 @@ const JobsType = () => {
                     roundName={val.roundName}
                     candidatesNumber={val.candidatesNumber}
                     eventKey={val.eventKey}
+                    BgColor={val.BgColor}
                   />
                 );
               })}
@@ -272,86 +400,147 @@ const JobsType = () => {
   );
 };
 const JobsList = () => {
+  const [buttonText, setButtonText] = useState("Copy");
+
+  function handleClick() {
+    setButtonText("Copied");
+  }
   const RedirectPage = () => {
     window.open("https://www.linkedin.com/login", "_blank");
   };
+  const JobsListApp = (props) => {
+    return (
+      <>
+        <div className="col-12">
+          <div className="EmployeesProfileCard_top_div">
+            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                <div>
+                  <div className="row">
+                    <div className="col-3">
+                      <PhotoApp
+                        className="JobsList_img"
+                        backgroundImage={Icon}
+                      />
+                    </div>
+                    <div className="col-9">
+                      <div className="JobsList_img_text">
+                        <h3>{props.name}</h3>
+                        <p>{props.postName}</p>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="JobsList_img_sub_text">
+                        <p>
+                          Experience: <span>3 Years</span>
+                        </p>
+                        <p>
+                          Linkedin Profile
+                          <span onClick={RedirectPage}>
+                            <AiFillLinkedin />
+                          </span>
+                        </p>
+                        <p>
+                          Resume
+                          <span>
+                            <NavLink to="/">
+                              <BiLink />
+                            </NavLink>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="ccol-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 EmployeesProfileCard_div_info">
+                <div>
+                  <div className="JobsList_mid_title">
+                    <h3>Being Interviewed By</h3>
+                  </div>
+                  <div>
+                    <InterviewedChip />
+                  </div>
+                  <div className="JobsList_mid_title">
+                    <h3>Interview link</h3>
+                  </div>
+                  <div className="JobsList_copy_btn_div">
+                    <div className="JobsList_copy_text">
+                      {props.InterviewLink}
+                    </div>
+                    <button
+                      onClick={() =>
+                        navigator.clipboard.writeText(props.InterviewLink)
+                      }
+                    >
+                      <span onClick={handleClick}>{buttonText}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
+                <div className="datetime_local_top_div">
+                  <div>
+                    <AiOutlineClockCircle /> Today <span>10:00-11:00</span>
+                  </div>
+                  <div className="sd-container datetime_local">
+                    <input
+                      className="sd"
+                      type="datetime-local"
+                      name="selected_date"
+                    />
+                    <span className="open-button">
+                      <button type="button">
+                        <PhotoApp
+                          className="selected_date_img"
+                          backgroundImage={Schedule}
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div className="datetime_local_butn_top_div">
+                  <div className="datetime_local_butn">
+                    <button className="button2">Join</button>
+                    <div className=" d-none d-xxl-block d-xl-block d-lg-block d-md-block"></div>
+                    <NavLink to="/" className="button1">
+                      Feedback
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const JobsListData = [
+    {
+      name: "Jan Mik",
+      postName: "UX Designer",
+      InterviewLink: "zsdfho458yjasdt94 /aeer/awerg/ar",
+    },
+    {
+      name: "Jan Mik",
+      postName: "UX Designer",
+      InterviewLink: "zsdfho458yjasdt94 /aeer/awerg/ar",
+    },
+  ];
   return (
     <>
       <div className="JobsList_main_div">
         <div className="row">
-          <div className="col-12">
-            <div className="EmployeesProfileCard_top_div">
-              <div className="row">
-                <div className="col-3">
-                  <div>
-                    <div className="row">
-                      <div className="col-3">
-                        <PhotoApp
-                          className="JobsList_img"
-                          backgroundImage={Icon}
-                        />
-                      </div>
-                      <div className="col-9">
-                        <div className="JobsList_img_text">
-                          <h3>Jan Mik</h3>
-                          <p>UX Designer</p>
-                        </div>
-                      </div>
-                      <div className="col-12">
-                        <div className="JobsList_img_sub_text">
-                          <p>
-                            Experience: <span>3 Years</span>
-                          </p>
-                          <p>
-                            Linkedin Profile
-                            <span onClick={RedirectPage}>
-                              <AiFillLinkedin />
-                            </span>
-                          </p>
-                          <p>
-                            Resume
-                            <span>
-                              <NavLink to="/">
-                                <BiLink />
-                              </NavLink>
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 EmployeesProfileCard_div_info">
-                  <div>
-                    <div className="JobsList_mid_title">
-                      <h3>Being Interviewed By</h3>
-                    </div>
-                    <div>
-                      <InterviewedChip />
-                    </div>
-                    <div className="JobsList_mid_title">
-                      <h3>Interview link</h3>
-                    </div>
-                    <div className="JobsList_copy_btn_div">
-                      <div className="JobsList_copy_text">
-                        Copy this text to clipboard
-                      </div>
-                      <button
-                        onClick={() =>
-                          navigator.clipboard.writeText(
-                            "Copy this text to clipboard"
-                          )
-                        }
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-3 EmployeesProfileCard_div_info">d</div>
-              </div>
-            </div>
-          </div>
+          {JobsListData.map((val, i) => {
+            return (
+              <JobsListApp
+                key={i}
+                name={val.name}
+                postName={val.postName}
+                InterviewLink={val.InterviewLink}
+              />
+            );
+          })}
         </div>
       </div>
     </>

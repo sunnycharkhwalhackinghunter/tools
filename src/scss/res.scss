@@ -13,6 +13,43 @@
   }
 }
 @media (max-width: 576px) {
+  .JobsList_copy_btn_div {
+    display: block;
+    button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  .datetime_local_top_div {
+    justify-content: start;
+    margin-bottom: 10px;
+  }
+  .EmployeesProfileCard_top_div {
+    .css-2m9kme-MuiFormControl-root {
+      width: 100% !important;
+    }
+  }
+  .datetime_local_butn_top_div {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+  .datetime_local_butn {
+    .button2 {
+      margin-bottom: 0;
+      margin-right: 5px;
+      width: 7rem;
+    }
+    .button1 {
+      margin-left: 5px;
+    }
+  }
+
+  .JobsList_img {
+    height: 3rem;
+    width: 3rem;
+  }
   .interviews_round_tabs_div {
     .nav-item {
       width: 100% !important;
@@ -554,6 +591,10 @@
   }
 }
 @media (min-width: 768px) {
+  .JobsList_img {
+    height: 2rem;
+    width: 2rem;
+  }
   .new_application_item {
     .new_application_tabs1 {
       width: 21.4rem;
@@ -682,6 +723,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .JobsList_img {
+    height: 3rem;
+    width: 3rem;
+  }
   .new_application_item {
     .new_application_tabs1 {
       width: 98%;

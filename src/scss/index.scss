@@ -4715,69 +4715,69 @@ a {
     padding: 0;
   }
 }
-.new_application_item {
-  .new_application_tabs1 {
-    background-color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    height: 100%;
-    position: relative;
-    padding: 1rem;
-    text-align: center;
-    width: 17rem;
-    h3 {
-      font-weight: 600;
-      font-size: 16px;
-      margin-bottom: 0;
-      margin-top: 5px;
-      color: black;
-    }
-    p {
-      margin-bottom: 0;
-      font-weight: 400;
-      font-size: 12px;
-      color: black;
-    }
-    .JobCards_main_div_round1 {
-      height: 45px;
-      width: 45px;
-      background-color: #0043ce;
-      border-radius: 100%;
-      margin-top: 0px;
-    }
-    .JobCards_main_div_menu2 {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      font-size: 20px;
-      cursor: pointer;
-      svg {
-        color: #0043ce;
-      }
-    }
-  }
-  .active,
-  .nav-pills .show > .nav-link {
-    background-color: transparent !important;
-    .new_application_tabs1 {
-      background-color: #0043ce;
-      h3 {
-        color: white;
-      }
-      p {
-        color: white;
-      }
-      .JobCards_main_div_round1 {
-        background-color: white;
-      }
-      .JobCards_main_div_menu2 {
-        svg {
-          color: white;
-        }
-      }
-    }
-  }
-}
+// .new_application_item {
+//   .new_application_tabs1 {
+//     background-color: white;
+//     border-radius: 10px;
+//     cursor: pointer;
+//     height: 100%;
+//     position: relative;
+//     padding: 1rem;
+//     text-align: center;
+//     width: 17rem;
+//     h3 {
+//       font-weight: 600;
+//       font-size: 16px;
+//       margin-bottom: 0;
+//       margin-top: 5px;
+//       color: black;
+//     }
+//     p {
+//       margin-bottom: 0;
+//       font-weight: 400;
+//       font-size: 12px;
+//       color: black;
+//     }
+//     .JobCards_main_div_round1 {
+//       height: 45px;
+//       width: 45px;
+//       background-color: #0043ce;
+//       border-radius: 100%;
+//       margin-top: 0px;
+//     }
+//     .JobCards_main_div_menu2 {
+//       position: absolute;
+//       top: 5px;
+//       right: 10px;
+//       font-size: 20px;
+//       cursor: pointer;
+//       svg {
+//         color: #0043ce;
+//       }
+//     }
+//   }
+//   .active,
+//   .nav-pills .show > .nav-link {
+//     background-color: transparent !important;
+//     .new_application_tabs1 {
+//       background-color: #0043ce;
+//       h3 {
+//         color: white;
+//       }
+//       p {
+//         color: white;
+//       }
+//       .JobCards_main_div_round1 {
+//         background-color: white;
+//       }
+//       .JobCards_main_div_menu2 {
+//         svg {
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+// }
 // .new_application_item2 {
 //   .new_application_tabs1 {
 //     background-color: white;
@@ -5041,6 +5041,25 @@ a {
     }
   }
 }
+.JobsType_card2 {
+  background-color: #f43d03;
+  border-radius: 10px;
+  .JobCards_main_div_round {
+    background-color: #fff;
+  }
+  ul {
+    width: 100%;
+  }
+  svg {
+    color: white;
+  }
+  h3 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
 .JobsList_img {
   @include bg_img;
   width: 3rem;
@@ -5081,6 +5100,15 @@ a {
   }
 }
 .JobsList_main_div {
+  .EmployeesProfileCard_top_div {
+    border: 1px solid #f43d03;
+    margin-bottom: 0px;
+    .css-2m9kme-MuiFormControl-root {
+      width: 265px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
   .EmployeesProfileCard_div_info {
     display: block;
   }
@@ -5112,4 +5140,118 @@ a {
   font-size: 14px;
   color: #525252;
 }
+.datetime_local {
+  button {
+    cursor: pointer;
+  }
+  input {
+    cursor: pointer;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: none;
+  }
+  // input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  //   color: rgba(0, 0, 0, 0);
+  //   opacity: 1;
+  //   display: block;
+  //   background: url("https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png")
+  //     no-repeat;
+  //   width: 20px;
+  //   height: 20px;
+  //   border-width: thin;
+  // }
+}
+.sd-container {
+  position: relative;
+  float: left;
+  margin-top: -3px;
+  margin-left: 12px;
+}
+
+.sd {
+  padding: 5px 10px;
+  height: 30px;
+  width: 150px;
+}
+
+.open-button {
+  position: absolute;
+  top: 4px;
+  right: -6px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  pointer-events: none;
+}
+
+.open-button button {
+  border: none;
+  background: transparent;
+}
+.selected_date_img {
+  @include bg_img;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+.datetime_local_top_div {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  justify-content: center;
+  svg {
+    margin-right: 5px;
+  }
+  span {
+    margin-left: 5px;
+  }
+}
 // HiringIndex page end
+.datetime_local_butn_top_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.datetime_local_butn {
+  .button2 {
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    transition: all 0.3s;
+    background-color: $blue;
+    padding: 5px 30px;
+    border-radius: 6px;
+    width: 8rem;
+    &:hover {
+      border: 1px solid transparent;
+      color: white;
+      background-color: $hover;
+    }
+  }
+  .button1 {
+    border: 1px solid black;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s;
+    background-color: white;
+    padding: 5px 32.5px;
+    border-radius: 6px;
+    &:hover {
+      a {
+        color: white;
+      }
+      border: 1px solid transparent;
+      color: white;
+      background-color: $hover;
+    }
+  }
+}
