@@ -5,9 +5,10 @@ import Select from "react-select";
 import { Nav, Tab } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import PdfIcon from "../../../../../../pics/test.pdf";
-import { useNavigate } from "react-router-dom";
-export const NewApplication = () => {
+import ReactStars from "react-rating-stars-component";
+import React from "react";
+
+export const HiredCandidates = () => {
   return (
     <>
       <div className="custom_container">
@@ -19,21 +20,22 @@ export const NewApplication = () => {
 };
 const PageTop = () => {
   const options = [
-    { value: "designer", label: "designer" },
-    { value: "developer", label: "developer" },
+    { value: "today", label: "today" },
+    { value: "tomorrow", label: "tomorrow" },
+    { value: "last week", label: "last week" },
   ];
   return (
     <>
       <div>
         <div className="row TotalOpenings_input_main_div g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
             <TopPageTitle
               TitleLink={-1}
               TilelIcon={<BsArrowLeft />}
-              Name="New Application"
+              Name="Hired Candidates"
             />
           </div>
-          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
+          <div className="col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12 col-12">
             <div className="TotalOpenings_input_div">
               <span>
                 <BiSearch />
@@ -41,13 +43,18 @@ const PageTop = () => {
               <input
                 type="email"
                 className="form-control"
-                placeholder="Search by name, email or department"
+                placeholder="Search jobs by title or department"
               />
             </div>
           </div>
-          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12">
             <div className="dashboard_top_week_Select">
               <Select options={options} placeholder="All Department" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
+            <div className="dashboard_top_week_Select">
+              <Select options={options} placeholder="This week" />
             </div>
           </div>
         </div>
@@ -83,74 +90,49 @@ const NewApplicationTabel = () => {
   const MissingInformationData = [
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
     },
     {
       Name: "sunny charkhwal",
-      date: "05/25/2021",
-      Availability: "Immediate",
-      Experience: "5 Years",
-      Expectation: "6 LPA",
+    },
+    {
+      Name: "sunny charkhwal",
+    },
+    {
+      Name: "sunny charkhwal",
+    },
+    {
+      Name: "sunny charkhwal",
     },
   ];
   const MissingInformationApp = (props) => {
-    const navigate = useNavigate();
     const [NewApplicationTabelName, setNewApplicationTabelName] =
       useState(true);
     const NewApplicationTabelNameChang = () => {
       setNewApplicationTabelName(!NewApplicationTabelName);
     };
-    const changNameUser = (PdfIcon) => {
-      window.open(PdfIcon, "__blank");
-    };
+    const ratingChanged = () => {};
     return (
       <>
         <tr
           className="ApprovalDetailsPage_thead_td"
           style={{ verticalAlign: "middle" }}
         >
-          <td
-            onClick={() => navigate("/hr/design_application")}
-            className="MissingInformation_td d-flex  align-items-center"
-          >
+          <td className="MissingInformation_td d-flex  align-items-center">
             <span
               onMouseOver={NewApplicationTabelNameChang}
               onMouseOut={NewApplicationTabelNameChang}
@@ -163,37 +145,65 @@ const NewApplicationTabel = () => {
             </span>
             {props.Name}
           </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.date}
+          <td className="MissingInformation_td">
+            <div className="Feedback_Ratings_div Feedback_Ratings_div_hired">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#F1C21B"
+              />
+              <h6>5.0</h6>
+            </div>
           </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Availability}
+          <td className="MissingInformation_td">
+            <div className="Feedback_Ratings_div Feedback_Ratings_div_hired">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#F1C21B"
+              />
+              <h6>5.0</h6>
+            </div>
           </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Experience}
+          <td className="MissingInformation_td">
+            <div className="Feedback_Ratings_div Feedback_Ratings_div_hired">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#F1C21B"
+              />
+              <h6>5.0</h6>
+            </div>
           </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Expectation}
+          <td className="MissingInformation_td">
+            <div className="Feedback_Ratings_div Feedback_Ratings_div_hired">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#F1C21B"
+              />
+              <h6>5.0</h6>
+            </div>
+          </td>
+          <td className="MissingInformation_td">
+            <div className="Feedback_Ratings_div Feedback_Ratings_div_hired">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#F1C21B"
+              />
+              <h6>5.0</h6>
+            </div>
           </td>
           <td>
-            <button
-              onClick={() => changNameUser(PdfIcon)}
-              className="missing_information_td_button"
-            >
-              View
-            </button>
+            <NavLink to="/">
+              <button className="missing_information_td_button">View</button>
+            </NavLink>
           </td>
         </tr>
       </>
@@ -204,7 +214,7 @@ const NewApplicationTabel = () => {
       <div>
         <div className="custom_container_iner">
           <div className="ApprovalDetailsPage_top_div pt-0">
-            <table className="table table-hover MissingInformation_main_div text-center text-capitalize">
+            <table className="table table-hover HiredCandidates_tabel_main_div text-center text-capitalize">
               <thead>
                 <tr className="ApprovalDetailsPage_thead_tr">
                   <th
@@ -222,7 +232,7 @@ const NewApplicationTabel = () => {
                   </th>
                   <th scope="col">
                     <span className="new_application_table_filter_div">
-                      Date
+                      1st Interview
                       <span className="new_application_table_filter">
                         <BsCaretUpFill />
                         <BsCaretDownFill />
@@ -231,7 +241,7 @@ const NewApplicationTabel = () => {
                   </th>
                   <th scope="col">
                     <span className="new_application_table_filter_div">
-                      Availability
+                      2st Interview
                       <span className="new_application_table_filter">
                         <BsCaretUpFill />
                         <BsCaretDownFill />
@@ -240,7 +250,7 @@ const NewApplicationTabel = () => {
                   </th>
                   <th scope="col">
                     <span className="new_application_table_filter_div">
-                      Experience
+                      3st Interview
                       <span className="new_application_table_filter">
                         <BsCaretUpFill />
                         <BsCaretDownFill />
@@ -249,28 +259,28 @@ const NewApplicationTabel = () => {
                   </th>
                   <th scope="col">
                     <span className="new_application_table_filter_div">
-                      Expectation
+                      4st Interview
                       <span className="new_application_table_filter">
                         <BsCaretUpFill />
                         <BsCaretDownFill />
                       </span>
                     </span>
                   </th>
-                  <th scope="col">Resume</th>
+                  <th scope="col">
+                    <span className="new_application_table_filter_div">
+                      5st Interview
+                      <span className="new_application_table_filter">
+                        <BsCaretUpFill />
+                        <BsCaretDownFill />
+                      </span>
+                    </span>
+                  </th>
+                  <th scope="col">View</th>
                 </tr>
               </thead>
               <tbody>
                 {MissingInformationData.map((val, i) => {
-                  return (
-                    <MissingInformationApp
-                      key={i}
-                      Name={val.Name}
-                      date={val.date}
-                      Availability={val.Availability}
-                      Experience={val.Experience}
-                      Expectation={val.Expectation}
-                    />
-                  );
+                  return <MissingInformationApp key={i} Name={val.Name} />;
                 })}
               </tbody>
             </table>

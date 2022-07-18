@@ -11,6 +11,7 @@ import Icon from "../../../../../../pics/profile.jpeg";
 import { AiFillLinkedin, AiOutlineClockCircle } from "react-icons/ai";
 import InterviewedChip from "./InterviewedChip";
 import Schedule from "../../../../../../pics/edit.png";
+import PdfIcon from "../../../../../../pics/test.pdf";
 export const Interviews = () => {
   return (
     <>
@@ -408,6 +409,9 @@ const JobsList = () => {
   const RedirectPage = () => {
     window.open("https://www.linkedin.com/login", "_blank");
   };
+  const changNameUser = (PdfIcon) => {
+    window.open(PdfIcon, "__blank");
+  };
   const JobsListApp = (props) => {
     return (
       <>
@@ -443,9 +447,7 @@ const JobsList = () => {
                         <p>
                           Resume
                           <span>
-                            <NavLink to="/">
-                              <BiLink />
-                            </NavLink>
+                            <BiLink onClick={() => changNameUser(PdfIcon)} />
                           </span>
                         </p>
                       </div>

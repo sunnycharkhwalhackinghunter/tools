@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import PdfIcon from "../../../../../../pics/test.pdf";
 import { useNavigate } from "react-router-dom";
-export const NewApplication = () => {
+export const ShortlistedCandidates = () => {
   return (
     <>
       <div className="custom_container">
@@ -30,7 +30,7 @@ const PageTop = () => {
             <TopPageTitle
               TitleLink={-1}
               TilelIcon={<BsArrowLeft />}
-              Name="New Application"
+              Name="Shortlisted Candidates"
             />
           </div>
           <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">

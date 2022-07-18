@@ -109,7 +109,7 @@ const HiringIndexCard = () => {
                   <div className="DashbordBg_icon1_div">
                     <div className="row">
                       <div className="col-12">
-                        <NavLink to="/">
+                        <NavLink to="/hr/interviews">
                           <div className="DashbordBg_icon_top_div_iner">
                             <Image
                               className="DashbordBg_icon1"
@@ -137,7 +137,7 @@ const HiringIndexCard = () => {
                   <div className="DashbordBg_icon1_div DashbordBg_icon1_div2">
                     <div className="row">
                       <div className="col-12">
-                        <NavLink to="/">
+                        <NavLink to="/hr/hired_candidates">
                           <div className="DashbordBg_icon_top_div_iner">
                             <Image
                               className="DashbordBg_icon1"
@@ -167,7 +167,7 @@ const HiringIndexCard = () => {
               <div className="DashbordBg_icon1_div ">
                 <div className="row">
                   <div className="col-12">
-                    <NavLink to="/">
+                    <NavLink to="/hr/shortlisted_candidates">
                       <div className="DashbordBg_icon_top_div_iner">
                         <Image
                           className="DashbordBg_icon1"

@@ -13,6 +13,29 @@
   }
 }
 @media (max-width: 576px) {
+  .Application_btn_div {
+    display: block;
+    button {
+      width: 100%;
+    }
+    .dropdown {
+      button {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .design_application_mobile {
+    margin-bottom: 1rem;
+    p {
+      font-weight: 600;
+    }
+  }
+  .design_application_text_div {
+    p {
+      text-align: justify;
+    }
+  }
   .JobsList_copy_btn_div {
     display: block;
     button {
@@ -589,8 +612,24 @@
   .notification_top_div {
     background-color: #dde2ff;
   }
+  .HiredCandidates_tabel_main_div {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
+  .HiredCandidates_tabel_main_div {
+    display: block;
+  }
+  .Feedback_Ratings_div_hired {
+    span {
+      font-size: 9px !important;
+      margin-left: 2px;
+    }
+    h6 {
+      margin-left: 4px;
+      font-size: 8px;
+    }
+  }
   .JobsList_img {
     height: 2rem;
     width: 2rem;
@@ -723,6 +762,19 @@
   }
 }
 @media (min-width: 1024px) {
+  .HiredCandidates_tabel_main_div {
+    display: inline-table;
+  }
+  .Feedback_Ratings_div_hired {
+    span {
+      margin-left: 5px;
+      font-size: 12px !important;
+    }
+    h6 {
+      margin-left: 8px;
+      font-size: 14px;
+    }
+  }
   .JobsList_img {
     height: 3rem;
     width: 3rem;
@@ -887,6 +939,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .Feedback_Ratings_div_hired {
+    span {
+      margin-left: 8px;
+    }
+  }
+  .HiredCandidates_tabel_main_div {
+    display: inline-table;
+  }
   .new_application_item {
     .new_application_tabs1 {
       width: 17rem;

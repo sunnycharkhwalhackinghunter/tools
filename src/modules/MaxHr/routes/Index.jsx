@@ -60,6 +60,9 @@ import { TotalOpenings } from "../components/Pages/Hiring/page/TotalOpenings";
 import { CreateNewJobs } from "../components/Pages/Hiring/page/CreateNewJobs";
 import { NewApplication } from "../components/Pages/Hiring/page/NewApplication";
 import { Interviews } from "../components/Pages/Hiring/page/Interviews";
+import { ShortlistedCandidates } from "../components/Pages/Hiring/page/ShortlistedCandidates";
+import { HiredCandidates } from "../components/Pages/Hiring/page/HiredCandidates";
+import { DesignApplication } from "../components/Pages/Hiring/page/DesignApplication";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -166,6 +169,15 @@ const Index = () => {
                 <Route path="/create_new_jobs" element={<CreateNewJobs />} />
                 <Route path="/new_application" element={<NewApplication />} />
                 <Route path="/interviews" element={<Interviews />} />
+                <Route
+                  path="/shortlisted_candidates"
+                  element={<ShortlistedCandidates />}
+                />
+                <Route path="/hired_candidates" element={<HiredCandidates />} />
+                <Route
+                  path="/design_application"
+                  element={<DesignApplication />}
+                />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
