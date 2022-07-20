@@ -13,6 +13,14 @@
   }
 }
 @media (max-width: 576px) {
+  .Schedule_Interview_chips {
+    .css-2m9kme-MuiFormControl-root {
+      width: 100%;
+    }
+  }
+  .ScheduleInterview_top_div {
+    width: 100%;
+  }
   .Application_btn_div {
     display: block;
     button {
@@ -617,6 +625,9 @@
   }
 }
 @media (min-width: 768px) {
+  .ScheduleInterview_top_div {
+    width: 100%;
+  }
   .HiredCandidates_tabel_main_div {
     display: block;
   }
@@ -762,6 +773,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .ScheduleInterview_top_div {
+    width: 70%;
+  }
   .HiredCandidates_tabel_main_div {
     display: inline-table;
   }

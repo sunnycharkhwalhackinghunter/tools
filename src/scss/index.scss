@@ -5230,5 +5230,55 @@ a {
   .dropdown-menu.show {
     width: 100%;
   }
+  .dropdown-item {
+    padding: 0;
+    button {
+      background-color: #fff;
+      border-radius: 0 !important;
+      width: 100%;
+      transition: all 0.3s;
+      height: 32px;
+      text-align: start;
+      padding-left: 9px;
+      text-transform: capitalize;
+      &:hover {
+        background-color: #eee7e7;
+      }
+    }
+  }
+}
+.ScheduleInterview_top_div_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ScheduleInterview_top_div {
+  width: 70%;
+}
+.Schedule_Interview_chips {
+  .css-2m9kme-MuiFormControl-root {
+    width: 40%;
+    padding: 0;
+    background-color: #fff;
+    margin: 0;
+    border-radius: 6px;
+  }
+}
+.Schedule_Interview_chips_top {
+  text-align: end;
+}
+.Schedule_Interview_date {
+  height: 3.7rem;
+}
+.ScheduleInterview_btn {
+  background-color: #fff;
+}
+.ScheduleInterview_btn2 {
+  &:hover {
+    background-color: #fff;
+  }
+}
+.ScheduleInterview_btn_div {
+  margin: auto;
 }
 // HiringIndex page end

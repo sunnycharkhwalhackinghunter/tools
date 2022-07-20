@@ -8,6 +8,7 @@ import PdfIcon from "../../../../../../pics/test.pdf";
 import ReactStars from "react-rating-stars-component";
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 export const DesignApplication = () => {
   return (
     <>
@@ -67,6 +68,7 @@ const Application = () => {
   const changNameUser = (PdfIcon) => {
     window.open(PdfIcon, "__blank");
   };
+  const navigate = useNavigate();
   const ratingChanged = () => {};
   return (
     <>
@@ -336,12 +338,19 @@ const Application = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
+                  <Dropdown.Item>
+                    <button onClick={() => navigate("/hr/schedule_interview")}>
+                      Interview
+                    </button>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
+                  <Dropdown.Item>
+                    <button>short list</button>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <button>hire</button>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <button>reject</button>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
