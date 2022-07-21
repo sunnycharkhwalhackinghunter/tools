@@ -5281,4 +5281,76 @@ a {
 .ScheduleInterview_btn_div {
   margin: auto;
 }
+.Completed_Jobs_List_time {
+  display: flex;
+  align-items: flex-end;
+  .datetime_local_top_div {
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
+.Completed_Jobs_List_feedback_div {
+  border-top: 1px solid #dde2ff;
+  margin-top: 1.5rem !important;
+  padding-top: 1rem;
+}
+.Completed_Jobs_List_feedback_title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  p {
+    margin-bottom: 0;
+  }
+}
+.Completed_Jobs_List_feedback_star {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+.ApplicationInfo_top_div {
+  background: #24a148;
+}
+.ApplicationInfo_top_div2 {
+  background: #da1e28 !important;
+}
+.ApplicationInfo_text_div {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+.ApplicationInfo_main_div {
+  .modal-content {
+    border: none !important;
+    border-radius: 10px;
+  }
+  .modal-body {
+    border-radius: 10px;
+  }
+}
+.Hire_editer {
+  .rdw-editor-main {
+    height: 16rem !important;
+    border: 1px solid #efe9e9;
+  }
+}
+.Employees_Document_name {
+  span {
+    svg {
+      color: black;
+      margin-left: 5px;
+      font-size: 11px;
+    }
+  }
+}
 // HiringIndex page end

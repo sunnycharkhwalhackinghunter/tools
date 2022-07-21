@@ -9,6 +9,8 @@ import ReactStars from "react-rating-stars-component";
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import React from "react";
 export const DesignApplication = () => {
   return (
     <>
@@ -68,7 +70,7 @@ const Application = () => {
   const changNameUser = (PdfIcon) => {
     window.open(PdfIcon, "__blank");
   };
-  const navigate = useNavigate();
+
   const ratingChanged = () => {};
   return (
     <>
@@ -331,29 +333,13 @@ const Application = () => {
           </div>
           <div className="col-12">
             <div className="Application_btn_div">
-              <button className="IssueAssets_btn">Downlaod Resume</button>
-              <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Next Steps
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <button onClick={() => navigate("/hr/schedule_interview")}>
-                      Interview
-                    </button>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <button>short list</button>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <button>hire</button>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <button>reject</button>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <button
+                onClick={() => changNameUser(PdfIcon)}
+                className="IssueAssets_btn"
+              >
+                Downlaod Resume
+              </button>
+              <ApplicationBtn />
             </div>
           </div>
         </div>
@@ -368,5 +354,73 @@ const InfoText = (props) => {
         <p>{props.text}</p>
       </div>
     </>
+  );
+};
+export const ApplicationBtn = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow2, setModalShow2] = React.useState(false);
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Next Steps
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item>
+            <button onClick={() => navigate("/hr/schedule_interview")}>
+              Interview
+            </button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setModalShow(true)}>short list</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => navigate("/hr/hire")}>hire</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setModalShow2(true)}>reject</button>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <ApplicationInfo show={modalShow} onHide={() => setModalShow(false)} />
+      <ApplicationInfo2 show={modalShow2} onHide={() => setModalShow2(false)} />
+    </>
+  );
+};
+const ApplicationInfo = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="ApplicationInfo_main_div"
+    >
+      <Modal.Body className="ApplicationInfo_top_div">
+        <div className="ApplicationInfo_text_div">
+          Candidate has been shortlisted successfully!
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+const ApplicationInfo2 = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="ApplicationInfo_main_div"
+    >
+      <Modal.Body className="ApplicationInfo_top_div ApplicationInfo_top_div2">
+        <div className="ApplicationInfo_text_div">
+          Candidate has been rejected successfully!
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 };

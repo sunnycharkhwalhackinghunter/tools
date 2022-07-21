@@ -13,6 +13,13 @@
   }
 }
 @media (max-width: 576px) {
+  .Completed_Jobs_List_feedback_star {
+    justify-content: flex-start;
+    font-size: 12px;
+    span {
+      font-size: 12px !important;
+    }
+  }
   .Schedule_Interview_chips {
     .css-2m9kme-MuiFormControl-root {
       width: 100%;

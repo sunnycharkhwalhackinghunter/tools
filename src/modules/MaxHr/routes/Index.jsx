@@ -64,6 +64,8 @@ import { ShortlistedCandidates } from "../components/Pages/Hiring/page/Shortlist
 import { HiredCandidates } from "../components/Pages/Hiring/page/HiredCandidates";
 import { DesignApplication } from "../components/Pages/Hiring/page/DesignApplication";
 import { ScheduleInterview } from "../components/Pages/Hiring/page/ScheduleInterview";
+import { Hire } from "../components/Pages/Hiring/page/Hire";
+import { Feedback } from "../components/Pages/Hiring/page/Feedback";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -183,6 +185,8 @@ const Index = () => {
                   path="/schedule_interview"
                   element={<ScheduleInterview />}
                 />
+                <Route path="/hire" element={<Hire />} />
+                <Route path="/feedback" element={<Feedback />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

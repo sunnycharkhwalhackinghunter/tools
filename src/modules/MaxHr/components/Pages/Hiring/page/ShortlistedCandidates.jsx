@@ -5,7 +5,6 @@ import Select from "react-select";
 import { Nav, Tab } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import PdfIcon from "../../../../../../pics/test.pdf";
 import { useNavigate } from "react-router-dom";
 export const ShortlistedCandidates = () => {
   return (
@@ -138,19 +137,13 @@ const NewApplicationTabel = () => {
     const NewApplicationTabelNameChang = () => {
       setNewApplicationTabelName(!NewApplicationTabelName);
     };
-    const changNameUser = (PdfIcon) => {
-      window.open(PdfIcon, "__blank");
-    };
     return (
       <>
         <tr
           className="ApprovalDetailsPage_thead_td"
           style={{ verticalAlign: "middle" }}
         >
-          <td
-            onClick={() => navigate("/hr/design_application")}
-            className="MissingInformation_td d-flex  align-items-center"
-          >
+          <td className="MissingInformation_td d-flex  align-items-center">
             <span
               onMouseOver={NewApplicationTabelNameChang}
               onMouseOut={NewApplicationTabelNameChang}
@@ -163,33 +156,13 @@ const NewApplicationTabel = () => {
             </span>
             {props.Name}
           </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.date}
-          </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Availability}
-          </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Experience}
-          </td>
-          <td
-            className="MissingInformation_td"
-            onClick={() => navigate("/hr/design_application")}
-          >
-            {props.Expectation}
-          </td>
+          <td className="MissingInformation_td">{props.date}</td>
+          <td className="MissingInformation_td">{props.Availability}</td>
+          <td className="MissingInformation_td">{props.Experience}</td>
+          <td className="MissingInformation_td">{props.Expectation}</td>
           <td>
             <button
-              onClick={() => changNameUser(PdfIcon)}
+              onClick={() => navigate("/hr/design_application")}
               className="missing_information_td_button"
             >
               View
