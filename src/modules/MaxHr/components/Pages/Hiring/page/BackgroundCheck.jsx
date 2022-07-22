@@ -205,13 +205,42 @@ const BackgroundCheckStatus = () => {
           </div>
           {props.arr.cat1.map((val, i) => {
             return (
-              <div
-                key={i}
-                className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12"
-              >
-                <div className="background_check_data_show">
-                  <label className="all_page_my_label">{val.label}</label>
-                  <p>{val.data}</p>
+              <div key={i} className="row mb-3">
+                <div className="col-12">
+                  <div className="row ">
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                      <div className="background_check_data_show">
+                        <label className="all_page_my_label">
+                          {val.NameLabel}
+                        </label>
+                        <p>{val.Name}</p>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                      <div className="background_check_data_show">
+                        <label className="all_page_my_label">
+                          {val.numberLabel}
+                        </label>
+                        <p>{val.number}</p>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                      <div className="background_check_data_show">
+                        <label className="all_page_my_label">
+                          {val.ratingsLabel}
+                        </label>
+                        <p>{val.ratings}</p>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                      <div className="background_check_data_show">
+                        <label className="all_page_my_label">
+                          {val.feedbackLabel}
+                        </label>
+                        <p>{val.feedback}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
@@ -225,36 +254,24 @@ const BackgroundCheckStatus = () => {
       toptile: "On Call Verification",
       cat1: [
         {
-          label: "Name",
-          data: "Maxlence Consulting",
+          NameLabel: "Name",
+          Name: "Maxlence Consulting",
+          numberLabel: "Number",
+          number: "8349933768",
+          ratingsLabel: "Ratings",
+          ratings: "4",
+          feedbackLabel: "Feedback",
+          feedback: "NA",
         },
         {
-          label: "Number",
-          data: "8349933768",
-        },
-        {
-          label: "Ratings",
-          data: "4",
-        },
-        {
-          label: "Feedback",
-          data: "NA",
-        },
-        {
-          label: "Compnay Name",
-          data: "Compnay Name",
-        },
-        {
-          label: "Compnay number",
-          data: "8349933768",
-        },
-        {
-          label: "Ratings",
-          data: "On Scale of 0 to 10",
-        },
-        {
-          label: "Feedback",
-          data: "If any",
+          NameLabel: "Name",
+          Name: "Maxlence Consulting",
+          numberLabel: "Number",
+          number: "8349933768",
+          ratingsLabel: "Ratings",
+          ratings: "4",
+          feedbackLabel: "Feedback",
+          feedback: "NA",
         },
       ],
     },
@@ -262,7 +279,7 @@ const BackgroundCheckStatus = () => {
   return (
     <>
       <div className="background_check_status_main_div">
-        <div className="row">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           <div className="col-12">
             <div className="background_check_status_title">
               <h3>Background Check</h3>
@@ -278,6 +295,11 @@ const BackgroundCheckStatus = () => {
                 />
               );
             })}
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+            <div className="document_verification_app_btn_div">
+              <button>add New</button>
+            </div>
           </div>
         </div>
         <DocumentVerification />
@@ -387,8 +409,8 @@ const DocumentVerification = () => {
   ];
   return (
     <>
-      <div className="">
-        <div className="row">
+      <div>
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           <div className="col-12">
             {DocumentVerificationData.map((val, i) => {
               return (
@@ -399,6 +421,11 @@ const DocumentVerification = () => {
                 />
               );
             })}
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+            <div className="document_verification_app_btn_div">
+              <button>add New</button>
+            </div>
           </div>
         </div>
       </div>
