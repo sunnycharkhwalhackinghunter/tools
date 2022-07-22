@@ -201,7 +201,7 @@ const NewApplicationTabel = () => {
             </div>
           </td>
           <td>
-            <NavLink to="/">
+            <NavLink to="/hr/background_check">
               <button className="missing_information_td_button">View</button>
             </NavLink>
           </td>

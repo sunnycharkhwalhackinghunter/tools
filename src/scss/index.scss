@@ -5353,4 +5353,101 @@ a {
     }
   }
 }
+.rating_changed_text {
+  p {
+    margin-bottom: 0;
+    border-bottom: 2px solid #666;
+    letter-spacing: 1.2px;
+    color: #666 !important;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px;
+    border-radius: 6px;
+    text-transform: capitalize;
+  }
+}
+.background_check_status_main_div {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: none !important;
+  margin-bottom: 1.5rem !important ;
+}
+.background_check_status_title {
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    text-transform: capitalize;
+  }
+}
+.background_check_sub_title_div {
+  border-top: 1px solid #dde2ff;
+  padding: 10px 0;
+  margin: 1rem 0;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #161616;
+    text-transform: capitalize;
+  }
+}
+.background_check_data_show {
+  p {
+    background: #f4f4f4;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #161616;
+    padding: 10px 1rem;
+    border-radius: 8px;
+  }
+}
+.background_check_sub_title_div2 {
+  margin-top: 3rem;
+  border-top: 1px solid #dde2ff;
+  padding-top: 10px;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #161616;
+    text-transform: capitalize;
+  }
+}
+.document_verification_app_top_div {
+  align-items: flex-end;
+}
+.document_verification_app_btn_div {
+  button {
+    border: none;
+    outline: none;
+    background-color: $blue;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s;
+    padding: 7px 11px;
+    border-radius: 6px;
+    color: white;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+}
+.Onboard_date_div {
+  align-items: center;
+  .ApprovalDetailsPage_date_picker {
+    label {
+      display: none;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+}
 // HiringIndex page end

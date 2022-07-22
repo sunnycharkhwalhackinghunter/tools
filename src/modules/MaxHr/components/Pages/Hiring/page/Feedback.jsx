@@ -7,6 +7,7 @@ import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
 import { BiLink } from "react-icons/bi";
 import ReactStars from "react-rating-stars-component";
+import { NavLink } from "react-router-dom";
 export const Feedback = () => {
   return (
     <>
@@ -28,7 +29,9 @@ export const Feedback = () => {
           </div>
           <div className="col-12 company_setup_bottom_btn">
             <div className="IssueAssets_btn_bottom_div">
-              <button className="IssueAssets_btn">Save</button>
+              <NavLink to="/hr/interviews">
+                <button className="IssueAssets_btn">Save</button>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -13,6 +13,12 @@
   }
 }
 @media (max-width: 576px) {
+  .document_verification_app_btn_div {
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
   .Completed_Jobs_List_feedback_star {
     justify-content: flex-start;
     font-size: 12px;
@@ -632,6 +638,12 @@
   }
 }
 @media (min-width: 768px) {
+  .document_verification_app_btn_div {
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
   .ScheduleInterview_top_div {
     width: 100%;
   }
@@ -780,6 +792,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .document_verification_app_btn_div {
+    button {
+      margin-top: 0;
+    }
+  }
   .ScheduleInterview_top_div {
     width: 70%;
   }

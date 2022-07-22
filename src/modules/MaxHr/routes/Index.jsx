@@ -66,6 +66,7 @@ import { DesignApplication } from "../components/Pages/Hiring/page/DesignApplica
 import { ScheduleInterview } from "../components/Pages/Hiring/page/ScheduleInterview";
 import { Hire } from "../components/Pages/Hiring/page/Hire";
 import { Feedback } from "../components/Pages/Hiring/page/Feedback";
+import { BackgroundCheck } from "../components/Pages/Hiring/page/BackgroundCheck";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -187,6 +188,7 @@ const Index = () => {
                 />
                 <Route path="/hire" element={<Hire />} />
                 <Route path="/feedback" element={<Feedback />} />
+                <Route path="/background_check" element={<BackgroundCheck />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
