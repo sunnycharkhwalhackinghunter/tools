@@ -7,7 +7,8 @@ import React from "react";
 import { Editor } from "react-draft-wysiwyg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-
+import { SketchPicker } from "react-color";
+import useClickOutside from "../../../../CustomHooks/ClickOutside";
 export const CreateNewJobs = () => {
   return (
     <>
@@ -54,16 +55,41 @@ const PageTop = () => {
   );
 };
 const CreateNewJobsForm = () => {
+  const [ColorPicker, setColorPicker] = useState(false);
+  const [buttonText, setButtonText] = useState("Copy");
+
+  function handleClick() {
+    setButtonText("Copied");
+  }
+  const ColorPickerOpen = () => {
+    setColorPicker(!ColorPicker);
+  };
+  let domNode = useClickOutside(() => {
+    setColorPicker(false);
+  });
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-        <div className="col-12">
+        <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
           <AboutProfileInput
             label="Job Title"
             type="text"
             className="form-control"
             placeholder="Job Title"
           />
+        </div>
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <div>
+            <label className="all_page_my_label">
+              Define Color for this job
+            </label>
+          </div>
+          <div className="new_jobs_setup_color_div" onClick={ColorPickerOpen}>
+            <p className="new_jobs_setup_color"></p>
+          </div>
+          <div ref={domNode}>
+            {ColorPicker ? <SketchPicker className="color_picker3" /> : null}
+          </div>
         </div>
         <div className="col-4">
           <AboutProfileInput
@@ -94,6 +120,27 @@ const CreateNewJobsForm = () => {
         </div>
         <div className="col-12">
           <CreateNewJobsList />
+        </div>
+        <div className="col-12 m-0 mb-4">
+          <div>
+            <label className="all_page_my_label">
+              Copy this link to share this job on other sites
+            </label>
+          </div>
+          <div className="JobsList_copy_btn_div">
+            <div className="JobsList_copy_text">
+              caiufhq934yr9hacoew8fyqc0384yuf 08eucNW04UFJ-0]9
+            </div>
+            <button
+              onClick={() =>
+                navigator.clipboard.writeText(
+                  "caiufhq934yr9hacoew8fyqc0384yuf 08eucNW04UFJ-0]9"
+                )
+              }
+            >
+              <span onClick={handleClick}>{buttonText}</span>
+            </button>
+          </div>
         </div>
         <div className="col-12">
           <div className="CreateNewJobs_btn_div">
@@ -244,7 +291,7 @@ const OpenJobs = () => {
           <div className="JobCards_main_div">
             <div className="row">
               <div className="col-3">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <div
                     className="JobCards_main_div_round"
                     style={{ backgroundColor: props.color }}
@@ -252,7 +299,7 @@ const OpenJobs = () => {
                 </NavLink>
               </div>
               <div className="col-6">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <h3>{props.name}</h3>
                   <p>{props.applicationsNumber}</p>
                 </NavLink>

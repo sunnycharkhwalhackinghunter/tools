@@ -100,7 +100,7 @@ const JobCards = () => {
           <div className="JobCards_main_div">
             <div className="row">
               <div className="col-3">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <div
                     className="JobCards_main_div_round"
                     style={{ backgroundColor: props.color }}
@@ -108,7 +108,7 @@ const JobCards = () => {
                 </NavLink>
               </div>
               <div className="col-6">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <h3>{props.name}</h3>
                   <p>{props.applicationsNumber}</p>
                 </NavLink>
@@ -307,7 +307,7 @@ const CloseJobs = () => {
           <div className="JobCards_main_div">
             <div className="row">
               <div className="col-3">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <div
                     className="JobCards_main_div_round"
                     style={{ backgroundColor: props.color }}
@@ -315,7 +315,7 @@ const CloseJobs = () => {
                 </NavLink>
               </div>
               <div className="col-6">
-                <NavLink to="/">
+                <NavLink to="/hr/new_application">
                   <h3>{props.name}</h3>
                   <p>{props.applicationsNumber}</p>
                 </NavLink>

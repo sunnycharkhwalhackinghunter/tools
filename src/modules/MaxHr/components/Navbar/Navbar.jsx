@@ -19,7 +19,13 @@ import {
   AiTwotoneSetting,
 } from "react-icons/ai";
 import { RiTableAltFill, RiBankFill } from "react-icons/ri";
-import { FaUserTie, FaUsers, FaBook, FaClipboardList } from "react-icons/fa";
+import {
+  FaUserTie,
+  FaUsers,
+  FaBook,
+  FaClipboardList,
+  FaUserAstronaut,
+} from "react-icons/fa";
 import {
   BsCalendarX,
   BsCalendar2CheckFill,
@@ -33,6 +39,7 @@ import {
   faPersonChalkboard,
 } from "@fortawesome/free-solid-svg-icons";
 import { CgPerformance } from "react-icons/cg";
+import { GiReceiveMoney } from "react-icons/gi";
 const NavUrl = ({ url, icon, description, navItems }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   const { nav, setNav } = useContext(NavContext);
@@ -180,7 +187,17 @@ const Navbar = () => {
             <NavUrl
               url="organizationchart"
               icon={<FaUsers />}
-              description="role"
+              description="Orginazation Tree"
+            />
+            <NavUrl
+              url="contractor_management"
+              icon={<FaUserAstronaut />}
+              description="Contractor Management"
+            />
+            <NavUrl
+              url="asset_management"
+              icon={<GiReceiveMoney />}
+              description="Asset Management"
             />
             <NavUrl
               url="hiring"

@@ -54,12 +54,12 @@ const BackgroundCheckRating = () => {
       <>
         <div className="col-12">
           <div className="row ">
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
               <div className="Completed_Jobs_List_feedback_title">
                 <p>{props.name}</p>
               </div>
             </div>
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
               <div className="Completed_Jobs_List_feedback_star">
                 {props.name}
                 <ReactStars
@@ -442,7 +442,7 @@ const Onboard = () => {
               <h3>Onboard</h3>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <AboutProfileInput
               label="Full Name"
               type="text"
@@ -450,9 +450,9 @@ const Onboard = () => {
               placeholder="Soham Kumar"
             />
           </div>
-          <div className="col-6">
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
             <div className="row document_verification_app_top_div">
-              <div className="col-8">
+              <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div className="background_check_data_show">
                   <AboutProfileInput
                     label="Official Email ID"
@@ -462,14 +462,14 @@ const Onboard = () => {
                   />
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                 <div className="document_verification_app_btn_div">
                   <button>Create Email ID</button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <div className="ApprovalDetailsPage_date_picker">
               <label>Department</label>
               <select className="form-select">
@@ -479,7 +479,7 @@ const Onboard = () => {
               </select>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
             <div className="ApprovalDetailsPage_date_picker">
               <label>Office Address</label>
               <textarea
@@ -489,12 +489,12 @@ const Onboard = () => {
               ></textarea>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="ApprovalDetailsPage_date_picker">
               <label>job types</label>
             </div>
             <div className="row">
-              <div className="col-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                 <div className="form-check form_check_label">
                   <input
                     className="form-check-input"
@@ -510,7 +510,7 @@ const Onboard = () => {
                   </label>
                 </div>
               </div>
-              <div className="col-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                 <div className="form-check form_check_label">
                   <input
                     className="form-check-input"
@@ -526,7 +526,7 @@ const Onboard = () => {
                   </label>
                 </div>
               </div>
-              <div className="col-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                 <div className="form-check form_check_label">
                   <input
                     className="form-check-input"
@@ -542,7 +542,7 @@ const Onboard = () => {
                   </label>
                 </div>
               </div>
-              <div className="col-3">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                 <div className="form-check form_check_label">
                   <input
                     className="form-check-input"
@@ -560,7 +560,7 @@ const Onboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <div className="ApprovalDetailsPage_date_picker">
               <label>job Title</label>
               <select className="form-select">
@@ -570,7 +570,7 @@ const Onboard = () => {
               </select>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <AboutProfileInput
               label="Reporting Day"
               type="date"
@@ -578,7 +578,7 @@ const Onboard = () => {
               placeholder="Soham Kumar"
             />
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <label className="all_page_my_label">Working Hours</label>
             <div className="row Onboard_date_div">
               <div className="col-5">
@@ -602,7 +602,7 @@ const Onboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
             <div className="ApprovalDetailsPage_date_picker">
               <label>Reporting Person</label>
               <select className="form-select">
@@ -612,9 +612,9 @@ const Onboard = () => {
               </select>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
             <div className="row document_verification_app_top_div">
-              <div className="col-8">
+              <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div className="background_check_data_show">
                   <AboutProfileInput
                     label="CTC"
@@ -624,7 +624,7 @@ const Onboard = () => {
                   />
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                 <div className="document_verification_app_btn_div">
                   <NavLink to="/hr/default_salary_stracture">
                     <button>Salary Structure</button>
@@ -633,7 +633,7 @@ const Onboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <AboutProfileInput
               label="Candidate’s personal email address"
               type="email"

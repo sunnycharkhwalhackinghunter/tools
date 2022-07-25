@@ -5429,7 +5429,6 @@ a {
     padding: 7px 11px;
     border-radius: 6px;
     color: white;
-    margin-bottom: 3px;
     text-transform: capitalize;
     &:hover {
       background-color: $hover;
@@ -5450,4 +5449,44 @@ a {
     text-transform: capitalize;
   }
 }
+.new_jobs_setup_color {
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  cursor: pointer;
+
+  background-color: black;
+}
+.new_jobs_setup_color_div {
+  background-color: #fff;
+  display: inline-block;
+  padding: 9px 11px;
+  margin-bottom: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.color_picker3 {
+  position: absolute;
+  z-index: 1;
+}
+.TimesheetReview_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 // HiringIndex page end
+// Contractor Management Index
+.Contractor_Management_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+// Contractor Management Index end
+// Asset Index
+.Asset_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+// Asset Index end

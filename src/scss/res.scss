@@ -13,6 +13,12 @@
   }
 }
 @media (max-width: 576px) {
+  .Asset_main_div {
+    display: block;
+  }
+  .Contractor_Management_main_div {
+    display: block;
+  }
   .document_verification_app_btn_div {
     button {
       margin-top: 10px;
@@ -638,6 +644,12 @@
   }
 }
 @media (min-width: 768px) {
+  .Contractor_Management_main_div {
+    display: block;
+  }
+  .Completed_Jobs_List_feedback_star {
+    justify-content: flex-start;
+  }
   .document_verification_app_btn_div {
     button {
       margin-top: 10px;
@@ -792,6 +804,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .Contractor_Management_main_div {
+    display: inline-table;
+  }
+  .Completed_Jobs_List_feedback_star {
+    justify-content: flex-end;
+  }
   .document_verification_app_btn_div {
     button {
       margin-top: 0;
