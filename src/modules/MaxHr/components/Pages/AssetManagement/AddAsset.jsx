@@ -1,4 +1,5 @@
 import Select from "react-select";
+import { AiOutlineClose } from "react-icons/ai";
 import TopPageTitle from "../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { AboutProfileInput } from "../Profile/components/AboutProfile";
@@ -8,6 +9,11 @@ import { NavLink } from "react-router-dom";
 import Input from "../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { Modal } from "react-bootstrap";
+import Logo from "../../../../common/components/img/Img";
+import GifPhoto from "../../../../../pics/su.gif";
+import React from "react";
+
 export const AddAsset = () => {
   const [AssetAddRemove, setAssetAddRemove] = useState(true);
   const AssetAddRemoveOpen = () => {
@@ -73,6 +79,7 @@ const PageTop = (props) => {
   );
 };
 const AddAssetForm = () => {
+  const [modalShow1, setModalShow1] = React.useState(false);
   const options = [
     { value: "degital", label: "degital" },
     { value: "flowers", label: "flowers" },
@@ -189,14 +196,21 @@ const AddAssetForm = () => {
         </div>
         <div className="col-12">
           <div className="document_verification_app_btn_div text-center">
-            <button className=" w-auto px-4">Add Asset</button>
+            <button
+              onClick={() => setModalShow1(true)}
+              className=" w-auto px-4"
+            >
+              Add Asset
+            </button>
           </div>
+          <Success show={modalShow1} onHide={() => setModalShow1(false)} />
         </div>
       </div>
     </>
   );
 };
 const AddOrRemoveAsset = () => {
+  const [modalShow1, setModalShow1] = React.useState(false);
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
@@ -210,8 +224,14 @@ const AddOrRemoveAsset = () => {
         </div>
         <div className="col-12">
           <div className="document_verification_app_btn_div text-center">
-            <button className=" w-auto px-4">Add</button>
+            <button
+              onClick={() => setModalShow1(true)}
+              className=" w-auto px-4"
+            >
+              Add
+            </button>
           </div>
+          <Success show={modalShow1} onHide={() => setModalShow1(false)} />
         </div>
       </div>
     </>
@@ -429,15 +449,23 @@ const AddedAssetList = (props) => {
     },
   ];
   const AddedAssetListApp = (props) => {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
       <>
         <tr className="ApprovalDetailsPage_thead_td">
           <td>{props.AssetName}</td>
           <td>{props.DateAdded}</td>
           <td>
-            <span className="reimbursement_view_btn">
-              <NavLink to="/">Rename</NavLink>
+            <span
+              className="reimbursement_view_btn"
+              onClick={() => setModalShow(true)}
+            >
+              Rename
             </span>
+            <AddedAssetModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </td>
           <td>
             <span className="reimbursement_view_btn">
@@ -521,5 +549,73 @@ const AddedAssetList = (props) => {
         </div>
       </div>
     </>
+  );
+};
+const AddedAssetModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="UploadDocumentModal_body bg-white">
+        <div className="UploadDocumentModal_body_close_btn">
+          <span onClick={props.onHide}>
+            <AiOutlineClose />
+          </span>
+        </div>
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+          <div className="col-12">
+            <AboutProfileInput
+              label="Rename Name Asset Name"
+              type="text"
+              className="form-control"
+              placeholder="Add Asset Name"
+            />
+          </div>
+        </div>
+        <div className="UploadDocumentModal_body_btn_div">
+          <button
+            className="UploadDocumentModal_body_btn"
+            onClick={props.onHide}
+          >
+            save
+          </button>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+
+const Success = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="UploadDocumentModal_body bg-white">
+        <div className="UploadDocumentModal_body_close_btn">
+          <span onClick={props.onHide}>
+            <AiOutlineClose />
+          </span>
+        </div>
+
+        <div>
+          <Logo className="success_gif" backgroundImage={GifPhoto} />
+        </div>
+        <p className="UploadDocumentModal_body_title text-center">Success</p>
+        <div className="UploadDocumentModal_body_btn_div">
+          <button
+            className="UploadDocumentModal_body_btn"
+            onClick={props.onHide}
+          >
+            ok
+          </button>
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 };
