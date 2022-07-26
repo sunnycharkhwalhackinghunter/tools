@@ -5,11 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Select from "react-select";
 import TopPageTitle from "../../../../common/components/topPageTitle/Index";
-
+import Img from "../../../../common/components/img/Img";
+import Icon from "../../../../../pics/assitIcon.png";
+import Icon3 from "../../../../../pics/assitIcon3.png";
 export const AssetIndex = () => {
   return (
     <>
       <Top />
+      <AssetCard />
       <AssetList />
     </>
   );
@@ -22,7 +25,7 @@ const Top = () => {
           <TopPageTitle Name="Asset Mangement" />
         </div>
         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-7 col-7 MyAttendence_next_page">
-          <NavLink to="/">
+          <NavLink to="/hr/add_asset">
             <span>Add Asset</span>
             <BsArrowRight />
           </NavLink>
@@ -226,6 +229,63 @@ const AssetList = (props) => {
             </tbody>
           </table>
         </div>
+      </div>
+    </>
+  );
+};
+const AssetCard = () => {
+  const AssetCardApp = (props) => {
+    return (
+      <>
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+          <div className="asset_card">
+            <div>
+              <Img className="asset_card_icon" backgroundImage={props.Icon} />
+            </div>
+            <div className="asset_card_text_div">
+              <h3>{props.number}</h3>
+              <p>{props.text}</p>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const AssetCardData = [
+    {
+      Icon: Icon,
+      number: "66",
+      text: "Number of Asset",
+    },
+    {
+      Icon: Icon,
+      number: "66",
+      text: "Issued to Employees",
+    },
+    {
+      Icon: Icon3,
+      number: "$108,000",
+      text: "Value of Asset",
+    },
+    {
+      Icon: Icon3,
+      number: "$108,000",
+      text: "Purchases in Fascal Year",
+    },
+  ];
+  return (
+    <>
+      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 mb-4">
+        {AssetCardData.map((val, i) => {
+          return (
+            <AssetCardApp
+              key={i}
+              Icon={val.Icon}
+              number={val.number}
+              text={val.text}
+            />
+          );
+        })}
       </div>
     </>
   );

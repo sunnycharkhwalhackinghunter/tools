@@ -69,6 +69,7 @@ import { Feedback } from "../components/Pages/Hiring/page/Feedback";
 import { BackgroundCheck } from "../components/Pages/Hiring/page/BackgroundCheck";
 import ContractorManagement from "../page/ContractorManagement";
 import AssetManagement from "../page/AssetManagement";
+import { AddAsset } from "../components/Pages/AssetManagement/AddAsset";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -196,6 +197,7 @@ const Index = () => {
                   element={<ContractorManagement />}
                 />
                 <Route path="/asset_management" element={<AssetManagement />} />
+                <Route path="/add_asset" element={<AddAsset />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

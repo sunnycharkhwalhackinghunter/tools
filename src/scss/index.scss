@@ -5489,4 +5489,52 @@ a {
   overflow-x: auto;
   white-space: nowrap;
 }
+.Asset_main_div2 {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.asset_card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.asset_card_icon {
+  @include bg_img;
+  width: 6rem;
+  height: 6rem;
+}
+.asset_card_text_div {
+  padding-left: 10px;
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.add_asset_right_btn {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  span {
+    margin-left: 10px;
+    svg {
+      font-size: 20px;
+    }
+  }
+}
+.AddAsset_top_main_div {
+  display: flex;
+  justify-content: center;
+}
+.AddAsset_top_inner_div {
+  width: 80%;
+}
 // Asset Index end

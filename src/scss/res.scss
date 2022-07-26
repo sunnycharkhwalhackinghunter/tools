@@ -1,6 +1,9 @@
 @import "--var.scss";
 @import "--mixing.scss";
 @media (max-width: 320px) {
+  .Asset_main_div2 {
+    display: block;
+  }
   .JobsType_card {
     ul {
       .JobsType_card_menu {
@@ -13,6 +16,16 @@
   }
 }
 @media (max-width: 576px) {
+  .AddAsset_top_inner_div {
+    width: 100%;
+  }
+  .asset_card_icon {
+    margin: auto;
+  }
+  .asset_card_text_div {
+    text-align: center;
+    padding-left: 0;
+  }
   .Asset_main_div {
     display: block;
   }
@@ -644,6 +657,17 @@
   }
 }
 @media (min-width: 768px) {
+  .AddAsset_top_inner_div {
+    width: 100%;
+  }
+  .add_asset_right_btn {
+    font-size: 11px;
+    span {
+      svg {
+        font-size: 12px;
+      }
+    }
+  }
   .Contractor_Management_main_div {
     display: block;
   }
@@ -804,6 +828,17 @@
   }
 }
 @media (min-width: 1024px) {
+  .AddAsset_top_inner_div {
+    width: 90%;
+  }
+  .add_asset_right_btn {
+    font-size: 16px;
+    span {
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
   .Contractor_Management_main_div {
     display: inline-table;
   }
@@ -995,6 +1030,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .AddAsset_top_inner_div {
+    width: 80%;
+  }
   .Feedback_Ratings_div_hired {
     span {
       margin-left: 8px;
