@@ -22,7 +22,7 @@ const Top = () => {
           <TopPageTitle Name="My Performance" />
         </div>
         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-7 col-7 MyAttendence_next_page">
-          <NavLink to="/">
+          <NavLink to="/hr/add_contractor">
             <span>Add Contractor</span>
             <BsArrowRight />
           </NavLink>
@@ -110,7 +110,7 @@ const ContractorManagementList = (props) => {
           <td>{props.pay}</td>
           <td>
             <span className="reimbursement_view_btn">
-              <NavLink to="/">Action</NavLink>
+              <NavLink to="/hr/action_contractor">Action</NavLink>
             </span>
           </td>
         </tr>

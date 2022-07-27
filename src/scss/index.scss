@@ -5518,17 +5518,22 @@ a {
   }
 }
 .add_asset_right_btn {
-  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  background-color: white;
+  padding: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  transition: all 0.3s;
   cursor: pointer;
-  padding: 1.5rem;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 16px;
-  span {
-    margin-left: 10px;
+  .right_awro {
     svg {
-      font-size: 20px;
+      margin-left: 10px;
     }
+  }
+  .left_awro {
+    margin-right: 10px;
   }
 }
 .AddAsset_top_main_div {
@@ -5537,5 +5542,35 @@ a {
 }
 .AddAsset_top_inner_div {
   width: 80%;
+}
+.ActionOnAsset_text_div {
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding-top: 5px;
+  }
+}
+.AddContractor_page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  div {
+    border-radius: 6px;
+    background-color: white;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
+    svg {
+      margin-left: 10px;
+    }
+  }
 }
 // Asset Index end

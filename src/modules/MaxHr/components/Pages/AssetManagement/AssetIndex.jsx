@@ -145,7 +145,7 @@ const AssetList = (props) => {
           <td>{props.Amount}</td>
           <td>
             <span className="reimbursement_view_btn">
-              <NavLink to="/">Action</NavLink>
+              <NavLink to="/hr/action_Asset">Action</NavLink>
             </span>
           </td>
         </tr>

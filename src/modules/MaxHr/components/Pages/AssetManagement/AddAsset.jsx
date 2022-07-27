@@ -22,21 +22,40 @@ export const AddAsset = () => {
   return (
     <>
       <div className="custom_container">
-        {AssetAddRemove ? (
-          <PageTop
-            title="Add Asset"
-            TilelIcon={<BsArrowLeft />}
-            TitleLink={-1}
-          />
-        ) : (
-          <PageTop
-            title="Add or Remove Asset"
-            TilelIcon={<BsArrowLeft />}
-            TitleLink={-1}
-          />
-        )}
+        <div className="row">
+          <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+            {AssetAddRemove ? (
+              <PageTop
+                title="Add Asset"
+                TilelIcon={<BsArrowLeft />}
+                TitleLink={-1}
+              />
+            ) : (
+              <PageTop
+                title="Add or Remove Asset"
+                TilelIcon={<BsArrowLeft />}
+                TitleLink={-1}
+              />
+            )}
+          </div>
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+            <div className="add_asset_right_btn" onClick={AssetAddRemoveOpen}>
+              {AssetAddRemove ? (
+                <TopRightBtn
+                  text="Add or Remove Asset "
+                  right={<BsArrowRight />}
+                />
+              ) : (
+                <TopRightBtn
+                  text="Add or Remove Asset "
+                  left={<BsArrowLeft />}
+                />
+              )}
+            </div>
+          </div>
+        </div>
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-          <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 order-md-1 order-2 ">
+          <div className="col-12 ">
             <div className="profile_iner_cont">
               <div className="AddAsset_top_main_div">
                 <div className="AddAsset_top_inner_div">
@@ -45,19 +64,21 @@ export const AddAsset = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 order-md-2 order-1">
-            <div className="add_asset_right_btn" onClick={AssetAddRemoveOpen}>
-              Add or Remove Asset Type
-              <span>
-                <BsArrowRight />
-              </span>
-            </div>
-          </div>
-          <div className="col-12 order-3">
+
+          <div className="col-12 ">
             {AssetAddRemove ? <AddAssetList /> : <AddedAssetList />}
           </div>
         </div>
       </div>
+    </>
+  );
+};
+const TopRightBtn = (props) => {
+  return (
+    <>
+      <span className="left_awro">{props.left}</span>
+      {props.text}
+      <span className="right_awro">{props.right}</span>
     </>
   );
 };
@@ -195,14 +216,25 @@ const AddAssetForm = () => {
           </div>
         </div>
         <div className="col-12">
-          <div className="document_verification_app_btn_div text-center">
-            <button
-              onClick={() => setModalShow1(true)}
-              className=" w-auto px-4"
-            >
-              Add Asset
-            </button>
+          <div className="IssueAssets_btn_bottom_div IssueAssets_btn_bottom_div2 mt-0">
+            <div>
+              <div>
+                <NavLink to={-1}>
+                  <button className="IssueAssets_btn3 mx-1">Cancel</button>
+                </NavLink>
+              </div>
+            </div>
+            <div>
+              <button
+                className="IssueAssets_btn2 mx-1"
+                onClick={() => setModalShow1(true)}
+              >
+                Add Asset
+              </button>
+            </div>
           </div>
+        </div>
+        <div className="col-12">
           <Success show={modalShow1} onHide={() => setModalShow1(false)} />
         </div>
       </div>
@@ -348,7 +380,7 @@ const AddAssetList = (props) => {
           <td>{props.Amount}</td>
           <td>
             <span className="reimbursement_view_btn">
-              <NavLink to="/">Action</NavLink>
+              <NavLink to="/hr/action_Asset">Action</NavLink>
             </span>
           </td>
         </tr>
@@ -469,7 +501,7 @@ const AddedAssetList = (props) => {
           </td>
           <td>
             <span className="reimbursement_view_btn">
-              <NavLink to="/">Action</NavLink>
+              <span>Delete</span>
             </span>
           </td>
         </tr>

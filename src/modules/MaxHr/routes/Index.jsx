@@ -70,6 +70,9 @@ import { BackgroundCheck } from "../components/Pages/Hiring/page/BackgroundCheck
 import ContractorManagement from "../page/ContractorManagement";
 import AssetManagement from "../page/AssetManagement";
 import { AddAsset } from "../components/Pages/AssetManagement/AddAsset";
+import { ActionOnAsset } from "../components/Pages/AssetManagement/ActionOnAsset";
+import { ActionOnContractor } from "../components/Pages/Management/ActionOnContractor";
+import { AddContractor } from "../components/Pages/Management/AddContractor";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -198,6 +201,12 @@ const Index = () => {
                 />
                 <Route path="/asset_management" element={<AssetManagement />} />
                 <Route path="/add_asset" element={<AddAsset />} />
+                <Route path="/action_Asset" element={<ActionOnAsset />} />
+                <Route
+                  path="/action_contractor"
+                  element={<ActionOnContractor />}
+                />
+                <Route path="/add_contractor" element={<AddContractor />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

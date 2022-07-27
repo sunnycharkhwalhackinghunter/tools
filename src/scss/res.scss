@@ -16,6 +16,10 @@
   }
 }
 @media (max-width: 576px) {
+  .add_asset_right_btn {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
   .AddAsset_top_inner_div {
     width: 100%;
   }
@@ -832,10 +836,10 @@
     width: 90%;
   }
   .add_asset_right_btn {
-    font-size: 16px;
+    font-size: 14px;
     span {
       svg {
-        font-size: 20px;
+        font-size: 15px;
       }
     }
   }
