@@ -9,9 +9,8 @@ import DashbordIcon2 from "../../../../../pics/hricon2.png";
 import DashbordIcon3 from "../../../../../pics/hricon3.png";
 import DashbordIcon4 from "../../../../../pics/hricon4.png";
 import ProfileIcon from "../../../../../pics/profile.jpeg";
-import { BsPlusLg } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import { AiOutlineClockCircle, AiOutlinePlus } from "react-icons/ai";
 import ReactApexChart from "react-apexcharts";
 import { useState } from "react";
 import Calendar from "react-calendar";
@@ -45,11 +44,17 @@ const HiringIndexTop = () => {
   return (
     <>
       <div className=" mb-4">
-        <div className="row HiringIndex_top_title">
-          <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-9 col-sm-6 col-6">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 HiringIndex_top_title">
+          <div className="col-xxl-8 col-xl-8 col-lg-6 col-md-5 col-sm-3 col-3">
             <TopPageTitle Name="Hiring" />
           </div>
-          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+          <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-9 col-9 MyAttendence_next_page">
+            <NavLink to="/hr/create_new_jobs">
+              <span>Create new Job</span>
+              <AiOutlinePlus />
+            </NavLink>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
             <div className="dashboard_top_week_Select">
               <Select options={options} placeholder="This week" />
             </div>
@@ -187,6 +192,26 @@ const HiringIndexCard = () => {
               <div className="DashbordBg_icon1_div ">
                 <div className="row">
                   <div className="col-12">
+                    <NavLink to="/hr/rejected">
+                      <div className="DashbordBg_icon_top_div_iner">
+                        <Image
+                          className="DashbordBg_icon1"
+                          backgroundImage={DashbordIcon4}
+                        />
+                        <div>
+                          <h3>123</h3>
+                          <p>Rejected</p>
+                        </div>
+                      </div>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <div className="DashbordBg_icon1_div ">
+                <div className="row">
+                  <div className="col-12">
                     <NavLink to="/hr/total_openings">
                       <div className="DashbordBg_icon_top_div_iner">
                         <Image
@@ -202,18 +227,6 @@ const HiringIndexCard = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-              <NavLink to="/hr/create_new_jobs">
-                <div className="HiringIndexCard_more_card_div">
-                  <p>
-                    Create New Job
-                    <span>
-                      <BsPlusLg />
-                    </span>
-                  </p>
-                </div>
-              </NavLink>
             </div>
           </div>
         </div>

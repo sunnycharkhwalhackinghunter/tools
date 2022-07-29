@@ -73,6 +73,10 @@ import { AddAsset } from "../components/Pages/AssetManagement/AddAsset";
 import { ActionOnAsset } from "../components/Pages/AssetManagement/ActionOnAsset";
 import { ActionOnContractor } from "../components/Pages/Management/ActionOnContractor";
 import { AddContractor } from "../components/Pages/Management/AddContractor";
+import { Rejected } from "../components/Pages/Hiring/page/Rejected";
+import { RejectedNormal } from "../components/Pages/Hiring/page/RejectedNormal";
+import { RejectedDetails } from "../components/Pages/Hiring/page/RejectedDetails";
+import { AddDepartment } from "../components/Pages/Hiring/page/AddDepartment";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -207,6 +211,10 @@ const Index = () => {
                   element={<ActionOnContractor />}
                 />
                 <Route path="/add_contractor" element={<AddContractor />} />
+                <Route path="/rejected" element={<Rejected />} />
+                <Route path="/rejected_normal" element={<RejectedNormal />} />
+                <Route path="/rejected_details" element={<RejectedDetails />} />
+                <Route path="/add_department" element={<AddDepartment />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

@@ -4,7 +4,7 @@ import { BiLink } from "react-icons/bi";
 import React from "react";
 import PhotoApp from "../../../../../common/components/img/Img";
 import Icon from "../../../../../../pics/profile.jpeg";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlinePlus } from "react-icons/ai";
 import PdfIcon from "../../../../../../pics/test.pdf";
 import ReactStars from "react-rating-stars-component";
 import { AboutProfileInput } from "../../Profile/components/AboutProfile";
@@ -437,9 +437,19 @@ const Onboard = () => {
     <>
       <div className="background_check_status_main_div">
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-          <div className="col-12">
+          <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-6 col-sm-12 col-12">
             <div className="background_check_status_title">
               <h3>Onboard</h3>
+            </div>
+          </div>
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div className="add_department_btn">
+              <NavLink to="/hr/add_department">
+                add Department
+                <span>
+                  <AiOutlinePlus />
+                </span>
+              </NavLink>
             </div>
           </div>
           <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">

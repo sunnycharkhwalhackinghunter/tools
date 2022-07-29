@@ -16,6 +16,9 @@
   }
 }
 @media (max-width: 576px) {
+  .AddDepartment_inner_div {
+    width: 100%;
+  }
   .add_asset_right_btn {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -661,6 +664,9 @@
   }
 }
 @media (min-width: 768px) {
+  .AddDepartment_inner_div {
+    width: 70%;
+  }
   .AddAsset_top_inner_div {
     width: 100%;
   }
@@ -832,6 +838,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .AddDepartment_inner_div {
+    width: 50%;
+  }
+  .RejectedDetails_time {
+    justify-content: flex-start !important;
+  }
   .AddAsset_top_inner_div {
     width: 90%;
   }
@@ -1034,6 +1046,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .RejectedDetails_time {
+    text-align: center;
+  }
   .AddAsset_top_inner_div {
     width: 80%;
   }

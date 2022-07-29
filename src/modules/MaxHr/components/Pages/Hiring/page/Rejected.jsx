@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Input from "../../../../../common/components/input/Input";
-export const NewApplication = () => {
+export const Rejected = () => {
   return (
     <>
       <div className="custom_container">
@@ -28,7 +28,7 @@ const PageTop = () => {
             <TopPageTitle
               TitleLink={-1}
               TilelIcon={<BsArrowLeft />}
-              Name="New Application"
+              Name="Rejected Candidates"
             />
           </div>
         </div>
@@ -68,6 +68,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_normal",
     },
     {
       Name: "sunny charkhwal",
@@ -75,6 +76,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_details",
     },
     {
       Name: "sunny charkhwal",
@@ -82,6 +84,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_normal",
     },
     {
       Name: "sunny charkhwal",
@@ -89,6 +92,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_details",
     },
     {
       Name: "sunny charkhwal",
@@ -96,6 +100,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_normal",
     },
     {
       Name: "sunny charkhwal",
@@ -103,6 +108,7 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_details",
     },
     {
       Name: "sunny charkhwal",
@@ -110,6 +116,31 @@ const NewApplicationTabel = () => {
       Availability: "Immediate",
       Experience: "5 Years",
       Expectation: "6 LPA",
+      link: "/hr/rejected_normal",
+    },
+    {
+      Name: "sunny charkhwal",
+      date: "05/25/2021",
+      Availability: "Immediate",
+      Experience: "5 Years",
+      Expectation: "6 LPA",
+      link: "/hr/rejected_details",
+    },
+    {
+      Name: "sunny charkhwal",
+      date: "05/25/2021",
+      Availability: "Immediate",
+      Experience: "5 Years",
+      Expectation: "6 LPA",
+      link: "/hr/rejected_normal",
+    },
+    {
+      Name: "sunny charkhwal",
+      date: "05/25/2021",
+      Availability: "Immediate",
+      Experience: "5 Years",
+      Expectation: "6 LPA",
+      link: "/hr/rejected_details",
     },
   ];
   const MissingInformationApp = (props) => {
@@ -119,7 +150,6 @@ const NewApplicationTabel = () => {
     const NewApplicationTabelNameChang = () => {
       setNewApplicationTabelName(!NewApplicationTabelName);
     };
-
     return (
       <>
         <tr
@@ -145,7 +175,7 @@ const NewApplicationTabel = () => {
           <td className="MissingInformation_td">{props.Expectation}</td>
           <td>
             <button
-              onClick={() => navigate("/hr/design_application")}
+              onClick={() => navigate(props.link)}
               className="missing_information_td_button"
             >
               View
@@ -267,6 +297,7 @@ const NewApplicationTabel = () => {
                       Availability={val.Availability}
                       Experience={val.Experience}
                       Expectation={val.Expectation}
+                      link={val.link}
                     />
                   );
                 })}
