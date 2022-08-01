@@ -1,7 +1,10 @@
+import { Index } from "../components/Pages/OrgnizationChart/Index";
 const OrganizationChart = () => {
   return (
     <>
-      <h1>Organization Chart</h1>
+      <div className="custom_container">
+        <Index />
+      </div>
     </>
   );
 };

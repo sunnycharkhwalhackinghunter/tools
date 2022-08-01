@@ -7,7 +7,6 @@ import D4 from "../../../.././../pics/d3.png";
 import D3 from "../../../.././../pics/d4.png";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
-import { AiTwotoneSetting } from "react-icons/ai";
 import CardIconImg from "../../../../../pics/profile.jpeg";
 import Birthday from "../../../../../pics/b.png";
 import Anniversiry from "../../../../../pics/p.png";
@@ -552,10 +551,8 @@ export const CelebrationsApp = () => {
               </div>
               <div className="col-6">
                 <div>
-                  <div className="celebrations_card_setting_icon_div">
-                    <NavLink to="/hr/Settings">
-                      <AiTwotoneSetting />
-                    </NavLink>
+                  <div className="reimbursement_top_title_link_page">
+                    <NavLink to="/hr/celeberations_List_Page">View All</NavLink>
                   </div>
                 </div>
               </div>
@@ -623,12 +620,8 @@ export const HolidaysApp = () => {
                 </div>
               </div>
               <div className="col-6">
-                <div>
-                  <div className="celebrations_card_setting_icon_div">
-                    <NavLink to="/hr/Settings">
-                      <AiTwotoneSetting />
-                    </NavLink>
-                  </div>
+                <div className="reimbursement_top_title_link_page">
+                  <NavLink to="/hr/holidays_list_page">View All</NavLink>
                 </div>
               </div>
             </div>

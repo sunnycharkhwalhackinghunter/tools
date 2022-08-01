@@ -91,7 +91,7 @@ const CreateNewJobsForm = () => {
             {ColorPicker ? <SketchPicker className="color_picker3" /> : null}
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
           <AboutProfileInput
             label="Job Title"
             type="text"
@@ -99,7 +99,7 @@ const CreateNewJobsForm = () => {
             placeholder="Internship"
           />
         </div>
-        <div className="col-4">
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
           <AboutProfileInput
             label="Department"
             type="text"
@@ -107,10 +107,26 @@ const CreateNewJobsForm = () => {
             placeholder="Marketing"
           />
         </div>
-        <div className="col-4">
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
           <AboutProfileInput
             label="Experience"
             type="text"
+            className="form-control"
+            placeholder="0-1 Year"
+          />
+        </div>
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+          <AboutProfileInput
+            label="from"
+            type="date"
+            className="form-control"
+            placeholder="0-1 Year"
+          />
+        </div>
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+          <AboutProfileInput
+            label="to"
+            type="date"
             className="form-control"
             placeholder="0-1 Year"
           />

@@ -77,6 +77,9 @@ import { Rejected } from "../components/Pages/Hiring/page/Rejected";
 import { RejectedNormal } from "../components/Pages/Hiring/page/RejectedNormal";
 import { RejectedDetails } from "../components/Pages/Hiring/page/RejectedDetails";
 import { AddDepartment } from "../components/Pages/Hiring/page/AddDepartment";
+import { CeleberationsListPage } from "../page/CeleberationsListPage";
+import { HolidayslistPage } from "../page/HolidayslistPage";
+import { AddEmployee } from "../components/Pages/OrgnizationChart/AddEmployee";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -215,7 +218,15 @@ const Index = () => {
                 <Route path="/rejected_normal" element={<RejectedNormal />} />
                 <Route path="/rejected_details" element={<RejectedDetails />} />
                 <Route path="/add_department" element={<AddDepartment />} />
-
+                <Route
+                  path="/celeberations_List_Page"
+                  element={<CeleberationsListPage />}
+                />
+                <Route
+                  path="/holidays_list_page"
+                  element={<HolidayslistPage />}
+                />
+                <Route path="/add_employee" element={<AddEmployee />} />
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }

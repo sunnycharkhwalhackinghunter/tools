@@ -3211,7 +3211,7 @@ a {
 }
 .last_icon {
   position: absolute;
-  top: 16px;
+  top: 8px;
   right: 8px;
 }
 .MyAttendence_dashbaord_calendar_iner_div {
@@ -5629,5 +5629,10 @@ a {
 .AddDepartment_link {
   color: $blue !important;
   text-transform: capitalize;
+}
+.HolidayslistPage_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 // Asset Index end
