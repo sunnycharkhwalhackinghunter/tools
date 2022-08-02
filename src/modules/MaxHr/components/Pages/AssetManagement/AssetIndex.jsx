@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsCaretUpFill, BsCaretDownFill } from "react-icons/bs";
 import Input from "../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,13 @@ import TopPageTitle from "../../../../common/components/topPageTitle/Index";
 import Img from "../../../../common/components/img/Img";
 import Icon from "../../../../../pics/assitIcon.png";
 import Icon3 from "../../../../../pics/assitIcon3.png";
+import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import React from "react";
+import { AboutProfileInput } from "../Profile/components/AboutProfile";
+import { FiChevronDown } from "react-icons/fi";
+
 export const AssetIndex = () => {
   return (
     <>
@@ -37,6 +44,7 @@ const Top = () => {
 const AssetList = (props) => {
   const AssetListData = [
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -45,6 +53,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -53,6 +62,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -61,6 +71,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -69,6 +80,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -77,6 +89,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -85,6 +98,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -93,6 +107,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -101,6 +116,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -109,6 +125,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -117,14 +134,7 @@ const AssetList = (props) => {
       Amount: "12000",
     },
     {
-      AssetName: "Flower Pot",
-      AssetNo: "Ad12ximjjsov",
-      date: "05/25/2021",
-      NoOfAsset: "01",
-      Time: "24 Day",
-      Amount: "12000",
-    },
-    {
+      Id: "MXC01",
       AssetName: "Flower Pot",
       AssetNo: "Ad12ximjjsov",
       date: "05/25/2021",
@@ -137,6 +147,10 @@ const AssetList = (props) => {
     return (
       <>
         <tr className="ApprovalDetailsPage_thead_td">
+          <td>
+            <input className="form-check-input" type="checkbox" />
+          </td>
+          <td>{props.Id}</td>
           <td>{props.AssetName}</td>
           <td>{props.AssetNo}</td>
           <td>{props.date}</td>
@@ -144,9 +158,9 @@ const AssetList = (props) => {
           <td>{props.Time}</td>
           <td>{props.Amount}</td>
           <td>
-            <span className="reimbursement_view_btn">
-              <NavLink to="/hr/action_Asset">Action</NavLink>
-            </span>
+            <div className="contractor_management_list_btn">
+              <ActionBtn />
+            </div>
           </td>
         </tr>
       </>
@@ -200,15 +214,75 @@ const AssetList = (props) => {
           </div>
         </div>
         <div className="ApprovalDetailsPage_top_div">
-          <table className="table table-hover Asset_main_div text-center text-capitalize">
+          <table className="table table-hover Contractor_Management_main_div text-center text-capitalize">
             <thead>
               <tr className="ApprovalDetailsPage_thead_tr">
-                <th scope="col">Asset Name</th>
-                <th scope="col">Asset No.</th>
-                <th scope="col">Date</th>
-                <th scope="col">No. of Asset</th>
-                <th scope="col">Issued Time</th>
-                <th scope="col">Amount</th>
+                <th scope="col">
+                  <input className="form-check-input" type="checkbox" />
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Asset ID
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Asset Name
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Asset No.
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Date
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    No. of Asset
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    ssued Time
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Amount
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
@@ -217,6 +291,7 @@ const AssetList = (props) => {
                 return (
                   <AssetListApp
                     key={i}
+                    Id={val.Id}
                     AssetName={val.AssetName}
                     AssetNo={val.AssetNo}
                     date={val.date}
@@ -288,5 +363,161 @@ const AssetCard = () => {
         })}
       </div>
     </>
+  );
+};
+export const ActionBtn = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  const [removeShow, setRemoveShow] = React.useState(false);
+
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Dropdown>
+        <Dropdown.Toggle id="dropdown-basic">
+          Action
+          <span>
+            <FiChevronDown />
+          </span>
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item>
+            <button onClick={() => navigate("/hr/action_Asset")}>
+              Edit Details
+            </button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => navigate("/hr/profile")}>
+              View Profile
+            </button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setModalShow(true)}>Offline</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setRemoveShow(true)}>Delete</button>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <DisableLoginModal show={modalShow} onHide={() => setModalShow(false)} />
+      <RemoveModal show={removeShow} onHide={() => setRemoveShow(false)} />
+    </>
+  );
+};
+const DisableLoginModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="sm"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="contractor_management_Modsal_title"
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <h3>Offline Asset</h3>
+        </Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <div>
+          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-12">
+              <label className="all_page_my_label">Offline Asset</label>
+
+              <div>
+                <label className="switch">
+                  <Input type="checkbox" className="switch_input" />
+                  <span className="slider slider2 round"></span>
+                </label>
+              </div>
+            </div>
+            <div className="col-12">
+              <AboutProfileInput
+                label="Comment"
+                type="text"
+                className="form-control"
+                placeholder="Add your comment"
+              />
+            </div>
+            <div className="col-12">
+              <div className="UploadDocumentModal_body_btn_div d-flex justify-content-center">
+                <button
+                  className="UploadDocumentModal_body_btn"
+                  onClick={props.onHide}
+                >
+                  Close
+                </button>
+                <button
+                  className="UploadDocumentModal_body_btn2"
+                  onClick={props.onHide}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+const RemoveModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="sm"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="contractor_management_Modsal_title"
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <h3>Delete Asset</h3>
+        </Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <div>
+          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-12">
+              <label className="all_page_my_label">Delete Asset</label>
+
+              <div>
+                <label className="switch">
+                  <Input type="checkbox" className="switch_input" />
+                  <span className="slider slider2 round"></span>
+                </label>
+              </div>
+            </div>
+            <div className="col-12">
+              <AboutProfileInput
+                label="Comment"
+                type="text"
+                className="form-control"
+                placeholder="Add your comment"
+              />
+            </div>
+            <div className="col-12">
+              <div className="UploadDocumentModal_body_btn_div d-flex justify-content-center">
+                <button
+                  className="UploadDocumentModal_body_btn"
+                  onClick={props.onHide}
+                >
+                  Close
+                </button>
+                <button
+                  className="UploadDocumentModal_body_btn2"
+                  onClick={props.onHide}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 };

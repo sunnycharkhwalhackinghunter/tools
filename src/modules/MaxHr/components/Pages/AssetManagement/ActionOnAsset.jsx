@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import Logo from "../../../../common/components/img/Img";
 import GifPhoto from "../../../../../pics/su.gif";
-import SwitchInput from "../../../../common/components/input/Input";
 import React from "react";
 
 export const ActionOnAsset = () => {
@@ -20,92 +19,6 @@ export const ActionOnAsset = () => {
           TitleLink={-1}
         />
         <div className="profile_iner_cont">
-          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-            <div className="col-12">
-              <div className="AddAsset_top_main_div">
-                <div className="AddAsset_top_inner_div">
-                  <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-2 col-sm-4 col-4">
-                      <div>
-                        <label className="all_page_my_label">
-                          Delete Asset
-                        </label>
-                        <div className=" mb-3">
-                          <label className="switch">
-                            <SwitchInput
-                              type="checkbox"
-                              className="switch_input"
-                            />
-                            <span className="slider slider2 round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8">
-                      <div>
-                        <label className="all_page_my_label">Details</label>
-                        <div className="ActionOnAsset_text_div">
-                          <p>If it is on, Details will be here</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                      <AboutProfileInput
-                        label="Comment"
-                        type="text"
-                        className="form-control"
-                        placeholder="Add your comment"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <hr />
-            </div>
-            <div className="col-12">
-              <div className="AddAsset_top_main_div">
-                <div className="AddAsset_top_inner_div">
-                  <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-2 col-sm-4 col-4">
-                      <div>
-                        <label className="all_page_my_label">
-                          Offline Asset
-                        </label>
-                        <div className=" mb-3">
-                          <label className="switch">
-                            <SwitchInput
-                              type="checkbox"
-                              className="switch_input"
-                            />
-                            <span className="slider slider2 round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8">
-                      <div>
-                        <label className="all_page_my_label">Details</label>
-                        <div className="ActionOnAsset_text_div">
-                          <p>By Gaurav Kaushik on 24/05/2022</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                      <AboutProfileInput
-                        label="Comment"
-                        type="text"
-                        className="form-control"
-                        placeholder="Comment your concern"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <hr />
-            </div>
-          </div>
           <div className="AddAsset_top_main_div">
             <div className="AddAsset_top_inner_div">
               <AddAssetForm />

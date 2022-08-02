@@ -502,6 +502,7 @@ ul {
 }
 .notifications_btn {
   text-align: center;
+  background-color: #fff;
   text-transform: capitalize;
   margin: 4px 0;
   a {
@@ -5482,6 +5483,67 @@ a {
   display: inline-table;
   overflow-x: auto;
   white-space: nowrap;
+}
+.contractor_management_list_btn {
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+
+  .btn-check:focus + .btn-primary,
+  .btn-primary:focus {
+    color: #fff;
+    background-color: transparent !important;
+    color: $blue !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .btn-primary {
+    background-color: transparent;
+    color: $blue;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    border: none;
+    span {
+      margin-left: 10px;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $blue;
+    }
+  }
+  .dropdown-menu.show {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .dropdown-item {
+    padding: 0;
+    button {
+      background-color: #fff;
+      border-radius: 0 !important;
+      width: 100%;
+      transition: all 0.3s;
+      height: 32px;
+      text-align: start;
+      padding-left: 9px;
+      text-transform: capitalize;
+      border: none;
+      &:hover {
+        background-color: #eee7e7;
+      }
+    }
+  }
+}
+.contractor_management_Modsal_title {
+  h3 {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+  }
+  .btn-close {
+    font-size: 11px;
+  }
 }
 // Contractor Management Index end
 // Asset Index
