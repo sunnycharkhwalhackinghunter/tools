@@ -10,9 +10,9 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../../../pics/Logo.png";
 import LogoImg from "../../../common/components/NavLogo/Logo";
 //ICONS
-import { MdPayments } from "react-icons/md";
+import { MdPayments, MdManageAccounts } from "react-icons/md";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
-import { ImBullhorn } from "react-icons/im";
+import { ImBullhorn, ImProfile } from "react-icons/im";
 import {
   AiOutlineSearch,
   AiOutlineLineChart,
@@ -149,7 +149,23 @@ const Navbar = () => {
               icon={<ImBullhorn />}
               description="Announcement"
             />
-            <NavUrl url="profile" icon={<FaUserTie />} description="profile" />
+            <NavUrl
+              navItems={[
+                {
+                  title: "My prosile",
+                  link: "/hr/profile",
+                  iconIner: <ImProfile />,
+                },
+                {
+                  title: "Employees’ Management",
+                  link: "/hr/employees_management",
+                  iconIner: <MdManageAccounts />,
+                },
+              ]}
+              url="profile"
+              icon={<FaUserTie />}
+              description="profile"
+            />
             <NavUrl url="finance" icon={<MdPayments />} description="finance" />
             <NavUrl
               navItems={[

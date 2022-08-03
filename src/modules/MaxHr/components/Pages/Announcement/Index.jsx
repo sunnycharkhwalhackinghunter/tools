@@ -7,13 +7,22 @@ import Input from "../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 export const Index = () => {
+  return (
+    <>
+      <Post />
+      <AnnouncementFilter />
+      <PostUser />
+      <UserPost />
+    </>
+  );
+};
+export const AnnouncementFilter = () => {
   const options = [
     { value: " Developers", label: " Developers" },
     { value: "Graphic Designer", label: "Graphic Designer" },
   ];
   return (
     <>
-      <Post />
       <div className=" mb-4">
         <div className="row g-3">
           <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
@@ -42,8 +51,6 @@ export const Index = () => {
           </div>
         </div>
       </div>
-      <PostUser />
-      <UserPost />
     </>
   );
 };

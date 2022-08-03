@@ -2,7 +2,13 @@ import ProfileIcon from "../../../../../common/components/img/Img";
 import ProfilPhoto2 from "../../../../../../pics/profile2.jpeg";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import { GrEdit } from "react-icons/gr";
+import { Modal } from "react-bootstrap";
+import React from "react";
 export const EmployeesProfileCard = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  const now = 60;
   return (
     <>
       <div className="EmployeesProfileCard_top_div">
@@ -23,7 +29,10 @@ export const EmployeesProfileCard = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info">
+          <div
+            className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info"
+            style={{ borderRight: "none" }}
+          >
             <div className="EmployeesProfileCard_info">
               <p>
                 <span>
@@ -39,16 +48,36 @@ export const EmployeesProfileCard = () => {
               </p>
             </div>
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info">
-            <div className="EmployeesProfileCard_info_user">
-              <p>
-                Reporting to:
-                <span> Shived Bansel</span>
-              </p>
+          <div
+            className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 EmployeesProfileCard_div_info ProgressBar_top_main_div"
+            style={{ borderRight: "none" }}
+          >
+            <div className="EmployeesProfileCard_info_user ProgressBar_top_div">
+              <p>Complete Your Profile</p>
+              <div>
+                <ProgressBar now={now} label={`${now}%`} />
+              </div>
+              <div className="ProgressBar_top_edit">
+                <GrEdit onClick={() => setModalShow(true)} />
+              </div>
+              <EditeModal show={modalShow} onHide={() => setModalShow(false)} />
             </div>
           </div>
         </div>
       </div>
     </>
+  );
+};
+const EditeModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="ApplicationInfo_main_div"
+    >
+      <Modal.Body>test</Modal.Body>
+    </Modal>
   );
 };

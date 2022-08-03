@@ -2108,13 +2108,44 @@ a {
 }
 //notification page end
 // profile page
+.ProgressBar_top_main_div {
+  position: relative;
+}
+.ProgressBar_top_edit {
+  position: absolute;
+  top: -5px;
+  right: 11px;
+  cursor: pointer;
+}
+.ProgressBar_top_div {
+  width: 75%;
+  p {
+    font-weight: 600 !important;
+    margin-bottom: 7px !important;
+  }
+  .progress-bar {
+    background-color: black;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  .progress {
+    height: 22px;
+    padding: 5px;
+  }
+}
 .profile_tab_div2 {
+  .nav {
+    overflow-x: scroll;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
   .nav-item {
     margin: auto;
   }
   .nav-pills {
     .nav-link {
       border-radius: 6px !important;
+      width: 10rem !important;
     }
   }
 }
@@ -5698,3 +5729,53 @@ a {
   white-space: nowrap;
 }
 // Asset Index end
+// Projects list
+.Projects_btn_div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 6px 0;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  p {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  span {
+    svg {
+      font-size: 15px;
+    }
+  }
+}
+// project list end
+.test_1 {
+  .modal-dialog {
+    float: right !important;
+    width: inherit !important;
+  }
+}
+
+.demo-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #212121;
+  text-align: center;
+}
+
+.demo-footer > a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}

@@ -16,6 +16,12 @@
   }
 }
 @media (max-width: 576px) {
+  .Projects_btn_div {
+    border: 1px solid black;
+    p {
+      display: none;
+    }
+  }
   .notifications_btn {
     padding: 7px 0;
     margin: 0;
@@ -108,9 +114,14 @@
     margin-bottom: 10px;
   }
   .EmployeesProfileCard_top_div {
+    position: relative;
     .css-2m9kme-MuiFormControl-root {
       width: 100% !important;
     }
+  }
+  .ProgressBar_top_edit {
+    top: 5px;
+    right: 10px;
   }
   .datetime_local_butn_top_div {
     display: flex;
@@ -385,12 +396,18 @@
 
   .EmployeesProfileCard_div_info {
     border: none;
+    justify-content: unset;
+  }
+  .ProgressBar_top_div {
+    width: 100%;
+  }
+  .ProgressBar_top_main_div {
+    position: unset;
   }
   .EmployeesProfileCard_text_div {
     margin-top: 0px;
   }
   .EmployeesProfileCard_icon_div_main {
-    justify-content: center;
     width: 100%;
   }
   .EmployeesProfileCard_info_user {
@@ -401,7 +418,6 @@
   .EmployeesProfileCard_info {
     margin-top: 8px;
     width: 100%;
-    text-align: center;
     p {
       font-size: 12px;
       margin-bottom: 4px;
@@ -431,7 +447,7 @@
       flex-wrap: wrap;
     }
     .nav-item {
-      width: 50%;
+      width: auto;
       text-align: center;
     }
   }
@@ -1110,9 +1126,7 @@
   }
   .profile_tab_div2 {
     .nav-item {
-      margin: auto;
       margin-bottom: unset;
-      width: auto;
       text-align: center;
     }
     .nav-pills {
