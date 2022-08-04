@@ -5756,14 +5756,104 @@ a {
     }
   }
 }
-// project list end
-.test_1 {
-  .modal-dialog {
-    float: right !important;
-    width: inherit !important;
+.projact_right_filter_div {
+  .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+    top: 11rem;
+    height: 75%;
+    right: 21px;
+    width: 42%;
+    border-radius: 10px;
   }
 }
+.projact_right_filter_inner_div {
+  padding: 1.5rem;
+  position: relative;
+}
+.projact_right_filter_title {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.projact_right_filter_title_close_btn {
+  text-align: end;
+  cursor: pointer;
+  svg {
+    font-size: 20px;
+  }
+}
+.projact_right_filter_btn_div {
+  position: sticky;
+  bottom: 0;
+  padding-bottom: 2rem;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+}
+.projact_right_filter_data {
+  overflow: scroll;
+  height: 37rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
+.Projects_Right_Filters_Data_main_div {
+  margin-bottom: 10px;
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+}
+.projects_card_div {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  border-left: 2px solid #000;
+  text-transform: capitalize;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #525252;
+    span {
+      margin-left: 3px;
+      font-weight: 500;
+    }
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+.projects_card_status {
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  background-color: #f1c21b;
+  padding: 5px 17px;
+  border-radius: 25px;
+  position: absolute;
+  top: 10px;
+  right: 11px;
+}
+.projects_card_members {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.projects_card_members_icon {
+  @include bg_img;
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: -6px;
+}
+// project list end
+// footer
 .demo-footer {
   position: fixed;
   bottom: 0;
@@ -5779,3 +5869,4 @@ a {
   font-size: 16px;
   color: #fff;
 }
+// footer
