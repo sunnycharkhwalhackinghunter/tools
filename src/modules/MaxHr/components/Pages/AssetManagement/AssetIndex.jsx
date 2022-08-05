@@ -388,12 +388,7 @@ export const ActionBtn = () => {
             </button>
           </Dropdown.Item>
           <Dropdown.Item>
-            <button onClick={() => navigate("/hr/profile")}>
-              View Profile
-            </button>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <button onClick={() => setModalShow(true)}>Offline</button>
+            <button onClick={() => setModalShow(true)}>close</button>
           </Dropdown.Item>
           <Dropdown.Item>
             <button onClick={() => setRemoveShow(true)}>Delete</button>
@@ -416,7 +411,7 @@ const DisableLoginModal = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          <h3>Offline Asset</h3>
+          <h3>Close Asset</h3>
         </Modal.Title>
       </Modal.Header>
 
@@ -424,7 +419,7 @@ const DisableLoginModal = (props) => {
         <div>
           <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
             <div className="col-12">
-              <label className="all_page_my_label">Offline Asset</label>
+              <label className="all_page_my_label">Close Asset</label>
 
               <div>
                 <label className="switch">

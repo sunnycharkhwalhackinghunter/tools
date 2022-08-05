@@ -23,7 +23,19 @@ export const ProjectsFilter = () => {
     <>
       <div className=" mb-4">
         <div className="row g-3">
-          <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10  d-flex">
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>From</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-12 col-12 ">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>to</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-6 col-xl-6 col-lg-3 col-md-6 col-sm-9 col-9 ApprovalDetailsPage_search_input justify-content-start">
             <div className="ApprovalDetailsPage_date_picker">
               <div className="ApprovalDetailsPage_search_input_iner_div">
                 <span>
@@ -37,7 +49,7 @@ export const ProjectsFilter = () => {
               </div>
             </div>
           </div>
-          <div className="col-2">
+          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-3 col-3 RightFilters_top_div ">
             <RightFilters
               title="Filter"
               btn1="Reset"
@@ -229,184 +241,309 @@ export const ProjectsRightFiltersData = () => {
   );
 };
 const ProjectsCard = () => {
+  const App = (props) => {
+    return (
+      <>
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="projects_card_div">
+            <h3>{props.ProjectName}</h3>
+            <p>
+              Last Update:<span>{props.time}</span>
+            </p>
+            <div className="projects_card_status">{props.status}</div>
+            <ul className="projects_card_members">
+              <li>
+                <p>Members:</p>
+              </li>
+              <li className=" mx-3  d-flex align-items-center">
+                {props.arr.cat1.map((val, i) => {
+                  return (
+                    <ProfileIcon
+                      key={i}
+                      className="projects_card_members_icon"
+                      backgroundImage={val.img}
+                    />
+                  );
+                })}
+                <div className="projects_card_members_more_icon">
+                  <span>+{props.more}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const Data = [
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "5",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "5",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "5",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "5",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "5",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+    {
+      ProjectName: "ABC Project Custom...",
+      time: "4 hr Ago",
+      status: "In Progress",
+      more: "10",
+
+      cat1: [
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+        {
+          img: ProfilPhoto2,
+        },
+      ],
+    },
+  ];
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="projects_card_div">
-            <h3>ABC Project Custom...</h3>
-            <p>
-              Last Update:<span>4 hr Ago</span>
-            </p>
-            <div className="projects_card_status">In Progress</div>
-            <ul className="projects_card_members">
-              <li>
-                <p>Members:</p>
-              </li>
-              <li className=" mx-3  d-flex align-items-center">
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <div className="projects_card_members_more_icon">
-                  <span>+1</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="projects_card_div">
-            <h3>ABC Project Custom...</h3>
-            <p>
-              Last Update:<span>4 hr Ago</span>
-            </p>
-            <div className="projects_card_status">In Progress</div>
-            <ul className="projects_card_members">
-              <li>
-                <p>Members:</p>
-              </li>
-              <li className=" mx-3  d-flex align-items-center">
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <div className="projects_card_members_more_icon">
-                  <span>+1</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="projects_card_div">
-            <h3>ABC Project Custom...</h3>
-            <p>
-              Last Update:<span>4 hr Ago</span>
-            </p>
-            <div className="projects_card_status">In Progress</div>
-            <ul className="projects_card_members">
-              <li>
-                <p>Members:</p>
-              </li>
-              <li className=" mx-3  d-flex align-items-center">
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <div className="projects_card_members_more_icon">
-                  <span>+1</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="projects_card_div">
-            <h3>ABC Project Custom...</h3>
-            <p>
-              Last Update:<span>4 hr Ago</span>
-            </p>
-            <div className="projects_card_status">In Progress</div>
-            <ul className="projects_card_members">
-              <li>
-                <p>Members:</p>
-              </li>
-              <li className=" mx-3  d-flex align-items-center">
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <div className="projects_card_members_more_icon">
-                  <span>+1</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="projects_card_div">
-            <h3>ABC Project Custom...</h3>
-            <p>
-              Last Update:<span>4 hr Ago</span>
-            </p>
-            <div className="projects_card_status">In Progress</div>
-            <ul className="projects_card_members">
-              <li>
-                <p>Members:</p>
-              </li>
-              <li className=" mx-3  d-flex align-items-center">
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <ProfileIcon
-                  className="projects_card_members_icon"
-                  backgroundImage={ProfilPhoto2}
-                />
-                <div className="projects_card_members_more_icon">
-                  <span>+1</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {Data.map((val, i) => {
+          return (
+            <App
+              key={i}
+              ProjectName={val.ProjectName}
+              time={val.time}
+              status={val.status}
+              more={val.more}
+              arr={val}
+            />
+          );
+        })}
       </div>
     </>
   );

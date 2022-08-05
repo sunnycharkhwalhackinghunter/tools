@@ -1,10 +1,10 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
 import Select from "react-select";
-import { BiSearch, BiDotsVerticalRounded } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { Nav, Tab } from "react-bootstrap";
+import { FiEdit } from "react-icons/fi";
 export const TotalOpenings = () => {
   return (
     <>
@@ -90,10 +90,6 @@ const TotalOpeningsTop = () => {
 };
 const JobCards = () => {
   const JobCardsApp = (props) => {
-    const [JobCardsLists, setJobCardsLists] = useState(false);
-    const JobCardsListsOpen = () => {
-      setJobCardsLists(!JobCardsLists);
-    };
     return (
       <>
         <div className="col-xx-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
@@ -114,13 +110,12 @@ const JobCards = () => {
                 </NavLink>
               </div>
               <div className="col-1">
-                <div className="JobCards_main_div_menu">
-                  <BiDotsVerticalRounded
-                    style={{ color: props.color }}
-                    onClick={JobCardsListsOpen}
-                  />
-                  {JobCardsLists ? <JobCardsList /> : null}
-                </div>
+                <NavLink
+                  className="JobCards_main_div_menu"
+                  to="/hr/create_new_jobs"
+                >
+                  <FiEdit />
+                </NavLink>
               </div>
             </div>
           </div>
@@ -297,10 +292,6 @@ const JobCards = () => {
 };
 const CloseJobs = () => {
   const JobCardsApp = (props) => {
-    const [JobCardsLists, setJobCardsLists] = useState(false);
-    const JobCardsListsOpen = () => {
-      setJobCardsLists(!JobCardsLists);
-    };
     return (
       <>
         <div className="col-xx-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
@@ -321,13 +312,12 @@ const CloseJobs = () => {
                 </NavLink>
               </div>
               <div className="col-1">
-                <div className="JobCards_main_div_menu">
-                  <BiDotsVerticalRounded
-                    style={{ color: props.color }}
-                    onClick={JobCardsListsOpen}
-                  />
-                  {JobCardsLists ? <JobCardsList /> : null}
-                </div>
+                <NavLink
+                  className="JobCards_main_div_menu"
+                  to="/hr/create_new_jobs"
+                >
+                  <FiEdit />
+                </NavLink>
               </div>
             </div>
           </div>
@@ -490,20 +480,6 @@ const CloseJobs = () => {
             />
           );
         })}
-      </div>
-    </>
-  );
-};
-const JobCardsList = () => {
-  return (
-    <>
-      <div className="JobCards_main_list_div">
-        <ul>
-          <NavLink to="/hr/create_new_jobs">
-            <li>elit</li>
-          </NavLink>
-          <li>close</li>
-        </ul>
       </div>
     </>
   );

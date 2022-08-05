@@ -1,14 +1,17 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
-import { BiSearch, BiDotsVerticalRounded } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { BsArrowLeft } from "react-icons/bs";
 import { AboutProfileInput } from "../../Profile/components/AboutProfile";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import React from "react";
+import Select from "react-select";
 import { Editor } from "react-draft-wysiwyg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { SketchPicker } from "react-color";
 import useClickOutside from "../../../../CustomHooks/ClickOutside";
+import { FiEdit } from "react-icons/fi";
+
 export const CreateNewJobs = () => {
   return (
     <>
@@ -67,6 +70,10 @@ const CreateNewJobsForm = () => {
   let domNode = useClickOutside(() => {
     setColorPicker(false);
   });
+  const options = [
+    { value: " Developers", label: " Developers" },
+    { value: "Graphic Designer", label: "Graphic Designer" },
+  ];
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
@@ -99,13 +106,15 @@ const CreateNewJobsForm = () => {
             placeholder="Internship"
           />
         </div>
-        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-          <AboutProfileInput
-            label="Department"
-            type="text"
-            className="form-control"
-            placeholder="Marketing"
-          />
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+          <label className="all_page_my_label">Departments</label>
+          <div className="row">
+            <div className="col-12 dep_all">
+              <div className="dashboard_top_week_Select">
+                <Select options={options} placeholder="Departments" />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
           <AboutProfileInput
@@ -117,7 +126,7 @@ const CreateNewJobsForm = () => {
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
           <AboutProfileInput
-            label="from"
+            label="start date"
             type="date"
             className="form-control"
             placeholder="0-1 Year"
@@ -125,7 +134,7 @@ const CreateNewJobsForm = () => {
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
           <AboutProfileInput
-            label="to"
+            label="end date"
             type="date"
             className="form-control"
             placeholder="0-1 Year"
@@ -297,10 +306,6 @@ const CreateNewJobsList = () => {
 
 const OpenJobs = () => {
   const JobCardsApp = (props) => {
-    const [JobCardsLists, setJobCardsLists] = useState(false);
-    const JobCardsListsOpen = () => {
-      setJobCardsLists(!JobCardsLists);
-    };
     return (
       <>
         <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
@@ -321,13 +326,12 @@ const OpenJobs = () => {
                 </NavLink>
               </div>
               <div className="col-1">
-                <div className="JobCards_main_div_menu">
-                  <BiDotsVerticalRounded
-                    style={{ color: props.color }}
-                    onClick={JobCardsListsOpen}
-                  />
-                  {JobCardsLists ? <JobCardsList /> : null}
-                </div>
+                <NavLink
+                  className="JobCards_main_div_menu"
+                  to="/hr/create_new_jobs"
+                >
+                  <FiEdit />
+                </NavLink>
               </div>
             </div>
           </div>
@@ -425,20 +429,6 @@ const OpenJobs = () => {
             />
           );
         })}
-      </div>
-    </>
-  );
-};
-const JobCardsList = () => {
-  return (
-    <>
-      <div className="JobCards_main_list_div">
-        <ul>
-          <NavLink to="/hr/create_new_jobs">
-            <li>elit</li>
-          </NavLink>
-          <li>close</li>
-        </ul>
       </div>
     </>
   );

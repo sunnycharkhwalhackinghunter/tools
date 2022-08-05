@@ -4665,6 +4665,7 @@ a {
   cursor: pointer;
   svg {
     color: #0043ce;
+    font-size: 15px;
   }
 }
 .JobCards_main_list_div {
@@ -4888,6 +4889,9 @@ a {
       right: 10px;
       font-size: 20px;
       cursor: pointer;
+      svg {
+        font-size: 16px;
+      }
     }
   }
   .nav-pills .nav-link.active,
@@ -4895,6 +4899,9 @@ a {
     background-color: #0043ce;
     .JobCards_main_div_round {
       background-color: #fff;
+    }
+    svg {
+      color: white;
     }
   }
 }
@@ -5868,6 +5875,13 @@ a {
   position: relative;
   span {
     position: absolute;
+  }
+}
+.RightFilters_top_div {
+  display: flex;
+  align-items: flex-end;
+  div {
+    width: 100%;
   }
 }
 // project list end

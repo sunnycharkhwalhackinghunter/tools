@@ -1,6 +1,6 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft } from "react-icons/bs";
-import { BiSearch, BiDotsVerticalRounded, BiLink } from "react-icons/bi";
+import { BiSearch, BiLink } from "react-icons/bi";
 import Select from "react-select";
 import { Nav, Tab } from "react-bootstrap";
 import React from "react";
@@ -14,6 +14,8 @@ import Schedule from "../../../../../../pics/edit.png";
 import PdfIcon from "../../../../../../pics/test.pdf";
 import ReactStars from "react-rating-stars-component";
 import { ApplicationBtn } from "./DesignApplication";
+import { FiEdit } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 export const Interviews = () => {
   return (
     <>
@@ -109,9 +111,12 @@ const CompletedSlider = () => {
                       <p>12 Candidates</p>
                     </li>
                     <li>
-                      <div className="JobsType_card_menu">
-                        <BiDotsVerticalRounded />
-                      </div>
+                      <NavLink
+                        className="JobsType_card_menu"
+                        to="/hr/create_new_jobs"
+                      >
+                        <FiEdit />
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
@@ -283,11 +288,7 @@ const MySlider = () => {
   );
 };
 const JobCards = (props) => {
-  const [JobCardsLists, setJobCardsLists] = useState(false);
-  const JobCardsListsOpen = () => {
-    setJobCardsLists(!JobCardsLists);
-  };
-
+  const navigate = useNavigate();
   return (
     <>
       <div className="JobCards_main_div">
@@ -300,9 +301,11 @@ const JobCards = (props) => {
             <p>{props.candidatesNumber}</p>
           </div>
           <div className="col-1">
-            <div className="JobCards_main_div_menu">
-              <BiDotsVerticalRounded onClick={JobCardsListsOpen} />
-              {JobCardsLists ? <JobCardsList /> : null}
+            <div
+              onClick={() => navigate("/hr/create_new_jobs")}
+              className="JobCards_main_div_menu"
+            >
+              <FiEdit />
             </div>
           </div>
         </div>
@@ -310,26 +313,10 @@ const JobCards = (props) => {
     </>
   );
 };
-const JobCardsList = () => {
-  return (
-    <>
-      <div className="JobCards_main_list_div">
-        <ul>
-          <NavLink to="/hr/create_new_jobs">
-            <li>edit</li>
-          </NavLink>
-          <li>close</li>
-        </ul>
-      </div>
-    </>
-  );
-};
+
 const JobsType = () => {
   const JobsTypeApp = (props) => {
-    const [JobCardsLists, setJobCardsLists] = useState(false);
-    const JobCardsListsOpen = () => {
-      setJobCardsLists(!JobCardsLists);
-    };
+    const navigate = useNavigate();
     return (
       <>
         <Nav.Item>
@@ -344,9 +331,11 @@ const JobsType = () => {
                   <p>{props.candidatesNumber}</p>
                 </li>
                 <li>
-                  <div className="JobsType_card_menu">
-                    <BiDotsVerticalRounded onClick={JobCardsListsOpen} />
-                    {JobCardsLists ? <JobCardsList /> : null}
+                  <div
+                    onClick={() => navigate("/hr/create_new_jobs")}
+                    className="JobCards_main_div_menu"
+                  >
+                    <FiEdit />
                   </div>
                 </li>
               </ul>

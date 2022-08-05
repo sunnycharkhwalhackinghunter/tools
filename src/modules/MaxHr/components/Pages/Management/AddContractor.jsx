@@ -144,12 +144,14 @@ const AddAssetForm = () => {
           </div>
         </div>
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-          <AboutProfileInput
-            label="Pay/project"
-            type="number"
-            className="form-control"
-            placeholder="2500"
-          />
+          <div className="ApprovalDetailsPage_date_picker">
+            <label>Pay/project</label>
+            <select className="form-select">
+              <option>1200</option>
+              <option>1500</option>
+              <option>1600</option>
+            </select>
+          </div>
         </div>
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
           <AboutProfileInput
@@ -185,7 +187,7 @@ const AddAssetForm = () => {
             <div>
               <div>
                 <NavLink to={-1}>
-                  <button className="IssueAssets_btn3 mx-1">Cancel</button>
+                  <button className="IssueAssets_btn3 mx-1">back</button>
                 </NavLink>
               </div>
             </div>

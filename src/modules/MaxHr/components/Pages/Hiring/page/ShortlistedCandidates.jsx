@@ -1,11 +1,13 @@
 import TopPageTitle from "../../../../../common/components/topPageTitle/Index";
 import { BsArrowLeft, BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
-import { BiSearch, BiDotsVerticalRounded } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import Select from "react-select";
 import { Nav, Tab } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FiEdit } from "react-icons/fi";
+
 export const ShortlistedCandidates = () => {
   return (
     <>
@@ -59,20 +61,6 @@ const NewApplicationTabs = () => {
     <>
       <div className="new_application_tabs_div">
         <NewApplicationSlider />
-      </div>
-    </>
-  );
-};
-const JobCardsList = () => {
-  return (
-    <>
-      <div className="JobCards_main_list_div">
-        <ul>
-          <NavLink to="/hr/create_new_jobs">
-            <li>elit</li>
-          </NavLink>
-          <li>close</li>
-        </ul>
       </div>
     </>
   );
@@ -323,11 +311,6 @@ const NewApplicationSlider = () => {
   );
 };
 const JobCards = (props) => {
-  const [JobCardsLists, setJobCardsLists] = useState(false);
-  const JobCardsListsOpen = () => {
-    setJobCardsLists(!JobCardsLists);
-  };
-
   return (
     <>
       <div className="JobCards_main_div">
@@ -340,10 +323,12 @@ const JobCards = (props) => {
             <p>{props.candidatesNumber}</p>
           </div>
           <div className="col-1">
-            <div className="JobCards_main_div_menu">
-              <BiDotsVerticalRounded onClick={JobCardsListsOpen} />
-              {JobCardsLists ? <JobCardsList /> : null}
-            </div>
+            <NavLink
+              className="JobCards_main_div_menu"
+              to="/hr/create_new_jobs"
+            >
+              <FiEdit />
+            </NavLink>
           </div>
         </div>
       </div>
