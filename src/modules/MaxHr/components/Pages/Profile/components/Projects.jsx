@@ -231,8 +231,8 @@ export const ProjectsRightFiltersData = () => {
 const ProjectsCard = () => {
   return (
     <>
-      <div className="row">
-        <div className="col-3">
+      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
           <div className="projects_card_div">
             <h3>ABC Project Custom...</h3>
             <p>
@@ -243,7 +243,7 @@ const ProjectsCard = () => {
               <li>
                 <p>Members:</p>
               </li>
-              <li className=" mx-3  d-flex">
+              <li className=" mx-3  d-flex align-items-center">
                 <ProfileIcon
                   className="projects_card_members_icon"
                   backgroundImage={ProfilPhoto2}
@@ -260,6 +260,149 @@ const ProjectsCard = () => {
                   className="projects_card_members_icon"
                   backgroundImage={ProfilPhoto2}
                 />
+                <div className="projects_card_members_more_icon">
+                  <span>+1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="projects_card_div">
+            <h3>ABC Project Custom...</h3>
+            <p>
+              Last Update:<span>4 hr Ago</span>
+            </p>
+            <div className="projects_card_status">In Progress</div>
+            <ul className="projects_card_members">
+              <li>
+                <p>Members:</p>
+              </li>
+              <li className=" mx-3  d-flex align-items-center">
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <div className="projects_card_members_more_icon">
+                  <span>+1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="projects_card_div">
+            <h3>ABC Project Custom...</h3>
+            <p>
+              Last Update:<span>4 hr Ago</span>
+            </p>
+            <div className="projects_card_status">In Progress</div>
+            <ul className="projects_card_members">
+              <li>
+                <p>Members:</p>
+              </li>
+              <li className=" mx-3  d-flex align-items-center">
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <div className="projects_card_members_more_icon">
+                  <span>+1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="projects_card_div">
+            <h3>ABC Project Custom...</h3>
+            <p>
+              Last Update:<span>4 hr Ago</span>
+            </p>
+            <div className="projects_card_status">In Progress</div>
+            <ul className="projects_card_members">
+              <li>
+                <p>Members:</p>
+              </li>
+              <li className=" mx-3  d-flex align-items-center">
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <div className="projects_card_members_more_icon">
+                  <span>+1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div className="projects_card_div">
+            <h3>ABC Project Custom...</h3>
+            <p>
+              Last Update:<span>4 hr Ago</span>
+            </p>
+            <div className="projects_card_status">In Progress</div>
+            <ul className="projects_card_members">
+              <li>
+                <p>Members:</p>
+              </li>
+              <li className=" mx-3  d-flex align-items-center">
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <ProfileIcon
+                  className="projects_card_members_icon"
+                  backgroundImage={ProfilPhoto2}
+                />
+                <div className="projects_card_members_more_icon">
+                  <span>+1</span>
+                </div>
               </li>
             </ul>
           </div>

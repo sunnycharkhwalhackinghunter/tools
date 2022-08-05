@@ -5842,6 +5842,7 @@ a {
 }
 .projects_card_members {
   display: flex;
+  align-items: center;
   margin-bottom: 0;
   margin-top: 5px;
 }
@@ -5851,6 +5852,23 @@ a {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: -6px;
+}
+.projects_card_members_more_icon {
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+  span {
+    position: absolute;
+  }
 }
 // project list end
 // footer
