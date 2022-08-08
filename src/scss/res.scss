@@ -16,6 +16,11 @@
   }
 }
 @media (max-width: 576px) {
+  .UploadDocument_select {
+    .dashboard_top_week_Select {
+      width: 100%;
+    }
+  }
   .projact_right_filter_btn_div {
     .UploadDocumentModal_body_btn {
       padding: 5px 40px;
@@ -712,6 +717,10 @@
   }
 }
 @media (min-width: 768px) {
+  .Experience_timline_img {
+    margin-bottom: 10px !important;
+    margin: unset;
+  }
   .projact_right_filter_data {
     height: 24rem;
   }

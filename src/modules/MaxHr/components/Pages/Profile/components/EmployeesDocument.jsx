@@ -2,175 +2,32 @@ import ProfileIcon from "../../../../../common/components/img/Img";
 import PDF from "../../../../../../pics/pdfd.png";
 import DOC from "../../../../../../pics/docsd.jpg";
 import ImagedDoc from "../../../../../../pics/imaged.png";
-import ModalIcon1 from "../../../../../../pics/modal1.png";
-import ModalIcon2 from "../../../../../../pics/modal2.png";
-import ModalIcon3 from "../../../../../../pics/modal3.png";
-import { Nav, Tab } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Modal } from "react-bootstrap";
 import Select from "react-select";
 import React from "react";
-import PdfIcon from "../../../../../../pics/docnew.png";
-import { NavLink } from "react-router-dom";
+import PdfIcon from "../../../../../../pics/test.pdf";
+import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs";
+import Input from "../../../../../common/components/input/Input";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Dropdown from "react-bootstrap/Dropdown";
+import { FiChevronDown } from "react-icons/fi";
 export const EmployeesDocument = () => {
-  const EmployeesDocumentTopNameApp = (props) => {
-    return (
-      <>
-        <Nav.Item>
-          <Nav.Link eventKey={props.eventKey}>{props.eventKeyName}</Nav.Link>
-        </Nav.Item>
-      </>
-    );
-  };
-  const EmployeesDocumentTopNameData = [
-    {
-      eventKey: "1",
-      eventKeyName: "Releaving Letter",
-    },
-    {
-      eventKey: "2",
-      eventKeyName: "Offer Letter",
-    },
-
-    {
-      eventKey: "3",
-      eventKeyName: "NDA",
-    },
-    {
-      eventKey: "4",
-      eventKeyName: "Voter ID Card",
-    },
-    {
-      eventKey: "5",
-      eventKeyName: "Aadhar Card",
-    },
-    {
-      eventKey: "6",
-      eventKeyName: "Bank Pasbook",
-    },
-    {
-      eventKey: "7",
-      eventKeyName: "Passport",
-    },
-    {
-      eventKey: "8",
-      eventKeyName: "6 Months Bank Statement",
-    },
-    {
-      eventKey: "9",
-      eventKeyName: "Signed Copy of NDA",
-    },
-    {
-      eventKey: "10",
-      eventKeyName: "Educational Certificate 01",
-    },
-    {
-      eventKey: "11",
-      eventKeyName: "Achievement Certificate 01",
-    },
-    {
-      eventKey: "13",
-      eventKeyName: "Orginazation Policy",
-    },
-    {
-      eventKey: "12",
-      eventKeyName: "Add Others",
-    },
-  ];
-  const EmployeesDocumentTabPan = (props) => {
-    return (
-      <>
-        <Tab.Pane eventKey={props.eventKey}>{props.data}</Tab.Pane>
-      </>
-    );
-  };
-  const EmployeesDocumentTabPanData = [
-    {
-      eventKey: "1",
-      data: <UploadDocument />,
-    },
-    {
-      eventKey: "2",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "3",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "4",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "5",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "6",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "7",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "8",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "9",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "10",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "11",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "12",
-      data: <DocumentDetailsList />,
-    },
-    {
-      eventKey: "13",
-      data: <DocumentDetailsList />,
-    },
-  ];
   return (
     <>
-      <div className="profile_iner_cont">
-        <div className="EmployeesDocument_top_title">
-          <h3>documents</h3>
+      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        <div className="col-12">
+          <div className="profile_iner_cont">
+            <div className="EmployeesDocument_top_title">
+              <h3>documents</h3>
+            </div>
+            <UploadDocument />
+          </div>
         </div>
-        <div className="EmployeesDocument_list_top_div">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="1">
-            <Nav variant="pills" className="flex">
-              {EmployeesDocumentTopNameData.map((val, i) => {
-                return (
-                  <EmployeesDocumentTopNameApp
-                    key={i}
-                    eventKey={val.eventKey}
-                    eventKeyName={val.eventKeyName}
-                  />
-                );
-              })}
-            </Nav>
-
-            <Tab.Content>
-              {EmployeesDocumentTabPanData.map((val, i) => {
-                return (
-                  <EmployeesDocumentTabPan
-                    key={i}
-                    eventKey={val.eventKey}
-                    data={val.data}
-                  />
-                );
-              })}
-            </Tab.Content>
-          </Tab.Container>
+        <div className="col-12">
+          <UploadDocumentList />
         </div>
       </div>
     </>
@@ -240,14 +97,12 @@ export const EmployeesTabPanDataIner = () => {
 };
 const UploadDocument = () => {
   const options = [
-    { value: "today", label: "today" },
-    { value: "tomorrow", label: "tomorrow" },
-    { value: "last week", label: "last week" },
+    { value: "NDA", label: "NDA" },
+    { value: "aadhaar card", label: "aadhaar card" },
   ];
   return (
     <>
       <div className="EmployeesDocument_top_title mt-3">
-        <h3>Upload Document</h3>
         <div className="UploadDocument_select">
           <div className="dashboard_top_week_Select">
             <label>Choose Document Type</label>
@@ -309,158 +164,25 @@ const UploadDocumentModal = (props) => {
     </Modal>
   );
 };
-export const DocumentDetailsList = () => {
-  const changNameUser = (PdfIcon) => {
-    window.open(PdfIcon, "__blank");
-  };
-  const UserDetailsListData = [
+const UploadDocumentList = (props) => {
+  const AssetListData = [
     {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon1,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.png",
-      type: "image",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon2,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.docx",
-      type: "doc",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
-    },
-    {
-      ListIcon: ModalIcon3,
-      ListName: "Screenshot 2022-05-26 at 8.46.54 AM.pdf",
-      type: "pdf",
-      Owner: "sunny charkhwal",
-      modified: "28 Apr 2022",
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
     },
   ];
-  const UserDetailsListCard = (props) => {
+  const AssetListApp = (props) => {
     return (
       <>
-        <tr>
-          <td className="UserDetailsList_icon_top_div">
-            <div className=" d-flex align-items-center">
-              <ProfileIcon
-                className="UserDetailsList_icon"
-                backgroundImage={props.ListIcon}
-              />
-              <span onClick={() => changNameUser(PdfIcon)}>
-                {props.ListName}
-              </span>
-            </div>
-          </td>
-          <td>{props.type}</td>
+        <tr className="ApprovalDetailsPage_thead_td">
+          <td>{props.DocumentName}</td>
           <td>{props.Owner}</td>
-          <td>{props.modified}</td>
+          <td>{props.LastUpdated}</td>
           <td>
-            <NavLink to="/">download</NavLink>
+            <div className="contractor_management_list_btn">
+              <ActionBtn />
+            </div>
           </td>
         </tr>
       </>
@@ -468,33 +190,202 @@ export const DocumentDetailsList = () => {
   };
   return (
     <>
-      <div className=" px-3">
-        <table className="table text-capitalize mt-4 table_top_div">
-          <thead>
-            <tr className="UserDetails_list_th">
-              <th scope="col">name</th>
-              <th scope="col">Type</th>
-              <th scope="col">Owner</th>
-              <th scope="col">Last modified</th>
-              <th scope="col">action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {UserDetailsListData.map((val, i) => {
-              return (
-                <UserDetailsListCard
-                  key={i}
-                  ListIcon={val.ListIcon}
-                  ListName={val.ListName}
-                  type={val.type}
-                  Owner={val.Owner}
-                  modified={val.modified}
-                />
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="custom_container_iner">
+        <div className="EmployeesDocument_top_title">
+          <h3>Uploaded Document</h3>
+        </div>
+        <div>
+          <div className="row g-3">
+            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+              <div className="ApprovalDetailsPage_date_picker">
+                <label>From</label>
+                <Input type="date" className="form-control" />
+              </div>
+            </div>
+            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+              <div className="ApprovalDetailsPage_date_picker">
+                <label>to</label>
+                <Input type="date" className="form-control" />
+              </div>
+            </div>
+
+            <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+              <div className="ApprovalDetailsPage_date_picker">
+                <div className="ApprovalDetailsPage_search_input_iner_div">
+                  <span>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </span>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="ApprovalDetailsPage_top_div">
+          <table className="table table-hover Contractor_Management_main_div text-center text-capitalize">
+            <thead>
+              <tr className="ApprovalDetailsPage_thead_tr">
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Document Name
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Owner
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Last Updated
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {AssetListData.map((val, i) => {
+                return (
+                  <AssetListApp
+                    key={i}
+                    DocumentName={val.DocumentName}
+                    Owner={val.Owner}
+                    LastUpdated={val.LastUpdated}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
+  );
+};
+export const ActionBtn = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  const [removeShow, setRemoveShow] = React.useState(false);
+  const changNameUser = (PdfIcon) => {
+    window.open(PdfIcon, "__blank");
+  };
+  return (
+    <>
+      <Dropdown>
+        <Dropdown.Toggle id="dropdown-basic">
+          Action
+          <span>
+            <FiChevronDown />
+          </span>
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item>
+            <button onClick={() => changNameUser(PdfIcon)}>View</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setModalShow(true)}>Update</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button>Download</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button onClick={() => setRemoveShow(true)}>Delete</button>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <UpdateModal show={modalShow} onHide={() => setModalShow(false)} />
+      <RemoveModal show={removeShow} onHide={() => setRemoveShow(false)} />
+    </>
+  );
+};
+const UpdateModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="contractor_management_Modsal_title"
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <h3>Update Document</h3>
+        </Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <div>
+          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-12">
+              <div className="UpdateModal_inner">
+                <UploadDocumentIner />
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="UploadDocumentModal_body_btn_div d-flex justify-content-center">
+                <button
+                  className="UploadDocumentModal_body_btn"
+                  onClick={props.onHide}
+                >
+                  Close
+                </button>
+                <button
+                  className="UploadDocumentModal_body_btn2"
+                  onClick={props.onHide}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+};
+const RemoveModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="UploadDocumentModal_body">
+        <div className="UploadDocumentModal_body_close_btn">
+          <span onClick={props.onHide}>
+            <AiOutlineClose />
+          </span>
+        </div>
+        <p className="UploadDocumentModal_body_title">Are you sure!</p>
+        <p className="UploadDocumentModal_body_text">
+          Once deleted it can not be reverted.
+        </p>
+        <div className="UploadDocumentModal_body_btn_div">
+          <button
+            className="UploadDocumentModal_body_btn"
+            onClick={props.onHide}
+          >
+            Close
+          </button>
+          <button className="UploadDocumentModal_body_btn2">Delete</button>
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 };
