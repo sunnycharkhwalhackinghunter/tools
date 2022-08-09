@@ -6,7 +6,7 @@ import { Announcement } from "./components/Announcement";
 import { AboutProfile } from "./components/AboutProfile";
 import { EmployeesDocument } from "./components/EmployeesDocument";
 import { Experience, PreviousExperiences } from "./components/Experience";
-import { IssueAssets } from "./components/IssueAssets";
+import { IssueAssets, ReturnIssueAssets } from "./components/IssueAssets";
 import { SalaryStracture } from "./components/SalaryStracture";
 import { AnnouncementFilter } from "../Announcement/Index";
 import { Projects } from "./components/Projects";
@@ -20,32 +20,6 @@ export const Tabs = () => {
   );
 };
 const InerNewTab = () => {
-  const IssueAssetsAppData = [
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-  ];
   return (
     <>
       <div className="profile_tab_div">
@@ -104,27 +78,9 @@ const InerNewTab = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="Assets">
               <div className="m_t"></div>
-              <IssueAssets
-                data={IssueAssetsAppData}
-                tableTopTitle="Issued Assets"
-                tableTitle="Assets Name"
-                tableTitle2="Assets Number"
-                tableTitle3="Remarks"
-                tableTitle4="Issue Date"
-                tableTitle5="Expected Return Date"
-                tableTitle6="Actual Return Date"
-              />
+              <IssueAssets />
               <div className="m_t"></div>
-              <IssueAssets
-                data={IssueAssetsAppData}
-                tableTopTitle="Returned Assets"
-                tableTitle="Assets Name"
-                tableTitle2="Assets Number"
-                tableTitle3="Remarks"
-                tableTitle4="Issue Date"
-                tableTitle5="Expected Return Date"
-                tableTitle6="Actual Return Date"
-              />
+              <ReturnIssueAssets />
             </Tab.Pane>
             <Tab.Pane eventKey="Board">
               <div className="m_t"></div>

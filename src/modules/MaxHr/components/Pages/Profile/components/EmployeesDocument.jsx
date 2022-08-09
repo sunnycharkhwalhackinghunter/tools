@@ -170,13 +170,110 @@ const UploadDocumentList = (props) => {
       DocumentName: "Dummy Documents 1",
       Owner: "Roushan Kumar",
       LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
+    },
+    {
+      DocumentName: "Dummy Documents 1",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: PDF,
+    },
+    {
+      DocumentName: "Dummy Documents 2",
+      Owner: "Roushan Kumar",
+      LastUpdated: "Today",
+      icon: DOC,
     },
   ];
   const AssetListApp = (props) => {
     return (
       <>
         <tr className="ApprovalDetailsPage_thead_td">
-          <td>{props.DocumentName}</td>
+          <td className="upload_document_list_img_top_div">
+            <ProfileIcon
+              backgroundImage={props.icon}
+              className="upload_document_list_img"
+            />
+            {props.DocumentName}
+          </td>
           <td>{props.Owner}</td>
           <td>{props.LastUpdated}</td>
           <td>
@@ -226,10 +323,10 @@ const UploadDocumentList = (props) => {
           </div>
         </div>
         <div className="ApprovalDetailsPage_top_div">
-          <table className="table table-hover Contractor_Management_main_div text-center text-capitalize">
+          <table className="table table-hover upload_document_list_main_div text-center text-capitalize">
             <thead>
-              <tr className="ApprovalDetailsPage_thead_tr">
-                <th scope="col">
+              <tr className="ApprovalDetailsPage_thead_tr ">
+                <th scope="col" className="text-start">
                   <span className="new_application_table_filter_div">
                     Document Name
                     <span className="new_application_table_filter">
@@ -267,6 +364,7 @@ const UploadDocumentList = (props) => {
                     DocumentName={val.DocumentName}
                     Owner={val.Owner}
                     LastUpdated={val.LastUpdated}
+                    icon={val.icon}
                   />
                 );
               })}

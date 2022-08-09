@@ -114,6 +114,11 @@ ul {
   font-size: 25px;
   color: white;
 }
+.upload_document_list_main_div {
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 .profile_img {
   @include bg_img;
   height: 2.5rem;
@@ -2524,6 +2529,18 @@ a {
     width: 100% !important;
   }
 }
+.upload_document_list_img_top_div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.upload_document_list_img {
+  @include bg_img;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 10px;
+  border-radius: 4px;
+}
 .UploadDocument_select {
   display: flex;
   align-items: center;
@@ -2937,6 +2954,8 @@ a {
   white-space: nowrap;
   thead {
     tr {
+      background-color: $c2;
+      color: white;
       th {
         font-weight: 600;
         font-size: 12px;

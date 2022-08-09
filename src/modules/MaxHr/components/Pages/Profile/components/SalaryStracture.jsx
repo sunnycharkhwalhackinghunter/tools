@@ -1,102 +1,105 @@
-export const SalaryStracture = () => {
+import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
+
+export const SalaryStracture = (props) => {
+  const IssueAssetsApp = (props) => {
+    return (
+      <>
+        <tr>
+          <td>{props.Salary}</td>
+          <td>{props.Amount}</td>
+          <td>{props.Fixed}</td>
+          <td>{props.Taxable}</td>
+        </tr>
+      </>
+    );
+  };
+  const IssueAssetsAppData = [
+    {
+      Salary: "Basic Salary",
+      Amount: "112%",
+      Fixed: "Percentage",
+      Taxable: "Yes",
+    },
+    {
+      Salary: "HRA",
+      Amount: "112%",
+      Fixed: "Percentage",
+      Taxable: "Yes",
+    },
+    {
+      Salary: "Special Allowance",
+      Amount: "112%",
+      Fixed: "Percentage",
+      Taxable: "Fixed",
+    },
+    {
+      Salary: "LTA",
+      Amount: "112%",
+      Fixed: "Percentage",
+      Taxable: "Yes",
+    },
+  ];
+
   return (
     <>
-      <table className="table SalaryStracture_top_tabel_top_div1 mt-5">
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-          </tr>
-          <tr>
-            <td>Designation</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-          </tr>
-          <tr>
-            <td>Location</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-          </tr>
-          <tr>
-            <td>Date Of Joining</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-            <td>65,245.00</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="SalaryStracture_top_tabel_main_title">
-        <h3>Salary Break-up</h3>
-      </div>
-      <div>
-        <div className="row">
-          <div className="col-6">
-            <div className="SalaryStracture_bottom_left_title">
-              <p>Cost to Company</p>
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="SalaryStracture_bottom_left_title2">
-              <p>21,00,000.00</p>
-            </div>
-          </div>
+      <div className="profile_iner_cont">
+        <div>
+          <table className="table text-center IssueAssets_top_div">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Salary Component
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    %age of CTC or Amount
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Percentage or Fixed
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span className="new_application_table_filter_div">
+                    Taxable
+                    <span className="new_application_table_filter">
+                      <BsCaretUpFill />
+                      <BsCaretDownFill />
+                    </span>
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {IssueAssetsAppData.map((val, i) => {
+                return (
+                  <IssueAssetsApp
+                    key={i}
+                    Salary={val.Salary}
+                    Amount={val.Amount}
+                    Fixed={val.Fixed}
+                    Taxable={val.Taxable}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-        <table className="table SalaryStracture_top_tabel_top_div">
-          <tbody>
-            <tr>
-              <td>Component</td>
-              <td>Per Annum</td>
-              <td>Per Month</td>
-              <td>Taxable/Non Taxable</td>
-            </tr>
-            <tr>
-              <td>Basic</td>
-              <td>4,45,080.00</td>
-              <td>65,080.00</td>
-              <td>Tax Tax</td>
-            </tr>
-            <tr>
-              <td>Basic</td>
-              <td>4,45,080.00</td>
-              <td>65,080.00</td>
-              <td>Tax Tax</td>
-            </tr>
-            <tr>
-              <td>Basic</td>
-              <td>4,45,080.00</td>
-              <td>65,080.00</td>
-              <td>Tax Tax</td>
-            </tr>
-            <tr>
-              <td>Basic</td>
-              <td>4,45,080.00</td>
-              <td>65,080.00</td>
-              <td>Tax Tax</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div className="SalaryStracture_top_tabel_top_div_bottom">
-          <div className="row">
-            <div className="col-6">
-              <div className="SalaryStracture_bottom_left_title">
-                <p>Net In-hand Salary</p>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="SalaryStracture_bottom_left_title2">
-                <p>65,245.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="IssueAssets_btn_bottom_div">
-        <button className="IssueAssets_btn">Download</button>
       </div>
     </>
   );

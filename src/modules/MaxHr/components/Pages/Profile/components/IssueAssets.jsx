@@ -1,6 +1,11 @@
 import { AboutProfileInput } from "./AboutProfile";
 import SwitchInput from "../../../../../common/components/input/Input";
 import { NavLink } from "react-router-dom";
+import Select from "react-select";
+import Input from "../../../../../common/components/input/Input";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 export const IssueAssets = (props) => {
   const IssueAssetsApp = (props) => {
     return (
@@ -8,44 +13,107 @@ export const IssueAssets = (props) => {
         <tr>
           <td>{props.AssetsName}</td>
           <td>{props.AssetsNumber}</td>
-          <td>{props.Remarks}</td>
           <td>{props.IssueDate}</td>
-          <td>{props.ExpectedReturnDate}</td>
-          <td>{props.ActualReturnDate}</td>
+          <td>{props.Remarks}</td>
         </tr>
       </>
     );
   };
-
+  const IssueAssetsAppData = [
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ];
+  const options = [
+    { value: " Laptop", label: " Laptop" },
+    { value: "mouse", label: " mouse" },
+  ];
   return (
     <>
       <div className="profile_iner_cont">
         <div className="EmployeesDocument_top_title">
-          <h3>{props.tableTopTitle}</h3>
+          <h3>Issued Assets</h3>
+        </div>
+        <div className="row g-3">
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>From</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>to</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
+            <div className="dashboard_top_week_Select">
+              <Select options={options} placeholder="Assets types" />
+            </div>
+          </div>
+
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+            <div className="ApprovalDetailsPage_date_picker">
+              <div className="ApprovalDetailsPage_search_input_iner_div">
+                <span>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </span>
+                <Input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <table className="table text-center IssueAssets_top_div">
             <thead>
               <tr>
-                <th scope="col">{props.tableTitle}</th>
-                <th scope="col">{props.tableTitle2}</th>
-                <th scope="col">{props.tableTitle3}</th>
-                <th scope="col">{props.tableTitle4}</th>
-                <th scope="col">{props.tableTitle5}</th>
-                <th scope="col">{props.tableTitle6}</th>
+                <th scope="col">Assets Name</th>
+                <th scope="col">Assets Number</th>
+                <th scope="col">Issue Date</th>
+                <th scope="col">Remarks if any</th>
               </tr>
             </thead>
             <tbody>
-              {props.data.map((val, i) => {
+              {IssueAssetsAppData.map((val, i) => {
                 return (
                   <IssueAssetsApp
                     key={i}
                     AssetsName={val.AssetsName}
                     AssetsNumber={val.AssetsNumber}
-                    Remarks={val.Remarks}
                     IssueDate={val.IssueDate}
-                    ExpectedReturnDate={val.ExpectedReturnDate}
-                    ActualReturnDate={val.ActualReturnDate}
+                    Remarks={val.Remarks}
                   />
                 );
               })}
@@ -56,7 +124,139 @@ export const IssueAssets = (props) => {
     </>
   );
 };
+export const ReturnIssueAssets = (props) => {
+  const IssueAssetsApp = (props) => {
+    return (
+      <>
+        <tr>
+          <td>{props.AssetsName}</td>
+          <td>{props.AssetsNumber}</td>
+          <td>{props.IssueDate}</td>
+          <td>{props.ReturnDate}</td>
+          <td>{props.Remarks}</td>
+        </tr>
+      </>
+    );
+  };
+  const IssueAssetsAppData = [
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      AssetsName: "Laptop",
+      AssetsNumber: "12339 cawcs13wr",
+      IssueDate: "09/23/2021",
+      ReturnDate: "09/23/2021",
+      Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ];
+  const options = [
+    { value: " Laptop", label: " Laptop" },
+    { value: "mouse", label: " mouse" },
+  ];
+  return (
+    <>
+      <div className="profile_iner_cont">
+        <div className="EmployeesDocument_top_title">
+          <h3>Returned Assets</h3>
+        </div>
+        <div className="row g-3">
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>From</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+            <div className="ApprovalDetailsPage_date_picker">
+              <label>to</label>
+              <Input type="date" className="form-control" />
+            </div>
+          </div>
+          <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
+            <div className="dashboard_top_week_Select">
+              <Select options={options} placeholder="Assets types" />
+            </div>
+          </div>
 
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+            <div className="ApprovalDetailsPage_date_picker">
+              <div className="ApprovalDetailsPage_search_input_iner_div">
+                <span>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </span>
+                <Input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table className="table text-center IssueAssets_top_div">
+            <thead>
+              <tr>
+                <th scope="col">Assets Name</th>
+                <th scope="col">Assets Number</th>
+                <th scope="col">Issue Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Remarks if any</th>
+              </tr>
+            </thead>
+            <tbody>
+              {IssueAssetsAppData.map((val, i) => {
+                return (
+                  <IssueAssetsApp
+                    key={i}
+                    AssetsName={val.AssetsName}
+                    AssetsNumber={val.AssetsNumber}
+                    IssueDate={val.IssueDate}
+                    Remarks={val.Remarks}
+                    ReturnDate={val.ReturnDate}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </>
+  );
+};
 export const IssueAssetsAppTop = () => {
   return (
     <>
