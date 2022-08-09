@@ -10,6 +10,7 @@ import { IssueAssets, ReturnIssueAssets } from "./components/IssueAssets";
 import { SalaryStracture } from "./components/SalaryStracture";
 import { AnnouncementFilter } from "../Announcement/Index";
 import { Projects } from "./components/Projects";
+import { OffBoard } from "./components/OffBoard";
 export const Tabs = () => {
   return (
     <>
@@ -47,6 +48,9 @@ const InerNewTab = () => {
                     <Nav.Link eventKey="Assets">Assets</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
+                    <Nav.Link eventKey="OffBoard">Off Board</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="Board">Salary Stracture</Nav.Link>
                   </Nav.Item>
                 </Nav>
@@ -55,6 +59,10 @@ const InerNewTab = () => {
           </div>
 
           <Tab.Content>
+            <Tab.Pane eventKey="OffBoard">
+              <div className="m_t"></div>
+              <OffBoard />
+            </Tab.Pane>
             <Tab.Pane eventKey="first">
               <div className="m_t"></div>
               <AnnouncementFilter />

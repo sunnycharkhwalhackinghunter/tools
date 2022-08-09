@@ -42,7 +42,7 @@ export const SalaryStracture = (props) => {
 
   return (
     <>
-      <div className="profile_iner_cont">
+      <div>
         <div>
           <table className="table text-center IssueAssets_top_div">
             <thead>
