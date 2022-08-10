@@ -10,7 +10,7 @@ import { IssueAssets, ReturnIssueAssets } from "./components/IssueAssets";
 import { SalaryStracture } from "./components/SalaryStracture";
 import { AnnouncementFilter } from "../Announcement/Index";
 import { Projects } from "./components/Projects";
-import { OffBoard } from "./components/OffBoard";
+import OffBoard from "./components/OffBoard";
 export const Tabs = () => {
   return (
     <>
