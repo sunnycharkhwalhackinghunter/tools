@@ -68,7 +68,7 @@ import { Hire } from "../components/Pages/Hiring/page/Hire";
 import { Feedback } from "../components/Pages/Hiring/page/Feedback";
 import { BackgroundCheck } from "../components/Pages/Hiring/page/BackgroundCheck";
 import ContractorManagement from "../page/ContractorManagement";
-import AssetManagement from "../page/AssetManagement";
+import { AssetManagement } from "../page/AssetManagement";
 import { AddAsset } from "../components/Pages/AssetManagement/AddAsset";
 import { ActionOnAsset } from "../components/Pages/AssetManagement/ActionOnAsset";
 import { ActionOnContractor } from "../components/Pages/Management/ActionOnContractor";

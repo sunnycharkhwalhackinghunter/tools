@@ -58,8 +58,17 @@ export const IssueAssets = (props) => {
   return (
     <>
       <div className="profile_iner_cont">
-        <div className="EmployeesDocument_top_title">
-          <h3>Issued Assets</h3>
+        <div className="row">
+          <div className="col-6">
+            <div className="EmployeesDocument_top_title">
+              <h3>Issued Assets</h3>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="Issue_Assets_btn_div">
+              <button>download</button>
+            </div>
+          </div>
         </div>
         <div className="row g-3">
           <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
@@ -189,8 +198,17 @@ export const ReturnIssueAssets = (props) => {
   return (
     <>
       <div className="profile_iner_cont">
-        <div className="EmployeesDocument_top_title">
-          <h3>Returned Assets</h3>
+        <div className="row">
+          <div className="col-6">
+            <div className="EmployeesDocument_top_title">
+              <h3>Returned Assets</h3>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="Issue_Assets_btn_div">
+              <button>download</button>
+            </div>
+          </div>
         </div>
         <div className="row g-3">
           <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default () => {
+export const OffBoard = () => {
   const [showOffBoardForm, setShowOffBoardForm] = useState(true);
   const [showOffBoardForm2, setShowOffBoardForm2] = useState(false);
   const [showOffBoardRegForm, setShowOffBoardRegForm] = useState(false);

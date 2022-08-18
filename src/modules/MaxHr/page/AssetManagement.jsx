@@ -1,5 +1,5 @@
 import { AssetIndex } from "../components/Pages/AssetManagement/AssetIndex";
-export default () => (
+export const AssetManagement = () => (
   <div className="custom_container">
     <AssetIndex />
   </div>
