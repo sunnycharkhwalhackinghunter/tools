@@ -6069,3 +6069,28 @@ a {
   padding: 0 !important;
 }
 // OffBoard end
+// Employees’ Management
+
+.list_view_img {
+  @include bg_img;
+  width: 13px;
+  height: 13px;
+  margin: auto;
+}
+.list_grid_top_div {
+  .nav-pills .nav-link {
+    color: black;
+    background-color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 4px;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: black;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 41px,
+      rgba(0, 0, 0, 0.21) 0px 6px 6px;
+  }
+}
+// Employees’ Management end
