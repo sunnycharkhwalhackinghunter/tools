@@ -53,6 +53,9 @@ const InerNewTab = () => {
                   <Nav.Item>
                     <Nav.Link eventKey="Board">Salary Stracture</Nav.Link>
                   </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="MyRole">My Role</Nav.Link>
+                  </Nav.Item>
                 </Nav>
               </div>
             </div>
@@ -62,6 +65,10 @@ const InerNewTab = () => {
             <Tab.Pane eventKey="OffBoard">
               <div className="m_t"></div>
               <OffBoard />
+            </Tab.Pane>
+            <Tab.Pane eventKey="MyRole">
+              <div className="m_t"></div>
+              <h1>My Role</h1>
             </Tab.Pane>
             <Tab.Pane eventKey="first">
               <div className="m_t"></div>

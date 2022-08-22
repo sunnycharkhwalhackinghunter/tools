@@ -141,7 +141,9 @@ const CreateNewJobsForm = () => {
           />
         </div>
         <div className="col-12">
-          <EditorCustomToolbarOption />
+          <div>
+            <EditorCustomToolbarOption />
+          </div>
         </div>
         <div className="col-12">
           <CreateNewJobsList />

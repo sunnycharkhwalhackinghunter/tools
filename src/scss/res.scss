@@ -16,6 +16,15 @@
   }
 }
 @media (max-width: 576px) {
+  .status_top_div_inner {
+    width: 100%;
+  }
+  .status_top_div_inner_data {
+    padding-left: 1rem !important;
+  }
+  .Resignation_form_div {
+    width: 100%;
+  }
   .upload_document_list_main_div {
     display: block;
   }
@@ -717,6 +726,9 @@
   }
 }
 @media (min-width: 768px) {
+  .status_top_div_inner {
+    width: 70%;
+  }
   .Experience_timline_img {
     margin-bottom: 10px !important;
     margin: unset;
@@ -904,6 +916,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .status_top_div_inner {
+    width: 50%;
+  }
   .projact_right_filter_data {
     height: 37rem;
   }
@@ -1121,6 +1136,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .status_top_div_inner {
+    width: 40%;
+  }
   .projact_right_filter_data {
     height: 30rem;
   }
