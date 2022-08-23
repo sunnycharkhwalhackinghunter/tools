@@ -1459,7 +1459,12 @@ a {
 }
 // Who Away emd
 // Announcement
-
+.Announcement_title_top_div {
+  .profil_emp_inter_page_title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
 .Announcement_iner {
   background-color: white;
   border-radius: 10px;
@@ -2944,6 +2949,62 @@ a {
   text-align: center;
   p {
     margin-bottom: 0;
+  }
+}
+.available_assets_number {
+  border: none;
+  border-bottom: 2px solid #666;
+  letter-spacing: 1.2px;
+  color: #666 !important;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  padding: 0.375rem 0.75rem;
+  font-weight: 400;
+}
+.return_asset_list_top_div {
+  margin-top: 2rem;
+  text-transform: capitalize;
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+  thead {
+    background-color: $c2;
+    color: white;
+  }
+  tr th {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  tr td {
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+.return_asset_list_btn {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid $blue;
+  color: $blue;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $blue;
+    color: white;
+    border: 1px solid $blue;
+  }
+}
+.assets_tab_div {
+  .nav-pills .nav-link {
+    border: 1px solid $c2;
+  }
+  .profile_tab_div2 .nav-item {
+    width: 10.5rem;
   }
 }
 .IssueAssets_top_div {

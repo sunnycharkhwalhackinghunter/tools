@@ -16,6 +16,9 @@
   }
 }
 @media (max-width: 576px) {
+  .return_asset_list_top_div {
+    display: block;
+  }
   .status_top_div_inner {
     width: 100%;
   }
@@ -726,6 +729,9 @@
   }
 }
 @media (min-width: 768px) {
+  .return_asset_list_top_div {
+    display: block;
+  }
   .status_top_div_inner {
     width: 70%;
   }
@@ -916,6 +922,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .return_asset_list_top_div {
+    display: inline-table;
+  }
   .status_top_div_inner {
     width: 50%;
   }

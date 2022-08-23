@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 import { EmployeesProfileCard } from "../EmployeesProfileCard";
 import { Nav, Tab } from "react-bootstrap";
@@ -7,63 +6,29 @@ import { UserPost } from "../../../../../../common/components/UserPost/UserPost"
 import ProfileIcon from "../../../../../../common/components/img/Img";
 import EX from "../../../../../../../pics/ex.png";
 import EX2 from "../../../../../../../pics/ex2.png";
-import { EmployeesDocument } from "../EmployeesDocument";
-import {
-  IssueAssets,
-  IssueAssetsAppTop,
-  EmployeesReturnAssets,
-  Disable,
-  OffBoard,
-} from "../IssueAssets";
+import { UploadDocumentList } from "../EmployeesDocument";
+import TopPageTitle from "../../../../../../common/components/topPageTitle/Index";
+import { Projects } from "../Projects";
+
+import { IssueAssetsAppTop } from "../IssueAssets";
 import { AboutInput } from "../AboutProfile";
+import { EmployeesOffBoard } from "../EmployeesOffBoard";
 const Announcement = () => {
-  const IssueAssetsAppData = [
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-    {
-      AssetsName: "Laptop",
-      AssetsNumber: "12339 cawcs13wr",
-      Remarks: "NA",
-      IssueDate: "09/23/2021",
-      ExpectedReturnDate: "NA",
-      ActualReturnDate: "NA",
-    },
-  ];
   return (
     <>
       <div className="custom_container">
         <div className="row">
-          <div className=" col-12">
-            <NavLink to={-1} className="profil_emp_inter_page_title">
-              <BsArrowLeft />
-              Employees Detail
-            </NavLink>
-          </div>
-        </div>
-        <div>
-          <div className="profil_emp_inter_page_tab">
-            <NavLink to={-1} className="profil_emp_inter_page_tab_div">
-              <p>My Profile</p>
-            </NavLink>
-            <div className="profil_emp_inter_page_tab_activ">
-              <p>Employees</p>
+          <div className="col-12">
+            <div className="Announcement_title_top_div">
+              <TopPageTitle
+                Name="Employees Detail"
+                TilelIcon={<BsArrowLeft />}
+                TitleLink={-1}
+              />
             </div>
           </div>
         </div>
+
         <div>
           <EmployeesProfileCard />
           <div className="profile_tab_div">
@@ -79,25 +44,19 @@ const Announcement = () => {
                         <Nav.Link eventKey="1">About</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
+                        <Nav.Link eventKey="Projects">Projects</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
                         <Nav.Link eventKey="2">Experience</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="3">Documents</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="Assets">Issue Assets</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="Return">Return Assets</Nav.Link>
+                        <Nav.Link eventKey="Assets">Assets</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="Board">Off Board</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="Disable">Disable Login</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="Hold">Hold Salary</Nav.Link>
                       </Nav.Item>
                     </Nav>
                   </div>
@@ -105,6 +64,10 @@ const Announcement = () => {
               </div>
 
               <Tab.Content>
+                <Tab.Pane eventKey="Projects">
+                  <div className="m_t"></div>
+                  <Projects />
+                </Tab.Pane>
                 <Tab.Pane eventKey="0">
                   <div className="m_t"></div>
                   <PostUser />
@@ -122,49 +85,15 @@ const Announcement = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="3">
                   <div className="m_t"></div>
-                  <EmployeesDocument />
+                  <UploadDocumentList />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Assets">
                   <div className="m_t"></div>
                   <IssueAssetsAppTop />
-                  <div className="m_t"></div>
-                  <IssueAssets
-                    data={IssueAssetsAppData}
-                    tableTopTitle="Issued Assets"
-                    tableTitle="Assets Name"
-                    tableTitle2="Assets Number"
-                    tableTitle3="Remarks"
-                    tableTitle4="Issue Date"
-                    tableTitle5="Expected Return Date"
-                    tableTitle6="Actual Return Date"
-                  />
-                </Tab.Pane>
-                <Tab.Pane eventKey="Return">
-                  <div className="m_t"></div>
-                  <EmployeesReturnAssets />
-                  <div className="m_t"></div>
-                  <IssueAssets
-                    data={IssueAssetsAppData}
-                    tableTopTitle="Return Assets"
-                    tableTitle="Assets Name"
-                    tableTitle2="Assets Number"
-                    tableTitle3="Remarks"
-                    tableTitle4="Issue Date"
-                    tableTitle5="Expected Return Date"
-                    tableTitle6="Actual Return Date"
-                  />
                 </Tab.Pane>
                 <Tab.Pane eventKey="Board">
                   <div className="m_t"></div>
-                  <OffBoard />
-                </Tab.Pane>
-                <Tab.Pane eventKey="Disable">
-                  <div className="m_t"></div>
-                  <Disable title="Disable Login" />
-                </Tab.Pane>
-                <Tab.Pane eventKey="Hold">
-                  <div className="m_t"></div>
-                  <Disable title="Hold Salary" />
+                  <EmployeesOffBoard />
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
@@ -197,7 +126,7 @@ const Experience = () => {
       <>
         <li>
           <div className="row">
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
+            <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
               <div className="row">
                 <div className="col-2">
                   <ProfileIcon
@@ -213,7 +142,7 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-9 col-sm-12">
+            <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
               <div className="Experience_timline_title_iner">
                 <h4>{props.role}</h4>
               </div>
@@ -272,32 +201,101 @@ const Experience = () => {
   ];
   return (
     <>
-      <div className="profile_iner_cont">
-        <div className="row">
-          <div className="col-12 ">
-            <div className="EmployeesDocument_top_title">
-              <h3>Experience with Maxlence Consulting</h3>
-              <p>4 years 0 month 3 days</p>
+      <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+          <div className="profile_iner_cont">
+            <div className="row">
+              <div className="col-12 ">
+                <div className="EmployeesDocument_top_title">
+                  <h3>Experience with Maxlence Consulting</h3>
+                  <p>4 years 0 month 3 days</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <ul className="Experience_timline_top_div">
+                    {ExperienceData.map((val, i) => {
+                      return (
+                        <ExperienceApp
+                          key={i}
+                          img={val.img}
+                          name={val.name}
+                          date={val.date}
+                          role={val.role}
+                          text={val.text}
+                        />
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <ul className="Experience_timline_top_div">
-                {ExperienceData.map((val, i) => {
-                  return (
-                    <ExperienceApp
-                      key={i}
-                      img={val.img}
-                      name={val.name}
-                      date={val.date}
-                      role={val.role}
-                      text={val.text}
-                    />
-                  );
-                })}
-              </ul>
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+              <div className="profile_iner_cont">
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <p className="skills_title">Skills</p>
+                  </div>
+                </div>
+                <div className="skills_main_div ">
+                  <div className="skills_main_inner_div">
+                    <span>Photoshop</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Illustrator</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>HTML</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>CSS</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Javascript</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Reserach</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Php</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Python</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+              <div className="profile_iner_cont">
+                <div className="row mb-2">
+                  <div className="col-12">
+                    <p className="skills_title">Project Completed</p>
+                  </div>
+                </div>
+                <div className="skills_main_div ">
+                  <div className="skills_main_inner_div">
+                    <span>Aftercare</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Maxlence PM</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Maxlence HR</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Maxlence CRM</span>
+                  </div>
+                  <div className="skills_main_inner_div">
+                    <span>Maxlence</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

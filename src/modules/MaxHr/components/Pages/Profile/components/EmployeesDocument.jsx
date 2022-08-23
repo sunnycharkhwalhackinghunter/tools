@@ -164,7 +164,7 @@ const UploadDocumentModal = (props) => {
     </Modal>
   );
 };
-const UploadDocumentList = (props) => {
+export const UploadDocumentList = (props) => {
   const AssetListData = [
     {
       DocumentName: "Dummy Documents 1",
