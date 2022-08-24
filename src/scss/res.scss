@@ -16,14 +16,39 @@
   }
 }
 @media (max-width: 576px) {
+  .approve_input {
+    margin-top: 3rem;
+  }
+  .approve_input_btn {
+    position: absolute;
+    top: 11px;
+    right: 13px;
+    margin: 0;
+  }
   .approval_title_main_div {
     display: block;
+    position: relative;
+    .setting_text {
+      margin-top: 25px;
+    }
   }
   .approval_title2 {
     h3 {
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 10px;
+      position: absolute;
+      top: 6px;
+      right: 13px;
+      font-size: 15px;
+    }
+  }
+  .approval_title {
+    h3 {
+      position: absolute;
+      top: 6px;
+      left: 13px;
+      font-size: 15px;
     }
   }
   .hand_over_form_top_inner_div {

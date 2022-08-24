@@ -2118,9 +2118,34 @@ a {
 }
 //notification page end
 // profile page
+.approve_input {
+  width: 100%;
+  label {
+    display: none;
+  }
+}
+.approve_input_btn {
+  border: none;
+  background: $blue;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 15px;
+  margin-left: 15px;
+  transition: all 0.3s;
+  &:hover {
+    background: $hover;
+  }
+}
 .approval_title_main_div {
   display: flex;
   align-items: center;
+  border: 1px solid black;
+  padding: 12px;
+  border-radius: 10px;
 }
 .approval_title {
   h3 {
