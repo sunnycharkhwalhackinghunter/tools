@@ -16,6 +16,22 @@
   }
 }
 @media (max-width: 576px) {
+  .approval_title_main_div {
+    display: block;
+  }
+  .approval_title2 {
+    h3 {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .hand_over_form_top_inner_div {
+    width: 100%;
+  }
+  .HandOverList_top_div {
+    display: block;
+  }
   .return_asset_list_top_div {
     display: block;
   }
@@ -729,6 +745,9 @@
   }
 }
 @media (min-width: 768px) {
+  .HandOverList_top_div {
+    display: block;
+  }
   .return_asset_list_top_div {
     display: block;
   }
@@ -922,6 +941,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .HandOverList_top_div {
+    display: inline-table;
+  }
   .return_asset_list_top_div {
     display: inline-table;
   }
