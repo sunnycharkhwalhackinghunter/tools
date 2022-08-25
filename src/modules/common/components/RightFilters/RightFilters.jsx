@@ -52,14 +52,3 @@ export const RightFilters = (props) => {
     </>
   );
 };
-// export const Right = () => {
-//   return (
-//     <>
-//       <footer className="demo-footer">
-//         <a href="http://www.bootpen.com" target="_blank">
-//           Get more code snippets
-//         </a>
-//       </footer>
-//     </>
-//   );
-// };

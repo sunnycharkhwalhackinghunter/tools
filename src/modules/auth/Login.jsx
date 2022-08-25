@@ -15,6 +15,12 @@ const Login = () => {
             Manager
           </NavLink>
         </div>
+
+        <div className=" m-auto">
+          <NavLink className="btn btn-warning" to="/Account/dashboard">
+            Account
+          </NavLink>
+        </div>
       </div>
     </>
   );
