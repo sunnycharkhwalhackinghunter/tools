@@ -15,9 +15,9 @@ export const AddDepartment = () => {
     <>
       <div className="custom_container">
         <PageTop />
-        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
           <div className="col-12">
-            <div className="custom_container_iner">
+            <div className="custom_container_iner mt-4">
               <div className="AddDepartment_main_div">
                 <div className="AddDepartment_inner_div">
                   <CreateDepartment />
@@ -55,7 +55,7 @@ const CreateDepartment = () => {
   return (
     <>
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-        <div className="col-12">
+        <div className="col-12 ">
           <AboutProfileInput
             label="Create department name"
             type="text"

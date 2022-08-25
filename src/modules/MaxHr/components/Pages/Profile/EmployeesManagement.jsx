@@ -23,7 +23,7 @@ export const EmployeesManagement = () => {
             </div>
           </div>
           <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-7 col-7 MyAttendence_next_page">
-            <NavLink to="/">
+            <NavLink to="/hr/add_employee">
               <span>Add Employee</span>
               <FiPlus />
             </NavLink>

@@ -49,12 +49,20 @@ const PageTop = () => {
 const AddEmployeeForm = () => {
   return (
     <>
-      <div className="col-12">
+      <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
         <AboutProfileInput
           label="Full Name"
           type="text"
           className="form-control"
           placeholder="Soham Kumar"
+        />
+      </div>
+      <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <AboutProfileInput
+          label="Add Contact Number"
+          type="number"
+          className="form-control"
+          placeholder="+91 834 9933 768"
         />
       </div>
       <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -97,7 +105,6 @@ const AddEmployeeForm = () => {
           </div>
         </div>
       </div>
-
       <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
         <div className="ApprovalDetailsPage_date_picker">
           <label>Office Address</label>
@@ -110,7 +117,7 @@ const AddEmployeeForm = () => {
       </div>
       <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
         <div className="ApprovalDetailsPage_date_picker">
-          <label>job types</label>
+          <label>Office Address</label>
         </div>
         <div className="row">
           <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
@@ -240,12 +247,20 @@ const AddEmployeeForm = () => {
           </div>
         </div>
       </div>
-      <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+      <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
         <AboutProfileInput
           label="Candidate’s personal email address"
           type="email"
           className="form-control"
           placeholder="Email address"
+        />
+      </div>
+      <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <AboutProfileInput
+          label="Reference"
+          type="text"
+          className="form-control"
+          placeholder="If any"
         />
       </div>
       <div className="col-12">
