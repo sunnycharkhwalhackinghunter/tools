@@ -6271,3 +6271,31 @@ a {
   }
 }
 // Employees’ Management end
+// Employee salary Stracture List
+.Terminate_Modal_title {
+  text-align: center;
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}
+.employees_salary_stracture_list_tr {
+  .dashboard_top_week_Select {
+    .css-1s2u09g-control {
+      background-color: #f4f4f4;
+    }
+  }
+}
+.employees_salary_stracture_list_input_div {
+  label {
+    display: none;
+  }
+  input {
+    height: 38px;
+  }
+}
+.employees_salary_stracture_list_name {
+  font-size: 14px !important;
+}
+// Employee salary Stracture List

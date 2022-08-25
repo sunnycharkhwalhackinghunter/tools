@@ -9,10 +9,14 @@ import EX2 from "../../../../../../../pics/ex2.png";
 import { UploadDocumentList } from "../EmployeesDocument";
 import TopPageTitle from "../../../../../../common/components/topPageTitle/Index";
 import { Projects } from "../Projects";
-
+import { EmployeesSalaryStracture } from "../EmployeesSalaryStracture";
 import { IssueAssetsAppTop } from "../IssueAssets";
 import { AboutInput } from "../AboutProfile";
 import { EmployeesOffBoard } from "../EmployeesOffBoard";
+import { Promote } from "../Promote";
+import { Demote } from "../Demote";
+import { RR } from "../R&R";
+
 const Announcement = () => {
   return (
     <>
@@ -58,12 +62,42 @@ const Announcement = () => {
                       <Nav.Item>
                         <Nav.Link eventKey="Board">Off Board</Nav.Link>
                       </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="SalaryStracture">
+                          Salary Stracture
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="Promote">Promote</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="Demote">Demote</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="R&R">R&R</Nav.Link>
+                      </Nav.Item>
                     </Nav>
                   </div>
                 </div>
               </div>
 
               <Tab.Content>
+                <Tab.Pane eventKey="R&R">
+                  <div className="m_t"></div>
+                  <RR />
+                </Tab.Pane>
+                <Tab.Pane eventKey="Demote">
+                  <div className="m_t"></div>
+                  <Demote />
+                </Tab.Pane>
+                <Tab.Pane eventKey="Promote">
+                  <div className="m_t"></div>
+                  <Promote />
+                </Tab.Pane>
+                <Tab.Pane eventKey="SalaryStracture">
+                  <div className="m_t"></div>
+                  <EmployeesSalaryStracture />
+                </Tab.Pane>
                 <Tab.Pane eventKey="Projects">
                   <div className="m_t"></div>
                   <Projects />

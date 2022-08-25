@@ -53,7 +53,7 @@ export const EmployeesOffBoard = () => {
               <div className=" d-flex">
                 <div>
                   <div className="Experience_timline_title2">
-                    <h3>Hand Over</h3>
+                    <h3>Return Date</h3>
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export const EmployeesOffBoard = () => {
                 <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                   <div className="col-12">
                     <AboutProfileInput
-                      label=" select Hand Over date "
+                      label=" select Return Date date "
                       type="date"
                       className="form-control"
                       placeholder=" Title"
@@ -428,7 +428,7 @@ export const EmployeesOffBoard = () => {
             <div className="hand_over_form_top_div">
               <div className="hand_over_form_top_inner_div">
                 <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="Name/Type of Handover"
                       type="text"
@@ -436,7 +436,7 @@ export const EmployeesOffBoard = () => {
                       placeholder="Name of Handover"
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="link"
                       type="text"
@@ -454,7 +454,7 @@ export const EmployeesOffBoard = () => {
                       ></textarea>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="Hand Over Date"
                       type="date"
@@ -462,7 +462,7 @@ export const EmployeesOffBoard = () => {
                       placeholder="Link of handover Data"
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <AboutProfileInput
                       label="Acknowledged by"
                       type="text"
