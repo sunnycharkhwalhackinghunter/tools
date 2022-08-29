@@ -101,9 +101,14 @@ nav {
   color: $c2;
   transition: all ease-in-out 0.2s;
   background-color: white;
-
   border-left: 3px solid white;
-
+  font-size: 12px;
+  span {
+    margin-left: 1rem;
+    svg {
+      margin-right: 5px;
+    }
+  }
   .description {
     margin-left: 0.5rem;
     font-weight: 500;
@@ -205,10 +210,18 @@ nav {
   overflow-x: auto;
   white-space: nowrap;
 }
+
 //NAVIGATION SMALL
 .nav_small {
   width: 3rem;
-
+  .li_navlink a {
+    span {
+      margin-left: 0;
+      label {
+        display: none;
+      }
+    }
+  }
   .categories {
     padding: 0 1rem;
   }

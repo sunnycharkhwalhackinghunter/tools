@@ -1,6 +1,6 @@
 //STYLES
 import styles from "./Navbar.module.scss";
-
+import "../../../../scss/index.scss";
 //CONTEXT
 import { useContext } from "react";
 import NavContext from "../../Context/NavContext";
@@ -72,7 +72,7 @@ const NavUrl = ({ url, icon, description, navItems }) => {
         }`}
       >
         {navItems.map((item, i) => (
-          <div className="isDropdownOpen_sub_menu" key={i}>
+          <div className="isDropdownOpen_sub_menu " key={i}>
             <NavLink
               to={item.link}
               onClick={() => checkWindowSize()}
@@ -82,7 +82,7 @@ const NavUrl = ({ url, icon, description, navItems }) => {
             >
               <span>
                 {item.iconIner}
-                {item.title}
+                <label className="nav_sub_title">{item.title}</label>
               </span>
             </NavLink>
           </div>
