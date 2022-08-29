@@ -152,7 +152,7 @@ const Navbar = () => {
             <NavUrl
               navItems={[
                 {
-                  title: "My prosile",
+                  title: "My profile",
                   link: "/hr/profile",
                   iconIner: <ImProfile />,
                 },

@@ -81,7 +81,7 @@ import { CeleberationsListPage } from "../page/CeleberationsListPage";
 import { HolidayslistPage } from "../page/HolidayslistPage";
 import { AddEmployee } from "../components/Pages/OrgnizationChart/AddEmployee";
 import { EmployeesManagement } from "../components/Pages/Profile/EmployeesManagement";
-import { Footer } from "../../common/components/footer/Footer";
+// import { Footer } from "../../common/components/footer/Footer";
 const Index = () => {
   const [nav, setNav] = useState(true);
   const value = { nav, setNav };
@@ -263,7 +263,7 @@ const Index = () => {
 
                   <Route path="*" element={<main>NOT FOUND</main>} />
                 </Routes>
-                <Footer />
+                {/* <Footer /> */}
               </>
             }
           />

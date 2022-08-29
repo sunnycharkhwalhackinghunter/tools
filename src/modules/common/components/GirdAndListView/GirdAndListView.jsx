@@ -16,18 +16,18 @@ export const GirdAndListView = (props) => {
       <div className="list_grid_top_div">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <div>
-            <div className="row g-3">
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 order-1  dep_all">
+            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+              <div className="  col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12   dep_all">
                 <div className="dashboard_top_week_Select">
                   <Select options={options} placeholder="Departments" />
                 </div>
               </div>
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 order-lg-2  dep_all">
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12   dep_all">
                 <div className="dashboard_top_week_Select">
                   <Select options={options} placeholder="Sort by" />
                 </div>
               </div>
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 order-lg-3  ApprovalDetailsPage_search_input">
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12  ApprovalDetailsPage_search_input">
                 <div className="ApprovalDetailsPage_date_picker">
                   <div className="ApprovalDetailsPage_search_input_iner_div">
                     <span>
@@ -41,30 +41,48 @@ export const GirdAndListView = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 order-lg-4 order-5 ApprovalDetailsPage_search_input">
-                <Nav variant="pills" className="flex">
-                  <Nav.Item>
-                    <Nav.Link eventKey="first">
-                      <Img className="list_view_img" backgroundImage={Gird} />
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">
-                      <Img className="list_view_img" backgroundImage={List} />
-                    </Nav.Link>
-                  </Nav.Item>
-                </Nav>
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+                <div className=" d-none d-xxl-block d-xl-block d-lg-block">
+                  <Nav variant="pills" className="flex">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">
+                        <Img className="list_view_img" backgroundImage={Gird} />
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">
+                        <Img className="list_view_img" backgroundImage={List} />
+                      </Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                </div>
               </div>
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-12 col-sm-12 col-12 order-lg-5 order-4 ">
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  ">
                 <div className="ApprovalDetailsPage_date_picker">
                   <label>From</label>
                   <Input type="date" className="form-control" />
                 </div>
               </div>
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-12 col-sm-12 col-12 order-lg-6 order-3">
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ">
                 <div className="ApprovalDetailsPage_date_picker">
                   <label>to</label>
                   <Input type="date" className="form-control" />
+                </div>
+              </div>
+              <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
+                <div className=" d-block d-xxl-none d-xl-none d-lg-none">
+                  <Nav variant="pills" className="flex">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">
+                        <Img className="list_view_img" backgroundImage={Gird} />
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">
+                        <Img className="list_view_img" backgroundImage={List} />
+                      </Nav.Link>
+                    </Nav.Item>
+                  </Nav>
                 </div>
               </div>
             </div>
