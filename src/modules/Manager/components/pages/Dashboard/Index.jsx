@@ -5,6 +5,8 @@ import Icon from "../../../../../pics/Manager/d1.png";
 import Icon2 from "../../../../../pics/Manager/d2.png";
 import Icon3 from "../../../../../pics/Manager/d3.png";
 import Icon4 from "../../../../../pics/Manager/d4.png";
+import Icon5 from "../../../../../pics/Manager/d5.png";
+import Icon6 from "../../../../../pics/Manager/d6.png";
 import { NavLink } from "react-router-dom";
 export const Index = () => {
   return (
@@ -90,7 +92,7 @@ const ProjectSummary = () => {
     {
       link: "/",
       backgroundColor: "#DA1E28",
-      icon: Icon4,
+      icon: Icon5,
       color: "white",
       number: "12",
       text: "On Hold",
@@ -98,7 +100,7 @@ const ProjectSummary = () => {
     {
       link: "/",
       backgroundColor: "#24A148",
-      icon: Icon4,
+      icon: Icon6,
       color: "white",
       number: "12",
       text: "Completed Project",
