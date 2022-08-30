@@ -67,7 +67,7 @@ const PageTop = () => {
 const InterviewsTabs = () => {
   return (
     <>
-      <div className="profile_tab_div">
+      <div className="profile_tab_div mt-3">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Nav variant="pills" className="flex">
             <Nav.Item>
@@ -81,7 +81,7 @@ const InterviewsTabs = () => {
           <Tab.Content>
             <Tab.Pane eventKey="first">
               <div className="m_t"></div>
-              <MySlider />
+              <JobsType />
             </Tab.Pane>
             <Tab.Pane eventKey="second">
               <div className="m_t"></div>
@@ -89,6 +89,132 @@ const InterviewsTabs = () => {
             </Tab.Pane>
           </Tab.Content>
         </Tab.Container>
+      </div>
+    </>
+  );
+};
+const JobsType = () => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="interviews_round_tabs_div">
+        <div className=" JobsType_card">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+            <Nav variant="pills" className="flex">
+              <Nav.Item>
+                <Nav.Link eventKey="first">
+                  <div>
+                    <ul>
+                      <li>
+                        <div className="JobCards_main_div_round"></div>
+                      </li>
+                      <li>
+                        <h3>Lead UX Designer</h3>
+                        <p>12 Candidates</p>
+                      </li>
+                      <li>
+                        <div
+                          onClick={() => navigate("/hr/create_new_jobs")}
+                          className="JobCards_main_div_menu"
+                        >
+                          <FiEdit />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="second">
+                  <div>
+                    <ul>
+                      <li>
+                        <div className="JobCards_main_div_round"></div>
+                      </li>
+                      <li>
+                        <h3>UI Developer Intern</h3>
+                        <p>12 Candidates</p>
+                      </li>
+                      <li>
+                        <div
+                          onClick={() => navigate("/hr/create_new_jobs")}
+                          className="JobCards_main_div_menu"
+                        >
+                          <FiEdit />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="3">
+                  <div>
+                    <ul>
+                      <li>
+                        <div className="JobCards_main_div_round"></div>
+                      </li>
+                      <li>
+                        <h3>SEO Marketing</h3>
+                        <p>12 Candidates</p>
+                      </li>
+                      <li>
+                        <div
+                          onClick={() => navigate("/hr/create_new_jobs")}
+                          className="JobCards_main_div_menu"
+                        >
+                          <FiEdit />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="4">
+                  <div>
+                    <ul>
+                      <li>
+                        <div className="JobCards_main_div_round"></div>
+                      </li>
+                      <li>
+                        <h3>HR Manager</h3>
+                        <p>12 Candidates</p>
+                      </li>
+                      <li>
+                        <div
+                          onClick={() => navigate("/hr/create_new_jobs")}
+                          className="JobCards_main_div_menu"
+                        >
+                          <FiEdit />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+
+            <Tab.Content>
+              <Tab.Pane eventKey="first">
+                <div className="m_t"></div>
+                <Upcoming />
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">
+                <div className="m_t"></div>
+                <Upcoming />
+              </Tab.Pane>
+              <Tab.Pane eventKey="3">
+                <div className="m_t"></div>
+                <Upcoming />
+              </Tab.Pane>
+              <Tab.Pane eventKey="4">
+                <div className="m_t"></div>
+                <Upcoming />
+              </Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
+        </div>
       </div>
     </>
   );
@@ -195,98 +321,7 @@ const CompletedSlider = () => {
     </>
   );
 };
-const MySlider = () => {
-  return (
-    <div className="interviews_round_tabs_div">
-      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Tab.Content>
-          <Tab.Pane eventKey="first">
-            <div className="m_t"></div>
-            <JobsType />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second">
-            <div className="m_t"></div>
-            <JobsType />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second3">
-            <div className="m_t"></div>
-            <JobsType />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second4">
-            <div className="m_t"></div>
-            <JobsType />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second5">
-            <div className="m_t"></div>
-            <JobsType />
-          </Tab.Pane>
-        </Tab.Content>
-        <Nav variant="pills" className="flex">
-          <Nav.Item>
-            <Nav.Link eventKey="first">
-              <JobCards
-                roundName="1st Round"
-                candidatesNumber="05 Candidates"
-              />
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="second">
-              <JobCards
-                roundName="2st Round"
-                candidatesNumber="05 Candidates"
-              />
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="second3">
-              <JobCards
-                roundName="3st Round"
-                candidatesNumber="05 Candidates"
-              />
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="second4">
-              <JobCards roundName="HR Round" candidatesNumber="05 Candidates" />
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="second5">
-              <JobCards
-                roundName="Final Round"
-                candidatesNumber="05 Candidates"
-              />
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
 
-        <Tab.Content>
-          <Tab.Pane eventKey="first">
-            <div className="m_t"></div>
-            <JobsList />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second">
-            <div className="m_t"></div>
-            <JobsList />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second3">
-            <div className="m_t"></div>
-            <JobsList />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second4">
-            <div className="m_t"></div>
-            <JobsList />
-          </Tab.Pane>
-          <Tab.Pane eventKey="second5">
-            <div className="m_t"></div>
-            <JobsList />
-          </Tab.Pane>
-        </Tab.Content>
-      </Tab.Container>
-    </div>
-  );
-};
 const JobCards = (props) => {
   const navigate = useNavigate();
   return (
@@ -313,84 +348,82 @@ const JobCards = (props) => {
     </>
   );
 };
-
-const JobsType = () => {
-  const JobsTypeApp = (props) => {
-    const navigate = useNavigate();
-    return (
-      <>
-        <Nav.Item>
-          <Nav.Link eventKey={props.eventKey}>
-            <div>
-              <ul>
-                <li>
-                  <div className="JobCards_main_div_round"></div>
-                </li>
-                <li>
-                  <h3>{props.roundName}</h3>
-                  <p>{props.candidatesNumber}</p>
-                </li>
-                <li>
-                  <div
-                    onClick={() => navigate("/hr/create_new_jobs")}
-                    className="JobCards_main_div_menu"
-                  >
-                    <FiEdit />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </Nav.Link>
-        </Nav.Item>
-      </>
-    );
-  };
-  const JobsTypeData = [
-    {
-      roundName: "Lead UX Designer",
-      candidatesNumber: "12 Candidates",
-      eventKey: "first",
-    },
-    {
-      roundName: "UI Developer Intern",
-      candidatesNumber: "12 Candidates",
-      eventKey: "2",
-    },
-    {
-      roundName: "SEO Marketing",
-      candidatesNumber: "12 Candidates",
-      eventKey: "3",
-    },
-    {
-      roundName: "HR Manager",
-      candidatesNumber: "12 Candidates",
-      eventKey: "4",
-    },
-  ];
+const Upcoming = () => {
   return (
     <>
-      <div>
-        <div className=" JobsType_card">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-            <Nav variant="pills" className="flex">
-              {JobsTypeData.map((val, i) => {
-                return (
-                  <JobsTypeApp
-                    key={i}
-                    roundName={val.roundName}
-                    candidatesNumber={val.candidatesNumber}
-                    eventKey={val.eventKey}
-                    BgColor={val.BgColor}
-                  />
-                );
-              })}
-            </Nav>
-          </Tab.Container>
-        </div>
+      <div className="interviews_round_tabs_div">
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Nav variant="pills" className="flex">
+            <Nav.Item>
+              <Nav.Link eventKey="first">
+                <JobCards
+                  roundName="1st Round"
+                  candidatesNumber="05 Candidates"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second">
+                <JobCards
+                  roundName="2st Round"
+                  candidatesNumber="05 Candidates"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second3">
+                <JobCards
+                  roundName="3st Round"
+                  candidatesNumber="05 Candidates"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second4">
+                <JobCards
+                  roundName="HR Round"
+                  candidatesNumber="05 Candidates"
+                />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second5">
+                <JobCards
+                  roundName="Final Round"
+                  candidatesNumber="05 Candidates"
+                />
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+
+          <Tab.Content>
+            <Tab.Pane eventKey="first">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second3">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second4">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+            <Tab.Pane eventKey="second5">
+              <div className="m_t"></div>
+              <JobsList />
+            </Tab.Pane>
+          </Tab.Content>
+        </Tab.Container>
       </div>
     </>
   );
 };
+
 const JobsList = () => {
   const [buttonText, setButtonText] = useState("Copy");
 

@@ -18,7 +18,7 @@ export const CreateNewJobs = () => {
       <div className="custom_container">
         <PageTop />
 
-        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 mt-1">
           <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 order-lg-1 order-2">
             <CreateNewJobsForm />
           </div>
