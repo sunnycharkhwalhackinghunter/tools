@@ -1,0 +1,24 @@
+@import "../--mixing.scss";
+@import "../--var.scss";
+@media (max-width: 576px) {
+  .welcome_note_mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .manager_btn_full {
+    font-size: 11px;
+  }
+  .welcome_note_div {
+    h3 {
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1440px) {
+}

@@ -1,7 +1,10 @@
+import { Index } from "../components/pages/Dashboard/Index";
 const Dashboard = () => {
   return (
     <>
-      <h1> Manager Dashboard</h1>
+      <div className="custom_container">
+        <Index />
+      </div>
     </>
   );
 };
