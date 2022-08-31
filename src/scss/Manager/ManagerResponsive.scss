@@ -1,6 +1,13 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .ProjectList_link_div {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+  }
+  .ProjectList_name_top_div {
+    justify-content: center;
+  }
   .welcome_note_mobile {
     position: absolute;
     right: 0;
