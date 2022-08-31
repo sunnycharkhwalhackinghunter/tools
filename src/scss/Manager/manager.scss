@@ -100,6 +100,12 @@
     overflow-x: scroll;
     width: 100%;
     flex-wrap: nowrap;
+    background: white;
+    padding-bottom: 1.2rem;
+  }
+  .tab-content {
+    height: 30rem;
+    overflow: scroll;
   }
 }
 .ProjectList_logo {
@@ -166,10 +172,70 @@
   transition: all 0.3s;
   border-radius: 10px;
   cursor: pointer;
+  // margin: 0 1rem;
+  &:hover {
+    color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+.MeetingsList_title_div {
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+}
+.MeetingsList_img_div {
+  display: flex;
+}
+.MeetingsList_img {
+  @include bg_img;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.MeetingsList_img_more {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+}
+.MeetingsList_time {
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    span {
+      color: #a8a8a8;
+      margin-right: 5px;
+    }
+  }
+}
+.MeetingsList_row_div {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.3s;
+  border-radius: 10px;
+  margin-top: 1rem !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 
   &:hover {
     color: black;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+}
+.MeetingsList_main_top_div {
+  overflow: scroll;
+  height: 30rem;
 }
 // Dashboard end

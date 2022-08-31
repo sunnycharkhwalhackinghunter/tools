@@ -7,7 +7,8 @@ import Icon3 from "../../../../../pics/Manager/d3.png";
 import Icon4 from "../../../../../pics/Manager/d4.png";
 import Icon5 from "../../../../../pics/Manager/d5.png";
 import Icon6 from "../../../../../pics/Manager/d6.png";
-import ProjectIcon from "../../../../../pics/Manager/projactLogo.webp";
+import ProjectIconImg from "../../../../../pics/Manager/projactLogo.webp";
+import MeetingsImg from "../../../../../pics/profile.jpeg";
 import { NavLink } from "react-router-dom";
 import { Nav, Tab } from "react-bootstrap";
 import React from "react";
@@ -15,6 +16,9 @@ import { PageInnerTitle } from "../../../../common/ManagerComponents/pageInnerTi
 import { BiLink } from "react-icons/bi";
 import { AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineReviews } from "react-icons/md";
+import { useState } from "react";
+import Calendar from "react-calendar";
+import { useNavigate } from "react-router-dom";
 export const Index = () => {
   return (
     <>
@@ -25,11 +29,18 @@ export const Index = () => {
       />
       <ProjectSummary />
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
-        <div className="col-xxl-8 col-xl-8 col-lg-9 col-md-12 col-sm-12 col-12">
-          <ProjectListApp />
+        <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+            <div className="col-12">
+              <ProjectListApp />
+            </div>
+            <div className="col12">
+              <MeetingsList />
+            </div>
+          </div>
         </div>
-        <div className="col-xxl-4 col-xl-4 col-lg-3 col-md-12 col-sm-12 col-12">
-          3
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+          <CalendarApp />
         </div>
       </div>
     </>
@@ -184,6 +195,103 @@ const ProjectListApp = () => {
   );
 };
 const ProjectList = () => {
+  const Data = [
+    {
+      link: "/",
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      projectIcon: ProjectIconImg,
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      projectIcon: ProjectIconImg,
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      projectIcon: ProjectIconImg,
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      projectIcon: ProjectIconImg,
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+    {
+      link: "/",
+      projectIcon: ProjectIconImg,
+      name: "Max HR",
+      date: "Ends: 24 March 2022",
+      brief: "Design Brief",
+      comments: "104 Comments",
+      reviews: "02 Reviews",
+      progress: "45%",
+    },
+  ];
   const App = (props) => {
     return (
       <>
@@ -194,15 +302,20 @@ const ProjectList = () => {
                 <div>
                   <div className="row">
                     <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                      <div>
-                        {ProjectIcon ? (
+                      <div className=" d-flex  justify-content-center">
+                        {props.projectIcon ? (
                           <Img
                             className="ProjectList_logo"
                             backgroundImage={props.projectIcon}
                           />
                         ) : (
                           <div className="ProjectList_logo_text">
-                            <span>{props.projectIconText}</span>
+                            <span>
+                              {props.name
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join(" ")}
+                            </span>
                           </div>
                         )}
                       </div>
@@ -257,19 +370,6 @@ const ProjectList = () => {
       </>
     );
   };
-  const Data = [
-    {
-      link: "/",
-      projectIcon: ProjectIcon,
-      projectIconText: "pm",
-      name: "After Care",
-      date: "Ends: 24 March 2022",
-      brief: "Design Brief",
-      comments: "104 Comments",
-      reviews: "02 Reviews",
-      progress: "45%",
-    },
-  ];
   return (
     <>
       <div>
@@ -279,7 +379,6 @@ const ProjectList = () => {
               key={i}
               link={val.link}
               projectIcon={val.projectIcon}
-              projectIconText={val.projectIconText}
               name={val.name}
               date={val.date}
               brief={val.brief}
@@ -289,6 +388,204 @@ const ProjectList = () => {
             />
           );
         })}
+      </div>
+    </>
+  );
+};
+const CalendarApp = () => {
+  const [value, onChangee] = useState(new Date());
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="row">
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+          <div className="dashbaord_white_card dashbaord_white_card2">
+            <div className="dashbaord_white_title">
+              <div>
+                <Calendar
+                  className="dashbaord_calendar"
+                  onChange={(date) => {
+                    onChangee(date);
+                    navigate("/");
+                  }}
+                  value={value}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const MeetingsList = () => {
+  const App = (props) => {
+    return (
+      <>
+        <div className="row g-xxl-0 g-xl-0 g-lg-0 g-md-0 g-sm-3 g-3 MeetingsList_row_div ">
+          <div className="  col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+            <div className="MeetingsList_title_div">
+              <h3>Review: {props.reviewName}</h3>
+            </div>
+          </div>
+          <div className=" col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+            <div className="MeetingsList_img_div">
+              <Img className="MeetingsList_img" backgroundImage={props.icon1} />
+              <Img className="MeetingsList_img" backgroundImage={props.icon2} />
+              <div className="MeetingsList_img_more">+{props.iconText}</div>
+            </div>
+          </div>
+          <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+            <div className="MeetingsList_time">
+              <p>
+                <span>In:</span>
+                {props.time}
+              </p>
+            </div>
+          </div>
+          <div className=" col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+            <div className="MeetingsList_btn">
+              <FullBtn link={props.link} name="Join" />
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const Data = [
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "Project Management",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "2",
+      time: "00:23:45",
+      link: "/",
+    },
+    {
+      reviewName: "sunny charkhwal",
+      icon1: MeetingsImg,
+      icon2: MeetingsImg,
+      iconText: "3",
+      time: "00:23:45",
+      link: "/",
+    },
+  ];
+  return (
+    <>
+      <div className="custom_container_iner ProjectList_top_div">
+        <PageInnerTitle name="Meetings" />
+
+        <div className="MeetingsList_main_top_div">
+          {Data.map((val, i) => {
+            return (
+              <App
+                key={i}
+                reviewName={val.reviewName}
+                icon1={val.icon1}
+                icon2={val.icon2}
+                iconText={val.iconText}
+                time={val.time}
+                link={val.link}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );
