@@ -20,6 +20,7 @@
   hr {
     opacity: 1 !important;
     margin: 0;
+    margin-bottom: 1rem;
   }
 }
 .manager_btn_full {
@@ -31,16 +32,82 @@
   padding: 10px 20px;
   border-radius: 6px;
   transition: all 0.3s;
+  border: none;
+  outline: none;
   &:hover {
     color: white;
     background-color: $blue;
     box-shadow: 0px 0px 12px rgba(81, 67, 239, 0.5);
   }
 }
+.manager_btn_full2 {
+  text-transform: capitalize;
+  background-color: $blue;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  width: 100%;
+  border: none;
+  outline: none;
+  &:hover {
+    color: white;
+    background-color: $blue;
+    box-shadow: 0px 0px 12px rgba(81, 67, 239, 0.5);
+  }
+}
+.manager_btn_outline {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: $blue;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 6px;
+  transition: all 0.3s;
+  border: 1px solid $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover {
+    color: white;
+    background-color: $blue;
+    box-shadow: 0px 0px 12px rgba(81, 67, 239, 0.5);
+  }
+}
+.manager_btn_outline_with_icon {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: $blue;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 6px;
+  transition: all 0.3s;
+  border: 1px solid $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover {
+    color: white;
+    background-color: $blue;
+    box-shadow: 0px 0px 12px rgba(81, 67, 239, 0.5);
+  }
+  svg {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 1px;
+  }
+}
 
 .project_summary_title {
   h3 {
-    margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: 500;
     font-size: 24px;
@@ -237,5 +304,72 @@
 .MeetingsList_main_top_div {
   overflow: scroll;
   height: 30rem;
+}
+.my_notes_main_div {
+  border-radius: 8px;
+  position: relative;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-transform: capitalize;
+  svg {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    font-size: 18px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #a8a8a8;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #0a0e30;
+  }
+  h5 {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+    span {
+      font-weight: 400;
+      font-size: 10px;
+      color: $blue;
+      margin-left: 5px;
+    }
+  }
+}
+.my_notes_top_btn_div {
+  margin-bottom: 1.5rem;
+}
+.my_notes_bottom_btn_div {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.my_notes_top_main_div {
+  overflow: scroll;
+  height: 37.8rem;
+}
+.intput_box {
+  border: none !important;
+  background-color: #f4f4f4 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+}
+.textareaBox_box {
+  border: none !important;
+  background-color: #dde2ff !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+.all_page_my_label_new {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #a8a8a8;
+  text-transform: capitalize;
 }
 // Dashboard end

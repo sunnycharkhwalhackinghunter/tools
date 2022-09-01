@@ -1,6 +1,9 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .my_notes_top_main_div {
+    height: 37.8rem;
+  }
   .MeetingsList_btn {
     text-align: center;
     display: flex;
@@ -46,8 +49,14 @@
   }
 }
 @media (min-width: 768px) {
+  .my_notes_top_main_div {
+    height: 9.3rem;
+  }
 }
 @media (min-width: 1024px) {
+  .my_notes_top_main_div {
+    height: 37.8rem;
+  }
 }
 @media (min-width: 1440px) {
 }

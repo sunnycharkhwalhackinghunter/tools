@@ -5,6 +5,7 @@ import Container from "../components/Container/Container";
 import TopNavbar from "../components/TopNavbar/TopNavbar";
 import Dashboard from "../page/Dashboard";
 import NavContext from "../Context/NavContext";
+import { Notes } from "../components/pages/Dashboard/page/Notes";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -20,6 +21,8 @@ const Index = () => {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/notes" element={<Notes />} />
+
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>
             }
