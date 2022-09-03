@@ -372,4 +372,16 @@
   color: #a8a8a8;
   text-transform: capitalize;
 }
+.Filters_Search_div {
+  position: relative;
+  svg {
+    position: absolute;
+    font-size: 20px;
+    top: 11px;
+    left: 12px;
+  }
+  input {
+    padding-left: 40px;
+  }
+}
 // Dashboard end

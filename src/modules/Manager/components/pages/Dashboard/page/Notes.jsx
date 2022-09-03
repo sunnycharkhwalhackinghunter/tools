@@ -11,11 +11,10 @@ import {
 import { RightFilters } from "../../../../../common/components/RightFilters/RightFilters";
 import React from "react";
 import { Modal } from "react-bootstrap";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FullBtn } from "../../../../../common/ManagerComponents/Btn/Btn";
-
 export const Notes = () => {
   return (
     <>
@@ -35,12 +34,16 @@ export const Notes = () => {
               />
             </div>
             <div className="col-3">
-              <RightFilters
-                title="Filter"
-                btn1="Reset"
-                btn2="Show results"
-                data={<RightFiltersData />}
-              />
+              <div className="Filters_Search_div">
+                <span>
+                  <AiOutlineSearch />
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search here..."
+                />
+              </div>
             </div>
           </div>
         </div>
