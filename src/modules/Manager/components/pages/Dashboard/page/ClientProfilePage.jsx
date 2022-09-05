@@ -9,6 +9,12 @@ import {
   SelectBox,
   TextareaBox,
 } from "../../../../../common/ManagerComponents/form/Form";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { Editor } from "react-draft-wysiwyg";
+import { UploadDocumentIner } from "../../../../../MaxHr/components/Pages/Profile/components/EmployeesDocument";
+import { Nav, Tab } from "react-bootstrap";
+import { AiOutlineClose } from "react-icons/ai";
+
 export const ClientProfile = () => {
   return (
     <>
@@ -265,6 +271,52 @@ const Step2 = () => {
       option: "USD",
     },
   ];
+  const EditorCustomToolbarOption = () => (
+    <Editor
+      wrapperClassName="wrapper-class"
+      editorClassName="editor-class"
+      toolbarClassName="toolbar-class"
+      placeholder="Congratulations, You are qualified for your next round of interview. We are inviting you..Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker Congratulations, You are qualified for your next round of interview. We are inviting you..Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker "
+    />
+  );
+  const EmployeesDocument = () => {
+    const EmployeesDocumentTopNameApp = (props) => {
+      return (
+        <>
+          <Nav.Item>
+            <Nav.Link className="Employees_Document_name">
+              {props.Name}
+              <span>
+                <AiOutlineClose />
+              </span>
+            </Nav.Link>
+          </Nav.Item>
+        </>
+      );
+    };
+    const EmployeesDocumentTopNameData = [
+      {
+        Name: "Offer Letter",
+      },
+      {
+        Name: "Attached Documets",
+      },
+    ];
+
+    return (
+      <>
+        <div className="EmployeesDocument_list_top_div m-0">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="1">
+            <Nav variant="pills" className="flex">
+              {EmployeesDocumentTopNameData.map((val, i) => {
+                return <EmployeesDocumentTopNameApp key={i} Name={val.Name} />;
+              })}
+            </Nav>
+          </Tab.Container>
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <div className="Client_Profile_title">
@@ -327,6 +379,39 @@ const Step2 = () => {
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <InputBox type="date" label="Project Deadline*" placeholder="" />
+          </div>
+          <div className="col-12">
+            <label className="all_page_my_label_new">Add Project Brief</label>
+            <div className="Hire_editer">
+              <EditorCustomToolbarOption />
+            </div>
+          </div>
+          <div className="col-12">
+            <label className="all_page_my_label_new">
+              Add Objective of this project
+            </label>
+            <div className="Hire_editer">
+              <EditorCustomToolbarOption />
+            </div>
+          </div>
+          <div className="col-12">
+            <label className="all_page_my_label_new">
+              Add Scope of this project
+            </label>
+            <div className="Hire_editer">
+              <EditorCustomToolbarOption />
+            </div>
+          </div>
+          <div className="col-12">
+            <label className="all_page_my_label_new">
+              only .pdf and not more than 2mb in size
+            </label>
+            <div className="DocumentCompanySetup_upload">
+              <UploadDocumentIner />
+            </div>
+          </div>
+          <div className="col-12">
+            <EmployeesDocument />
           </div>
         </div>
       </div>
