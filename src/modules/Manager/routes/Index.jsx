@@ -6,6 +6,7 @@ import TopNavbar from "../components/TopNavbar/TopNavbar";
 import Dashboard from "../page/Dashboard";
 import NavContext from "../Context/NavContext";
 import { Notes } from "../components/pages/Dashboard/page/Notes";
+import { ClientProfile } from "../components/pages/Dashboard/page/ClientProfilePage";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -22,6 +23,7 @@ const Index = () => {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/notes" element={<Notes />} />
+                <Route path="/client_Profile" element={<ClientProfile />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

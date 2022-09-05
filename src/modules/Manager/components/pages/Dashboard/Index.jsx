@@ -35,7 +35,7 @@ export const Index = () => {
       <WelcomeNote
         name="Shived"
         text="Lets do the best today"
-        data={<FullBtn link="/" name="Add Project" />}
+        data={<FullBtn link="/manager/client_Profile" name="Add Project" />}
       />
       <ProjectSummary />
       <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">

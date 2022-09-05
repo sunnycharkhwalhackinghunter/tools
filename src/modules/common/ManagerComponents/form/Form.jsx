@@ -22,3 +22,24 @@ export const TextareaBox = (props) => {
     </>
   );
 };
+export const SelectBox = (props) => {
+  const App = (props) => {
+    return (
+      <>
+        <option value={props.value}>{props.option}</option>
+      </>
+    );
+  };
+  return (
+    <>
+      <label className="all_page_my_label_new ">{props.label}</label>
+      <select className="form-select SelectBox_box">
+        {props.SelectBoxData.map((val, i) => {
+          return (
+            <App key={i} optionValue={val.optionValue} option={val.option} />
+          );
+        })}
+      </select>
+    </>
+  );
+};

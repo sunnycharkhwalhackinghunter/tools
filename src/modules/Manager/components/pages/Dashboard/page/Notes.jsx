@@ -14,7 +14,7 @@ import { Modal } from "react-bootstrap";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { FullBtn } from "../../../../../common/ManagerComponents/Btn/Btn";
+
 export const Notes = () => {
   return (
     <>
@@ -24,26 +24,25 @@ export const Notes = () => {
         </div>
         <div className="mb-4">
           <div className="row">
-            <div className="col-7"></div>
-            <div className="col-2">
-              <RightFilters
-                title="Filter"
-                btn1="Reset"
-                btn2="Show results"
-                data={<RightFiltersData />}
-              />
-            </div>
-            <div className="col-3">
+            <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-9 col-9">
               <div className="Filters_Search_div">
                 <span>
                   <AiOutlineSearch />
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search here..."
                 />
               </div>
+            </div>
+            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3">
+              <RightFilters
+                title="Filter"
+                btn1="Reset"
+                btn2="Show results"
+                data={<RightFiltersData />}
+              />
             </div>
           </div>
         </div>
@@ -265,7 +264,7 @@ const MyNotes = () => {
     };
     return (
       <>
-        <div className="col-3">
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
           <div className="my_notes_main_div">
             <p>{props.date}</p>
             <h3>{props.name}</h3>
@@ -281,6 +280,26 @@ const MyNotes = () => {
     );
   };
   const Data = [
+    {
+      date: "20 April",
+      name: "Exploration Ideas",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum es",
+    },
+    {
+      date: "20 April",
+      name: "Exploration Ideas",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum es",
+    },
+    {
+      date: "20 April",
+      name: "Exploration Ideas",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum es",
+    },
+    {
+      date: "20 April",
+      name: "Exploration Ideas",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum es",
+    },
     {
       date: "20 April",
       name: "Exploration Ideas",
@@ -415,7 +434,7 @@ const MyNotes = () => {
   return (
     <>
       <div>
-        <div className="my_notes_top_main_div">
+        <div className="">
           <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
             {Data.map((val, i) => {
               return (
@@ -423,9 +442,6 @@ const MyNotes = () => {
               );
             })}
           </div>
-        </div>
-        <div className="my_notes_bottom_btn_div">
-          <FullBtn name="View All" link="/manager/notes" />
         </div>
 
         <AddSkillsModal

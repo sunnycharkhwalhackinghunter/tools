@@ -1,6 +1,27 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .manager_btn_outline {
+    font-size: 11px;
+  }
+  .Client_Profile_title {
+    display: block;
+  }
+  .Client_Profile_main_top_div {
+    display: none;
+  }
+  .Client_Profile_svg {
+    svg {
+      margin-left: 25px;
+      top: 3px;
+    }
+    label {
+      display: none;
+    }
+  }
+  .Client_Profile_svg_last_text {
+    display: none;
+  }
   .my_notes_top_main_div {
     height: 37.8rem;
   }

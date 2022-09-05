@@ -361,7 +361,7 @@
 }
 .textareaBox_box {
   border: none !important;
-  background-color: #dde2ff !important;
+  background-color: #f4f4f4 !important;
   font-weight: 400 !important;
   font-size: 14px !important;
 }
@@ -382,6 +382,76 @@
   }
   input {
     padding-left: 40px;
+  }
+}
+.ClientProfile_normal_dot {
+  color: #c9bdbd !important;
+}
+.Client_Profile_main_top_div {
+  position: relative;
+  display: block;
+}
+.Client_Profile_svg {
+  svg {
+    font-size: 25px !important;
+    position: absolute;
+    top: 21.5px;
+    margin-left: 91px;
+  }
+  label {
+    margin-left: 64px;
+    display: block;
+  }
+}
+.Client_Profile_svg_last {
+  svg {
+    margin-left: 52px !important;
+  }
+}
+.Client_Profile_svg_last_text {
+  margin-bottom: 0;
+  display: block;
+}
+.Client_Profile_title {
+  text-align: center;
+  display: none;
+  h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 550;
+    letter-spacing: 1px;
+  }
+}
+.Client_Profile_btn_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  .manager_btn_full {
+    margin-left: 1.5rem;
+  }
+}
+.SelectBox_box {
+  border: none !important;
+  background-color: #f4f4f4 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+}
+.drop_box {
+  .css-1s2u09g-control {
+    border: none !important;
+    background-color: #f4f4f4 !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+  }
+  .css-9gakcf-option {
+    background-color: #e0e0e0;
+    color: black;
+    border-bottom: 1px solid #8d8d8d;
+  }
+  .css-yt9ioa-option {
+    border-bottom: 1px solid #8d8d8d;
   }
 }
 // Dashboard end
