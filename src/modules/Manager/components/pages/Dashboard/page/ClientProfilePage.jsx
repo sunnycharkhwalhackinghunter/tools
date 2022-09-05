@@ -14,7 +14,11 @@ import { Editor } from "react-draft-wysiwyg";
 import { UploadDocumentIner } from "../../../../../MaxHr/components/Pages/Profile/components/EmployeesDocument";
 import { Nav, Tab } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
-
+import {
+  OutlineBtn,
+  OutlineBtnWithIcon,
+} from "../../../../../common/ManagerComponents/Btn/Btn";
+import { BsPlus } from "react-icons/bs";
 export const ClientProfile = () => {
   return (
     <>
@@ -419,12 +423,176 @@ const Step2 = () => {
   );
 };
 const Step3 = () => {
+  const Department = [
+    { value: "Design", label: "Design" },
+    { value: "Developement", label: "Developement" },
+    { value: "Marketing", label: "Marketing" },
+    { value: "Others", label: "Others" },
+  ];
+  const Service = [
+    { value: "Website Design", label: "Website Design" },
+    { value: "Application Design", label: "Application Design" },
+    { value: "Facebook Post Design", label: "Facebook Post Design" },
+    { value: "Flyer Design", label: "Flyer Design" },
+  ];
   return (
     <>
       <div className="Client_Profile_title">
         <h3> Select Services</h3>
       </div>
-      <h3>3</h3>
+      <div className="m_t">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
+          <div className="col-12">
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+            <div className="row  Select_Services_row">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    options={Department}
+                    placeholder="Select Department"
+                  />
+                </div>
+              </div>
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <label className="all_page_my_label_new">Country</label>
+                <div className="dashboard_top_week_Select drop_box">
+                  <Select
+                    isMulti
+                    options={Service}
+                    placeholder="Select Service"
+                  />
+                </div>
+              </div>
+              <div className="col-2">
+                <OutlineBtn name="Save" />
+              </div>
+            </div>
+          </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 add_Department_btn_div">
+            <OutlineBtnWithIcon name="Add More Department" icon={<BsPlus />} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

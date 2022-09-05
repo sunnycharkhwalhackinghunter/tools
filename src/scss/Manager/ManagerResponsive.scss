@@ -1,6 +1,22 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .add_Department_btn_div {
+    margin-top: 3rem !important;
+  }
+  .Select_Services_row {
+    margin-bottom: 3rem;
+    position: relative;
+    .manager_btn_outline {
+      padding: 10px 20px;
+      font-size: 15px;
+      width: 94%;
+      position: absolute;
+      left: 0;
+      margin-top: 10px;
+      margin-left: 12px;
+    }
+  }
   .manager_btn_outline {
     font-size: 11px;
   }
