@@ -476,4 +476,24 @@
     margin-bottom: 1.5rem;
   }
 }
+.CreateBenchmark_brn {
+  text-align: center;
+  button {
+    width: 15%;
+  }
+}
+.SavedBenchmark_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .manager_btn_full2 {
+    margin-left: 10px;
+  }
+  .manager_btn_outline {
+    margin-right: 10px;
+  }
+  button {
+    width: 15%;
+  }
+}
 // Dashboard end

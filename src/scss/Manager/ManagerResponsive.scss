@@ -1,6 +1,16 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .CreateBenchmark_brn {
+    button {
+      width: 50%;
+    }
+  }
+  .SavedBenchmark_btn {
+    button {
+      width: 50%;
+    }
+  }
   .select_team_leaders_CheckBox_div {
     display: flex;
     align-items: center;
