@@ -43,3 +43,15 @@ export const SelectBox = (props) => {
     </>
   );
 };
+export const CheckBox = (props) => {
+  return (
+    <>
+      <div className="form-check">
+        <input className="form-check-input" type="checkbox" id={props.id} />
+        <label className="form-check-label checkbox_label" htmlFor={props.id}>
+          {props.text}
+        </label>
+      </div>
+    </>
+  );
+};

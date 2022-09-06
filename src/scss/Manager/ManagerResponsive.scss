@@ -1,12 +1,48 @@
 @import "../--mixing.scss";
 @import "../--var.scss";
 @media (max-width: 576px) {
+  .select_team_leaders_CheckBox_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Select_Services_row_new {
+    border: 2px solid #e6dede;
+    padding: 20px 0px;
+    border-radius: 8px;
+    padding-top: 13px;
+    width: 98%;
+  }
+  .Select_Services_row_new_inner_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Select_Services_row_new_inner {
+    position: absolute;
+    top: -17px;
+    background: white;
+    width: 25px;
+    left: 20px;
+    color: #d6caca;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: 550;
+    }
+  }
+
   .add_Department_btn_div {
     margin-top: 3rem !important;
   }
   .Select_Services_row {
-    margin-bottom: 3rem;
     position: relative;
+
     .manager_btn_outline {
       padding: 10px 20px;
       font-size: 15px;

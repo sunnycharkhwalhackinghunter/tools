@@ -8,16 +8,14 @@ import {
   InputBox,
   SelectBox,
   TextareaBox,
+  CheckBox,
 } from "../../../../../common/ManagerComponents/form/Form";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { Editor } from "react-draft-wysiwyg";
 import { UploadDocumentIner } from "../../../../../MaxHr/components/Pages/Profile/components/EmployeesDocument";
 import { Nav, Tab } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
-import {
-  OutlineBtn,
-  OutlineBtnWithIcon,
-} from "../../../../../common/ManagerComponents/Btn/Btn";
+import { OutlineBtnWithIcon } from "../../../../../common/ManagerComponents/Btn/Btn";
 import { BsPlus } from "react-icons/bs";
 export const ClientProfile = () => {
   return (
@@ -30,13 +28,13 @@ export const ClientProfile = () => {
             Name="Create Client Profile"
           />
         </div>
-        <Appraisal />
+        <ClientProfileStep />
       </div>
     </>
   );
 };
 
-export const Appraisal = () => {
+export const ClientProfileStep = () => {
   const steps = [<Step1 />, <Step2 />, <Step3 />, <Step4 />];
   const [currentStep, setCurrentStep] = useState(0);
   const getCurrentStepCheckbox = (index) => {
@@ -262,7 +260,7 @@ const Step2 = () => {
     {
       value: "Set new Benchmark",
       label: "Set new Benchmark",
-      url: "/",
+      url: "/manager/benchmark",
     },
   ];
   const CountryData = [
@@ -435,6 +433,59 @@ const Step3 = () => {
     { value: "Facebook Post Design", label: "Facebook Post Design" },
     { value: "Flyer Design", label: "Flyer Design" },
   ];
+  const App = (props) => {
+    return (
+      <>
+        <div className="col-12 Select_Services_row_new_inner_top">
+          <div className="row  align-items-baseline  Select_Services_row Select_Services_row_new">
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+              <div className=" Select_Services_row_new_inner">
+                <p>{props.MobileRowNumber}</p>
+              </div>
+
+              <label className="all_page_my_label_new">Select Department</label>
+              <div className="dashboard_top_week_Select drop_box">
+                <Select options={Department} placeholder="Select Department" />
+              </div>
+            </div>
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <label className="all_page_my_label_new">Select Service</label>
+              <div className="dashboard_top_week_Select drop_box">
+                <Select
+                  isMulti
+                  options={Service}
+                  placeholder="Select Service"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const Data = [
+    {
+      MobileRowNumber: "1",
+    },
+    {
+      MobileRowNumber: "2",
+    },
+    {
+      MobileRowNumber: "3",
+    },
+    {
+      MobileRowNumber: "4",
+    },
+    {
+      MobileRowNumber: "5",
+    },
+    {
+      MobileRowNumber: "6",
+    },
+    {
+      MobileRowNumber: "7",
+    },
+  ];
   return (
     <>
       <div className="Client_Profile_title">
@@ -442,152 +493,9 @@ const Step3 = () => {
       </div>
       <div className="m_t">
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
-          <div className="col-12">
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-            <div className="row  Select_Services_row">
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 mt-3">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    options={Department}
-                    placeholder="Select Department"
-                  />
-                </div>
-              </div>
-              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                <label className="all_page_my_label_new">Country</label>
-                <div className="dashboard_top_week_Select drop_box">
-                  <Select
-                    isMulti
-                    options={Service}
-                    placeholder="Select Service"
-                  />
-                </div>
-              </div>
-              <div className="col-2">
-                <OutlineBtn name="Save" />
-              </div>
-            </div>
-          </div>
+          {Data.map((val, i) => {
+            return <App key={i} MobileRowNumber={val.MobileRowNumber} />;
+          })}
           <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 add_Department_btn_div">
             <OutlineBtnWithIcon name="Add More Department" icon={<BsPlus />} />
           </div>
@@ -597,12 +505,75 @@ const Step3 = () => {
   );
 };
 const Step4 = () => {
+  const App = (props) => {
+    return (
+      <>
+        <div className="col-12 Select_Services_row_new_inner_top">
+          <div className="row    Select_Services_row Select_Services_row_new">
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+              <div className=" Select_Services_row_new_inner">
+                <p>{props.MobileRowNumber}</p>
+              </div>
+
+              <InputBox
+                type="text"
+                label="Department"
+                placeholder={props.DepartmentType}
+              />
+            </div>
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="dashboard_top_week_Select drop_box">
+                <InputBox
+                  type="text"
+                  label="Team Leader*"
+                  placeholder=" Enter name/Email ID"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+  const Data = [
+    {
+      MobileRowNumber: "1",
+      DepartmentType: "Design",
+    },
+    {
+      MobileRowNumber: "2",
+      DepartmentType: "Developement",
+    },
+    {
+      MobileRowNumber: "3",
+      DepartmentType: "Marketing",
+    },
+    {
+      MobileRowNumber: "4",
+      DepartmentType: "Others",
+    },
+  ];
   return (
     <>
       <div className="Client_Profile_title">
         <h3>Select Team Leaders</h3>
       </div>
-      <h3>step 4</h3>
+      <div className="m_t">
+        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
+          {Data.map((val, i) => {
+            return (
+              <App
+                key={i}
+                MobileRowNumber={val.MobileRowNumber}
+                DepartmentType={val.DepartmentType}
+              />
+            );
+          })}
+          <div className="col-12 select_team_leaders_CheckBox_div">
+            <CheckBox text="Allow team leader to edit Project Details" id="0" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
