@@ -4,7 +4,6 @@ import Select from "react-select";
 import Input from "../../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { Nav, Tab } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 import React from "react";
@@ -282,56 +281,61 @@ export const IssueAssetsAppTop = () => {
   const IssueAssetApp = () => {
     return (
       <>
-        <div className="IssueAssetsAppTop_main_div">
+        <div className="IssueAssetsAppTop_main_div mt-0">
+          <div className="EmployeesDocument_top_title">
+            <h3>Issue Assets</h3>
+          </div>
           <div className="row  g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-              <div className="col-12">
-                <div className="row">
-                  <div className="col-3">
-                    <label className="all_page_my_label">
-                      Search Available Assets
-                    </label>
-                    <div className="ApprovalDetailsPage_date_picker">
-                      <div className="ApprovalDetailsPage_search_input_iner_div">
-                        <span>
-                          <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </span>
-                        <Input
-                          type="text"
-                          className="form-control"
-                          placeholder="Search"
-                        />
+            <div className="col-12">
+              <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                <div className="col-12">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                      <label className="all_page_my_label">
+                        Search Available Assets
+                      </label>
+                      <div className="ApprovalDetailsPage_date_picker">
+                        <div className="ApprovalDetailsPage_search_input_iner_div">
+                          <span>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                          </span>
+                          <Input
+                            type="text"
+                            className="form-control"
+                            placeholder="Search"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-3">
-                <label className="all_page_my_label">Availability</label>
-                <div className="available_assets_number">2</div>
-              </div>
-              <div className="col-3">
-                <AboutProfileInput
-                  label="Asset Name"
-                  type="text"
-                  className="form-control"
-                  placeholder="What’s assets"
-                />
-              </div>
-              <div className="col-3">
-                <AboutProfileInput
-                  label="Asset Number"
-                  type="number"
-                  className="form-control"
-                  placeholder="What’s assets number"
-                />
-              </div>
-              <div className="col-3">
-                <AboutProfileInput
-                  label="Issue date"
-                  type="date"
-                  className="form-control"
-                />
+                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <label className="all_page_my_label">Availability</label>
+                  <div className="available_assets_number">2</div>
+                </div>
+                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <AboutProfileInput
+                    label="Asset Name"
+                    type="text"
+                    className="form-control"
+                    placeholder="What’s assets"
+                  />
+                </div>
+                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <AboutProfileInput
+                    label="Asset Number"
+                    type="number"
+                    className="form-control"
+                    placeholder="What’s assets number"
+                  />
+                </div>
+                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <AboutProfileInput
+                    label="Issue date"
+                    type="date"
+                    className="form-control"
+                  />
+                </div>
               </div>
             </div>
 
@@ -347,141 +351,6 @@ export const IssueAssetsAppTop = () => {
         </div>
         <div className="IssueAssets_btn_bottom_div">
           <button className="IssueAssets_btn">Issue Assets</button>
-        </div>
-      </>
-    );
-  };
-  const AssetsList = (props) => {
-    const App = (props) => {
-      return (
-        <>
-          <tr>
-            <td>{props.AssetsName}</td>
-            <td>{props.AssetsNumber}</td>
-            <td>{props.Remarks}</td>
-            <td>{props.IssueDate}</td>
-            <td>{props.ReturnDate}</td>
-          </tr>
-        </>
-      );
-    };
-    const Data = [
-      {
-        AssetsName: "Laptop",
-        AssetsNumber: "12339 cawcs13wr",
-        IssueDate: "09/23/2021",
-        ReturnDate: "09/20/2024",
-        Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        AssetsName: "Laptop",
-        AssetsNumber: "12339 cawcs13wr",
-        IssueDate: "09/23/2021",
-        ReturnDate: "09/20/2024",
-        Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        AssetsName: "Laptop",
-        AssetsNumber: "12339 cawcs13wr",
-        IssueDate: "09/23/2021",
-        ReturnDate: "09/20/2024",
-        Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        AssetsName: "Laptop",
-        AssetsNumber: "12339 cawcs13wr",
-        IssueDate: "09/23/2021",
-        ReturnDate: "09/20/2024",
-        Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        AssetsName: "Laptop",
-        AssetsNumber: "12339 cawcs13wr",
-        IssueDate: "09/23/2021",
-        ReturnDate: "09/20/2024",
-        Remarks: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ];
-    const options = [
-      { value: " Laptop", label: " Laptop" },
-      { value: "mouse", label: " mouse" },
-    ];
-    return (
-      <>
-        <div className="profile_iner_cont">
-          <div className="row">
-            <div className="col-6">
-              <div className="EmployeesDocument_top_title">
-                <h3>Assets</h3>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="Issue_Assets_btn_div">
-                <button>download</button>
-              </div>
-            </div>
-          </div>
-          <div className="row g-3">
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
-              <div className="ApprovalDetailsPage_date_picker">
-                <label>From</label>
-                <Input type="date" className="form-control" />
-              </div>
-            </div>
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
-              <div className="ApprovalDetailsPage_date_picker">
-                <label>to</label>
-                <Input type="date" className="form-control" />
-              </div>
-            </div>
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 dep_all">
-              <div className="dashboard_top_week_Select">
-                <Select options={options} placeholder="Assets types" />
-              </div>
-            </div>
-
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ApprovalDetailsPage_search_input">
-              <div className="ApprovalDetailsPage_date_picker">
-                <div className="ApprovalDetailsPage_search_input_iner_div">
-                  <span>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                  </span>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    placeholder="Search"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <table className="table text-center IssueAssets_top_div">
-              <thead>
-                <tr>
-                  <th scope="col">Assets Name</th>
-                  <th scope="col">Assets Number</th>
-                  <th scope="col">Remarks</th>
-                  <th scope="col">Issue Date</th>
-                  <th scope="col">Return Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Data.map((val, i) => {
-                  return (
-                    <App
-                      key={i}
-                      AssetsName={val.AssetsName}
-                      AssetsNumber={val.AssetsNumber}
-                      IssueDate={val.IssueDate}
-                      ReturnDate={val.ReturnDate}
-                      Remarks={val.Remarks}
-                    />
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
         </div>
       </>
     );
@@ -614,10 +483,19 @@ export const IssueAssetsAppTop = () => {
                   <th scope="col">Assets Number</th>
                   <th scope="col">Remarks</th>
                   <th scope="col">Issue Date</th>
-                  <th scope="col">action</th>
+                  <th scope="col">Return date</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>Laptop</td>
+                  <td>12339 cawcs13wr</td>
+                  <td>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </td>
+                  <td>09/23/2021</td>
+                  <td>09/23/2021</td>
+                </tr>
                 {Data.map((val, i) => {
                   return (
                     <App
@@ -700,38 +578,12 @@ export const IssueAssetsAppTop = () => {
         <div className="col-12">
           <div className="profile_iner_cont assets_tab_div">
             <div className="profile_tab_div">
-              <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-                <div className="profile_tab_div2">
-                  <div className="row">
-                    <div className="col-12">
-                      <Nav variant="pills" className="flex">
-                        <Nav.Item>
-                          <Nav.Link eventKey="0">Issue Asset</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="1">Return Asset</Nav.Link>
-                        </Nav.Item>
-                      </Nav>
-                    </div>
-                  </div>
-                </div>
-
-                <Tab.Content>
-                  <Tab.Pane eventKey="0">
-                    <div className="m_t"></div>
-                    <IssueAssetApp />
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="1">
-                    <div className="m_t"></div>
-                    <ReturnAssetList />
-                  </Tab.Pane>
-                </Tab.Content>
-              </Tab.Container>
+              <IssueAssetApp />
             </div>
           </div>
         </div>
         <div className="col-12">
-          <AssetsList />
+          <ReturnAssetList />
         </div>
       </div>
     </>

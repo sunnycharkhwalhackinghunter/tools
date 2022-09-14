@@ -175,25 +175,28 @@ export const OffBoard = () => {
     const App = (props) => {
       return (
         <>
-          <p>{props.status}</p>
+          <p style={{ color: props.color }}>{props.status}</p>
         </>
       );
     };
     const Data = [
       {
         status: "Approved by Admin 1",
+        color: "green",
       },
       {
         status: "Pending at Admin 2",
+        color: "#da1e28",
       },
       {
         status: "Pending at Admin 3",
+        color: "#da1e28",
       },
     ];
     return (
       <>
         <div className="EmployeesDocument_top_title">
-          <h3>Resignation2</h3>
+          <h3>Resignation</h3>
         </div>
         <div className="status_top_div">
           <div className="status_top_div_inner">
@@ -204,7 +207,9 @@ export const OffBoard = () => {
               <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 status_top_div_inner_data">
                 <div>
                   {Data.map((val, i) => {
-                    return <App key={i} status={val.status} />;
+                    return (
+                      <App key={i} status={val.status} color={val.color} />
+                    );
                   })}
                 </div>
               </div>

@@ -41,7 +41,7 @@ export const RR = () => {
     <>
       <div className="profile_iner_cont">
         <div className="EmployeesDocument_top_title">
-          <h3>R&R</h3>
+          <h3>Rewards & Recognition</h3>
         </div>
 
         <div className="hand_over_form_top_div">

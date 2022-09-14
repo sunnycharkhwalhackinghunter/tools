@@ -56,7 +56,7 @@ export const AddAsset = () => {
         </div>
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           <div className="col-12 ">
-            <div className="profile_iner_cont">
+            <div className="profile_iner_cont mt-4">
               <div className="AddAsset_top_main_div">
                 <div className="AddAsset_top_inner_div">
                   {AssetAddRemove ? <AddAssetForm /> : <AddOrRemoveAsset />}
@@ -65,7 +65,7 @@ export const AddAsset = () => {
             </div>
           </div>
 
-          <div className="col-12 ">
+          <div className="col-12  ">
             {AssetAddRemove ? <AddAssetList /> : <AddedAssetList />}
           </div>
         </div>
@@ -86,7 +86,7 @@ const PageTop = (props) => {
   return (
     <>
       <div>
-        <div className="row TotalOpenings_input_main_div ">
+        <div className="row TotalOpenings_input_main_div mb-4">
           <div className="col-12">
             <TopPageTitle
               TitleLink={props.TitleLink}
@@ -515,7 +515,7 @@ const AddedAssetList = (props) => {
   return (
     <>
       <PageTop title="Added Asset" />
-      <div className="custom_container_iner">
+      <div className="custom_container_iner ">
         <div>
           <div className="row g-3">
             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">

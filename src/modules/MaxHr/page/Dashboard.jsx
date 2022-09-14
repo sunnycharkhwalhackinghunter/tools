@@ -98,7 +98,7 @@ const Dashboard = (props) => {
         <UserName />
         <PagesTopTitle title="dashbaord" />
 
-        <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
+        <div className="row mb-3 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3 ">
           <InfoCard />
           <EmployeesChart />
           <WorkingFormatChart />
