@@ -94,7 +94,7 @@ const Navbar = () => {
     >
       <nav className={nav ? undefined : styles.nav_small}>
         {/* LOGO */}
-        <LogoImg className="logo_div" img={Logo} alt="logo" />
+        <LogoImg className={styles.logo_div} img={Logo} alt="logo" />
 
         {/* MENU */}
         <div className="menu_container_new">

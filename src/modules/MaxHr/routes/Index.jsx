@@ -81,6 +81,8 @@ import { CeleberationsListPage } from "../page/CeleberationsListPage";
 import { HolidayslistPage } from "../page/HolidayslistPage";
 import { AddEmployee } from "../components/Pages/OrgnizationChart/AddEmployee";
 import { EmployeesManagement } from "../components/Pages/Profile/EmployeesManagement";
+import { AddTicket } from "../components/Pages/Help&Support/AddTicket";
+
 // import { Footer } from "../../common/components/footer/Footer";
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -260,7 +262,7 @@ const Index = () => {
                     path="/employees_management"
                     element={<EmployeesManagement />}
                   />
-
+                  <Route path="/add_ticket" element={<AddTicket />} />
                   <Route path="*" element={<main>NOT FOUND</main>} />
                 </Routes>
                 {/* <Footer /> */}

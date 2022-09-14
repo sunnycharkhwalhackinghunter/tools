@@ -197,6 +197,14 @@
     text-transform: uppercase;
   }
 }
+.ProjectList_name_valu {
+  text-align: end;
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #525252;
+  }
+}
 .ProjectList_name {
   font-weight: 600;
   font-size: 16px;

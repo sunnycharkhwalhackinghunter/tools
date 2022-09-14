@@ -49,17 +49,7 @@ strong {
   background-color: white;
   height: 100vh;
 }
-.logo_div {
-  background: $c2;
-  height: 83px;
-  display: flex;
-  img {
-    @include bg_img;
-    width: 8rem;
-    height: 3rem;
-    margin: auto;
-  }
-}
+
 ul {
   padding: 0 !important;
 }

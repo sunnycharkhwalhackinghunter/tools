@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../../../pics/Logo.png";
 import LogoImg from "../../../common/components/NavLogo/Logo";
 //ICONS
-import { MdPayments, MdManageAccounts } from "react-icons/md";
+import { MdPayments, MdManageAccounts, MdOutlineHelp } from "react-icons/md";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { ImBullhorn, ImProfile } from "react-icons/im";
 import {
@@ -25,6 +25,7 @@ import {
   FaBook,
   FaClipboardList,
   FaUserAstronaut,
+  FaTicketAlt,
 } from "react-icons/fa";
 import {
   BsCalendarX,
@@ -120,7 +121,7 @@ const Navbar = () => {
     >
       <nav className={nav ? undefined : styles.nav_small}>
         {/* LOGO */}
-        <LogoImg className="logo_div" img={Logo} alt="logo" />
+        <LogoImg className={styles.logo_div} img={Logo} alt="logo" />
 
         {/* MENU */}
         <div className="menu_container_new">
@@ -240,6 +241,22 @@ const Navbar = () => {
               url="settings"
               icon={<AiTwotoneSetting />}
               description="Settings"
+            />
+            <NavUrl
+              navItems={[
+                {
+                  title: "Add Ticket",
+                  link: "/hr/add_ticket",
+                  iconIner: <FaTicketAlt />,
+                },
+                {
+                  title: "Employees’ Management",
+                  link: "/hr/employees_management",
+                  iconIner: <MdManageAccounts />,
+                },
+              ]}
+              icon={<MdOutlineHelp />}
+              description="Help & Support"
             />
           </ul>
         </div>

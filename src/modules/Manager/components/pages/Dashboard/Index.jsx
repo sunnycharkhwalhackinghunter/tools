@@ -306,7 +306,7 @@ const ProjectList = () => {
       brief: "Design Brief",
       comments: "104 Comments",
       reviews: "02 Reviews",
-      progress: "45%",
+      progress: "40%",
     },
   ];
   const App = (props) => {
@@ -368,7 +368,15 @@ const ProjectList = () => {
               </div>
               <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                 <div className="ProjectList_progress_main_div">
-                  <p className="ProjectList_name">Progress</p>
+                  <div className="row">
+                    <div className="col-6">
+                      <p className="ProjectList_name">Progress</p>
+                    </div>
+                    <div className="col-6 ProjectList_name_valu">
+                      <span>{props.progress}</span>
+                    </div>
+                  </div>
+
                   <div className="progress ProjectList_progress">
                     <div
                       className="progress-bar"
