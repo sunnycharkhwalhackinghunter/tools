@@ -39,6 +39,7 @@ import {
   faGaugeHigh,
   faPersonChalkboard,
 } from "@fortawesome/free-solid-svg-icons";
+import { TiTicket } from "react-icons/ti";
 import { CgPerformance } from "react-icons/cg";
 import { GiReceiveMoney } from "react-icons/gi";
 const NavUrl = ({ url, icon, description, navItems }) => {
@@ -250,9 +251,9 @@ const Navbar = () => {
                   iconIner: <FaTicketAlt />,
                 },
                 {
-                  title: "Employees’ Management",
-                  link: "/hr/employees_management",
-                  iconIner: <MdManageAccounts />,
+                  title: "ActionTicket",
+                  link: "/hr/action_ticket",
+                  iconIner: <TiTicket />,
                 },
               ]}
               icon={<MdOutlineHelp />}

@@ -6338,4 +6338,158 @@ a {
     margin-bottom: 1.5rem;
   }
 }
+.ticket_history_list_status {
+  background: #a7f0ba;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+.ticket_history_list_Priority {
+  background: #bae6ff;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+.ticket_history_list_btn {
+  color: white;
+  cursor: pointer;
+  background-color: $blue;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $hover;
+  }
+}
+.ticket_history_list_img_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ticket_history_list_img {
+  @include bg_img;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.ticket_history_list_filter_div {
+  .ApprovalDetailsPage_date_picker {
+    input {
+      height: 40px;
+    }
+  }
+  .ApprovalDetailsPage_search_input_iner_div {
+    input {
+      height: 40px;
+    }
+  }
+}
+.ticket_history_list_status_modal {
+  background: #a7f0ba;
+  padding: 5px 15px;
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.ticket_history_list_modal_data_title_div {
+  padding-left: 1rem;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0;
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      color: $blue;
+      margin-left: 5px;
+    }
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+}
+.ticket_history_list_modal_data_title_div2 {
+  text-align: end;
+  padding-right: 1rem;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0;
+    label {
+      font-weight: 400;
+      font-size: 12px;
+      color: $blue;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+}
+.ticket_history_list_modal_data_top_div {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.ticket_history_list_modal_data_Description_top_div {
+  padding: 1rem;
+}
+.ticket_history_list_modal_data_Description {
+  display: flex;
+  align-items: baseline;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-bottom: 6px;
+  }
+  p {
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: justify;
+    text-transform: capitalize;
+  }
+}
+.close_ticket_modal_img_tex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  .ticket_history_list_img {
+    margin-bottom: 2px;
+    width: 30px;
+    height: 30px;
+  }
+  span {
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 550;
+  }
+}
 // TicketHistory
+.mybutton {
+  background: white;
+  color: #525252;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+.mybutton.active {
+  background-color: #0a0e30;
+  color: white;
+}
+
+.profile_tab_div_Ticket {
+  margin-bottom: 1.5rem;
+}

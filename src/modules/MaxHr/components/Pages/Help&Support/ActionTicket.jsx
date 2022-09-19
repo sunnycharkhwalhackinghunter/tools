@@ -1,5 +1,4 @@
 import TopPageTitle from "../../../../common/components/topPageTitle/Index";
-import { BsArrowLeft } from "react-icons/bs";
 import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs";
 import Input from "../../../../common/components/input/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +9,7 @@ import Img from "../../../../common/components/img/Img";
 import Icon from "../../../../../pics/profile.jpeg";
 import { Modal } from "react-bootstrap";
 
-export const TicketHistory = () => {
+export const ActionTicket = () => {
   const [activeTicketType, setActiveTicketType] = useState("open");
   const [openModalShow, setOpenModalShow] = useState(false);
   const [closeModalShow, setCloseModalShow] = useState(false);
@@ -27,31 +26,17 @@ export const TicketHistory = () => {
       Status: "Progressopen",
       Department: "IT",
       ImgIcon: Icon,
-      description: [{ DescriptionText: "Close text" }],
-    },
-    {
-      serialNumber: "1",
-      TicketID: "12339 cawcs13wr",
-      TicketSubject: "Laptop Issue",
-      AssignedPerson: "John Smith",
-      CreatedDate: "24-04-2024",
-      Priority: "Meduim",
-      Status: "Progressopen",
-      Department: "IT",
-      ImgIcon: Icon,
-      description: [{ DescriptionText: "Close text" }],
-    },
-    {
-      serialNumber: "1",
-      TicketID: "12339 cawcs13wr",
-      TicketSubject: "Laptop Issue",
-      AssignedPerson: "John Smith",
-      CreatedDate: "24-04-2024",
-      Priority: "Meduim",
-      Status: "Progressopen",
-      Department: "IT",
-      ImgIcon: Icon,
-      description: [{ DescriptionText: "Close text" }],
+      description: [
+        {
+          DescriptionTextTop:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
+        },
+        {
+          DescriptionTextIcon: "Text",
+          name: "Sunny charkhwal",
+          image: Icon,
+        },
+      ],
     },
   ];
   const CloseTicketData = [
@@ -228,8 +213,24 @@ export const TicketHistory = () => {
             {openModalData?.description?.map((val, i) => {
               const UserAvatarView = () => (
                 <>
-                  {val.image && <span>{val.image} </span>}
-                  {val.name && <span>{val.name}</span>}
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="close_ticket_modal_img_tex">
+                        <Img
+                          className="ticket_history_list_img"
+                          backgroundImage={val.image}
+                        />
+                        <span>{val.name}</span>
+                      </div>
+                      <div className="ApprovalDetailsPage_date_picker mt-3">
+                        <textarea
+                          className="form-control"
+                          placeholder={val.DescriptionTextIcon}
+                          rows="6"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
                 </>
               );
               return (
@@ -239,14 +240,19 @@ export const TicketHistory = () => {
                 >
                   <div className="row">
                     <div className="col-12">
-                      <div className="ticket_history_list_modal_data_Description">
-                        {val.name || val.image ? (
-                          <UserAvatarView />
-                        ) : (
-                          <h3>Description:</h3>
-                        )}
-
-                        <p>{val.DescriptionText}</p>
+                      <div className="ticket_history_list_modal_data_Description d-block">
+                        <div className="row">
+                          <div className="col-12">
+                            {val.name || val.image ? (
+                              <UserAvatarView />
+                            ) : (
+                              <h3>Description:</h3>
+                            )}
+                          </div>
+                          <div className="col-12">
+                            <p className=" mx-0"> {val.DescriptionTextTop}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -266,7 +272,7 @@ export const TicketHistory = () => {
                     className="UploadDocumentModal_body_btn2"
                     onClick={closeModal}
                   >
-                    Downlaod
+                    Update
                   </button>
                 </div>
               </div>
@@ -454,11 +460,7 @@ export const TicketHistory = () => {
     <>
       <div className="custom_container">
         <div className="ticket_history_top_tile">
-          <TopPageTitle
-            TitleLink={-1}
-            TilelIcon={<BsArrowLeft />}
-            Name="Ticket History"
-          />
+          <TopPageTitle Name="Action on Ticket" />
         </div>
         <div className="profile_tab_div_Ticket">
           <button

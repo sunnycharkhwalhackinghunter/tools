@@ -83,6 +83,7 @@ import { AddEmployee } from "../components/Pages/OrgnizationChart/AddEmployee";
 import { EmployeesManagement } from "../components/Pages/Profile/EmployeesManagement";
 import { AddTicket } from "../components/Pages/Help&Support/AddTicket";
 import { TicketHistory } from "../components/Pages/Help&Support/TicketHistory";
+import { ActionTicket } from "../components/Pages/Help&Support/ActionTicket";
 
 // import { Footer } from "../../common/components/footer/Footer";
 const Index = () => {
@@ -265,6 +266,7 @@ const Index = () => {
                   />
                   <Route path="/add_ticket" element={<AddTicket />} />
                   <Route path="/ticket_history" element={<TicketHistory />} />
+                  <Route path="/action_ticket" element={<ActionTicket />} />
 
                   <Route path="*" element={<main>NOT FOUND</main>} />
                 </Routes>
