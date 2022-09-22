@@ -7,11 +7,12 @@ import { useState } from "react";
 import {
   InputBox,
   TextareaBox,
+  SearchBox,
 } from "../../../../../common/ManagerComponents/form/Form";
 import { RightFilters } from "../../../../../common/components/RightFilters/RightFilters";
 import React from "react";
 import { Modal } from "react-bootstrap";
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
@@ -25,16 +26,7 @@ export const Notes = () => {
         <div className="mb-4">
           <div className="row">
             <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-9 col-9">
-              <div className="Filters_Search_div">
-                <span>
-                  <AiOutlineSearch />
-                </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search here..."
-                />
-              </div>
+              <SearchBox placeholder="Search here..." />
             </div>
             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3">
               <RightFilters

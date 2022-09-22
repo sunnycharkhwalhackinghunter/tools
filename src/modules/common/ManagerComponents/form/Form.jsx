@@ -1,3 +1,4 @@
+import { AiOutlineSearch } from "react-icons/ai";
 export const InputBox = (props) => {
   return (
     <>
@@ -51,6 +52,23 @@ export const CheckBox = (props) => {
         <label className="form-check-label checkbox_label" htmlFor={props.id}>
           {props.text}
         </label>
+      </div>
+    </>
+  );
+};
+
+export const SearchBox = (props) => {
+  return (
+    <>
+      <div className="Filters_Search_div">
+        <span>
+          <AiOutlineSearch />
+        </span>
+        <input
+          type="text"
+          className="form-control"
+          placeholder={props.placeholder}
+        />
       </div>
     </>
   );

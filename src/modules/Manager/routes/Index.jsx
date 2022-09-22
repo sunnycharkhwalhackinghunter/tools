@@ -9,6 +9,7 @@ import { Benchmark } from "../page/Benchmark";
 import NavContext from "../Context/NavContext";
 import { Notes } from "../components/pages/Dashboard/page/Notes";
 import { ClientProfile } from "../components/pages/Dashboard/page/ClientProfilePage";
+import { PiplineProjects } from "../components/pages/Dashboard/page/PiplineProjects";
 
 const Index = () => {
   const [nav, setNav] = useState(true);
@@ -27,6 +28,7 @@ const Index = () => {
                 <Route path="/notes" element={<Notes />} />
                 <Route path="/client_Profile" element={<ClientProfile />} />
                 <Route path="/benchmark" element={<Benchmark />} />
+                <Route path="/pipline_projects" element={<PiplineProjects />} />
 
                 <Route path="*" element={<main>NOT FOUND</main>} />
               </Routes>

@@ -12,7 +12,7 @@ export const ScheduleInterview = () => {
     <>
       <div className="custom_container">
         <PageTop />
-        <div className="ScheduleInterview_top_div_main">
+        <div className="ScheduleInterview_top_div_main mt-4">
           <div className="ScheduleInterview_top_div">
             <Profile />
             <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">

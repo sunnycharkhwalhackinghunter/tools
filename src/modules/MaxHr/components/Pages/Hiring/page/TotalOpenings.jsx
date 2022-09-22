@@ -18,7 +18,7 @@ export const TotalOpenings = () => {
 const JobsTabs = () => {
   return (
     <>
-      <div className="profile_tab_div">
+      <div className="profile_tab_div mt-4">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Nav variant="pills" className="flex">
             <Nav.Item>

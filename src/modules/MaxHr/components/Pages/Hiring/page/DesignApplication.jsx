@@ -74,7 +74,7 @@ const Application = () => {
   const ratingChanged = () => {};
   return (
     <>
-      <div className="design_application_top_div">
+      <div className="design_application_top_div mt-4">
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
           <div className="col-6">
             <div className="design_application_name_div">

@@ -172,20 +172,7 @@ const Step1 = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <InputBox
-              type="text"
-              label="Reference if any"
-              placeholder="Client ID"
-            />
-          </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <InputBox
-              type="text"
-              label="Email Address*"
-              placeholder="Client’s personal email ID"
-            />
-          </div>
+
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <label className="all_page_my_label_new">Lead Source*</label>
             <div className="dashboard_top_week_Select drop_box">
@@ -195,6 +182,20 @@ const Step1 = () => {
                 placeholder="Select Lead Source"
               />
             </div>
+          </div>
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <InputBox
+              type="text"
+              label="Email Address*"
+              placeholder="Client’s personal email ID"
+            />
+          </div>
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <InputBox
+              type="text"
+              label="Lead Source details"
+              placeholder="Lead Source details"
+            />
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <TextareaBox

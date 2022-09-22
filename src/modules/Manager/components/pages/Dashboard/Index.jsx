@@ -4,8 +4,6 @@ import {
 } from "../../../../common/ManagerComponents/Btn/Btn";
 import { WelcomeNote } from "../../../../common/ManagerComponents/WelcomeNote/WelcomeNote";
 import Img from "../../../../common/components/img/Img";
-import Icon from "../../../../../pics/Manager/d1.png";
-import Icon2 from "../../../../../pics/Manager/d2.png";
 import Icon3 from "../../../../../pics/Manager/d3.png";
 import Icon4 from "../../../../../pics/Manager/d4.png";
 import Icon5 from "../../../../../pics/Manager/d5.png";
@@ -93,31 +91,7 @@ const ProjectSummary = () => {
   };
   const Data = [
     {
-      link: "/",
-      backgroundColor: "#0043CE",
-      icon: Icon,
-      color: "white",
-      number: "12",
-      text: "Project from BD Team",
-    },
-    {
-      link: "/",
-      backgroundColor: "#8D8D8D",
-      icon: Icon2,
-      color: "white",
-      number: "12",
-      text: "Project from Website",
-    },
-    {
-      link: "/",
-      backgroundColor: "#0A0E30",
-      icon: Icon3,
-      color: "white",
-      number: "12",
-      text: "In Progress Project",
-    },
-    {
-      link: "/",
+      link: "/manager/pipline_projects",
       backgroundColor: "#F1C21B",
       icon: Icon4,
       color: "white",
@@ -131,6 +105,14 @@ const ProjectSummary = () => {
       color: "white",
       number: "12",
       text: "Tasks in Pipeline",
+    },
+    {
+      link: "/",
+      backgroundColor: "#0A0E30",
+      icon: Icon3,
+      color: "white",
+      number: "12",
+      text: "In Progress Project",
     },
     {
       link: "/",

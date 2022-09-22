@@ -67,7 +67,7 @@ const PageTop = () => {
 const NewApplicationTabs = () => {
   return (
     <>
-      <div className="new_application_tabs_div">
+      <div className="new_application_tabs_div mt-2">
         <NewApplicationSlider />
       </div>
     </>
